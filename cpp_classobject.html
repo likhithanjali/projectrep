@@ -1,0 +1,269 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article> 
+<h1 style="color:#000080">CLASSES & OBJECTS In C++ Programming</h1>
+<h2>C++ Class:</h2>
+
+<p>Before you create an object in C++, you need to define a class.</p>
+
+<p>A class is a blueprint for the object.</p>
+
+<p>We can think of class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows etc. Based on these descriptions we build the house. House is the object.</p>
+
+
+<p>A class is defined in C++ using keyword class followed by the name of class.</p>
+
+<p>The body of class is defined inside the curly brackets and terminated by a semicolon at the end.</p>
+<table border="" width="700"><tr><td><pre>
+class className
+   {
+   // some data
+   // some functions
+   };</table></tr></td></pre><br>
+<b>Example:</b> Class in C++
+<table border="" width="700"><tr><td><pre>
+class Test
+{
+    private:
+        int data1;
+        float data2;  
+
+    public:  
+        void function1()
+        {
+            data1 = 2; 
+        } 
+
+        float function2()
+        { 
+            data2 = 3.5;
+            return data2;
+        }
+   };</table></tr></td></pre>
+
+<p>Here, we defined a class named Test.</p>
+
+<p>This class has two data members: data1 and data2 and two member functions: function1() and function2().</p>
+<h3>Keywords: private and public</h3>
+
+<p>You may have noticed two keywords: private and public in the above example.</p>
+
+<p>The private keyword makes data and functions private. Private data and functions can be accessed only from inside the same class.</p>
+
+<p>The public keyword makes data and functions public. Public data and functions can be accessed out of the class.</p>
+
+<p>Here, data1 and data2 are private members where as function1() and function2() are public members.</p>
+
+<p>If you try to access private data from outside of the class, compiler throws error. This feature in OOP is known as data hiding.</p>
+
+<h2>C++ Objects:</h2>
+
+<p>When class is defined, only the specification for the object is defined; no memory or storage is allocated.</p>
+
+<p>To use the data and access functions defined in the class, you need to create objects.</p>
+Syntax to Define Object in C++
+<table border="" width="700"><tr><td><pre>
+className objectVariableName;
+</table></tr></td></pre>
+<p>You can create objects of Test class (defined in above example) as follows:</p>
+
+<table border="" width="700"><tr><td><pre>
+class Test
+{
+    private:
+        int data1;
+        float data2;  
+
+    public:  
+        void function1()
+        {
+           data1 = 2;  
+        } 
+
+        float function2()
+        { 
+            data2 = 3.5;
+            return data2;
+        }
+   };
+
+int main()
+{
+    Test o1, o2;
+}</table></tr></td></pre>
+
+<p>Here, two objects o1 and o2 of Test class are created.</p>
+
+<p>In the above class Test, data1 and data2 are data members and function1() and function2() are member functions.</p>
+</h3>How to access data member and member function in C++?</h3>
+
+<p>You can access the data members and member functions by using a . (dot) operator. For example,</p>
+<table border="" width="700"><tr><td><pre>
+o2.function1();
+</table></tr></td></pre>
+
+<p>This will call the function1() function inside the Test class for objects o2.</p>
+
+<p>Similarly, the data member can be accessed as:</p>
+<table border="" width="700"><tr><td><pre>
+o1.data2 = 5.5;
+</table></tr></td></pre>
+
+<p>It is important to note that, the private members can be accessed only from inside the class.</p>
+
+<p>So, you can use o2.function1(); from any function or class in the above example. However, </p>
+<table border="" width="700"><tr><td><pre>
+the code o1.data2 = 5.5;</table></tr></td></pre>
+<p> should always be inside the class Test.</p>
+<b>Example:</b> Object and Class in C++ Programming</br>
+<table border="" width="700"><tr><td><pre>
+// Program to illustrate the working of objects and class in C++ Programming
+#include &ltiostream>
+using namespace std;
+
+class Test
+{
+    private:
+        int data1;
+        float data2;
+
+    public:
+       
+       void insertIntegerData(int d)
+       {
+          data1 = d;
+          cout << "Number: " << data1;
+        }
+
+       float insertFloatData()
+       {
+           cout << "\nEnter data: ";
+           cin >> data2;
+           return data2;
+        }
+};
+
+ int main()
+ {
+      Test o1, o2;
+      float secondDataOfObject2;
+
+      o1.insertIntegerData(12);
+      secondDataOfObject2 = o2.insertFloatData();
+
+      cout << "You entered " << secondDataOfObject2;
+      return 0;
+ }</table></tr></td></pre>
+<br>
+<b>Output:</b>
+<table border="" width="700"><tr><td><pre>
+Number: 12
+Enter data: 23.3
+You entered 23.3
+</table></tr></td></pre>
+
+<p>In this program, two data members data1 and data2 and two member functions insertIntegerData() and insertFloatData() are defined under Test class.</p>
+
+<p>Two objects o1 and o2 of the same class are declared.</p>
+<p>The insertIntegerData() function is called for the o1 object using:</p>
+<table border="" width="700"><tr><td><pre>
+o1.insertIntegerData(12);
+</table></tr></td></pre>
+<p>This sets the value of data1 for object o1 to 12.
+
+Then, the insertFloatData() function for object o2 is called and the return value from the function is stored in variable secondDataOfObject2 using:</p>
+
+secondDataOfObject2 = o2.insertFloatData();
+
+<p>In this program, data2 of o1 and data1 of o2 are not used and contains garbage value.</p>
+
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="c_overview.html">Overview</a></li><br>
+<li><a href="c_prostuct.html">Program Structures</a></li><br>
+<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
+<li><a href="c_datatypes.html">DataTypes</a></li><br>
+<li><a href="c_variables.html">Variables</a></li><br>
+<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
+<li><a href="c_operators.html">Operators</a></li><br>
+<li><a href="c_desisonmake.html">Desision Making</a></li><br>
+<li><a href="c_loops.html">Loops</a></li><br>
+<li><a href="c_functions.html">Functions</a></li><br>
+<li><a href="c_scope.html">Scope Rules</a></li><br>
+<li><a href="c_arrays.html">Arrays</a></li><br>
+<li><a href="c_pointers.html">Pointers</a></li><br>
+<li><a href="c_strings.html">Strings</a></li><br>
+<li><a href="c_structunion.html">Structures&Unions</a></li><br>
+<li><a href="c_ipop.html">Input&Output</a></li><br>
+<li><a href="c_fileio.html">File I/O </a></li><br>
+</ul>
+</nav>
+<article><h1 style="color:#000080">STRUCTURES & UNIONS In C Programming</h1>
+ <h1>Structures</h1>
+<p>Arrays allow to define type of variables that can hold several data items of the
+same kind. Similarly, structure is another user-defined data type available in C
+that allows to combine data items of different kinds.</p>
+
+<p>Structures are used to represent a record. Suppose you want to keep track of
+your books in a library. You might want to track the following attributes about
+each book:</p>
+•Title<br>
+•Author<br>
+•Subject<br>
+•Book ID<br>
+
+<h2>Defining a Structure:</h2>
+<p>To define a structure, you must use the struct statement. The struct statement
+defines a new data type, with more than one member. The format of the struct
+statement is as follows:</p>
+<img src="C_str1.png">
+<p>The structure tag is optional and each member definition is a normal variable
+definition, such as int i; or float f; or any other valid variable definition. At the
+end of the structure's definition, before the final semicolon, you can specify one
+or more structure variables but it is optional. Here is the way you would declare
+the Book structure:</p>
+<img src="c_str2.png">
+<img src="c_str3.png">
+<h2>Accessing Structure Members:</h2>
+To access any member of a structure, we use the member access operator
+(.). The member access operator is coded as a period between the structure
+variable name and the structure member that we wish to access. You would
+use the keyword struct to define variables of structure type. The following
+example shows how to use a structure in a program:
+<div class="le-col l6" style="padding:3%">
+  <div class="le-hide-small le-card-2 le-light-grey" style="padding:16px;">
+<div class="le-code notranslate le-card-2 le-border-green">
+<div class="htmlHigh"> 
+   </div>
+<table border="" cellpadding="2" cellspacing="2" width="500">
+<tr>
+<td>#include&ltstdio.h><br>
+#include&ltstring.h><br>
+struct Books<br>
+{<br>
+char title[50];<br>
+char author[50];<br>
+char subject[100];<br>
+int book_id;<br>
+};<br>
+int main( )<br>
+{<br>
+struct Books Book1; /* Declare Book1 of type Book */<br>
+struct Books Book2; /* Declare Book2 of type Book */<br>
+/* book 1 specification */<br>
+strcpy( Book1.title, "C Programming");<br>
+strcpy( Book1.author, "Nuha Ali");<br>
+strcpy( Book1.subject, "C Programming Tutorial");<br>
+Book1.book_id = 6495407;<br>
+/* book 2 specification */<br>
+strcpy( Book2.title, "Telecom Billing");<br>
+strcpy( Book2.author, "Zara Ali");<br>
+strcpy( Book2.subject, "Telecom Billing Tutorial");<br>
+Book2.book_id = 6495700;<br>
+/* print Book1 info */<br>
+printf( "Book 1 title : %s\n", Book1.title);<br>
+printf( "Book 1 author : %s\n", Book1.author);<br>
+printf( "Book 1 subject : %s\n", Book1.subject);<br>
+printf( "Book 1 book_id : %d\n", Book1.book_id);<br>
+/* print Book2 info */<br>
+printf( "Book 2 title : %s\n", Book2.title);<br>
+printf( "Book 2 author : %s\n", Book2.author);<br>
+printf( "Book 2 subject : %s\n", Book2.subject);<br>
+printf( "Book 2 book_id : %d\n", Book2.book_id);<br>
+return 0;<br>
+}<br><br></td>
+</tr>
+</table>
+</div>
+    <div class="htmlHigh">
+When the above code is compiled and executed, it produces the following result:<br>
+Book 1 title : C Programming<br>
+Book 1 author : Nuha Ali<br>
+Book 1 subject : C Programming Tutorial<br>
+Book 1 book_id : 6495407<br>
+Book 2 title : Telecom Billing<br>
+Book 2 author : Zara Ali<br>
+Book 2 subject : Telecom Billing Tutorial<br>
+<h2>Structures as Function Arguments:</h2>
+<p>You can pass a structure as a function argument in the same way as you pass
+any other variable or pointer.</p><br>
+<b>example</b>
+<h2>Pointers to Structures:</h2>
+You can define pointers to structures in the same way as you define pointer to
+any other variable:<br>
+<table border="" cellpadding="2" cellspacing="2" width="200">
+<tr>
+<td>struct Books *struct_pointer;</td>
+</tr>
+</table><br>
+Now, you can store the address of a structure variable in the above-defined
+pointer variable. To find the address of a structure variable, place the ‘&’
+operator before the structure's name as follows:
+<table border="1" cellpadding="2" cellspacing="2" width="200">
+<tr>
+<td>struct_pointer = &Book1;</td><br>
+</tr>
+</table><br>
+To access the members of a structure using a pointer to that structure, you must
+use the -> operator as follows:
+<table border="1" cellpadding="2" cellspacing="2" width="200">
+<tr>
+<td>struct_pointer->title;</td><br>
+</tr>
+</table><br>
+Let us rewrite the above example using structure pointer.<br>
+<b>example</b><br><br>
+<h2>Bit Fields</h2>
+<p>Bit Fields allow the packing of data in a structure. This is especially useful when
+memory or data storage is at a premium. Typical examples include:</p>
+•Packing several objects into a machine word, e.g. 1 bit flags can be
+compacted.<br>
+•Reading external file formats -- non-standard file formats could be read
+in, e.g., 9-bit integers.<br><br>
+
+C allows us to do this in a structure definition by putting :bit length after the
+variable. For example:
+<table border="" cellpadding="" cellspacing="" width="300">
+<tr>
+<td>struct packed_struct {<br>
+unsigned int f1:1;<br>
+unsigned int f2:1;<br>
+unsigned int f3:1;<br>
+unsigned int f4:1;<br>
+unsigned int type:4;<br>
+unsigned int my_int:9;<br>
+} pack;</td><br>
+</tr>
+</table><br>
+Here, the packed_struct contains 6 members: Four 1 bit flags f1..f3, a 4-bit
+type, and a 9-bit my_int.
+C automatically packs the above bit fields as compactly as possible, provided
+that the maximum length of the field is less than or equal to the integer word
+length of the computer. If this is not the case, then some compilers may allow
+memory overlap for the fields, while others would store the next field in the next
+word.
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

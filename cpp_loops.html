@@ -1,0 +1,305 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+</ul>
+</nav>
+<article><h1 style="color:#000080">LOOPS In C++ O+Programming</h1>
+<h2>Loops :</h2>
+<p>Loops in programming comes into use when we need to repeatedly execute a block of statements. For example: Suppose we want to print “Hello World” 10 times.</p>
+<p>This can be done in two ways as shown below:</p>
+<h3>1.Iterative Method</h3>
+<p>Iterative method to do this is to write the printf() statement 10 times.</p>
+<table border="" cellpadding="20" cellspacing="2" width="400"><tr><td>
+<pre <code>
+// C++ program to illustrate need of loops</br>
+ #include &ltiostream&gt
+using namespace std;
+ 
+int main()
+{
+    cout &lt&lt "Hello World\n";
+    cout &lt&lt "Hello World\n";
+    cout &lt&lt "Hello World\n";
+    cout &lt&lt "Hello World\n";
+    cout &lt&lt "Hello World\n";
+    cout &lt&lt "Hello World\n";
+    cout &lt&lt "Hello World\n";
+    cout &lt&lt "Hello World\n";
+    cout &lt&lt "Hello World\n";
+    cout &lt&lt "Hello World\n";
+    return 0;
+}</table></tr></td></pre></code>
+<h3>2.Using Loops</h3>
+<p>In Loop, the statement needs to be written only once and the loop will be executed 10 times as shown below.</p>
+<p>In computer programming, a loop is a sequence of instructions that is repeated until a certain condition is reached.</p>
+<ul><li>An operation is done, such as getting an item of data and changing it, and then some condition is checked such as whether a counter has reached a prescribed number.</li>
+<li><b>Counter not Reached:</b> If the counter has not reached the desired number, the next instruction in the sequence returns to the first instruction in the sequence and repeat it.</li>
+<li><b>Counter reached:</b> If the condition has been reached, the next instruction “falls through” to the next sequential instruction or branches outside the loop.</li>
+</ul>
+<h3>There are mainly two types of loops:</h3>
+<h4>Entry Controlled loops:</h4> <p>In this type of loops the test condition is tested before entering the loop body. For Loop and While Loop are entry controlled loops.</p>
+<h4>Exit Controlled Loops:</h4> <p>In this type of loops the test condition is tested or evaluated at the end of loop body. Therefore, the loop body will execute atleast once, irrespective of whether the test condition is true or false. do – while loop is exit controlled loop.</p>
+<h3>for Loop:</h3>
+
+<p>A for loop is a repetition control structure which allows us to write a loop that is executed a specific number of times. The loop enables us to perform n number of steps together in one line.</p><h4>Syntax:</h4>
+<table border="" cellpadding="20" cellspacing="2" width="400"><tr><td> 
+<pre>for (initialization expr; test expr; update expr)
+{    
+     // body of the loop
+     // statements we want to execute
+}</pre></table></td></tr>
+<p>In for loop, a loop variable is used to control the loop. First initialize this loop variable to some value, then check whether this variable is less than or greater than counter value. If  statement is true, then loop body is executed and loop variable gets updated . Steps are repeated till  exit condition comes.</p>
+<h5>Initialization Expression:</h5><p> In this expression we have to initialize the loop counter to some value. <br> for example: int i=1;</p>
+<h5>Test Expression: </h5><p>In this expression we have to test the condition. If the condition evaluates to true then we will execute the body of loop and go to update expression otherwise we will exit from the for loop. <br>For example: i <= 10;</p>
+<h5>Update Expression:</h5><p> After executing loop body this expression increments/decrements the loop variable by some value.<br> for example: i++;</p>
+<table border="" cellpadding="20" cellspacing="2" width="400"><tr><td>
+<pre>// C++ program to illustrate for loop
+#include &ltiostream>
+using namespace std;
+ 
+int main()
+{
+    for (int i = 1; i <= 10; i++)
+    {
+        cout << "Hello World\n";
+    }
+ 
+    return 0;
+}</pre></table></td></tr>
+<h4>flowchart for Forloop:</h4>
+<img src="cpp_loop1.png">
+<h3>While Loop</h3>
+<p>While studying for loop we have seen that the number of iterations is known beforehand, i.e. the number of times the loop body is needed to be executed is known to us.</p>  <p>while loops are used in situations where we do not know the exact number of iterations of loop beforehand. The loop execution is terminated on the basis of test condition.</p>
+
+<h4>Syntax:</h4>
+<p>We have already stated that a loop is mainly consisted of three statements – initialization expression, test expression, update expression. The syntax of the three loops – For, while and do while mainly differs on the placement of these three statements.</p>
+<table border="" cellpadding="20" cellspacing="2" width="400">
+<tr>
+<td><pre>initialization expression;
+while (test_expression)
+{
+   // statements
+ 
+  update_expression;
+}</pre></table></tr></td>
+<br>
+<table border="" cellpadding="20" cellspacing="2" width="400"><tr>
+<td>
+<pre>
+// C++ program to illustrate for loop
+#include &ltiostream>
+using namespace std;
+ 
+int main()
+{
+    // initialization expression
+    int i = 1;
+ 
+    // test expression
+    while (i < 6)
+    {
+        cout << "Hello World\n";
+ 
+        // update expression
+        i++;
+    }
+ 
+    return 0;
+}</pre></table></tr></td>
+
+<h5>Output:</h5>
+
+<pre>Hello World
+Hello World
+Hello World
+Hello World
+Hello World</pre>
+<h4>flowchart for While loop:</h4>
+<img src="cpp_loop2.png">
+
+
+
+
+<h3>do while loop:</h3>
+
+<p>In do while loops also the loop execution is terminated on the basis of test condition. The main difference between do while loop and while loop is in do while loop the condition is tested at the end of loop body, i.e do while loop is exit controlled whereas the other two loops are entry controlled loops.</p>
+<p><b>Note:</b> In do while loop the loop body will execute at least once irrespective of test condition.</p>
+
+<h4>Syntax:</h4>
+<table border="" cellpadding="20" cellspacing="2" width="400"><tr>
+<td><pre>
+initialization expression;
+do
+{
+   // statements
+
+   update_expression;
+} while (test_expression);</pre></table></td></tr>
+<p><b>Note:</b> Notice the semi–colon(“;”) in the end of loop.</p>
+<table border="" cellpadding="20" cellspacing="2" width="400"><tr>
+<td>
+<pre>
+// C++ program to illustrate do-while loop
+#include &ltiostream>
+using namespace std;
+ int main()
+{
+    int i = 2; // Initialization expression
+ 
+    do
+    {
+        // loop body
+        cout << "Hello World\n";
+ 
+        // update expression
+        i++;
+ 
+    }  while (i < 1);   // test expression
+ 
+    return 0;
+}</pre></table></tr></td>
+
+<h5>Output:</h5>
+<table border="" cellpadding="20" cellspacing="2" width="400"><tr>
+<td>
+<pre>
+Hello World</pre></table></tr></td>
+<p>In the above program the test condition (i<1) evaluates to false. But still as the loop is exit – controlled the loop body will execute once.</p>
+<h4>flowchart for Do-while loop:</h4>
+<img src="cpp_loop3.png">
+<h3>What about an Infinite Loop?</h3>
+<p>An infinite loop (sometimes called an endless loop ) is a piece of coding that lacks a functional exit so that it repeats indefinitely. An infinite loop occurs when a condition always evaluates to true. Usually, this is an error.</p>
+<table border="" cellpadding="20" cellspacing="2" width="400"><tr>
+<td>
+<pre>
+#include &ltiostream>
+using namespace std;
+int main ()
+{
+    int i;
+ 
+    // This is an infinite for loop as the condition
+    // expression is blank
+    for ( ; ; )
+    {
+        cout &lt&lt"This loop will run forever.\n";
+    }
+ 
+    // This is an infinite for loop as the condition
+    // given in while loop will keep repeating infinitely
+    /*
+    while (i != 0)
+    {
+        i-- ;
+        cout &lt&lt "This loop will run forever.\n";
+    }
+    */
+ 
+    // This is an infinite for loop as the condition
+    // given in while loop is "true"
+    /*
+    while (true)
+    {
+        cout &lt&lt "This loop will run forever.\n";
+    }
+    */
+}</pre></table></tr></td>
+
+<h5>Output:</h5>
+<table border="" cellpadding="20" cellspacing="2" width="400"><tr>
+<td>
+<pre>
+This loop will run forever.
+This loop will run forever.
+................... 
+</pre></table></tr></td>
+<h4>Important Points:</h4>
+
+<ul><li>Use for loop when number of iterations is known beforehand, i.e. the number of times the loop body is needed to be executed is known.</li>
+<li>Use while loops where exact number of iterations is not known but the loop termination condition is known.</li>
+<li>Use do while loop if the code needs to be executed at least once like in Menu driven programs</li></ul>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

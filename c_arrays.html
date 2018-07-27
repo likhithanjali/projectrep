@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="c_overview.html">Overview</a></li><br>
+<li><a href="c_prostuct.html">Program Structures</a></li><br>
+<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
+<li><a href="c_datatypes.html">DataTypes</a></li><br>
+<li><a href="c_variables.html">Variables</a></li><br>
+<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
+<li><a href="c_operators.html">Operators</a></li><br>
+<li><a href="c_desisonmake.html">Desision Making</a></li><br>
+<li><a href="c_loops.html">Loops</a></li><br>
+<li><a href="c_functions.html">Functions</a></li><br>
+<li><a href="c_scope.html">Scope Rules</a></li><br>
+<li><a href="c_arrays.html">Arrays</a></li><br>
+<li><a href="c_pointers.html">Pointers</a></li><br>
+<li><a href="c_strings.html">Strings</a></li><br>
+<li><a href="c_structunion.html">Structures&Unions</a></li><br>
+<li><a href="c_ipop.html">Input&Output</a></li><br>
+<li><a href="c_fileio.html">File I/O </a></li><br>
+</ul>
+</nav>
+<article>
+ <h1 style="color:#000080">ARRAYS In C Programming</h1>
+<h2>Arrays</h2>
+<p>An array is a collection of data that holds fixed number of values of same type. For example: if you want to store marks of 100 students, you can create an array for it.</p>
+<p><h3>Representation of an array</h3></p>
+<img src="c_array1.png">
+<img src="c_array2.png">
+<p>The size and type of arrays cannot be changed after its declaration.</p>
+
+<p><h3>Arrays are of two types:</h3></p>
+
+<p>1.One-dimensional arrays</p>
+<p>2.Multidimensional arrays</p>
+<p><h3>How to declare arrays in c</h3></p>
+<img src=c_array3.png>
+<p><h4>Example</h4></p>
+<img src=c_array4.png>
+<p><h4>Elements of an Array and How to access them?</h4></p>
+<p>You can access elements of an array by indices.<p>
+
+</p>Suppose you declared an array mark as above. The first element is mark[0], second element is mark[1] and so on.</p>
+<img src="c_array5.png">
+<p></h4>Few key notes:</h4></p>
+<p>Arrays have 0 as the first index not 1. In this example, mark[0]</p>
+<p>If the size of an array is n, to access the last element, (n-1) index is used. In this example, mark[4]</p>
+<p>Suppose the starting address of mark[0] is 2120d. Then, the next address, a[1], will be 2124d, address of a[2] will be 2128d and so on. It's because the size of a float is 4 bytes.</p>
+<p><h4>How to initialize an array in C programming?</h4> </p>
+<p>It's possible to initialize an array during declaration. For example,</p>
+<img src="c_array6.png">
+<p>Another method to initialize array during declaration:</p>
+<img src="c_array7.png"><br>
+<img src="c_array8.png">
+<p>Here,</p>
+<img src="c_array8.png">
+<p>How to insert and print array elements?</p>
+<img src="c_array10.png">
+<p><h4>Example Array</h4></p>
+<img src="c_array11.png">
+<p><h4>Output</h4></p>
+<img src="c_array12.png">
+<p><h2><u>One dimensional Array in C</u></h2></p>
+<p>The variable allows us to store a single value at a time, what if we want to store roll no. of 100 students ? For this task, we have to declare 100 variables, then assign values to each of them. What if there are 10000 students or more ? As you can see declaring that many variables for one entity (i.e students) is not a good idea. In a situation like this arrays provide a better way to store data.</p>
+<p><h3>Syntax:</h3> datatype array_name[size];</p>
+<P><H3>datatype:</H3> It denotes the type of the elements in the array.</P>
+
+<P><H3>array_name:</h3> it is the name given to an array. It must be any valid identifier.<p>
+
+<p><h3>size:</h3> It is the number of elements an array can hold.</p>
+
+<p>here are some example of array declarations:</p>
+<img src="c_array13.png">
+<p>num is an array of type int, which can only store 100 elements of type int. temp is an array of type float, which can only store 20 elements of type float. ch is an array of type char, which can only store 50 elements of type char.</p>
+<p><h3>Note:</h3> When an array is declared it contains garbage values.</p>
+<p><h3>Processing 1-D arrays </h3></p>
+<p>The following program uses for loop to take input and print elements of a 1-D array.</p>  
+<pre style="color:#000080"><code>#include&lt;stdio.h&gt;
+
+int main()
+{
+    int arr[5], i;
+
+    for(i = 0; i &lt; 5; i++)
+    {
+        printf(&quot;Enter a[%d]: &quot;, i);
+        scanf(&quot;%d&quot;, &amp;arr[i]);
+    } 
+
+    printf(&quot;\nPrinting elements of the array: \n\n&quot;);
+
+    for(i = 0; i &lt; 5; i++)
+    {
+        printf(&quot;%d &quot;, arr[i]);
+    }
+
+    // signal to operating system program ran fine
+    return 0;
+}</code></pre>
+
+<p><strong>Expected Output:</strong></p>
+
+<pre class="language-none line-numbers"><code>Enter a[0]: 11
+Enter a[1]: 22
+Enter a[2]: 34
+Enter a[3]: 4
+Enter a[4]: 34
+
+Printing elements of the array:
+
+11 22 34 4 34</code></pre>
+
+<p><h3>**How it works ? **</h3></p>
+
+<p>In Line 5, we have declared an array of 5 integers and variable i of type int. Then a for loop is used to enter five elements into an array. In scanf() we have used & operator (& is also known as the address of operator) on element arr[i] of an array, just like we had done with variables of type int, float, char etc. Line 13 prints "Printing elements of the array" to the console. The second for loop prints all the elements of an array one by one.</p>
+<p><h2>Two Dimensional Array in C</h2></p>
+<p>The syntax declaration of 2-D array is not much different from 1-D array. In 2-D array, to declare and access elements of a 2-D array we use 2 subscripts instead of 1.</p>
+
+<p><h3>Syntax:</h3> datatype array_name[ROW][COL];</p>
+
+<p>The total number of elements in a 2-D array is ROW*COL. Let’s take an example.</p>
+<img src="c_array16.png">
+<p>This array can store 2*3=6 elements. You can visualize this 2-D array as a matrix of 2 rows and 3 columns.</p>
+<img src="c_array17.png">
+<p>The individual elements of the above array can be accessed by using two subscript instead of one. The first subscript denotes row number and second denotes column number. As we can see in the above image both rows and columns are indexed from 0. So the first element of this array is at arr[0][0] and the last element is at arr[1][2]. Here are how you can access all the other elements:</p>
+
+<p>arr[0][0] - refers to the first element arr[0][1] - refers to the second element arr[0][2] - refers to the third element arr[1][0] - refers to the fourth element arr[1][1] - refers to the fifth element arr[1][2] - refers to the sixth element</p>
+
+<p>If you try to access an element beyond valid ROW and COL , C compiler will not display any kind of error message, instead, a garbage value will be printed. It is the responsibility of the programmer to handle the bounds.</p>
+
+<p>arr[1][3] - a garbage value will be printed, because the last valid index of COL is 2 arr[2][3] - a garbage value will be printed, because the last valid index of ROW and COL is 1 and 2 respectively</p>
+
+<p>Just like 1-D arrays, we can only also use constants and symbolic constants to specify the size of a 2-D array.</p>
+
+<img src="c_array18.png">
+<p><h3>Processing elements of a 2-D array #</h3></p>
+<p>To process elements of a 2-D array, we use two nested loop. The outer for loop to loop through all the rows and inner for loop to loop through all the columns. The following program will clear everything.</p>
+<p style="color:#000080">#include&ltstdio.h><br>
+#define ROW 3<br>
+#define COL 4<br>
+
+<br>int main()
+<br>{
+    <br>int arr[ROW][COL], i, j;
+
+<br>    for(i = 0; i < ROW; i++)
+    <br>{
+        <br>for(j = 0; j < COL; j++)
+        <br>{
+            <br>printf("Enter arr[%d][%d]: ", i, j);
+            <br>scanf("%d", &arr[i][j]);
+        <br>}
+    <br>}
+
+<br>    printf("\nEntered 2-D array is: \n\n");
+
+<br>    for(i = 0; i < ROW; i++)
+    <br>{
+        <br>for(j = 0; j < COL; j++)
+        <br>{
+            <br>printf("%3d ", arr[i][j] );
+        <br>}
+     <br>   printf("\n");
+    <br>}
+    <br>// signal to operating system everything works fine
+   <br> return 0;
+<br>}
+<br><br>Expected Output:
+<br>Enter arr[0][0]: 11<br>
+Enter arr[0][1]: 35<br>
+Enter arr[0][2]: 73<br>
+Enter arr[0][3]: 831<br>
+Enter arr[1][0]: 3<br>
+Enter arr[1][1]: 40<br>
+Enter arr[1][2]: 31<br>
+Enter arr[1][3]: 93<br>
+Enter arr[2][0]: 35<br>
+Enter arr[2][1]: 10<br>
+Enter arr[2][2]: 52<br>
+Enter arr[2][3]: 81<br>
+
+Entered 2-D array is:
+
+<br> 11 35 73 831
+  <br>3 40 31  93
+ <br>35 10 52  81
+<p><h3>how it works?</h3></p>
+<p>There is nothing new in this previous program that deserves any explanation. We are just using two nested for loops. The first nested for loop takes input from the user. And the second for loop prints the elements of a 2-D array like a matrix.</p>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

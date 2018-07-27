@@ -1,0 +1,162 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article><h1 style="color:#000080">BASIC I/O Operations In C++ Programming</h1>
+<h2>Input & Output</h2>
+ <p>In every program, there is some data which is taken as input and generate the processed data as output following the <b>input > process > output</b> cycle. Therefore it is essential to know how to provide data as input and how to present the output in the desired form. C++ supports a rich set of I/O functions and operations to do this. As these functions use the advanced features of C++, programmers need to know a lot about them before implementing them in any program. It is to be noted that C++ supports all of C's rich sets of I/O functions. Programmers can use any of them within a C++ program. In this chapter, you will learn about how to manage the input/output capabilities of a C++ program.</p>
+<h3>basic input and output in c++</h3>
+<p>C does not have built-in input/output facilities. Instead, it left the I/O to the compiler as external library functions (such as printf and scanf) in stdio (standard input output) library. The ANSI C standard formalized these IO functions into Standard IO package (stdio.h). Likewise, C++ continues this approach and formalizes IO in iostream and fstream libraries.</p>
+<h3>features of io</h3>
+<ul><li>C++ IO is type safe.</li>
+<li>C++ IO operations are based on streams of bytes and are device independent.</li></ul>
+<h3>Streams in c++</h3>
+<p>C++ IO is based on streams, which are a sequence of bytes flowing in and out of the programs (just like water and oil flowing through a pipe). I/O systems in C++ are designed to work with a wide variety of devices including terminals, disks and tape drives. The input-output system supplies an interface to the programmer that is independent of the actual device being accessed. This interface is known as a stream. A stream is a sequence of bytes which acts either as a source from which input data can be obtained or as a destination to which output data can be sent. The source stream which provides data to the program is called the input stream and the destination stream which receives output from the program is called the output stream.</p>
+
+<h4>To perform input and output, a C++ program must follow the steps mentioned below:</h4>
+
+<ul><li>Construct a stream object.</li>
+<li>Connect (Associate) the stream object to an actual IO device</li>
+<li>Perform input/output operations on the stream, via the functions defined in the stream's public interface in a device-independent manner.</li>
+<li>Disconnect (Dissociate) the stream to the actual IO device (e.g., close the file).</li>
+<li>Free the stream object.</li></ul>
+<h3>Unformatted input/output operatations</h3>
+<p>You have already used the cin and cout (pre-defined in iostream file) for input and output of data of various types. This has been made possible by overloading the operators &lt&lt and &gt&gt to recognize all the basic C++ types.<p>
+<ul><li>cin standard input stream</li>
+<li>cout standard output stream</li></ul>
+<h4></h4>
+<table border="" width="400">
+<tr><td><pre>#include &ltiostream>
+using namespace std;
+
+void main()
+  {
+    int g;
+    cin>>g;
+    cout << "Output is: "<< g;
+  }</pre></td></tr></table>
+<h3>put() and get() Functions</h3>
+<p>The classes istream and ostream defines two member functions get() and put() respectively to handle single character input/output operations.</p>
+
+<h4>Get() function is of two types:</h4>
+
+<ul><li>get(char *)</li>
+<li>get(void)</ul></li>
+<p>Both of them can be used to fetch a character including a blank space, tab or new-line character.</p>
+<h3>Code snippet(reusable source code)</h3>
+<table border="" width="400">
+<tr><td><pre>char ch;
+cin.get(ch);
+ while(ch != '\n')
+  {
+    cout&lt&ltch;
+    cin.get(ch);
+  }</pre></td></tr></table>
+<p>Similarly, the function put(), a member of ostream class can be used to output a line of text character by character.</p>
+<h4>Example</h4>
+<table border="" width="400">
+<tr><td><pre>cout.put ('g');
+char ch;
+cout.put(ch);</pre></td></tr></table>
+<h3>getline() and writeline()</h3>
+<p>You can read and display lines of text more efficiently using the lie oriented input/output functions. They are:</p>
+
+<ul><li>getline()</li>
+<li>write()</li></ul>
+<p>The getline() function reads the entire line of texts that ends with a newline character. The general form of getline() is:</p>
+
+<table border="" width="400">
+<tr><td>cin.getline (line, size);</td></tr></table>
+<p>The write() function displays the entire line of text and the general form of writing this function is:</p>
+
+<table border="" width="400">
+<tr><td>cout.write (line, size);</td></tr></table>
+
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

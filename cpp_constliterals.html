@@ -1,0 +1,298 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article>
+ <h1 style="color:#000080">CONSTANTS & LITERALS In C++ Programming</h1>
+<h2>constants:<h2>
+<h3>There are two simple ways in C++ to define constants </h3>
+1.Using #define preprocessor.</br>
+2.Using const keyword.
+<h2>The #define Preprocessor:</h2>
+<p>Following is the form to use #define preprocessor to define a constant :
+<br>
+#define identifier value</p>
+<pre <code>Following example explains it in detail :
+#include&ltiostream>
+using namespace std;
+
+#define LENGTH 10   
+#define WIDTH  5
+#define NEWLINE '\n'
+
+int main() {
+   int area;  
+   
+   area = LENGTH * WIDTH;
+   cout << area;
+   cout << NEWLINE;
+   return 0;
+}</pre></code>
+<p>When the above code is compiled and executed, it produces the following result </p>
+50
+<h2>The const Keyword:</h2>
+<p>You can use const prefix to declare constants with a specific type as follows:<br>
+const type variable = value;</p>
+<pre <code>Following example explains it in detail :
+#include&ltiostream>
+using namespace std;
+int main() {
+   const int  LENGTH = 10;
+   const int  WIDTH  = 5;
+   const char NEWLINE = '\n';
+   int area;  
+   
+   area = LENGTH * WIDTH;
+   cout << area;
+   cout << NEWLINE;
+   return 0;
+}</pre></code>
+<p>When the above code is compiled and executed, it produces the following result<br>
+50<br>
+Note that it is a good programming practice to define constants in CAPITALS. 
+</p>
+<h2><b>literals:</b></h2>
+<p>Constants refer to fixed values that the program may not alter and they are called <b>literals.</b>
+<br>
+Constants can be of any of the basic data types and can be divided into Integer Numerals, Floating-Point Numerals, Characters, Strings and Boolean Values.
+Again, constants are treated just like regular variables except that their values cannot be modified after their definition.
+</p><h3><b>Integer Literals:</b></h3>
+<p>An integer literal can be a decimal, octal, or hexadecimal constant. A prefix specifies the base or radix: 0x or 0X for hexadecimal, 0 for octal, and nothing for decimal.<br>
+An integer literal can also have a suffix that is a combination of U and L, for unsigned and long, respectively. The suffix can be uppercase or lowercase and can be in any order.</p></br>
+<pre <code>Here are some examples of integer literals -
+
+212         // Legal
+215u        // Legal
+0xFeeL      // Legal
+078         // Illegal: 8 is not an octal digit
+032UU       // Illegal: cannot repeat a suffix
+Following are other examples of various types of Integer literals -
+
+85         // decimal
+0213       // octal
+0x4b       // hexadecimal
+30         // int
+30u        // unsigned int
+30l        // long
+30ul       // unsigned long</pre></code>
+<h3><b>Floating-point Literals:</b></h3>
+<p>A floating-point literal has an integer part, a decimal point, a fractional part, and an exponent part. You can represent floating point literals either in decimal form or exponential form.<br>
+
+While representing using decimal form, you must include the decimal point, the exponent, or both and while representing using exponential form, you must include the integer part, the fractional part, or both. The signed exponent is introduced by e or E.
+</p>
+<h4>Here are some examples of floating-point literals -
+</h4>
+3.14159       // Legal
+314159E-5L    // Legal
+510E          // Illegal: incomplete exponent
+210f          // Illegal: no decimal or exponent
+.e55          // Illegal: missing integer or fraction
+<h3><b>Boolean Literals:</b></h3>
+<p>There are two Boolean literals and they are part of standard C++ keywords -
+<br>
+A value of true representing true.
+<br>
+A value of false representing false.
+<br>
+You should not consider the value of true equal to 1 and value of false equal to 0.</p>
+
+<h3><b>Character Literals:</b></h3>
+<p>Character literals are enclosed in single quotes. If the literal begins with L (uppercase only), it is a wide character literal (e.g., L'x') and should be stored in wchar_t type of variable . Otherwise, it is a narrow character literal (e.g., 'x') and can be stored in a simple variable of char type.<br>
+
+A character literal can be a plain character (e.g., 'x'), an escape sequence (e.g., '\t'), or a universal character (e.g., '\u02C0').
+<br>
+There are certain characters in C++ when they are preceded by a backslash they will have special meaning and they are used to represent like newline (\n) or tab (\t). Here, you have a list of some of such escape sequence</p>	
+ 
+
+<table>
+  <tr>
+    <th>escape sequence</th>
+    <th>meaning</th>
+   
+  </tr>
+<tr>
+    <td>\\</td>
+    <td>\character</td>
+    
+  </tr>
+<tr>
+    <td>\'</td>
+    <td>'character</td>
+    
+  </tr>
+<tr>
+    <td>\"</td>
+    <td>"character</td>
+    </tr>
+<tr>
+    <td>\?</td>
+    <td>?character</td>
+    </tr>
+<tr>
+    <td>\a</td>
+    <td>alert or bell</td>
+    </tr>
+<tr>
+    <td>\b</td>
+    <td>backspace</td>
+    </tr>
+<tr>
+    <td>\f</td>
+    <td>form feed</td>
+    </tr>
+<tr>
+    <td>\n</td>
+    <td>newline</td>
+    </tr>
+<tr>
+    <td>\r</td>
+    <td>carriage return</td>
+    </tr>
+<tr>
+    <td>\t</td>
+    <td>horizontal tab</td>
+    </tr>
+<tr>
+    <td>\v</td>
+    <td>vertical tab</td>
+    </tr>
+<tr>
+    <td>\000</td>
+    <td>Octal number of one to three digits</td>
+    </tr>
+<tr>
+    <td>\xhh...</td>
+    <td>Octal number of one to three digits</td>
+    </tr>
+</table>
+
+
+
+
+
+ 
+<h3>Following is the example to show a few escape sequence characters </h3>
+
+<pre <code> 
+#include&ltiostream>
+using namespace std;
+
+int main() {
+   cout << "Hello\tWorld\n\n";
+   return 0;
+}</pre></code>
+<h3>When the above code is compiled and executed, it produces the following result </h3>
+
+<h4>Hello   World</h4>
+<h4>String Literals</h4>
+<p>String literals are enclosed in double quotes. A string contains characters that are similar to character literals: plain characters, escape sequences, and universal characters.
+<br>
+You can break a long line into multiple lines using string literals and separate them using whitespaces.<br>
+Here are some examples of string literals. All the three forms are identical strings.
+<br>
+"hello, dear"<br>
+"hello, \<br>dear"<br>
+"hello, " "d" "ear"<br>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="c_overview.html">Overview</a></li><br>
+<li><a href="c_prostuct.html">Program Structures</a></li><br>
+<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
+<li><a href="c_datatypes.html">DataTypes</a></li><br>
+<li><a href="c_variables.html">Variables</a></li><br>
+<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
+<li><a href="c_operators.html">Operators</a></li><br>
+<li><a href="c_desisonmake.html">Desision Making</a></li><br>
+<li><a href="c_loops.html">Loops</a></li><br>
+<li><a href="c_functions.html">Functions</a></li><br>
+<li><a href="c_scope.html">Scope Rules</a></li><br>
+<li><a href="c_arrays.html">Arrays</a></li><br>
+<li><a href="c_pointers.html">Pointers</a></li><br>
+<li><a href="c_strings.html">Strings</a></li><br>
+<li><a href="c_structunion.html">Structures&Unions</a></li><br>
+<li><a href="c_ipop.html">Input&Output</a></li><br>
+<li><a href="c_fileio.html">File I/O </a></li><br>
+</ul>
+</nav>
+<article>
+<h1 style="color:#000080";> CONSTANTS & LITERALS In C Programming</h1>
+<body>
+<p>Constants refer to fixed values that the program may not alter during its
+execution. These fixed values are also called literals.</p>
+<p>Constants can be of any of the basic data types like an integer constant, a
+floating constant, a character constant, or a string literal. There are enumeration
+constants as well.</p>
+<p>Constants are treated just like regular variables except that their values cannot
+be modified after their definition.</p>
+<p><h2>Integer Literals</h2></p>
+<p>An integer literal can be a decimal, octal, or hexadecimal constant. A prefix
+specifies the base or radix: 0x or 0X for hexadecimal, 0 for octal, and nothing for
+decimal.</p>
+An integer literal can also have a suffix that is a combination of U and L, for
+unsigned and long, respectively. The suffix can be uppercase or lowercase and
+can be in any order.</p>
+<p>Here are some examples of integer literals:<br></p>
+<img src="c_literal1.png"/>
+<p><h2>Floating-point Literals</h2></p>
+<p>A floating-point literal has an integer part, a decimal point, a fractional part, and
+an exponent part. You can represent floating point literals either in decimal form
+or exponential form.</p>
+<p>While representing decimal form, you must include the decimal point, the
+exponent, or both; and while representing exponential form, you must include
+the integer part, the fractional part, or both. The signed exponent is introduced
+by e or E.</p>																						
+<p>Here are some examples of floating-point literals:</p>
+<img src="c_literal2.png"/>
+<p><h2>Character Constants</h2></p>
+<p>Character literals are enclosed in single quotes, e.g., 'x' can be stored in a
+simple variable of char type.</p>
+<p>A character literal can be a plain character (e.g., 'x'), an escape sequence (e.g.,
+'\t'), or a universal character (e.g., '\u02C0').</p>
+<p>There are certain characters in C that represent special meaning when preceded
+by a backslash, for example, newline (\n) or tab (\t). Here, you have a list of
+such escape sequence codes:</p>
+<img src="c_literal3.png">
+<img src="c_literal4.png">
+<p>Following is the example to show a few escape sequence characters:</p>
+<img src="c_literal5.png">
+<p>When the above code is compiled and executed, it produces the following result:</p>
+<p><h3>Hello World</h3></p>
+<p><h2>String Literals</h2></p>
+<p>A "string literal" is a sequence of characters from the source character set enclosed in double quotation marks (" "). String literals are used to represent a sequence of characters which, taken together, form a null-terminated string. You must always prefix wide-string literals with the letter L.</p>
+<img src="c_literal6.png">
+<p><h2>Defining Constants</h2></p>
+<p>There are two simple ways in C to define constants:</p>
+<p>* Using #define preprocessor</p>
+<p>* Using const keyword</p>
+<p><h3>The #define Preprocessor</h3></p>
+Given below is the form to use #define preprocessor to define a constant:</p>
+<p>#define identifier value</p>
+</p>The following example explains it in detail:</p>
+<img src="c_literal7.png">
+<img src="c_literal8.png">
+<p>When the above code is compiled and executed, it produces the following result:</p>
+<p><h3>value of area : 50</h3></p>
+<p><h2>The const Keyword</h2></p>
+<p>You can use const prefix to declare constants with a specific type as follows:</p>
+<p>const type variable = value;<p>
+<p>The following example explains it in detail:</p>
+<img src="c_literal9.png">
+<p>When the above code is compiled and executed, it produces the following result:</p>
+<p><h3>value of area : 5</h3></p>
+<p>Note that it is a good programming practice to define constants in CAPITALS.</p>
+
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

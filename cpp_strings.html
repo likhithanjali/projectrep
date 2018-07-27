@@ -1,0 +1,305 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article><h1 style="color:#000080">STRINGS In C++ Programming</h1>
+
+<h2>Strings in Cpp</h2>
+<h3>C++ provides following two types of string representations</h3>
+
+<ol><list>The C-style character string.</list>
+<list>The string class type introduced with Standard C++.</list></ol>
+<h3>1.The C-Style Character String</h3>
+<p>The C-style character string originated within the C language and continues to be supported within C++. This string is actually a one-dimensional array of characters which is terminated by a null character '\0'. Thus a null-terminated string contains the characters that comprise the string followed by a null.</p>
+
+<p>The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello.</p>
+
+<table border="" width="400">
+<tr>
+<td>char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};</td></tr></table><p>
+If you follow the rule of array initialization, then you can write the above statement as follows
+
+char greeting[] = "Hello";</p></br>
+<img src="cpp_strings1.png"><br>
+<p>Actually, you do not place the null character at the end of a string constant. The C++ compiler automatically places the '\0' at the end of the string when it initializes the array.</br> Let us try to print above-mentioned string </p>
+<table border="" width="400">
+<tr>
+<td>
+<pre>
+
+#include &ltiostream>
+
+using namespace std;
+
+int main () {
+
+   char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+
+   cout &lt&lt "Greeting message: ";
+   cout &lt&lt greeting &lt&ltborde endl;
+
+   return 0;
+}</pre></td></tr></table>
+<p>When the above code is compiled and executed, it produces the following result</p>
+<table border="" width="400">
+<tr>
+<td>
+Greeting message: Hello</td></tr></table>
+<p>C++ supports a wide range of functions that manipulate null-terminated strings</p
+<head>
+<style>
+table
+{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<table>
+  <tr>
+    <th>sr.no</th>
+    <th>Function & Purpose</th>
+  
+  </tr>
+<tr>
+    <td>1</td>
+    <td>strcpy(s1, s2);
+
+Copies string s2 into string s1.</td>
+    
+  </tr>
+<tr>
+    <td>2</td>
+    <td>strcat(s1, s2);
+
+Concatenates string s2 onto the end of string s1.
+
+</td>
+    
+  </tr>
+<tr>
+    <td>3</td>
+    <td>strlen(s1);
+
+Returns the length of string s1.</td>
+    
+  </tr>
+
+<tr>
+    <td>4</td>
+    <td>strcmp(s1, s2);Returns 0 if s1 and s2 are the same; less than 0 if s1<s2; greater than 0 if s1>s2.</td>
+    
+  </tr>
+
+<tr>
+    <td>5</td>
+    <td>strchr(s1, ch);
+
+Returns a pointer to the first occurrence of character ch in string s1.</td>
+    
+  </tr>
+
+<tr>
+    <td>6</td>
+    <td>strstr(s1, s2);
+
+Returns a pointer to the first occurrence of string s2 in string s1.
+
+</td>
+    
+  </tr>
+</table>
+
+  
+  
+
+
+
+
+
+
+
+<h4>Following example makes use of few of the above-mentioned functions </h4>
+<table border="" width="400">
+<tr>
+<td>
+<pre>
+#include &ltiostream>
+#include &ltcstring>
+
+using namespace std;
+
+int main () {
+
+   char str1[10] = "Hello";
+   char str2[10] = "World";
+   char str3[10];
+   int  len ;
+
+   // copy str1 into str3
+   strcpy( str3, str1);
+   cout &lt&lt "strcpy( str3, str1) : " << str3 << endl;
+
+   // concatenates str1 and str2
+   strcat( str1, str2);
+   cout << "strcat( str1, str2): " << str1 << endl;
+
+   // total lenghth of str1 after concatenation
+   len = strlen(str1);
+   cout << "strlen(str1) : " << len << endl;
+
+   return 0;
+}</pre></tr></td></table>
+<p>When the above code is compiled and executed, it produces result something as follows </p>
+<table border="" width="400">
+<tr>
+<td>
+<pre>
+strcpy( str3, str1) : Hello
+strcat( str1, str2): HelloWorld
+strlen(str1) : 10</pre></tr></td></table>
+<h3>The String Class in C++:</h3>
+<p>The standard C++ library provides a string class type that supports all the operations mentioned above, additionally much more functionality.</p> <p>Let us check the following example.</p>
+<table border="" width="400">
+<tr>
+<td>
+<pre>
+#include &ltiostream>
+#include &ltstring>
+
+using namespace std;
+
+int main () {
+
+   string str1 = "Hello";
+   string str2 = "World";
+   string str3;
+   int  len ;
+
+   // copy str1 into str3
+   str3 = str1;
+   cout << "str3 : " << str3 << endl;
+
+   // concatenates str1 and str2
+   str3 = str1 + str2;
+   cout << "str1 + str2 : " << str3 << endl;
+
+   // total length of str3 after concatenation
+   len = str3.size();
+   cout << "str3.size() :  " << len << endl;
+
+   return 0;
+}</table>
+</tr>
+</td>
+</pre>
+<p>When the above code is compiled and executed, it produces result something as follows </p>
+<table border="" width="400">
+<tr>
+<td>
+<pre>
+str3 : Hello
+str1 + str2 : HelloWorld
+str3.size() :  10
+ </table>
+</tr>
+</td>
+</pre>
+
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

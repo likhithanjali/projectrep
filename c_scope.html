@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="c_overview.html">Overview</a></li><br>
+<li><a href="c_prostuct.html">Program Structures</a></li><br>
+<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
+<li><a href="c_datatypes.html">DataTypes</a></li><br>
+<li><a href="c_variables.html">Variables</a></li><br>
+<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
+<li><a href="c_operators.html">Operators</a></li><br>
+<li><a href="c_desisonmake.html">Desision Making</a></li><br>
+<li><a href="c_loops.html">Loops</a></li><br>
+<li><a href="c_functions.html">Functions</a></li><br>
+<li><a href="c_scope.html">Scope Rules</a></li><br>
+<li><a href="c_arrays.html">Arrays</a></li><br>
+<li><a href="c_pointers.html">Pointers</a></li><br>
+<li><a href="c_strings.html">Strings</a></li><br>
+<li><a href="c_structunion.html">Structures&Unions</a></li><br>
+<li><a href="c_ipop.html">Input&Output</a></li><br>
+<li><a href="c_fileio.html">File I/O </a></li><br>
+</ul>
+</nav>
+<article><h1 style="color:#000080">SCOPE RULES In C Programming</h1>
+<h1>Scope Rules</h1></head><arial>
+<body> <p>A scope in any programming is a region of the program where a defined variable can have its existence and beyond that variable it cannot be accessed. There are three places where variables can be declared in C programming language -</p>
+<ul>
+<li>Inside a function or a block which is called local variables.</li>
+<li>Outside of all functions which is called global variables.</li>
+<li>In the definition of function parameters which are called formal parameters.</li>
+</ul>
+<p>Let us understand what are local and global variables, and formal parameters.</p>
+<h2>Local Variables</h2>
+<p>Variables that are declared inside a function or block are called local variables. They can be used only by statements that are inside that function or block of code. Local variables are not known to functions outside their own. The following example shows how local variables are used. Here all the variables a, b, and c are local to main() function.</p> 
+<img src="c_srules1.png">
+<h2>Global Variables</h2>
+<p>Global variables are defined outside a function, usually on top of the program. Global variables hold their values throughout the lifetime of your program and they can be accessed inside any of the functions defined for the program.</p>
+<p>A global variable can be accessed by any function. That is, a global variable is available for use throughout your entire program after its declaration. The following program show how global variables are used in a program.</p>
+<img src="c_srules2.png">
+<p>A program can have same name for local and global variables but the value of local variable inside a function will take preference. Here is an example -<p>
+<img src="c_srules3.png">
+<p>When the above code is compiled and executed, it produces the following result -</p>
+<img src="c_srules4.png">
+<h2>Formal Parameters</h2>
+<p>Formal parameters, are treated as local variables with-in a function and they take precedence over global variables. Following is an example -</p>
+<img src="c_srules5.png">
+<p>When the above code is compiled and executed, it produces the following result -</p>
+<img src="c_srules6.png">
+<h2>Initializing Local and Global Variables</h2>
+<p>When a local variable is defined, it is not initialized by the system, you must initialize it yourself. Global variables are initialized automatically by the system when you define them as follows -</p>
+<img src="c_srules7.png">
+<p>It is a good programming practice to initialize variables properly, otherwise your program may produce unexpected results, because uninitialized variables will take some garbage value already available at their memory location.</p></arial>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

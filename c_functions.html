@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="c_overview.html">Overview</a></li><br>
+<li><a href="c_prostuct.html">Program Structures</a></li><br>
+<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
+<li><a href="c_datatypes.html">DataTypes</a></li><br>
+<li><a href="c_variables.html">Variables</a></li><br>
+<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
+<li><a href="c_operators.html">Operators</a></li><br>
+<li><a href="c_desisonmake.html">Desision Making</a></li><br>
+<li><a href="c_loops.html">Loops</a></li><br>
+<li><a href="c_functions.html">Functions</a></li><br>
+<li><a href="c_scope.html">Scope Rules</a></li><br>
+<li><a href="c_arrays.html">Arrays</a></li><br>
+<li><a href="c_pointers.html">Pointers</a></li><br>
+<li><a href="c_strings.html">Strings</a></li><br>
+<li><a href="c_structunion.html">Structures&Unions</a></li><br>
+<li><a href="c_ipop.html">Input&Output</a></li><br>
+<li><a href="c_fileio.html">File I/O </a></li><br>
+</ul>
+</nav>
+<article><h1 style="color:#000080">FUNCTIONS In C Programming</h1>
+ <p>A function is a group of statements that together perform a task. Every C
+program has at least one function, which is main(), and all the most trivial
+programs can define additional functions.</p>
+<p>You can divide up your code into separate functions. How you divide up your
+code among different functions is up to you, but logically the division is such
+that each function performs a specific task.</p>
+<p>A function declaration tells the compiler about a function's name, return type,
+and parameters. A function definition provides the actual body of the function.</p>
+</p>The C standard library provides numerous built-in functions that your program
+can call. For example, strcat() to concatenate two strings, memcpy() to copy
+one memory location to another location, and many more functions.</p>
+</p>A function can also be referred as a method or a sub-routine or a procedure, etc.</p>
+<p><h2>Defining a Function</h2></p>
+<p>The general form of a function definition in C programming language is as
+follows:</p>
+<IMG SRC="c_func1.PNG">
+<p>A function definition in C programming consists of a function header and a
+function body. Here are all the parts of a function:</p>
+<p><h3>* Return Type:</h3> A function may return a value. The return_type is the
+data type of the value the function returns. Some functions perform the
+desired operations without returning a value. In this case, the return_type
+is the keyword void.</p>
+<p><h3>* Function Name:</h3> This is the actual name of the function. The function
+name and the parameter list together constitute the function signature.</p>
+<p><h3>* Parameters:</h3> A parameter is like a placeholder. When a function is
+invoked, you pass a value to the parameter. This value is referred to as
+actual parameter or argument. The parameter list refers to the type,
+order, and number of the parameters of a function. Parameters are
+optional; that is, a function may contain no parameters.</p>
+<p><h3>* Function Body:</h3> The function body contains a collection of statements
+that define what the function does.</p>
+<p>Given below is the source code for a function called max(). This function takes
+two parameters num1 and num2 and returns the maximum value between the
+two:</p>
+<p><h3>Example</h3></p>
+<img src="c_func2.png"/>
+<p><h2><u>function declaration</u></h2></p>
+<p>A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function. The C standard library provides numerous built-in functions that your program can call.</p>
+<p><h3>Syntax of Function Declaration</h3></p>
+return_type function_name(type arg1, type arg2 .....);</p>
+<p><h3> For Example</h3></p>
+<p>Declaration of a function with no input parameters</p>
+<p>--->void printMatrix();</h3></p>
+
+<p>Declaration of a function with one input parameter and integer return type</p>
+<p>--->int isEvenNumber(int num);</p>
+
+<p>Declaration of a function with multiple input parameter and integer return type.</p>
+<p>--->int getSum(int num1, int num2);</p>
+
+<p>Declaration of a function with no input parameters and integer return type.</p>
+<p>--->int getRandomNumber() ;</p>
+<p><h3><u>Important Points about Function Declaration.</u></h3></p>
+<p>*Function declaration in C always ends with a semicolon.</p>
+
+<p>*By default the return type of a functi	on is integer(int) data type.</p>
+
+<p>*Function declaration is also known as function prototype.</p>
+
+<p>*Name of parameters are not compulsory in function declaration only their type is required. Hence following declaration is also valid.</p>
+int getSum(int, int);</p>
+
+<p>*If function definition is written before main function then function declaration is not required whereas, If function definition is written after main function then we must write function declaration before main function.</p>
+</head>
+<p><h2><u>calling function</u></h2></p>
+<p>The calling function is exactly what it sounds like - the function that calls your function. Consider this example:</p>
+<img src="c_func3.png"/>
+<p>In the above code snippet, fun2() is the calling function for fun1(). In general, a C program constitutes a chain of calling functions that have the main() at one end and the currently executing function at the other end. This chain (with intermediate parameter values and return types) is what constitutes a call stack.</p>
+<p><h2>Function Arguments</h2></p>
+<p>A function in C can be called either with arguments or without arguments. These function may or may not return values to the calling functions. All C functions can be called either with arguments or without arguments in a C program. Also, they may or may not return any values.</p>
+<p>While calling a function, the arguments can be passed to a function in two ways, Call by value and call by reference.</p>
+<img src="c_func4.png"/>
+<p><h2><u>call by value</u></h2></p>
+<p>The call by value method of passing arguments to a function copies the actual
+value of an argument into the formal parameter of the function. In this case,
+changes made to the parameter inside the function have no effect on the
+argument.</p>
+<p>By default, C programming uses call by value to pass arguments. In general, it
+means the code within a function cannot alter the arguments used to call the
+function.</p>
+<p><h3>Example</h3></p>
+<p>#include<stdio.h></p>
+
+<p>/* function declaration */int addition(int num1, int num2);</p>
+
+
+<p>int main()</p>
+
+<p>{</p>
+
+ <p>   /* local variable definition */    int answer;</p>
+    
+    <p>int num1 = 10;</p>
+
+    <p>int num2 = 5;</p>
+    
+    </p>/* calling a function to get addition value */    answer = addition(num1,num2);</p>
+
+   <p> printf("The addition of two numbers is: %d\n",answer);</p>
+    <p>return 0;</p>
+<p>}</p>
+
+<p>/* function returning the addition of two numbers */int addition(int a,int b)</p>
+<p>{</p>
+    <p>return a + b;<p>
+<p>}</p>
+<p><h3>Output</h3></p>
+<p>The addition of two numbers is: 15</p>
+<p><h2><u>Call By Referance</u></h2></p>
+<p>The call by reference method of passing arguments to a function copies the
+address of an argument into the formal parameter. Inside the function, the
+address is used to access the actual argument used in the call. It means the
+changes made to the parameter affect the passed argument.</p>
+<p>To pass a value by reference, argument pointers are passed to the functions just
+like any other value. So accordingly, you need to declare the function
+parameters as pointer types as in the following function swap(), which
+exchanges the values of the two integer variables pointed to, by their
+arguments.</p>
+<p><h3>Example</h3></p>
+<p>#include<stdio.h></p>
+
+<p>/* function declaration */int addition(int *num1, int *num2);</p>
+
+<p>int main()</p>
+<p>{</p>
+    <p>/* local variable definition */    int answer;</p>
+    <p>int num1 = 10;</p>
+    <p>int num2 = 5;</p>
+    
+    <p>/* calling a function to get addition value */    answer = addition(&num1,&num2);</p>
+
+    <p>printf("The addition of two numbers is: %d\n",answer);</p>
+    <p>return 0;</p>
+<p>}</p>
+
+<p>/* function returning the addition of two numbers */int addition(int *a,int *b)</p>
+<P>{<p>
+    <p>return *a + *b;</p>
+<p>}</p>
+<p><h3>Output</h3></p>
+<P>The addition of two numbers is: 15</p>
+
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

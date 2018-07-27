@@ -1,0 +1,284 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article><h1 style="color:#000080">STORAGE CLASSES In C++ Programming</h1>
+<h2>Storage class</h2>
+<p> Storage class of a variable defines the lifetime and visibility of a variable. Lifetime means the duration till which the variable remains active and visibility defines in which module of the program the variable is accessible.</p> 
+<p>There are five types of storage classes in C++. They are:</p>
+
+<ul><li>Automatic</li>
+<li>External</li>
+<li>Static</li>
+<li>Register</li>
+<li>Mutable</li></ul>
+<img src="cpp_storage1.png">
+<p><h2>1. Automatic Storage Class</h2></p>
+<p>Automatic storage class assigns a variable to its default storage type. auto keyword is used to declare automatic variables. However, if a variable is declared without any keyword inside a function, it is automatic by default. This variable is visible only within the function it is declared and its lifetime is same as the lifetime of the function as well. Once the execution of function is finished, the variable is destroyed.</p>
+<h4>Syntax of Automatic Storage Class Declaration</h4>
+<table border=""width=400>
+<tr><td>datatype var_name1= value;<br>
+or<br>
+auto datatype var_name1 = value;
+</tr></td><table>
+<h4>Example of Automatic Storage Class</h4>
+<table border=""width=400>
+<tr><td>auto int x;<br>
+float y = 5.67;</td></tr></table>
+<p><h2>2. External Storage Class</h2></p>
+<p>External storage class assigns variable a reference to a global variable declared outside the given program. extern keyword is used to declare external variables. They are visible throughout the program and its lifetime is same as the lifetime of the program where it is declared. This visible to all the functions present in the program.</p>
+
+<h4>Syntax of External Storage Class Declaration</h4>
+<table border=""width=400>
+<tr><td>extern datatype var_name1;<br>extern datatype var_name1;</td></tr></table>
+<h4>Example</h4>
+<table border=""width=400>
+<tr><td>extern float var1;</td></tr></table>
+<p><h4>Example of External Storage Class</h4></p>
+<p> C++ program to create and use external storage.
+
+File: sub.cpp</p>
+<table border=""width=400>
+<tr><td><pre>File: sub.cpp
+int test=100;  // assigning value to test
+
+void multiply(int n)
+{
+    test=test*n;
+}</pre></tr></td></table><br>
+<table border=""width=400>
+<tr><td><pre>File: main.cpp
+#include&ltiostream&gt
+#include "sub.cpp"  // includes the content of sub.cpp
+using namespace std;
+
+extern int test;  // declaring test
+
+int main()
+{
+    cout<<test<<endl;
+    multiply(5);
+    cout<<test<<endl;
+    return 0;
+}</pre></tr></td></table>
+<p>A variable test is declared as external in main.cpp. It is a global variable and it is assigned to 100 in sub.cpp. It can be accessed in both files. The function multiply() multiplies the value of test with the parameter passed to it while invoking it. The program performs the multiplication and changes the global variable test to 500.</p>
+<p><h4>Note:</h4> Run the main.cpp program<b>(output)</b></p>
+<table border=""width=400>
+<tr><td>100<br>
+500</tr></td></table>
+<p><h2>3. Static Storage Class</h2></p>
+<p>Static storage class ensures a variable has the visibility mode of a local variable but lifetime of an external variable. It can be used only within the function where it is declared but destroyed only after the program execution has finished. When a function is called, the variable defined as static inside the function retains its previous value and operates on it. This is mostly used to save values in a recursive function.</p>
+
+<h4>Syntax of Static Storage Class Declaration</h4>
+<table border=""width=400>
+<tr><td>static datatype var_name1 [= value];</tr				></td></table>
+<h4>For Example</h4>
+<table border=""width=400>
+<tr><td>static int x = 101;<br>
+static float sum;</tr></td></table>
+<p><h2>4. Register Storage Class</h2></p>
+<p>Register storage assigns a variable's storage in the CPU registers rather than primary memory. It has its lifetime and visibility same as automatic variable. The purpose of creating register variable is to increase access speed and makes program run faster. If there is no space available in register, these variables are stored in main memory and act similar to variables of automatic storage class. So only those variables which requires fast access should be made register.</p>
+
+<h4>Syntax of Register Storage Class Declaration</h4>
+<table border=""width=400>
+<tr><td>register datatype var_name1 [= value];</tr></td></table>
+<table border=""width=400>
+<h4>For Example</h4>
+<tr><td>register int id;<br>
+register char a;</tr></td></table>
+<p><h4>Example of Storage Class</h4></p>
+<p> C++ program to create automatic, global, static and register variables.</p>
+<table border=""width=400>
+<tr><td><pre>#include&ltiostream>
+using namespace std;
+
+int g;    //global variable, initially holds 0
+
+void test_function()
+{
+    static int s;    //static variable, initially holds 0
+    register int r;    //register variable
+    r=5;
+    s=s+r*2;
+    cout&lt&lt"Inside test_function"&lt&ltendl;
+    cout&lt&lt"g = "&lt&ltg&lt&ltendl;
+    cout&lt&lt"s = "&lt&lts&lt&ltendl;
+    cout&lt&lt"r = "&lt&ltr&lt&ltendl;
+}
+
+int main()
+{
+    int a;    //automatic variable
+    g=25;
+    a=17;
+    test_function();
+    cout&lt&lt"Inside main"&lt&ltendl;
+    cout&lt&lt"a = "&lt&lta&lt&ltendl;
+    cout&lt&lt"g = "&lt&ltg&lt&ltendl;
+    test_function();
+    return 0;
+}</pre></tr></td></table>
+<p>In the above program, g is a global variable, s is static, r is register and a is automatic variable. We have defined two function, first is main() and another is test_function(). Since g is global variable, it can be used in both function. Variables r and s are declared inside test_function() so can only be used inside that function. However, s being static isn't destroyed until the program ends. When test_function() is called for the first time, r is initialized to 5 and the value of s is 10 which is calculated from the statement,</p>
+<table border=""width=400>
+<tr><td>s=s+r*2;</tr></td></table>
+<p>After the termination of test_function(), r is destroyed but s still holds 10. When it is called second time, r is created and initialized to 5 again. Now, the value of s becomes 20 since s initially held 10. Variable a is declared inside main() and can only be used inside main().</p>
+<h4>Output</h4>
+<table border=""width=400>
+<tr><td><pre>Inside test_function
+g = 25
+s = 10
+r = 5
+Inside main
+a = 17
+g = 25
+Inside test_function
+g = 25
+s = 20
+r = 5</pre></tr></td></table>
+<p><h2>5. Mutable Storage Class</h2></p>
+<p>In C++, a class object can be kept constant using keyword const. This doesn't allow the data members of the class object to be modified during program execution. But, there are cases when some data members of this constant object must be changed. For example, during a bank transfer, a money transaction has to be locked such that no information could be changed but even then, its state has be changed from - started to processing to completed. In those cases, we can make these variables modifiable using a mutable storage class.<p>
+
+<h4>Syntax for Mutable Storage Class Declaration</h4>
+<table border=""width=400>
+<tr><td>mutable datatype var_name1;
+</tr></td></table><br>
+<table border=""width=400>
+<h4>For Example</h4>
+<tr><td>mutable int x;<br>
+mutable char y;
+</tr></td></table>
+<h4>Example of Mutable Storage Class</h4>
+<p> C++ program to create mutable variable.</p>
+<table border=""width=400>
+<tr><td><pre>#include&ltiostream>
+using namespace std;
+
+class test
+{
+    mutable int a;
+    int b;
+    public:
+        test(int x,int y)
+        {
+            a=x;
+            b=y;
+        }
+        void square_a() const
+        {
+            a=a*a;
+        }
+        void display() const
+        {
+            cout&lt&lt"a = "&lt&lta&lt&ltendl;
+            cout&lt&lt"b = "&lt&ltb&lt&ltendl;
+        }
+};
+
+int main()
+{
+    const test x(2,3);
+    cout&lt&lt"Initial value"&lt&ltendl;
+    x.display();
+    x.square_a();
+    cout&lt&lt"Final value"&lt&ltendl;
+    x.display();
+    return 0;
+}</pre></tr></td></table>
+<p>A class test is defined in the program. It consists of a mutable data member a. A constant object x of class test is created and the value of data members are initialized using user-defined constructor. Since, b is a normal data member, its value can't be changed after initialization. However a being mutable, its value can be changed which is done by invoking square_a() method. display() method is used to display the value the data members.</p>
+<h4>Output</h4>
+<table border=""width=400>
+<tr><td><pre>Initial value
+a = 2
+b = 3
+Final value
+a = 4
+b = 3</pre></tr></td></table>
+
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

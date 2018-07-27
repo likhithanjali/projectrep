@@ -1,0 +1,131 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}body
+{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="c_overview.html">Overview</a></li><br>
+<li><a href="c_prostuct.html">Program Structures</a></li><br>
+<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
+<li><a href="c_datatypes.html">DataTypes</a></li><br>
+<li><a href="c_variables.html">Variables</a></li><br>
+<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
+<li><a href="c_operators.html">Operators</a></li><br>
+<li><a href="c_desisonmake.html">Desision Making</a></li><br>
+<li><a href="c_loops.html">Loops</a></li><br>
+<li><a href="c_functions.html">Functions</a></li><br>
+<li><a href="c_scope.html">Scope Rules</a></li><br>
+<li><a href="c_arrays.html">Arrays</a></li><br>
+<li><a href="c_pointers.html">Pointers</a></li><br>
+<li><a href="c_strings.html">Strings</a></li><br>
+<li><a href="c_structunion.html">Structures&Unions</a></li><br>
+<li><a href="c_ipop.html">Input&Output</a></li><br>
+<li><a href="c_fileio.html">File I/O </a></li><br>
+</ul>
+</nav>
+<article>
+<h1 style="color:#000080";>BASIC SYNTAXES In C Programming</h1> 	 	
+<p>You have seen the basic structure of a C program, so it will be easy to
+understand other basic building blocks of the C programming language.</p>
+<h2>Tokens in C</h2>
+<p>A C program consists of various tokens and a token is either a keyword, an
+identifier, a constant, a string literal, or a symbol. For example, the following C
+statement consists of five tokens:<br></p>
+<p>printf("Hello, World! \n");</p>
+<p><h3>The individual tokens are:</h3>
+printf<br>(<br>"Hello, World! \n"<br>)<br>;</p>
+<h2>Semicolons</h2>
+<p>In a C program, the semicolon is a statement terminator. That is, each individual
+statement must be ended with a semicolon. It indicates the end of one logical
+entity.</p>
+<h3>Given below are two different statements:</h3>
+<p>printf("Hello, World! \n");<br>return 0;</p>
+<h2>Comments</h2>
+<p>Comments are like helping text in your C program and they are ignored by the
+compiler. They start with /* and terminate with the characters */ as shown
+below:</b></p>
+<p>/* my first program in C */</p>
+<p>You cannot have comments within comments and they do not occur within a
+string or character literals.</p>
+<h2>Identifiers</h2>
+<p>A C identifier is a name used to identify a variable, function, or any other userdefined
+item. An identifier starts with a letter A to Z, a to z, or an underscore ‘_’
+followed by zero or more letters, underscores, and digits (0 to 9).</p>
+<b>it does not allow punctuation characters such as @, $, and % within identifiers.</b><br>
+<p>C is a case-sensitive programming language. Thus, Manpower and manpower
+are two different identifiers in C. Here are some examples of acceptable
+identifiers:</p>
+<p>mohd zara abc move_name a_123</p>
+<p>myname50 _temp j a23b9 retVal</p>
+<h2>Keywords</h2>
+<p>The following list shows the reserved words in C. These reserved words may not
+be used as constants or variables or any other identifier names.</p>
+<img src="c_basicsyntax1.png"/>
+<h2>Whitespace in C</h2>
+<p>A line containing only whitespace, possibly with a comment, is known as a blank
+line, and a C compiler totally ignores it.</p>
+<p><b>Whitespace is the term used in C to describe blanks, tabs, newline characters
+and comments. Whitespace separates one part of a statement from another and
+enables the compiler to identify where one element in a statement, such as int,
+ends and the next element begins. Therefore, in the following statement:</b><br>int age;<br>
+<p><b>there must be at least one whitespace character (usually a space) between int
+and age for the compiler to be able to distinguish them. On the other hand, in
+the following statement:</b><br></p><p>fruit = apples + oranges; // get the total fruit<br></p>
+<p>no whitespace characters are necessary between fruit and =, or between = and
+apples, although you are free to include some if you wish to increase readability<br></p>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+
+ 

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="c_overview.html">Overview</a></li><br>
+<li><a href="c_prostuct.html">Program Structures</a></li><br>
+<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
+<li><a href="c_datatypes.html">DataTypes</a></li><br>
+<li><a href="c_variables.html">Variables</a></li><br>
+<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
+<li><a href="c_operators.html">Operators</a></li><br>
+<li><a href="c_desisonmake.html">Desision Making</a></li><br>
+<li><a href="c_loops.html">Loops</a></li><br>
+<li><a href="c_functions.html">Functions</a></li><br>
+<li><a href="c_scope.html">Scope Rules</a></li><br>
+<li><a href="c_arrays.html">Arrays</a></li><br>
+<li><a href="c_pointers.html">Pointers</a></li><br>
+<li><a href="c_strings.html">Strings</a></li><br>
+<li><a href="c_structunion.html">Structures&Unions</a></li><br>
+<li><a href="c_ipop.html">Input&Output</a></li><br>
+<li><a href="c_fileio.html">File I/O </a></li><br>
+</ul>
+</nav>
+<article><h1 style="color:#000080">FILE I/O In C Programming</h1>
+ <p><h2>File input/output</h2></p>
+<p>A file represents a sequence of bytes on the disk where a group of related data is stored. File is created for permanent storage of data. It is a ready made structure.</p>
+<p>For C File I/O you need to use a FILE pointer, which will let the program keep track of the file being accessed. (You can think of it as the memory address of the file or the location of the file). </p>
+<p><h4>For Example</h4></p>
+<table border=""height="50"width="700">
+<tr><td>FILE *fp;</td></tr></table>
+<p><h4><u>fopen</u></h4></p>
+<p>To open a file you need to use the fopen function, which returns a FILE pointer. Once you've opened a file, you can use the FILE pointer to let the compiler perform input and output functions on the file.</p>
+<table border=""height="50"width="700">
+<tr><td>FILE *fopen(const char *filename, const char *mode);</td></tr></table>
+<p>In the filename, if you use a string literal as the argument, you need to remember to use double backslashes rather than a single backslash as you otherwise risk an escape character such as \t. Using double backslashes \\ escapes the \ key, so the string works as it is expected. Your users, of course, do not need to do this! It's just the way quoted strings are handled in C and C++.</p>
+<p><h3><u>fopen modes</u></h3></p>
+<p>The allowed modes for fopen are as follows:</p>
+<table border=""height="100"width="700">
+<tr><td>r  - open for reading<br>
+w  - open for writing (file need not exist)<br>
+a  - open for appending (file need not exist)<br>
+r+ - open for reading and writing, start at beginning<br>
+w+ - open for reading and writing (overwrite file)<br>
+a+ - open for reading and writing (append if file exists)</td></tr></table>
+<p>Note that it's possible for fopen to fail even if your program is perfectly correct: you might try to open a file specified by the user, and that file might not exist (or it might be write-protected). In those cases, fopen will return 0, the NULL pointer.</p>
+<table border=""height="50"width="700">
+<tr><td>FILE *fp;<br>
+fp=fopen("c:\\test.txt", "r");</td></tr></table> 
+<p>This code will open test.txt for reading in text mode. To open a file in a binary mode you must add a b to the end of the mode string; for example, "rb" (for the reading and writing modes, you can add the b either after the plus sign - "r+b" - or before - "rb+")</p>
+<p><h4>fclose</h4></p>
+<p>When you're done working with a file, you should close it using the function</p>
+<table border=""height="50"width="700">
+<tr><td>FILE *fopen(const char int fclose(FILE *a_file);</td></tr></table>
+<p>fclose returns zero if the file is closed successfully.</p>
+
+<p>An example of fclose is</p>
+<table border=""height="50"width="700">
+<tr><td>FILE fclose(fp);</td></tr></table>
+<p><h3><u>Reading and writing with fprintf, fscanf fputc, and fgetc</u></h3></p>
+<p>To work with text input and output, you use fprintf and fscanf, both of which are similar to their friends printf and scanf except that you must pass the FILE pointer as first argument. For example:</p>
+<table border=""height="50"width="700">
+<tr><td>FILE *fp;<br>
+fp=fopen("c:\\test.txt", "w");<br>
+fprintf(fp, "Testing...\n");</td></tr></table>
+<p>It is also possible to read (or write) a single character at a time--this can be useful if you wish to perform character-by-character input (for instance, if you need to keep track of every piece of punctuation in a file it would make more sense to read in a single character than to read in a string at a time.) The fgetc function, which takes a file pointer, and returns an int, will let you read a single character from a file:</p>
+<table border=""height="50"width="700">
+<tr><td>int fgetc (FILE *fp);</td></tr></table>
+<p>Notice that fgetc returns an int. What this actually means is that when it reads a normal character in the file, it will return a value suitable for storing in an unsigned char (basically, a number in the range 0 to 255). On the other hand, when you're at the very end of the file, you can't get a character value--in this case, fgetc will return "EOF", which is a constant that indicates that you've reached the end of the file. To see a full example using fgetc in practice, take a look at the example here.</p> 
+
+<p>The fputc function allows you to write a character at a time--you might find this useful if you wanted to copy a file character by character. It looks like this:</p>
+<table border=""height="50"width="700">
+<tr><td>int fputc( int c, FILE *fp );</td></tr></table>
+<p>Note that the first argument should be in the range of an unsigned char so that it is a valid character. The second argument is the file to write to. On success, fputc will return the value c, and on failure, it will return EOF.</p>
+
+
+<p><h3><u>Binary file I/O - fread and fwrite</u></h3></p>
+<p>For binary File I/O you use fread and fwrite.</p>
+
+<p>The declarations for each are similar:</p>
+<table border=""height="50"width="700">
+<tr><td>size_t fread(void *ptr, size_t size_of_elements, size_t number_of_elements, FILE *a_file);<br>
+size_t fwrite(const void *ptr, size_t size_of_elements, size_t number_of_elements, FILE *a_file);</td></tr></table>
+<p>Both of these functions deal with blocks of memories - usually arrays. Because they accept pointers, you can also use these functions with other data structures; you can even write structs to a file or a read struct into memory.</p>
+
+<p>Let's look at one function to see how the notation works.</p>
+
+<p>fread takes four arguments. Don't be confused by the declaration of a void *ptr; void means that it is a pointer that can be used for any type variable. The first argument is the name of the array or the address of the structure you want to write to the file. The second argument is the size of each element of the array; it is in bytes. For example, if you have an array of characters, you would want to read it in one byte chunks, so size_of_elements is one. You can use the sizeof operator to get the size of the various datatypes; for example, if you have a variable int x; you can get the size of x with sizeof(x);. This usage works even for structs or arrays. E.g., if you have a variable of a struct type with the name a_struct, you can use sizeof(a_struct) to find out how much memory it is taking up.</p>
+
+<p><h4>For Example</h4> </p>
+<table border=""height="50"width="700">
+<tr><td>sizeof(int);</td></tr></table>
+<p>The third argument is simply how many elements you want to read or write; for example, if you pass a 100 element array, you want to read no more than 100 elements, so you pass in 100.</p>
+
+<p>The final argument is simply the file pointer we've been using. When fread is used, after being passed an array, fread will read from the file until it has filled the array, and it will return the number of elements actually read. If the file, for example, is only 30 bytes, but you try to read 100 bytes, it will return that it read 30 bytes. To check to ensure the end of file was reached, use the feof function, which accepts a FILE pointer and returns true if the end of the file has been reached.</p>
+
+<p>fwrite is similar in usage, except instead of reading into the memory you write from memory into a file.</p>
+
+<p><h4>For example,<h4></p>
+<table border=""height="50"width="700">
+<tr><td>FILE *fp;
+
+fp=fopen("c:\\test.bin", "wb");
+
+char x[10]="ABCDEFGHIJ";
+
+fwrite(x, sizeof(x[0]), sizeof(x)/sizeof(x[0]), fp);</td></tr></table>
+              
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

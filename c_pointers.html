@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}   
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="c_overview.html">Overview</a></li><br>
+<li><a href="c_prostuct.html">Program Structures</a></li><br>
+<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
+<li><a href="c_datatypes.html">DataTypes</a></li><br>
+<li><a href="c_variables.html">Variables</a></li><br>
+<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
+<li><a href="c_operators.html">Operators</a></li><br>
+<li><a href="c_desisonmake.html">Desision Making</a></li><br>
+<li><a href="c_loops.html">Loops</a></li><br>
+<li><a href="c_functions.html">Functions</a></li><br>
+<li><a href="c_scope.html">Scope Rules</a></li><br>
+<li><a href="c_arrays.html">Arrays</a></li><br>
+<li><a href="c_pointers.html">Pointers</a></li><br>
+<li><a href="c_strings.html">Strings</a></li><br>
+<li><a href="c_structunion.html">Structures&Unions</a></li><br>
+<li><a href="c_ipop.html">Input&Output</a></li><br>
+<li><a href="c_fileio.html">File I/O </a></li><br>
+</ul>
+</nav>
+<article> 
+<h1 style="color:#000080">POINTERS In C Programming</h1>
+<h2><u>pointers</u></h2>
+<p>Pointers in C language is a variable that stores/points the address of another variable. A Pointer in C is used to allocate memory dynamically i.e. at run time. The pointer variable might be belonging to any of the data type such as int, float, char, double, short etc.<br>
+Pointers are also variables and play a very important role in C programming language.</p> <h4>They are used for several reasons, such as:</h4>
+<p>Strings<br>Dynamic memory allocation<br>Sending function arguments by reference<br>Building complicated data structures<br>Pointing to functions<br>Building special data structures (i.e. Tree, Tries, etc...)<br>And many more.</p>
+<h3>What is a pointer?</h3>
+<p>A pointer is essentially a simple integer variable which holds a memory address that points to a value, instead of holding the actual value itself.</p>
+<p>The computer's memory is a sequential store of data, and a pointer points to a specific part of the memory. Our program can use pointers in such a way that the pointers point to a large amount of memory - depending on how much we decide to read from that point on.</p>
+<table border="" width="400">
+<tr><td>type *var-name;</td></tr></table>
+<p>Here, the type is the pointer’s base type; it must be a valid C data type, and var-name is the name of the pointer variable. The asterisk * used to declare a pointer is the same asterisk used for multiplication. However, in this statement, the asterisk is being used to designate a variable as a pointer. Take a look at some of the valid pointer declarations -</p>
+ <table border="" width="400"><tr><td><pre>
+int *ip;         /* pointer to an integer */ 
+double *dp;      /* pointer to a double */ 
+float *fp;       /* pointer to a float */ 
+char *ch;         /* pointer to a character*/</pre>
+</td></tr></table>
+<p>The actual data type of the value of all pointers, whether integer, float, character, or otherwise, is
+the same, a long hexadecimal number that represents a memory address. The only difference
+between pointers of different data types is the data type of the variable or constant that the
+pointer points to.</p>
+<h4>How to use Pointers?</h4>
+<p>There are few important operations, which we will do with the help of pointers very frequently. a we
+define a pointer variable b assign the address of a variable to a pointer and c finally access the
+value at the address available in the pointer variable. This is done by using unary operator * that
+returns the value of the variable located at the address specified by its operand. Following</p>
+<h4>example makes use of these operations:</h4>
+<table border=""  width="400">
+<tr><td><pre>#include &ltstdio.h>
+int main ()
+{
+int var = 20; /* actual variable declaration */
+int *ip; /* pointer variable declaration */
+ip = &var; /* store address of var in pointer variable*/
+printf("Address of var variable: %x\n", &var );
+/* address stored in pointer variable */
+printf("Address stored in ip variable: %x\n", ip );
+/* access the value using the pointer */
+printf("Value of *ip variable: %d\n", *ip );
+return 0;
+}
+</pre></tr></td></table> 
+<p>When the above code is compiled and executed, it produces result something as follows:</p>
+<table border=""  width="400">
+<tr><td><pre>Address of var variable: bffd8b3c
+Address stored in ip variable: bffd8b3c
+Value of *ip variable: 20</pre></td></tr></table>
+<p><h4>NULL Pointers in C</h4></p>
+<p>It is always a good practice to assign a NULL value to a pointer variable in case you do not have
+exact address to be assigned. This is done at the time of variable declaration. A pointer that is
+assigned NULL is called a null pointer.</p>
+<p>The NULL pointer is a constant with a value of zero defined in several standard libraries. Consider
+the following program:</p>
+<table border=""  width="400">
+<tr><td><pre>#include&ltstdio.h>
+int main ()
+{
+int *ptr = NULL;
+printf("The value of ptr is : %x\n", ptr );
+return 0;
+}</pre></td></tr></table>
+<p>When the above code is compiled and executed, it produces the following result:</p>
+<table border=""  width="400">
+<tr><td>The value of ptr is 0</td></tr></table>
+<p>On most of the operating systems, programs are not permitted to access memory at address 0
+because that memory is reserved by the operating system. However, the memory address 0 has
+special significance; it signals that the pointer is not intended to point to an accessible memory
+location. But by convention, if a pointer contains the null zero value, it is assumed to point to
+nothing.</p>
+<h4>To check for a null pointer you can use an if statement as follows:</h4>
+<table border=""  width="400">
+<tr><td>if(ptr) /* succeeds if p is not null */<br>
+if(!ptr) /* succeeds if p is null */</td></tr></table>
+<p><h3>C Pointers in Detail:</h3></p>
+<p>
+<h3>Types Of Pointers In C Programming</h3></p>
+<p>* NULL Pointer</br>
+ * Dangling Pointer<br>
+* Generic Pointers</br>
+* Wild Pointer</br>
+* Complex Pointers</br>
+* Near Pointer</br>
+* Far Pointer</br>
+* Huge Pointers</p>
+</h3>List Of Pointers In C Programming</h3>
+<h4>1. Null Pointer</h4> 
+<ul><li>NULL Pointer is a pointer which is pointing to nothing.</li>
+<li>NULL pointer points the base address of the segment.</li>
+<li>In case, if you don’t have address to be assigned to pointer then you can simply use NULL</li>
+<li>Pointer which is initialized with NULL value is considered as a NULL pointer.</li>
+<li>NULL is macro constant defined in following header files –</li></ul>
+<pre>
+	-->stdio.h
+	-->alloc.h	
+	-->mem.h
+	-->stddef.h
+	-->stdlib.h</pre>
+<h3>Defining NULL Value</h3>
+<table border=""  width="400">
+<tr><td>#define NULL 0</td></tr></table>
+<h4>Example</h4>
+<table border=""  width="400">
+<tr><td><pre>#include&ltstdio.h>
+int main()
+{
+   int  *ptr = NULL;
+   printf("The value of ptr is %u",ptr);
+
+   return 0;
+}</pre></tr></td></table>
+<h4>Output</h4>
+<table border=""  width="400">
+<tr><td>The value of ptr is 0</td></tr></table>
+<h4>2. Dangling Pointer</h4>
+<ul><li>Dangling pointers arise when an object is deleted or de-allocated, without modifying the value of the pointer, so that the pointer still points to the memory location of the de-allocated memory.</li>
+<li>In short, pointer pointing to a non-existing memory location is called dangling pointer.</li></ul>
+<h4>Examples of Dangling Pointer</h4>
+<p>There are different ways where Pointer acts as a dangling pointer.</p>
+
+<h4>Way 1 : Using free or de-allocating memory</h4>
+<table border=""  width="400">
+<tr><td><pre>#include&ltstdlib.h>
+{
+    char *ptr = malloc(Constant_Value);
+    .......
+    .......
+    .......
+    free (ptr);      /* ptr now becomes a dangling pointer */
+}</pre></td></tr></table>
+<p>We have declared the character pointer in the first step. After execution of some statements, we have the de-allocated memory which is allocated previously for the pointer.</p>
+<p>As soon as memory is de-allocated for pointer, pointer becomes dangling pointer</p>
+<p><h3>Way 2 : Out of Scope</h4></p>
+<table border=""  width="400">
+<tr><td><pre>
+#include&ltstdlib.h>
+void main()
+ {
+   char *ptr = NULL;
+   .....
+   .....
+   {
+       char ch;
+       ptr = &ch;
+   } 
+   .....   /* dp is now a dangling pointer */
+}</pre></td></tr></table>
+<ul><li>Character Pointer is Declared in the first Step.</li>
+<li>Pointer Variable ‘ptr’ is pointing to Character Variable ‘ch’ declared in the inner block.</li>
+<li>As character variable is non-visible in Outer Block, then Pointer is Still Pointing to Same Invalid memory location in Outer block, then Pointer becomes “Dangling”.</li></ul>
+<h4>3. Generic Pointers</h4>
+<p>When a variable is declared as being a pointer to type void, it is known as a generic pointer. Since you cannot have a variable of type void, the pointer will not point to any data and therefore cannot be dereferenced. It is still a pointer though, to use it you just have to cast it to another kind of pointer first. Hence the term Generic pointer.</p>
+<p>This is very useful when you want a pointer to point to data of different types at different times.
+<p><h4>Example of Generic Pointer</h4>
+<p>Here is some code using a void pointer:</p>
+<table border=""  width="400">
+<tr><td><pre>
+int main()
+{
+  int i;
+  char c;
+  void *the_data;
+
+  i = 6;
+  c = 'a';
+
+  the_data = &i;
+  printf("the_data points to the integer value %d\n", *(int*) the_data);
+
+  the_data = &c;
+  printf("the_data now points to the character %c\n", *(char*) the_data);
+
+  return 0;
+}</pre></td></tr></table><br>
+<h4>4. Wild Pointer</h4>
+<p>A Pointer in C that has not been initialized till its first use is known as the Wild pointer. A wild pointer points to some random memory location.
+<h4>Example of Wild Pointer</h4>
+<p>How can we avoid Wild Pointers ?</p>
+<table border=""  width="400">
+<tr><td><pre>int main() 
+{
+  int  *ptr;
+  /* Ptr is a wild pointer, as it is not initialized Yet */
+  printf("%d", *ptr);
+}</pre></td></tr></table>
+<p>We can initialize a pointer at the point of declaration wither by the address of some object/variable or by NULL;</p>
+<table border="" height="100" width="500">
+<tr><td><pre>int main() 
+{
+  int val = 5;
+  int  *ptr = &val; /* Initializing pointer */
+  /* Ptr is not a wild pointer, it is pointing to the address of variable val */
+  printf("%d", *ptr);
+}</pre></td></tr></table>
+
+<H3>5. Complex Pointers</h3>
+<h4>Precedence :</h4><p> Operator precedence describes the order in which C reads expressions</p>
+<h4>Associativity :</h4><p> Order operators of equal precedence in an expression are applied</p>
+
+<p>We need to assign the priority to the pointer declaration considering precedence and associative according to the following table.</P>
+ <table>
+  <tr>
+    <th>operator</th>
+    <th>precedence</th>
+<th>associative</th>
+   
+  </tr>
+<tr>
+    <td>(),[]</td>
+    <td>1</td>
+<td>left to right</td>
+    
+  </tr>
+<tr>
+    <td>*,identifier</td>
+    <td>2</td>
+<td> right to left</td>
+    
+  </tr>
+<tr>
+    <td>datab type</td>
+    <td>3</td>
+<td></td>
+    
+  </tr></table>
+<p>Where</p>
+
+<p>(): This operator behaves as bracket operator or function operator.</br>
+
+[]: This operator behaves as array subscription operator.</br>
+
+*: This operator behaves as pointer operator, not as the multiplication operator.</p>
+
+<h4>Identifier:</h4><p> It is not an operator, but it is name of the pointer variable. You will always find the</p>
+
+<p>Priority will be assigned to the name of the pointer.<p>
+
+<h4>Data type:</h4> <p>It is also not an operator. Data types also include modifier (like signed 
+int,long double etc.)</p>
+
+<h3>6. Near Pointer</h3>
+<p>The pointer which can points only 64KB data segment or segment number 8 is known as near pointer.</p>
+<p>That is near pointer cannot access beyond the data segment like graphics video memory, text video memory, etc. Size of near pointer is two byte. With the help of keyword near, we can make any pointer as near pointer.</p>
+<h4>Example of Near Pointer</h4>
+<table border=""  width="400">
+<tr><td><pre>#include&ltstdio.h>
+
+          int main()
+      {
+          int x=25;
+          int near* ptr;
+          ptr=&x;
+          printf(“%d”,sizeof ptr);
+          return 0;
+      }</pre></td></tr></table>
+<p><b>Output is 2</b></p>
+<h3>7. Far Pointer</h3>
+<ul><li>The pointer which can point or access whole the residence memory of RAM, i.e., which can access all 16 segments is known as far pointer.</li>
+<li>Size of the far pointer is 4 byte or 32 bit.</li></ul>
+<p><h4>Example of Far Pointer</h4></p>
+<table border=""  width="400">
+<tr><td><pre>
+#include&ltstdio.h>
+int main()
+{
+int x=10;
+int far *ptr;
+ptr=&x;
+printf("%d",sizeof ptr);
+return 0;
+}
+</pre></td></tr></table>
+<p><b>Output is 4</b></p>
+<h3>8. Huge Pointer</h3>
+<ul><li>The pointer which can point or access whole the residence memory of RAM i.e. which can access all 16 segments is known as a huge pointer.</li>
+<li>Size of the far pointer is 4 byte or 32 bit.</li></ul>
+<p><h4>Example of Huge Pointer</h4></p>
+<table border=""  width="400">
+<tr><td><pre>#include&ltstdio.h>
+int main()
+{
+char huge * far *p;
+printf("%d %d %d",sizeof(p),sizeof(*p),sizeof(**p));
+return 0;
+}</pre></td></tr></table>
+<p><b>Output is 441</b></p>
+<h4>Explanation:</h4><p>  p is the huge pointer, *p is the far pointer and **p is char type data variable.</p>
+
+<h4>Advantages of Pointers In C Programming</h4>
+<ul><li>We can dynamically allocate or deallocate space in memory at a run time by using pointers.</li>
+<li>Using pointers, we can return multiple values from a function.
+We can pass arrays to a function as call by Reference.</li>
+<li>Pointers are used to efficiently access array elements, as array elements are stored in adjacent memory locations. If we have a pointer pointing to a particular element of an array, then we can get the address of next element by simply incrementing the pointer.</li>
+<li>Pointers in C are used to efficiently implement dynamic Data Structures like Queues, Stacks, Linked Lists, Trees, etc.</li>
+<li>The use of pointers results in the faster execution of the program.</li></ul>
+
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article><h1 style="color:#000080">DATA TYPES In C++ Programming</h1>
+<h2>Data Types:</h2><p>
+All variables use data-type during declaration to restrict the type of data to be stored. Therefore, we can say that data types are used to tell the variables the type of data it can store.
+Whenever a variable is defined in C++, the compiler allocates some memory for that variable based on the data-type with which it is declared. Every data type requires different amount of memory.
+<br>
+<h3>Data types in C++ is mainly divided into two types:</h3>
+<h4>Primitive Data Types: </h4>These data types are built-in or predefined data types and can be used directly by the user to declare variables. <br>example: int, char , float, bool etc. Primitive data types available in C++ are:<br>
+<ul>
+<li>Integer</li>
+<li>Character</li><li>
+Boolean</li><li>
+Floating Point</li>
+<li>Double Floating Point</li><li>
+Valueless or Void</li><li>
+Wide Character</li></ul>
+<h4>Abstract or user defined data type:</h4> These data types are defined by user itself. Like, defining a class in C++ or a structure.<br>
+This article discusses primitive data types available in C++.
+<br><br>
+<strong>Integer: </strong>Keyword used for integer data types is int. Integers typically requires 4 bytes of memory space and ranges from -2147483648 to 2147483647.<br>
+<strong>Character:</strong> Character data type is used for storing characters. Keyword used for character data type is char. Characters typically requires 1 byte of memory space and ranges from -128 to 127 or 0 to 255.<br>
+<strong>Boolean: </strong>Boolean data type is used for storing boolean or logical values. A boolean variable can store either true or false. Keyword used for boolean data type is bool.<br>
+<strong>Floating Point:</strong> Floating Point data type is used for storing single precision floating point values or decimal values. Keyword used for floating point data type is float. Float variables typically requires 4 byte of memory space.<br>
+<strong>Double Floating Point:</strong> Double Floating Point data type is used for storing double precision floating point values or decimal values. Keyword used for double floating point data type is double. Double variables typically requires 8 byte of memory space.<br>
+<strong>void: </strong>Void means without any value. void datatype represents a valueless entity. Void data type is used for those function which does not returns a value.<br> 
+<strong>Wide Character: </strong>Wide character data type is also a character data type but this data type has size greater than the normal 8-bit datatype. Represented by wchar_t. It is generally 2 or 4 bytes long.<br><br>
+<h4>Datatype Modifiers: </h4>As the name implies, datatype modifiers are used with the built-in data types to modify the length of data that a particular data type can hold. Data type modifiers available in C++ are:<br>
+<ul><li>
+Signed</li><li>
+Unsigned</li><li>
+Short</li><li>
+Long</li></ul>
+<br>Below table summarizes the modified size and range of built-in datatypes when combined with the type modifiers:<br>
+<img src="cpp_datatype1.png"/><br>
+<h3>*Note :</h3> Above values may vary from compiler to compiler. In above example, we have considered GCC 64 bit.
+<br><br>
+We can display the size of all the data types by using the size_of() function and passing the keyword of the datatype as argument to this function as shown below:
+<br></p>
+<table border="" width="700" height="100"><tr><td>
+<pre><code>
+ // C++ program to sizes of data types
+#include&ltiostream&gt
+using namespace std;
+int main()
+{
+    cout &lt&lt "Size of char : "&lt&lt sizeof(char) &lt&lt " byte" &lt&lt endl;
+    cout &lt&lt "Size of int : " &lt&lt sizeof(int) &lt&lt" bytes" &lt&lt endl;
+    cout &lt&lt "Size of short int : " &lt&lt sizeof(short int) &lt&lt " bytes" &lt&lt endl;
+    cout &lt&lt "Size of long int : " &lt&lt sizeof(long int) &lt&lt " bytes" &lt&lt endl;
+    cout &lt&lt "Size of signed long int : " &lt&lt sizeof(signed long int) &lt&lt " bytes" &lt&lt endl;
+    cout &lt&lt "Size of unsigned long int : " &lt&lt sizeof(unsigned long int) &lt&lt " bytes" &lt&lt endl;
+    cout &lt&lt "Size of float : " &lt&lt sizeof(float) &lt&lt " bytes" &lt&ltendl;
+    cout &lt&lt "Size of double : " &lt&lt sizeof(double) &lt&lt " bytes"&lt&lt endl;
+    cout &lt&lt "Size of wchar_t : "&lt&lt sizeof(wchar_t) &lt&lt " bytes"&lt&ltendl;
+    return 0;
+}
+</pre></code>
+ </td></tr></table>
+<br><br>
+<strong>Output:</strong>
+<pre>
+<table border="" width="700" height="100"><tr><td>
+Size of char : 1 byte<br>
+Size of int : 4 bytes<br>
+Size of short int : 2 bytes<br>
+Size of long int : 8 bytes<br>
+Size of signed long int : 8 bytes<br>
+Size of unsigned long int : 8 bytes<br>
+Size of float : 4 bytes<br>
+Size of double : 8 bytes<br>
+Size of wchar_t : 4 bytes <br></td></tr></table>
+</pre>
+<h3>typedef Declarations:</h3>
+<p>You can create a new name for an existing type using typedef. Following is the simple syntax to define a new type using typedef -</p>
+<br><table border="" width="500" height="30"><tr><td>
+typedef type newname; </td></tr></table><p>
+For example, the following tells the compiler that feet is another name for int -
+</p>
+<table border="" width="500" height="30"><tr><td>typedef int feet;</td></tr></table>
+<p>Now, the following declaration is perfectly legal and creates an integer variable called distance -</p>
+<table border="" width="500" height="30"><tr><td>
+feet distance;</td></tr></table>
+<h3>Enumerated Types:</h3>
+An enumerated type declares an optional type name and a set of zero or more identifiers that can be used as values of the type. Each enumerator is a constant whose type is the enumeration.<br>
+
+Creating an enumeration requires the use of the keyword enum. The general form of an enumeration type is -</p>
+<table border="" width="500" height="30"><tr><td>
+enum enum-name { list of names } var-list; </td></tr></table><p>
+Here, the enum-name is the enumeration's type name. The list of names is comma separated.
+<br>
+For example, the following code defines an enumeration of colors called colors and the variable c of type color. Finally, c is assigned the value "blue".</p>
+<table border="" width="500" height="30"><tr><td>
+enum color { red, green, blue } c;
+c = blue;</td></tr></table><p>
+By default, the value of the first name is 0, the second name has the value 1, and the third has the value 2, and so on. <br>But you can give a name, a specific value by adding an initializer. For example, in the following enumeration, green will have the value 5.</p>
+<table border="" width="500" height="3 0"><tr><td>
+enum color { red, green = 5, blue };</td></tr></table><p>
+Here, blue will have a value of 6 because each name will be one greater than the one that precedes it.
+</p>
+
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,199 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article>
+ <h1 style="color:#000080">VARIABLE Types &Its SCOPE In C++ Programming</h1>
+<h2>variable</h2>
+<p> A variable provides us with named storage that our programs can manipulate. Each variable in C++ has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.
+<br><br>
+The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C++ is case-sensitive .
+<br> 
+There are following basic types of variable in C++ as explained in last chapter -</p>
+ <img src=""/>
+<p>C++ also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Reference, Data structures, and Classes.
+<br><br>
+Following section will cover how to define, declare and use various types of variables.
+<br>
+<h3>Variable Definition in C++</h3>
+<p>A variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type, and contains a list of one or more variables of that type as follows -</p>
+<table border="" width="500" height="30"><tr><td>
+type variable_list;</td></tr></table>
+<p>Here, type must be a valid C++ data type including char, w_char, int, float, double, bool or any user-defined object, etc., and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here -
+</p><table border="" width="500" height="30"><tr><td>
+int    i, j, k;
+char   c, ch;
+float  f, salary;
+double d;</td></tr></table>
+<p>The line int i, j, k; both declares and defines the variables i, j and k; which instructs the compiler to create variables named i, j and k of type int.
+<br>
+Variables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows -
+</p><table border="" width="500" height="30"><tr><td>
+type variable_name = value;
+</td></tr></table>
+<h4>Some examples are -</h4>
+<table border="" width="500" height="30"><tr><td><pre>
+extern int d = 3, f = 5;    // declaration of d and f. 
+int d = 3, f = 5;           // definition and initializing d and f. 
+byte z = 22;                // definition and initializes z. 
+char x = 'x';               // the variable x has the value 'x'.
+</td></tr></table></pre>
+
+<p>For definition without an initializer: variables with static storage duration are implicitly initialized with NULL (all bytes have the value 0); the initial value of all other variables is undefined.
+</p>
+<h3>Variable Declaration in C++</h3><p>
+A variable declaration provides assurance to the compiler that there is one variable existing with the given type and name so that compiler proceed for further compilation without needing complete detail about the variable. A variable declaration has its meaning at the time of compilation only, compiler needs actual variable definition at the time of linking of the program.
+<br>
+A variable declaration is useful when you are using multiple files and you define your variable in one of the files which will be available at the time of linking of the program. You will use extern keyword to declare a variable at any place. Though you can declare a variable multiple times in your C++ program, but it can be defined only once in a file, a function or a block of code.
+</p>
+<h4>Example</h4>
+<p>Try the following example where a variable has been declared at the top, but it has been defined inside the main function -</p>
+<table border="" width="500" height="30"><tr><td>
+<pre><code>
+#include&ltiostream>
+using namespace std;
+
+// Variable declaration:
+extern int a, b;
+extern int c;
+extern float f;
+  
+int main () {
+   // Variable definition:
+   int a, b;
+   int c;
+   float f;
+ 
+   // actual initialization
+   a = 10;
+   b = 20;
+   c = a + b;
+ 
+   cout << c << endl ;
+
+   f = 70.0/3.0;
+   cout << f << endl ;
+ 
+   return 0;
+}
+</pre></code></td></tr></table><p>
+When the above code is compiled and executed, it produces the following result -
+</p><table border="" width="500" height="30"><tr><td>
+<pre><code>
+30
+23.3333</pre></code></td></tr></table><p>
+Same concept applies on function declaration where you provide a function name at the time of its declaration and its actual definition can be given anywhere else. For example -
+</p><table border="" width="500" height="30"><tr><td>
+// function declaration
+int func();
+int main() {
+   // function call
+   int i = func();
+}
+
+// function definition
+int func() {
+   return 0;
+}</pre></code></td></tr></table><p>
+<h3>Lvalues and Rvalues</h3>
+<p>There are two kinds of expressions in C++ <br>
+
+<strong>lvalue -></strong> Expressions that refer to a memory location is called "lvalue" expression. An lvalue may appear as either the left-hand or right-hand side of an assignment.
+<br>
+<strong>rvalue -></strong> The term rvalue refers to a data value that is stored at some address in memory. An rvalue is an expression that cannot have a value assigned to it which means an rvalue may appear on the right- but not left-hand side of an assignment.
+<br>
+Variables are lvalues and so may appear on the left-hand side of an assignment. Numeric literals are rvalues and so may not be assigned and can not appear on the left-hand side. Following is a valid statement -
+</p><table border="" width="500" height="30"><tr><td>
+int g = 20;</pre></code></td></tr></table><p>
+But the following is not a valid statement and would generate compile-time error -
+</p><table border="" width="500" height="30"><tr><td>
+10 = 20;
+</pre></code></td></tr></table><p>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

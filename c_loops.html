@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="c_overview.html">Overview</a></li><br>
+<li><a href="c_prostuct.html">Program Structures</a></li><br>
+<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
+<li><a href="c_datatypes.html">DataTypes</a></li><br>
+<li><a href="c_variables.html">Variables</a></li><br>
+<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
+<li><a href="c_operators.html">Operators</a></li><br>
+<li><a href="c_desisonmake.html">Desision Making</a></li><br>
+<li><a href="c_loops.html">Loops</a></li><br>
+<li><a href="c_functions.html">Functions</a></li><br>
+<li><a href="c_scope.html">Scope Rules</a></li><br>
+<li><a href="c_arrays.html">Arrays</a></li><br>
+<li><a href="c_pointers.html">Pointers</a></li><br>
+<li><a href="c_strings.html">Strings</a></li><br>
+<li><a href="c_structunion.html">Structures&Unions</a></li><br>
+<li><a href="c_ipop.html">Input&Output</a></li><br>
+<li><a href="c_fileio.html">File I/O </a></li><br>
+</ul>
+</nav>
+<article><h1 style="color:#000080">LOOPS In C Programming</h1>
+<p>You may encounter situations when a block of code needs to be executed
+several number of times. In general, statements are executed sequentially: The
+first statement in a function is executed first, followed by the second, and so on.</p>
+<p>Programming languages provide various control structures that allow for more
+complicated execution paths.</p>
+<p>A loop statement allows us to execute a statement or group of statements
+multiple times. Given below is the general form of a loop statement in most of
+the programming languages:</p>
+ <p><h2>How to use Loops in C</h3></p>
+<p>In any programming language including C, loops are used to execute a set of statements repeatedly until a particular condition is satisfied.</p>
+<p><h3>How it Works</h3></p>
+<p><h3>TYPES OF LOOP CONTROL STATEMENTS IN C:</h3></p>
+<p>There are 3 types of loop control statements in C language. They are,<p>TYPES OF LOOP CONTROL STATEMENTS IN C:
+There are 3 types of loop control statements in C language. They are,
+<p>->for</p>
+<p>->while</p>
+<p>->do-while</p>
+<p><h2><u> for loop </u></h2></p>
+<p>A loop is used for executing a block of statements repeatedly until a given condition returns false.</p>
+<p>This is one of the most frequently used loop in C programming.</p>
+<p><h3>Syntax of for loop:</h3></p>
+
+<p>for (initialization; condition test; increment or decrement)</p>
+<p>{</p>
+      <p> //Statements to be executed repeatedly</p>
+<p>}</p>
+<p><h2><u>Flow Diagram of For loop</u></h2></p>
+<img src="c_loop1.png">
+<p>Here is the flow of control in a 'for' loop -</p>
+
+<p>->The init step is executed first, and only once. This step allows you to declare and initialize any loop control variables. You are not required to put a statement here, as long as a semicolon appears.</p>
+
+<p>->Next, the condition is evaluated. If it is true, the body of the loop is executed. If it is false, the body of the loop does not execute and the flow of control jumps to the next statement just after the 'for' loop.</p>
+
+<p>->After the body of the 'for' loop executes, the flow of control jumps back up to the increment statement. This statement allows you to update any loop control variables. This statement can be left blank, as long as a semicolon appears after the condition.</p>
+
+<p>->The condition is now evaluated again. If it is true, the loop executes and the process repeats itself (body of loop, then increment step, and then again condition). After the condition becomes false, the 'for' loop terminates.</p>
+<p><h3>Example</h3></p>
+<img src="c_loop2.png">
+<p>When the above code is compiled and executed, it produces the following result -</p>
+<img src="c_loop3.png">
+<p><h2><u>while loop</u></h2></p>
+<p>A while loop in C programming repeatedly executes a target statement as long as a given condition is true.</p>
+
+<p><h3>Syntax</h3></p>
+<p>The syntax of a while loop in C programming language is -</p>
+
+<p><h4>while(condition) {</p>
+<p>   statement(s);</p>
+<p>}</h4></p>
+<p>Here, statement(s) may be a single statement or a block of statements. The condition may be any expression, and true is any nonzero value.</p>
+<p> The loop iterates while the condition is true.</p>
+
+<p>When the condition becomes false, the program control passes to the line immediately following the loop.</p>
+<p><h2><u>Flow Diagram</u></h2></p>
+<img src="c_loop4.png">
+<p>Here, the key point to note is that a while loop might not execute at all. When the condition is tested and the result is false, the loop body will be skipped and the first statement after the while loop will be executed.</p>
+<p><h3>example</h3></p>
+<img src="c_loop5.png">
+<p>When the above code is compiled and executed, it produces the following result -</p>
+<img src="c_loop6.png">
+<p><h2>do...while loop</h2></p>
+<p>Unlike for and while loops, which test the loop condition at the top of the loop, the do...while loop in C programming checks its condition at the bottom of the loop.</p>
+<p>A do...while loop is similar to a while loop, except the fact that it is guaranteed to execute at least one time.</p>
+<p><h3>Syntax</h3></p>
+<p>The syntax of a do...while loop in C programming language is -<p>
+
+<p>do {</p>
+   <p>statement(s);</p>
+<p>} while( condition );</p>
+<p>Notice that the conditional expression appears at the end of the loop, so the statement(s) in the loop executes once before the condition is tested.</p>
+</p>If the condition is true, the flow of control jumps back up to do, and the statement(s) in the loop executes again. This process repeats until the given condition becomes false.</p>
+<p><h2><u>flow diagram</u></h2></p>
+<img src="c_loop7.png">
+<p><h3>Example</h3></p>
+<img src="c_loop8.png">
+<p>When the above code is compiled and executed, it produces the following result -</p>
+<img src="c_loop9.png">
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article><h1 style="color:#000080">POINTERS In C++ Programming</h1>
+<h2>pointers</h2>
+<p>In this article, you'll learn everything about pointers. You'll learn how values are stored in the computer and how to access them using pointers.</p>
+<img src="cpp_pointerpic1.png">
+
+<p>Pointers are powerful features of C++ that differentiates it from other programming languages like Java and Python.</p>
+
+<p>Pointers are used in C++ program to access the memory and manipulate the address.</p>
+
+<h3>Address in C++</h3>
+<p>To understand pointers, you should first know how data is stored on the computer.</p>
+
+<p>Each variable you create in your program is assigned a location in the computer's memory. The value the variable stores is actually stored in the location assigned.</p>
+
+<p>To know where the data is stored, C++ has an & operator. The & (reference) operator gives you the address occupied by a variable.</p>
+
+<p>If var is a variable then, &var gives the address of that variable.</p>
+
+<h4>Example 1: Address in C++</h4>
+<table border=""width="400">
+<tr><td><pre>#include &ltiostream&gt
+using namespace std;
+
+int main()
+{
+    int var1 = 3;
+    int var2 = 24;
+    int var3 = 17;
+    cout &lt&lt &var1 &lt&lt endl;
+    cout &lt&lt &var2 &lt&lt endl;
+    cout  &lt&lt &var3  &lt&ltendl;
+}</pre></td></tr></table>
+<h4>Output</h4>
+<table border=""width="400">
+<tr><td><pre>
+0x7fff5fbff8ac
+0x7fff5fbff8a8
+0x7fff5fbff8a4
+</pre></td></tr></table>
+<h4>Note:</h4><p> You may not get the same result on your system.</p>
+
+<p>The 0x in the beginning represents the address is in hexadecimal form.</p>
+
+<p>Notice that first address differs from second by 4-bytes and second address differs from third by 4-bytes.</p>
+
+<p>This is because the size of integer (variable of type int) is 4 bytes in 64-bit system.</p>
+
+<h2>Pointers Variables</h2>
+<p>C++ gives you the power to manipulate the data in the computer's memory directly. You can assign and de-assign any space in the memory as you wish. This is done using Pointer variables.</p>
+
+<p>Pointers variables are variables that points to a specific address in the memory pointed by another variable.</p>
+ 
+<h4>How to declare a pointer?</h4>
+<table border="" width="400">
+<tr><td><pre>int *p;
+      OR,
+int* &lt&lt p;</pre></td></tr></table>
+
+<p>The statement above defines a pointer variable p. It holds the memory address</p>
+
+<p>The asterisk is a dereference operator which means pointer to.</p>
+
+<p>Here, pointer p is a pointer to int, i.e., it is pointing to an integer value in the memory address.</p>
+
+<h3>Reference operator (&) and Deference operator (*)</h3>
+<p>Reference operator (&) as discussed above gives the address of a variable.</p>
+
+<p>To get the value stored in the memory address, we use the dereference operator (*).</p>
+
+<h4>For example:</h4><p> If a number variable is stored in the memory address <b>0x123</b>, and it contains a value <b>5</b>.
+
+<p>The reference <b>(&)</b> operator gives the value <b>0x123</b>, while the <b>dereference (*)</b> operator gives the value <b>5</b>.</p>
+
+<h4>Note:</h4><p> The (*) sign used in the declaration of C++ pointer is not the dereference pointer. It is just a similar notation that creates a pointer.</p>
+<h4>C++ Program to demonstrate the working of pointer.</h4>
+<table border=""width="400">
+<tr><td><pre>
+#include &ltiostream&gt
+using namespace std;
+int main() {
+    int *pc, c;
+    
+    c = 5;
+    cout &lt&lt "Address of c (&c): "  &lt&lt &c  &lt&ltendl;
+    cout  &lt&lt "Value of c (c): " &lt&lt c  &lt&lt endl &lt&ltendl;
+
+    pc = &c;    // Pointer pc holds the memory address of variable c
+    cout  &lt&lt"Address that pointer pc holds (pc): "&lt&lt pc &lt&lt endl;
+    cout &lt&lt"Content of the address pointer pc holds (*pc): "  &lt&lt *pc  &lt&lt endl  &lt&lt endl;
+    
+    c = 11;    // The content inside memory address &c is changed from 5 to 11.
+    cout &lt&lt "Address pointer pc holds (pc): "  &lt&ltpc  &lt&ltendl;
+    cout &lt&lt "Content of the address pointer pc holds (*pc): "  &lt&lt*pc &lt&lt endl  &lt&lt  endl;
+
+    *pc = 2; 
+    cout  &lt&lt"Address of c (&c): "  &lt&lt &c  &lt&ltendl;
+    cout  &lt&lt"Value of c (c): "  &lt&ltc  &lt&ltendl  &lt&ltendl;
+
+    return 0;
+}</pre></td></tr></table>
+<h4>Output</h4>
+<table border=""width="400">
+<tr><td><pre>
+Address of c (&c): 0x7fff5fbff80c
+Value of c (c): 5
+
+Address that pointer pc holds (pc): 0x7fff5fbff80c
+Content of the address pointer pc holds (*pc): 5
+
+Address pointer pc holds (pc): 0x7fff5fbff80c
+Content of the address pointer pc holds (*pc): 11
+
+Address of c (&c): 0x7fff5fbff80c
+Value of c (c): 2</pre></td></tr></table><br>
+<img src="cpp_pointerspic2.png">
+
+<h3>Explanation of program</h3>
+
+<p>When c = 5; the value 5 is stored in the address of variable c - 0x7fff5fbff8c.<br>
+<p>When pc = &c; the pointer pc holds the address of c - 0x7fff5fbff8c, and the expression (dereference operator) *pc outputs the value stored in that address, 5.<br>
+<p>When c = 11; since the address pointer pc holds is the same as c - 0x7fff5fbff8c, change in the value of c is also reflected when the expression *pc is executed, which now outputs 11.<br>
+<p>When *pc = 2; it changes the content of the address stored by pc - 0x7fff5fbff8c. This is changed from 11 to 2. So, when we print the value of c, the value is 2 as well.</p>
+<h4>Common mistakes when working with pointers</h4>
+<p>Suppose, you want pointer pc to point to the address of c. Then,</p>
+<table border=""width="400">
+<tr><td><pre>
+int c, *pc;
+pc=c;  /* Wrong! pc is address whereas, c is not an address. */
+*pc=&c; /* Wrong! *pc is the value pointed by address whereas, %amp;c is an address. */
+pc=&c; /* Correct! pc is an address and, %amp;pc is also an address. */
+*pc=c; /* Correct! *pc is the value pointed by address and, c is also value*/</pre></td></tr></table>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

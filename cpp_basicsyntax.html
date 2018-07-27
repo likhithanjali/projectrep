@@ -1,0 +1,177 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article>
+
+<h1 style="color:#000080">BASIC SYNATXES In C++ Programming</h1><h2>Basic Syntaxes</h2><p>
+When we consider a C++ program, it can be defined as a collection of objects that communicate via invoking each other's methods. Let us now briefly look into what a class, object, methods, and instant variables mean.</p>
+<img src="cpp_syntax1.png"/>
+<h3>C++ Program Structure</h3>
+<p>Let us look at a simple code that would print the words Hello World.
+</p>
+<img src="cpp_syntax2.png"/> <h5>
+Let us look at the various parts of the above program -</h5>
+<ul>
+<li>The C++ language defines several headers, which contain information that is either necessary or useful to your program. For this program, the header <iostream> is needed.
+</li><li>
+The line using namespace std; tells the compiler to use the std namespace. Namespaces are a relatively recent addition to C++.
+</li><li>
+The next line '// main() is where program execution begins.' is a single-line comment available in C++. Single-line comments begin with // and stop at the end of the line.
+</li><li>
+The line int main() is the main function where program execution begins.
+</li><li>
+The next line cout << "Hello World"; causes the message "Hello World" to be displayed on the screen.
+</li><li>
+The next line return 0; terminates main( )function and causes it to return the value 0 to the calling process.
+</li></ul>
+<h3>
+Compile and Execute C++ Program</h3>
+<ul>
+<h5>Let's look at how to save the file, compile and run the program. Please follow the steps given below -</h5>
+<li>
+Open a text editor and add the code as above.
+</li><li>
+Save the file as: hello.cpp
+</li><li>
+Open a command prompt and go to the directory where you saved the file.
+</li><li>
+Type 'g++ hello.cpp' and press enter to compile your code. If there are no errors in your code the command prompt will take you to the next line and would generate a.out executable file.
+</li><li>
+Now, type 'a.out' to run your program.
+</li><li>
+You will be able to see ' Hello World ' printed on the window.
+</li></ul> 
+<p>
+Make sure that g++ is in your path and that you are running it in the directory containing file hello.cpp. 	 
+</p><h3>
+Semicolons and Blocks in C++</h3>
+<p>
+In C++, the semicolon is a statement terminator. That is, each individual statement must be ended with a semicolon. It indicates the end of one logical entity.
+<br>
+For example, following are three different statements -
+</p>
+<img src="cpp_syntax4.png"/><p>
+A block is a set of logically connected statements that are surrounded by opening and closing braces. For example -</p>
+<img src="cpp_syntax5.png"/><p>
+C++ does not recognize the end of the line as a terminator. For this reason, it does not matter where you put a statement in a line. For example -</p>
+<img src="cpp_syntax6.png"/>
+<h3>C++ Identifiers</h3>
+<p>
+A C++ identifier is a name used to identify a variable, function, class, module, or any other user-defined item. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores, and digits (0 to 9).
+<br>
+C++ does not allow punctuation characters such as @, $, and % within identifiers. C++ is a case-sensitive programming language. Thus, Manpower and manpower are two different identifiers in C++.
+<br>
+Here are some examples of acceptable identifiers -</p>
+
+<img src="cpp_syntax7.png"/>
+<h3>C++ Keywords</h3>
+<p>
+The following list shows the reserved words in C++. These reserved words may not be used as constant or variable or any other identifier names.
+</p><img src="cpp_syntax8.png"/>
+<br><img src="cpp_syntax9.png"/>
+<h3>Trigraphs</h3><p>
+A few characters have an alternative representation, called a trigraph sequence. A trigraph is a three-character sequence that represents a single character and the sequence always starts with two question marks.<br>
+
+Trigraphs are expanded anywhere they appear, including within string literals and character literals, in comments, and in preprocessor directives.
+<br>
+Following are most frequently used trigraph sequences -</p>
+<br><img src="cpp_syntax10.png"/>
+<p>All the compilers do not support trigraphs and they are not advised to be used because of their confusing nature.
+</p><h3>
+Whitespace in C++</h3>
+<p>A line containing only whitespace, possibly with a comment, is known as a blank line, and C++ compiler totally ignores it.
+<br>
+Whitespace is the term used in C++ to describe blanks, tabs, newline characters and comments. Whitespace separates one part of a statement from another and enables the compiler to identify where one element in a statement, such as int, ends and the next element begins.</p>
+<h5>Statement 1</h5><p>In the above statement there must be at least one whitespace character (usually a space) between int and age for the compiler to be able to distinguish them.</p>
+<br><img src="cpp_syntax11.png"/>
+<h5>Statement 2</h5>
+<p>In the above statement 2, no whitespace characters are necessary between fruit and =, or between = and apples, although you are free to include some if you wish for readability purpose.</p>
+<br><img src="cpp_syntax12.png"/>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

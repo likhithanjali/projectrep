@@ -1,0 +1,162 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+</ul>
+</nav>
+<article> 
+<h1 style="color:#000080">FUNCTIONS In C++ Programming</h1>
+ <h2>Functions</h2>
+<h3>What are member Functions in c++?</h3>
+<p>Member functions are C++ functions that have their declarations inside the class definition and these member functions work on the data member of the class. Member function definition can be written inside or outside the definition of the class. If the definition of the member function is inside the class definition, then it can define directly, but if it is defined outside the class then a special operator name scope resolution operator (::) is used along with the name of the class and the function name.</p>
+
+<b>Example:</b>
+<table border="" width="700"><tr><td>
+<pre><code class="prettyprint">
+class Sq {
+public:
+    int a;
+    int square(); // Declaring function square with no argument and having return type 'int'.
+};
+
+int Sq::square()
+{
+    return a * a;
+}
+</code></pre></td></tr></table>
+<p>In this case, if you define the member function outside the class definition, then you must declare the function inside the class definition and then define it outside using the scope resolution operator. </p>or 
+
+<table border="" width="700">
+<tr><td><pre>class Sq {
+public:
+    int a;
+    int square()
+    {
+        return a * a; //returns square of a number
+    }
+};</code></pre></td></tr></table>
+<p>In the above program, the function is defined inside the class and so you do not need to declare it first and can directly define the function.</p>
+ <h3>main() Function of C++</h3><p>The main() function is called when the program starts after initialization of the non-local objects with static storage duration. It is the primary entry point of any C++ program that is executed in a hosted environment. In C++, the main() function is written after the class definition. The main function of C++ has several special properties. These are: <ol><li>main() function cannot be used anywhere within the program<ol><li>In particular, cannot be called recursively</li><li>Its address cannot be taken for reuse</li></ol></li><li>main() function cannot be predefined and cannot be overloaded.</li><li>main() function cannot be declared as static, inline or constexpr</li><li>The return type of the main() function cannot be deduced (i.e. auto main() {... is not allowed in C++).</li></ol><p>The main() function for both the function definition (discussed above) will be same. You have to create objects of the class inside the main() and using that object along with the dot (.) operator member functions will be called. <div class="example"><b>Syntax:</b></div>
+<table border="" width="700"><tr><td>
+<pre><code class="prettyprint">return_type main()
+{
+    class_name object - declaration;
+    object_name.memberfunction1_name();
+    object_name.memberfunction2_name();
+    ........
+}</code></pre></td></tr></table>
+<div class="example"><b>Example:</b></div>
+<table border="" width="700"><tr><td>
+
+<pre><code class="prettyprint">int main()
+{
+    Sq S1;
+    S1.a = 6;
+    S1.square();
+    cout &lt;&lt; " Square of the number is :"&lt;&lt; S1.square();
+}
+</code></pre></td></tr></table>
+<h2>Types of Member Functions in C++</h2><p>As we are now familiar with what are member function and how they are declared and defined, how they are used in a C++ program to handle data member and member functions, and how they are called from the main(); it is time to know what are the different types of member function provided by C++. <div class="card"><div class="card-header">Listed below are the special types of member functions that can be used within the class.</div><div class="card-body"><ul><li>Simple member function</li><li>Static Member function</li><li>Const function</li><li>Inline function</li><li>Friend function</li></ul></div></div><h3>Simple Member Functions</h3><p>As discussed earlier, these are simple functions of C++ with or without return type and with or without parameters. The basic structure of a simple member function is: 
+<table border="" width="700"><tr><td><pre><code class="prettyprint">return_type functionName(parameter_list)
+{
+    // function body;
+}
+</code></pre></td></tr></table>
+<h3>Static Member Functions</h3><p>The keyword '<em>static</em>' is used with such member functions. Static is mainly used to hold its positions. These functions work for the whole class rather than for a particular object of the class.
+<table border="" width="700"><tr><td> <pre><code class="prettyprint">class X {
+public:
+    static void k(){};
+};
+int main()
+{
+    G::k(); // calling member function directly with class name
+}
+</code></pre></td></tr></table><p>The static member functions cannot access ordinary data members and member functions, but can only access the static data members and static member functions of a class. <h3>Const Member Function</h3><p>Const keyword makes variable constant, which means once defined, their value cannot be changed. The basic syntax of const member function is:<table border="" width="700"><tr><td> 
+
+<pre><code class="prettyprint">void fun() const{}</code></pre></td></tr></table>
+<h3>Inline Function</h3><p>When a function is declared as inline, the compiler places a copy of the code of that specific function at each point where the function is called at compile time. <h3>Friend Function</h3><p>Functions are declared as a friend using the keyword 'friend' to give private access to non-class functions. Programmers can declare a global function as a friend, or a member function of other class as the friend.
+
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

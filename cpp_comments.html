@@ -1,0 +1,138 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article><h1 style="color:#000080">COMMENTS In C++ Programming</h1><h2>comments:</h2>
+ <p>Comments are portions of the code ignored by the compiler which allow the user to make simple notes in the relevant areas of the source code. Comments come either in block form or as sibngle lines.
+<br><br>
+<u><b>Single-line comments </u>:</b>
+<p>start with // and continue until the end of the line. If the last character in a comment line is a \ the comment will continue in the next line.
+<br><br>
+Let's take a look on the Hello World program. Have you noticed that a part of lines of below code is just the description of the program:
+<br><br>
+Any words in a line after "//" are ignored by the compiler. So if you want to write a comment about 'what is this code doing' you have to write it in the following way:
+<br><br>
+The "//" symbols is used to write one line comment.
+<br>
+//any text that describes your code
+<br><br>
+ <pre>
+//include a header file from Standard Library
+#include&ltiostream>
+using namespace std;
+//the work of the program starts from function called  main
+int main()
+{
+	//use standard (console) to output message "Hello World"
+	cout << "Hello  world" << endl;
+	//wait for user to press a key
+	cin.ignore();
+	//return a value to the system when program finish its execution successfully
+	return 0;
+}
+</pre> </p><br>
+<u><b>Multi-line comments </u>:</b>
+<p> start with /* and end with */.<br>
+ 
+<br>Comments are important part of C++ language. You should learn to write comments from the beginning, because it's a good habit for a programmer.<br><br>
+Sometimes long comments are required in the code. For this purpose the following characters are used:
+<br><pre>
+/*start line
+	This is a multiline comment
+	Anything  between start (/ *) and end (* /)
+	will be ignored by the compiler
+end line */</pre><br><br>
+If you want to write a multiline comment you have to write "/*" at the start of the comment. After this you can write as many number of lines of description. When you are done with writing multiline comment then you have to close multiline comment. It is done by the "*/" symbol.<br><br>
+<strong>Why comments are important?</strong><br><br>
+Do not think that comments are not important for your program. When you write small programs then you will be able to remember all the things you have written and the purpose of that. But when your programs grow in size then comments will be really helpful to understand what your lines of code doing.
+<br><br>
+Another benefit of using comments is that it makes your program much more clear for people who will read your code. At enterprise level the software becomes too big and multiple teams work on it. If comments are not present then it becomes really difficult to understand the coding logic.</p>
+
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

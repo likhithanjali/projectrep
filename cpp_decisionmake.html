@@ -1,0 +1,289 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+</ul>
+</nav>
+<article><h1 style="color:#000080">DECISION MAKING In C++Programming</h1>
+
+<h2>Decision making in C++</h2>
+<p>Decision making is about deciding the order of execution of statements based on certain conditions or repeat a group of statements until certain specified conditions are met. C++ handles decision-making by supporting the following statements,
+</p>
+<p>* if statement
+* switch statement
+* conditional operator statement
+* goto statement
+* Decision making with if statement</p>
+<p>The if statement may be implemented in different forms depending on the complexity of conditions to be tested. The different forms are,<ul><li>
+Simple if statement</li><li>
+If....else statement</li><li>
+Nested if....else statement</li><li>
+else if statement</li></ul>
+<h3>Simple if statement</h3>
+<p><b>The general form of a simple if statement is,</b>
+<table border="" width="400"><tr><td><pre>
+if( expression )
+{
+ statement-inside;
+}
+ statement-outside;
+</pre></td></tr></table>
+</p>
+<p>If the expression is true, then 'statement-inside' it will be executed, otherwise 'statement-inside' is skipped and only 'statement-outside' is executed.
+<br>
+<h4>Example :</h4>
+<table border="" width="400"><tr><td>
+<pre>
+#include&ltiostream.h>
+int main( )
+{
+ int x,y;
+ x=15;
+ y=13;
+ if (x > y )
+ {
+  cout << "x is greater than y";
+ }
+} </td></tr></table>
+<h4>Output:</h4><table border="" width="400"><tr><td>
+<pre>
+x is greater than y
+</pre></td></tr></table>
+<h3>if...else statement</h3>
+<br><b>The general form of a simple if...else statement is,</b>
+<table border="" width="400"><tr><td>
+<pre>
+if( expression )
+{
+ statement-block1;
+}
+else
+{
+ statement-block2;
+}</pre></td></tr></table><p>
+If the 'expression' is true, the 'statement-block1' is executed, else 'statement-block1' is skipped and 'statement-block2' is executed.
+</p>
+<h4>Example :</h4>
+<table border="" width="400"><tr><td>
+<pre>
+void main( )
+{
+ int x,y;
+ x=15;
+ y=18;
+ if (x > y )
+ {
+  cout << "x is greater than y";
+ }
+ else
+ {
+  cout << "y is greater than x";
+ }
+}</pre></td></tr></table>
+<h4>Output :</h4>
+<table border="" width="400"><tr><td>
+<pre>
+y is greater than x
+</pre></td></tr></table>
+<h3>Nested if....else statement</h3>
+<b>The general form of a nested if...else statement is,
+</b><table border="" width="400"><tr><td>
+<pre>
+if( expression )
+{
+  if( expression1 )
+   {
+     statement-block1;
+   }
+  else 
+   {
+     statement-block2;
+   }
+}
+else
+{
+ statement-block3;
+}</pre></td></tr></table><p>
+if 'expression' is false the 'statement-block3' will be executed, otherwise it continues to perform the test for 'expression 1' . If the 'expression 1' is true the 'statement-block1' is executed otherwise 'statement-block2' is executed.</p>
+
+<h4>Example :</h4>
+<table border="" width="400"><tr><td>
+<pre>
+
+void main( )
+{
+ int a,b,c;
+ clrscr();
+ cout << "enter 3 number";
+ cin >> a >> b >> c;
+ if(a > b)
+ {
+  if( a > c)
+  {
+    cout << "a is greatest";
+  }
+  else 
+  {
+    cout << "c is greatest";
+  }
+ }
+ else
+ {
+  if( b> c)
+   {
+     cout << "b is greatest";
+   }
+  else
+   {
+     printf("c is greatest");
+   }
+  }
+getch();
+} </pre></td></tr></table>
+<h3>else-if ladder</h3>
+<b>The general form of else-if ladder is,</b>
+<table border="" width="400"><tr><td>
+<pre>
+if(expression 1)
+{
+ statement-block1;
+}
+else if(expression 2) 
+{
+ statement-block2;
+}
+else if(expression 3 ) 
+{
+ statement-block3;
+}
+else 
+ default-statement;
+</pre></td></tr></table>
+<p>The expression is tested from the top(of the ladder) downwards. As soon as the true condition is found, the statement associated with it is executed.
+</p><h4>
+Example :</h4>
+<table border="" width="400"><tr><td>
+<pre>
+void main( )
+{
+ int a;
+ cout << "enter a number";
+ cin >> a;
+ if( a%5==0 && a%8==0)
+ {
+  cout << "divisible by both 5 and 8";
+ }  
+ else if( a%8==0 )
+ {
+  cout << "divisible by 8";
+ }
+ else if(a%5==0)
+ {
+  cout << "divisible by 5";
+ }
+ else 
+ {
+  cout << "divisible by none";
+ }
+getch();
+}</pre></td></tr></table>
+<h3>***Points to Remember:***</h3>
+<li>In if statement, a single statement can be included without enclosing it into curly braces { }</li><table border="" width="400"><tr><td>
+<pre>
+int a = 5;
+if(a > 4)
+  cout &lt&lt "success";</pre></td></tr></table>
+<li>No curly braces are required in the above case, but if we have more than one statement inside if condition, then we must enclose them inside curly braces.</li>
+
+<br><li>== must be used for comparison in the expression of if condition, if you use = the expression will always return true, because it performs assignment not comparison.
+Other than 0(zero), all other values are considered as true.</li>
+<table border="" width="400"><tr><td>
+<pre>
+if(27)
+ cout << "hello";
+</pre></td></tr></table>
+<P>In above example, hello will be printed.</P>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

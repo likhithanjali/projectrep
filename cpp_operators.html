@@ -1,0 +1,168 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article>
+  <h1 style="color:#000080">OPERATORS In C++Programming</h1>
+<h2>operaters</h2>
+<p>Operators are special type of functions, that takes one or more arguments and produces a new value. For example : addition (+), substraction (-), multiplication (*) etc, are all operators. Operators are used to perform various operations on variables and constants.</p>
+<img src="cpp_operater.png">
+<h2>Types of operators</h2>
+<ol><li>Assignment Operator</li>
+<li>Mathematical Operators</li>
+<li>Relational Operators</li>
+<li>Logical Operators</li>
+<li>Bitwise Operators</li>
+<li>Shift Operators</li>
+<li>Unary Operators</li>
+<li>Ternary Operator</li>
+<li>Comma Operator</li></ol>
+<h2>Assignment Operator ( = )</h2>
+<p>Operates '=' is used for assignment, it takes the right-hand side (called rvalue) and copy it into the left-hand side (called lvalue). Assignment operator is the only operator which can be overloaded but cannot be inherited.</p>
+
+<h2>Mathematical Operators</h2>
+<p>There are operators used to perform basic mathematical operations. Addition (+) , subtraction (-) , diversion (/) multiplication (*) and modulus (%) are the basic mathematical operators. Modulus operator cannot be used with floating-point numbers.</p>
+
+<p>C++ and C also use a shorthand notation to perform an operation and assignment at same type.<p> 
+<h4>Example,</h4>
+<table border="" width="400"><tr><td><pre>int x=10;
+x += 4 // will add 4 to 10, and hence assign 14 to X. 
+x -= 5 // will subtract 5 from 10 and assign 5 to x.</pre></td></tr></table>
+<h2>Relational Operators</h2>
+<p>These operators establish a relationship between operands. The relational operators are : less than (&lt) , grater thatn (&gt) , less than or equal to (&lt=), greater than equal to (&gt=), equivalent (==) and not equivalent (!=).</p>
+
+</p>You must notice that assignment operator is (=) and there is a relational operator, for equivalent (==). These two are different from each other, the assignment operator assigns the value to any variable, whereas equivalent operator is used to compare values, like in if-else conditions</p>
+<h4> Example</h4>
+
+<table border="" width="400"><tr><td><pre>int x = 10;  //assignment operator
+x=5;         // again assignment operator 
+if(x == 5)   // here we have used equivalent relational operator, for comparison
+{
+ cout <<"Successfully compared";
+}</pre></td></tr></table>   
+<h2>Logical Operators</h2>
+<p>The logical operators are AND (&&) and OR (||). They are used to combine two different expressions together.</p>
+
+<p>If two statement are connected using AND operator, the validity of both statements will be considered, but if they are connected using OR operator, then either one of them must be valid. These operators are mostly used in loops (especially while loop) and in Decision making.</p>
+
+<h2>Bitwise Operators</h2>
+<p>There are used to change individual bits into a number. They work with only integral data types like char, int and long and not with floating point values.</p>
+
+<ul><li>Bitwise AND operators &</li>
+<li>Bitwise OR operator |</li>
+<li>And bitwise XOR operator ^</li>
+<li>And, bitwise NOT operator ~</ul></li>
+<p>They can be used as shorthand notation too, & = , |= , ^= , ~= etc.</p>
+
+<h2>Shift Operators</h2>
+<p>Shift Operators are used to shift Bits of any variable. It is of three types,</p>
+
+<ul><li>Left Shift Operator &lt&lt</li>
+<li>Right Shift Operator &lt&lt </li>
+<li>Unsigned Right Shift Operator &lt&lt&lt</li></ul>
+<h2>Unary Operators</h2>
+<p>These are the operators which work on only one operand. There are many <p>unary operators, but increment ++ and decrement -- operators are most used.</p>
+
+<h4>Other Unary Operators :</h4><p> address of &, dereference *,<b> new</b> and <b>delete</b>, bitwise not ~, logical not !, unary minus - and unary plus +.</p>
+
+<h2>Ternary Operator</h2>
+<p>The ternary if-else ? : is an operator which has three operands.</p>
+<table border="" width="400"><tr><td><pre>
+int a = 10;
+a &lt 5 ? cout &lt&lt "true" : cout &lt&lt "false"</pre></td></tr></table>
+<h2>Comma Operator</h2>
+<p>This is used to separate variable names and to separate expressions. In case of expressions, the value of last expression is produced and used.</p>
+
+<h4>Example :</h4>
+<table border=""width="400">
+<tr><td>int a,b,c; // variables declaration using comma operator<br>
+a=b++, c++; // a = c++ will be done.
+</td></tr></table>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

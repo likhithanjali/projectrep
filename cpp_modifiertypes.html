@@ -1,0 +1,154 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+body{
+font-family:arial;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<header>
+<h1>C++ Programming</h1>
+</header>
+<nav>
+<ul>
+<li> <a href="home.html">HOME</a></li><br>
+<li><a href="cpp_overview.html">Overview</a></li><br>
+
+<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
+<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
+<li><a href="cpp_comments.html">comments</a></li><br>
+<li><a href="cpp_datatypes.html">data types</a></li><br>
+<li><a href="cpp_variables.html">variable types</a></li><br>
+
+<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
+<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
+<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
+<li><a href="cpp_operators.html">operators</a></li><br>
+<li><a href="cpp_loops.html">loops</a></li><br>
+<li><a href="cpp_decisionmake.html">decision making</a></li><br>
+<li><a href="cpp_functions.html">functions</a></li><br>
+<li><a href="cpp_arraays.html">arrays</a></li><br>
+<li><a href="cpp_strings.html">strings</a></li><br>
+<li><a href="cpp_pointers.html">pointers</a></li><br>
+<li><a href="cpp_references.html">references</a></li><br>
+<li><a href="cpp_basicio.html">basic input&output</a></li><br>
+<li><a href="cpp_datastructures.html">data structures</a></li><br>
+<li><a href="cpp_classobject.html">classes&objects</a></li><br>
+<li><a href="cpp_inheritance.html">inheritance </a></li><br>
+<li><a href="cpp_overloading.html">overloading</a></li><br>
+<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
+<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
+<li><a href="cpp_interfaces.html">interfaces</a></li><br>
+
+
+</ul>
+</nav>
+<article>
+<h1 style="color:#000080">MODIFIER TYPES In C++ Programming</h1>
+ <h2>modifier types</h2>
+<p>C++ allows the char, int, and double data types to have modifiers preceding them. A modifier is used to alter the meaning of the base type so that it more precisely fits the needs of various situations.</p>
+The data type modifiers are listed here -
+<ol><li>signed
+<li>unsigned
+<li>long
+<li>short
+<p>The modifiers signed, unsigned, long, and short can be applied to integer base types. In addition, signed and unsigned can be applied to char, and long can be applied to double.</p>
+<p>The modifiers signed and unsigned can also be used as prefix to long or short modifiers. For example, unsigned long int.</p>
+
+<p>C++ allows a shorthand notation for declaring unsigned, short, or long integers. You can simply use the word unsigned, short, or long, without int. It automatically implies int. For example, the following two statements both declare unsigned integer variables.</p>
+<pre><code>unsigned x;
+unsigned int y;</code></pre>
+<p>To understand the difference between the way signed and unsigned integer modifiers are interpreted by C++, you should run the following short program -</p>
+<h4>Example:</h4>
+<pre><code>#include <iostream>
+using namespace std;
+ 
+/* This program shows the difference between
+   * signed and unsigned integers.
+*/
+int main() {
+   short int i;           // a signed short integer
+   short unsigned int j;  // an unsigned short integer
+
+   j = 50000;
+
+   i = j;
+   cout << i << " " << j;
+
+   return 0;
+}</code></pre>
+When this program is run, following is the output-<br>
+<b>OUTPUT:</b>
+<pre>-15536 50000</pre>
+The above result is because the bit pattern that represents 50,000 as a short unsigned integer is interpreted as -15,536 by a short.
+
+<h2>Type Qualifiers in C++</h2>
+The type qualifiers provide additional information about the variables they precede.<br>
+<table border="" cellpadding="2" cellspacing="2" width="600">
+<tr>
+<th>Sr.No</th>
+<th style="text-align:center;">Qualifier &amp; Meaning</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><p><b>const</b></p>
+<p>Objects of type <b>const</b> cannot be changed by your program during execution.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><p><b>volatile</b></p>
+<p>The modifier <b>volatile</b> tells the compiler that a variable's value may be changed in ways not explicitly specified by the program.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><p><b>restrict</b></p>
+<p>A pointer qualified by <b>restrict</b> is initially the only means by which the object it points to can be accessed. Only C99 adds a new type qualifier called restrict.</p></td>
+</tr>
+</table>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+
