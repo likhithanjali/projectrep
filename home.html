@@ -1,9 +1,83 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+body {
+  margin: 10;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color:#ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
 body{
 font-family:arial;
 }
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+
 </style>
 <script type="text/javascript">
   
@@ -12,11 +86,11 @@ font-family:arial;
   
 	             var image1 = new Image(); // Preload an image
       
-	             image1.src = "pic1.png";
+	             image1.src = "homePic1.png";
             
 	             var image2 = new Image(); // Preload second image
               
-	             image2.src = "pic2.png";
+	             image2.src = "homePic2.png";
            
 	   }
 
@@ -25,57 +99,38 @@ font-family:arial;
 </script>
 </head>
 <body>
-<table width="100%" height="90">
-<tr bgcolor="#000080">
-<td><center><h1 style="color:white";>LEARN PROGRAMMING</h1></center></td>
-</tr> 
-</table>
-<table width="100%" height="30" boarder="3">
-<tr bgcolor="lightcyan" height="50">
-<td align="center"><a href="home.html">Home</a></td>
-<td align="center"><a href="allprolang.html">Programming Language</a></td>
-<td align="center"><a href="success.html">About</a></td>
-<td align="center"><a href="success.html">contact</a></td>
-<td align="center"><a href="success.html">Experts</td>
-</tr>
-</table>
- 
-
-
-
-<a href="pic1.png" onMouseOver="document.myImage.src=image2.src;" onMouseOut="document.myImage.src=image1.src;">
-      <img name="myImage" src=" pic1.png" />
-      </a>
-
-
-
+<div class="container">
+<header><h1>LEARN PROGRAMMING</h2></header>
+<div class="topnav">
+  <div class="icon-bar">
+  <a class="active" href="home.html"><i class="fa fa-home"></i></a> </div>
+  <a href="allprolang.html">PROGRAMMING LANGUAGES</a>
+  <a href="about.html">ABOUT</a>
+  <a href="contactUs.html">CONTACT US</a>
+  <a href="experts.html">EXPERTS</a>
+  
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a>
+  </div>
+</div><center>
+<a href="homePic1.png" onMouseOver="document.myImage.src=image2.src;" onMouseOut="document.myImage.src=image1.src;">
+      <img name="myImage" src=" homePic1.png" />
+</a></center>
 <h3 style="color:blue";>
 Professional Benefits:</h3>
 <p fontsize="30px">
 Studying programming languages will help you be better at your job, and make more money, and be a happier, more fulfilled and more informed citizen, because you’ll learn to:
-<br>
+<br><br>
 Choose the most appropriate language for a given task. A programming language lets you express computational tasks in certain ways. Some do a great job expressing some kinds of tasks and do a terrible job at others.
 Learn new languages more easily. Thinking in terms of language independent concepts (e.g. types, sequencing, iteration, selection, recursion, concurrency, subroutines, parameter passing, naming, scope, abstraction, inheritance, composition, binding, etc.) rather than in one particular language’s syntactic constructs enables you to adapt to any programming environment.
-<br><br>
+<br><br></p>
+<center>
 <video width="1000" height="500" controls>
   <source src=" Computer Languages Introduction.mp4" type="video/mp4">
 </video>
-
+</center>
 <p>
-TO KNOW ABOUT PROGRAMMING LANGUAGES VISIT THE FOLLOWING LINKS<br><br>
+TO KNOW ABOUT PROGRAMMING LANGUAGES VISIT THE <a href="allProLang.html">ALL PROGRAMMING LANGUAGES</a><br><br>
 </p>
-<form action="/action_page.php" id="usrform">
-  Name: <input type="text" name="usrname">
-  <input type="submit">
-</form>
-<br>
-<textarea rows="4" cols="50" name="comment" form="usrform">
-Enter text here...</textarea>
-
-<p>The text area above is outside the form element, but should still be a part of the form.</p>
-
-<h3><font color="brown">devoloped by :likhithanjali</font></h3></td></tr>
+<footer>Devoloped by LE's</footer>
 </body>
 </html>
-#projectrep
-#projectrep

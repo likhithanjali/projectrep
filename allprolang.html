@@ -1,7 +1,35 @@
  <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+body {
+  margin: 10;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color:#ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
 div.container {
     width: 100%;
     border: 1px solid gray;
@@ -15,33 +43,15 @@ header, footer {
     font-size:large;
     text-align: center;
 }
-
-nav {
+.icon-bar a {
     float: left;
-    max-width: 160px;
-    margin: 0;
-    padding: 1em;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    font-size:25px;
-}
-
-nav ul a {
-    text-decoration: none;
-}
-
-article {
-    margin-left: 170px;
-    border-left: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
-}
-body{
-font-family:arial;
-}
 </style>
 </head>
 <body>
@@ -50,22 +60,22 @@ font-family:arial;
 <header>
 <h1>Programming Languages</h1>
 </header>
-<nav>
-<ul>
-<li> <a href="c.html">C</a></li><br>
-<li><a href="cpp.html">C++</a></li><br>
-<li><a href="java.html">JAVA</a></li><br>
-<li><a href="html.html">HTML</a></li><br>
-<li><a href="php.html">PHP</a></li><br>
-<li><a href="css.html">CSS</a></li><br>
-<li><a href="javascript.html">JAVASCRIPT</a></li><br>
-<li><a href="python.html">PYTHON</a></li><br>
-
-</ul>
-</nav>
-<article>
+<div class="topnav">
+  <div class="icon-bar"> 
+  <a class="" href="home.html"><i class="fa fa-home"></i></a> </div>
+  <a class="active" href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp.html">C++</a>
+  <a href="java.html">JAVA</a>
+  <a href="html.html">HTML</a>
+  <a href="css.html">CSS</a>
+  <a href="javascript.html">JAVA SCRIPT</a>
+  <a href="python.html">PYTHON</a>
+  <a href="php.html">PHP</a>
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a>
+  </div></div>
 <h1 style="color:#000080";>INTRODUCTION ABOUT ALL PROGRAMMING LANGUAGES</h1>
-<h2><a href="c.html">1.C:</a></h2>
+<h2><a href="c_overview.html">1.C:</a></h2>
 C is a high-level and general-purpose programming language that is ideal for developing firmware or portable applications.</br> Originally intended for writing system software, C was developed at Bell Labs by Dennis Ritchie for the Unix Operating System in the early 1970s.
 
 <h2><a href="cpp.html">2.C++ Programming Language :</a></h2>
@@ -89,11 +99,14 @@ CSS stands for Cascading Style Sheets.</br>
 • CSS describes how HTML elements are to be displayed on screen, paper, or in other media.</br>
 • CSS saves a lot of work. It can control the layout of multiple web pages all at once.</br>
 • External stylesheets are stored in CSS files.</br>
+<h2><a href="python.html">6.Python:</a></h2>
+Python is an interpreted high-level programming language for general-purpose programming. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales. In July 2018, Van Rossum stepped down as the leader in the language community after 30 years.<br>
 
-<h2><a href="php.html">6.Php:</a></h2>
+Python features a dynamic type system and automatic memory management. It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library.
+<h2><a href="php.html">7.Php:</a></h2>
 PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.</br>
 PHP is a widely-used, free, and efficient alternative to competitors such as Microsoft's ASP.
-<h2><a href="javascript.html">7.Javascript:</a></h2>
+<h2><a href="javascript.html">8.Javascript:</a></h2>
 JavaScript and Java are completely different languages, both in concept and design.</br>
 JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.</br>
 JavaScript is one of the 3 languages all web developers must learn:</br>
@@ -102,10 +115,8 @@ JavaScript is one of the 3 languages all web developers must learn:</br>
    3. JavaScript to program the behavior of web pages.</br>
 <p>Web pages are not the only place where JavaScript is used. Many desktop and server programs use JavaScript.Node.js is the best known. Some databases, like MongoDB and CouchDB, also use JavaScript as their programming language.</p>
 <p>HTML tutorial or HTML 5 tutorial provides basic and advanced concepts of html. Our HTML tutorial is developed for beginners and professionals.</p>
-<p>TML is an acronym which stands for Hyper Text Markup Language. Let's see what is Hyper Text and what is Markup Language?</p>
-</article>
+<p>TML is an acronym which stands for Hyper Text Markup Language. Let's see what is Hyper Text and what is Markup Language?</p><br>
 <footer>Devoloped by LE's</footer>
-</div>
 </body>
 </html>
 

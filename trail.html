@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color:#ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
 div.container {
     width: 100%;
     border: 1px solid gray;
@@ -42,18 +70,33 @@ article {
 body{
 font-family:arial;
 }
-</style>
-</head>
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+</style></head>
 <body>
-
-<div class="container">
 <header>
 <h1>C Programming</h1>
-</header>
+</header> 
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="home.html"><i class="fa fa-home"></i></a> </div>
+  <a class="active" href="c.html">C</a>
+  <a href="cpp.html">C++</a>
+  <a href="java.html">JAVA</a>
+  <a href="html.html">HTML</a>
+  <a href="css.html">CSS</a>
+  <a href="javascript.html">JAVA SCRIPT</a>
+  <a href="python.html">PYTHON</a>
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div>
+</div>
+<div class="container">
 <nav>
-<ul>
-<li> <a href="home.html">HOME</a></li><br>
-<li><a href="c_overview.html">Overview</a></li><br>
+<ul><li><a href="c_overview.html">Overview</a></li><br>
 <li><a href="c_prostuct.html">Program Structures</a></li><br>
 <li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
 <li><a href="c_datatypes.html">DataTypes</a></li><br>
@@ -73,14 +116,25 @@ font-family:arial;
 </ul>
 </nav>
 <article>
-<img src="pic3.jpg"/>
-<br>
-<br>
-<p> 
-C is a high-level and general-purpose programming language that is ideal for developing firmware or portable applications.
-Originally intended for writing system software, C was developed at Bell Labs by Dennis Ritchie for the Unix Operating System in the early 1970s.
+ 
+
 </article>
 <footer>Devoloped by LE's</footer>
 </div>
 </body>
 </html>
+
+
+
+
+
+<form action="/action_page.php" id="usrform">
+  Name: <input type="text" name="usrname">
+  <input type="submit">
+</form>
+<br>
+<textarea rows="4" cols="50" name="comment" form="usrform">
+Enter text here...</textarea>
+
+<p>The text area above is outside the form element, but should still be a part of the form.</p>
+

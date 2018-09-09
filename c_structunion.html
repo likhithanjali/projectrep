@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
 div.container {
     width: 100%;
     border: 1px solid gray;
@@ -18,7 +46,7 @@ header, footer {
 
 nav {
     float: left;
-    max-width: 160px;
+    max-width: 180px;
     margin: 0;
     padding: 1em;
 }
@@ -38,40 +66,74 @@ article {
     border-left: 1px solid gray;
     padding: 1em;
     overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
 }
-body{
-font-family:arial;
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
 }
 </style>
+
 </head>
 <body>
-
-<div class="container">
 <header>
 <h1>C Programming</h1>
 </header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="home.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a class="active" href="c.html">C</a>
+  <a href="cpp.html">C++</a>
+  <a href="java.html">JAVA</a>
+  <a href="html.html">HTML</a>
+  <a href="css.html">CSS</a>
+  <a href="javascript.html">JAVA SCRIPT</a>
+  <a href="python.html">PYTHON</a>
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
 <nav>
-<ul>
-<li> <a href="home.html">HOME</a></li><br>
-<li><a href="c_overview.html">Overview</a></li><br>
-<li><a href="c_prostuct.html">Program Structures</a></li><br>
-<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
-<li><a href="c_datatypes.html">DataTypes</a></li><br>
-<li><a href="c_variables.html">Variables</a></li><br>
-<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
-<li><a href="c_operators.html">Operators</a></li><br>
-<li><a href="c_desisonmake.html">Desision Making</a></li><br>
-<li><a href="c_loops.html">Loops</a></li><br>
-<li><a href="c_functions.html">Functions</a></li><br>
-<li><a href="c_scope.html">Scope Rules</a></li><br>
-<li><a href="c_arrays.html">Arrays</a></li><br>
-<li><a href="c_pointers.html">Pointers</a></li><br>
-<li><a href="c_strings.html">Strings</a></li><br>
-<li><a href="c_structunion.html">Structures&Unions</a></li><br>
-<li><a href="c_ipop.html">Input&Output</a></li><br>
-<li><a href="c_fileio.html">File I/O </a></li><br>
-</ul>
-</nav>
+<div class="vertical-menu">
+   <a href="c_overview.html">Overview</a>
+   <a href="c_prostuct.html">Program Structures</a>
+   <a href="c_basicsyntax.html">Basic Syntax</a>
+   <a href="c_datatypes.html">DataTypes</a>
+   <a href="c_variables.html">Variables</a>
+   <a href="c_constliterals.html">Constants&Literals </a>
+   <a href="c_operators.html">Operators</a>
+   <a href="c_desisonmake.html">Desision Making</a>
+   <a href="c_loops.html">Loops</a>
+   <a href="c_functions.html">Functions</a>
+   <a href="c_scope.html">Scope Rules</a>
+   <a href="c_arrays.html">Arrays</a>
+   <a href="c_pointers.html">Pointers</a>
+   <a href="c_strings.html">Strings</a>
+   <a class="active" href="c_structunion.html">Structures&Unions </a>
+   <a href="c_ipop.html">Input&Output </a>
+   <a href="c_fileio.html">File I/O </a>
+ </div> </nav>
 <article><h1 style="color:#000080">STRUCTURES & UNIONS In C Programming</h1>
  <h1>Structures</h1>
 <p>Arrays allow to define type of variables that can hold several data items of the
@@ -96,7 +158,7 @@ definition, such as int i; or float f; or any other valid variable definition. A
 end of the structure's definition, before the final semicolon, you can specify one
 or more structure variables but it is optional. Here is the way you would declare
 the Book structure:</p>
-<img src="c_str2.png">
+<img src="c_str2.png"><br>
 <img src="c_str3.png">
 <h2>Accessing Structure Members:</h2>
 To access any member of a structure, we use the member access operator
@@ -104,11 +166,7 @@ To access any member of a structure, we use the member access operator
 variable name and the structure member that we wish to access. You would
 use the keyword struct to define variables of structure type. The following
 example shows how to use a structure in a program:
-<div class="le-col l6" style="padding:3%">
-  <div class="le-hide-small le-card-2 le-light-grey" style="padding:16px;">
-<div class="le-code notranslate le-card-2 le-border-green">
-<div class="htmlHigh"> 
-   </div>
+
 <table border="" cellpadding="2" cellspacing="2" width="500">
 <tr>
 <td>#include&ltstdio.h><br>
@@ -148,8 +206,7 @@ return 0;<br>
 }<br><br></td>
 </tr>
 </table>
-</div>
-    <div class="htmlHigh">
+<p>
 When the above code is compiled and executed, it produces the following result:<br>
 Book 1 title : C Programming<br>
 Book 1 author : Nuha Ali<br>
@@ -157,7 +214,7 @@ Book 1 subject : C Programming Tutorial<br>
 Book 1 book_id : 6495407<br>
 Book 2 title : Telecom Billing<br>
 Book 2 author : Zara Ali<br>
-Book 2 subject : Telecom Billing Tutorial<br>
+Book 2 subject : Telecom Billing Tutorial<br></p>
 <h2>Structures as Function Arguments:</h2>
 <p>You can pass a structure as a function argument in the same way as you pass
 any other variable or pointer.</p><br>

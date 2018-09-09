@@ -1,7 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
 div.container {
     width: 100%;
     border: 1px solid gray;
@@ -18,7 +46,7 @@ header, footer {
 
 nav {
     float: left;
-    max-width: 160px;
+    max-width: 180px;
     margin: 0;
     padding: 1em;
 }
@@ -38,40 +66,74 @@ article {
     border-left: 1px solid gray;
     padding: 1em;
     overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
 }
-body{
-font-family:arial;
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
 }
 </style>
+
 </head>
 <body>
-
-<div class="container">
 <header>
 <h1>C Programming</h1>
 </header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="home.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a class="active" href="c.html">C</a>
+  <a href="cpp.html">C++</a>
+  <a href="java.html">JAVA</a>
+  <a href="html.html">HTML</a>
+  <a href="css.html">CSS</a>
+  <a href="javascript.html">JAVA SCRIPT</a>
+  <a href="python.html">PYTHON</a>
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
 <nav>
-<ul>
-<li> <a href="home.html">HOME</a></li><br>
-<li><a href="c_overview.html">Overview</a></li><br>
-<li><a href="c_prostuct.html">Program Structures</a></li><br>
-<li><a href="c_basicsyntax.html">Basic Syntax</a></li><br>
-<li><a href="c_datatypes.html">DataTypes</a></li><br>
-<li><a href="c_variables.html">Variables</a></li><br>
-<li><a href="c_constliterals.html">Constants&Literals</a></li><br>
-<li><a href="c_operators.html">Operators</a></li><br>
-<li><a href="c_desisonmake.html">Desision Making</a></li><br>
-<li><a href="c_loops.html">Loops</a></li><br>
-<li><a href="c_functions.html">Functions</a></li><br>
-<li><a href="c_scope.html">Scope Rules</a></li><br>
-<li><a href="c_arrays.html">Arrays</a></li><br>
-<li><a href="c_pointers.html">Pointers</a></li><br>
-<li><a href="c_strings.html">Strings</a></li><br>
-<li><a href="c_structunion.html">Structures&Unions</a></li><br>
-<li><a href="c_ipop.html">Input&Output</a></li><br>
-<li><a href="c_fileio.html">File I/O </a></li><br>
-</ul>
-</nav>
+<div class="vertical-menu">
+   <a href="c_overview.html">Overview</a>
+   <a href="c_prostuct.html">Program Structures</a>
+   <a href="c_basicsyntax.html">Basic Syntax</a>
+   <a href="c_datatypes.html">DataTypes</a>
+   <a href="c_variables.html">Variables</a>
+   <a href="c_constliterals.html">Constants&Literals </a>
+   <a href="c_operators.html">Operators</a>
+   <a href="c_desisonmake.html">Desision Making</a>
+   <a href="c_loops.html">Loops</a>
+   <a href="c_functions.html">Functions</a>
+   <a href="c_scope.html">Scope Rules</a>
+   <a class="active" href="c_arrays.html">Arrays</a>
+   <a href="c_pointers.html">Pointers</a>
+   <a href="c_strings.html">Strings</a>
+   <a href="c_structunion.html">Structures&Unions </a>
+   <a href="c_ipop.html">Input&Output </a>
+   <a href="c_fileio.html">File I/O </a>
+ </div> </nav>
 <article>
  <h1 style="color:#000080">ARRAYS In C Programming</h1>
 <h2>Arrays</h2>
@@ -86,9 +148,9 @@ font-family:arial;
 <p>1.One-dimensional arrays</p>
 <p>2.Multidimensional arrays</p>
 <p><h3>How to declare arrays in c</h3></p>
-<img src=c_array3.png>
+<img src="c_array3.png"	/>
 <p><h4>Example</h4></p>
-<img src=c_array4.png>
+<img src="c_array4.png"/>
 <p><h4>Elements of an Array and How to access them?</h4></p>
 <p>You can access elements of an array by indices.<p>
 
@@ -169,11 +231,6 @@ Printing elements of the array:
 <p>The syntax declaration of 2-D array is not much different from 1-D array. In 2-D array, to declare and access elements of a 2-D array we use 2 subscripts instead of 1.</p>
 
 <p><h3>Syntax:</h3> datatype array_name[ROW][COL];</p>
-
-<p>The total number of elements in a 2-D array is ROW*COL. Let’s take an example.</p>
-<img src="c_array16.png">
-<p>This array can store 2*3=6 elements. You can visualize this 2-D array as a matrix of 2 rows and 3 columns.</p>
-<img src="c_array17.png">
 <p>The individual elements of the above array can be accessed by using two subscript instead of one. The first subscript denotes row number and second denotes column number. As we can see in the above image both rows and columns are indexed from 0. So the first element of this array is at arr[0][0] and the last element is at arr[1][2]. Here are how you can access all the other elements:</p>
 
 <p>arr[0][0] - refers to the first element arr[0][1] - refers to the second element arr[0][2] - refers to the third element arr[1][0] - refers to the fourth element arr[1][1] - refers to the fifth element arr[1][2] - refers to the sixth element</p>
@@ -183,8 +240,6 @@ Printing elements of the array:
 <p>arr[1][3] - a garbage value will be printed, because the last valid index of COL is 2 arr[2][3] - a garbage value will be printed, because the last valid index of ROW and COL is 1 and 2 respectively</p>
 
 <p>Just like 1-D arrays, we can only also use constants and symbolic constants to specify the size of a 2-D array.</p>
-
-<img src="c_array18.png">
 <p><h3>Processing elements of a 2-D array #</h3></p>
 <p>To process elements of a 2-D array, we use two nested loop. The outer for loop to loop through all the rows and inner for loop to loop through all the columns. The following program will clear everything.</p>
 <p style="color:#000080">#include&ltstdio.h><br>
@@ -240,6 +295,5 @@ Entered 2-D array is:
 <p>There is nothing new in this previous program that deserves any explanation. We are just using two nested for loops. The first nested for loop takes input from the user. And the second for loop prints the elements of a 2-D array like a matrix.</p>
 </article>
 <footer>Devoloped by LE's</footer>
-</div>
 </body>
 </html>
