@@ -104,7 +104,7 @@ article {
 </header>
 
 <div class="topnav">
-  <div class="icon-bar"> <a class="" href="home.html"><i class="fa fa-home"></i></a> </div>
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
 <a href="allprolang.html">All Languages</a>
    <a class="active" href="c_overview.html">C</a>
   <a href="cpp_overview.html">C++</a>
@@ -139,17 +139,17 @@ article {
 <p>A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.<br></p>
 <p>The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C is case-sensitive. Based on the basic types explained in the previous chapter, there will be the following basic variable types</p>
 <p>C programming language also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Structure, Union, etc. For this chapter, let us study only basic variable types.<br></p>
-<img src="c_var.png"/>
+<img src="images/c_var.png"/>
 <h2>Variable Definition in C</h2>
 <p>A variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows<br></p>
-<img src="c_var1.png"/>
+<img src="images/c_var1.png"/>
 <p>Here, type must be a valid C data type including char, w_char, int, float, double, bool, or any user-defined object; and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here<br></p>
-<img src="c_var2.png"/>
+<img src="images/c_var2.png"/>
 <p>The line int i, j, k; declares and defines the variables i, j, and k; which instruct the compiler to create variables named i, j and k of type int.</p>
 <p>Variables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows </p>
-<img src="c_var3.png"<br>>
+<img src="images/c_var3.png"<br>>
 <p>Some examples are -</p>
-<img src="c_var4.png">
+<img src="images/c_var4.png">
 <p>For definition without an initializer: variables with static storage duration are implicitly initialized with NULL (all bytes have the value 0); the initial value of all other variables are undefined.</p>
 <h2>Variable Declaration in C</h2>
 <p>A variable declaration provides assurance to the compiler that there exists a variable with the given type and name so that the compiler can proceed for further compilation without requiring the complete detail about the variable. A variable definition has its meaning at the time of compilation only, the compiler needs actual variable definition at the time of linking the program.</p>
@@ -157,11 +157,11 @@ article {
 
 <h3>Example</h3>
 <p>Try the following example, where variables have been declared at the top, but they have been defined and initialized inside the main function -<p>
-<img src="c_var5.png"/>
+<img src="images/c_var5.png"/>
 <p>When the above code is compiled and executed, it produces the following result -</p>
-<img src="c_var6.png"><br>
+<img src="images/c_var6.png"><br>
 <p>The same concept applies on function declaration where you provide a function name at the time of its declaration and its actual definition can be given anywhere else. For example -</p>
-<img src="c_var7.png">
+<img src="images/c_var7.png">
 <h3>Lvalues and Rvalues in C</h3>
 <p>There are two kinds of expressions in C -</p>
 <p><b>lvalue -</b> Expressions that refer to a memory location are called "lvalue" expressions. An lvalue may appear as either the left-hand or right-hand side of an assignment.</p>
@@ -169,7 +169,7 @@ article {
 <p><b>rvalue -</b> The term rvalue refers to a data value that is stored at some address in memory. An rvalue is an expression that cannot have a value assigned to it which means an rvalue may appear on the right-hand side but not on the left-hand side of an assignment.</p>
 
 Variables are lvalues and so they may appear on the left-hand side of an assignment. Numeric literals are rvalues and so they may not be assigned and cannot appear on the left-hand side. Take a look at the following valid and invalid statements 
-<img src="c_var8.png"/>
+<img src="images/c_var8.png"/>
 </article>
 <footer>Devoloped by LE's</footer>
 </body>

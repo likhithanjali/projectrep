@@ -104,7 +104,7 @@ article {
 </header>
 
 <div class="topnav">
-  <div class="icon-bar"> <a class="" href="home.html"><i class="fa fa-home"></i></a> </div>
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
 <a href="allprolang.html">All Languages</a>
    <a class="active" href="c_overview.html">C</a>
   <a href="cpp_overview.html">C++</a>
@@ -134,8 +134,7 @@ article {
    <a href="c_ipop.html">Input&Output </a>
    <a href="c_fileio.html">File I/O </a>
  </div> </nav>
-<article><h1 style="color:#000080">SCOPE RULES In C Programming</h1>
-<h1>Scope Rules</h1></head><arial>
+<article><h1 style="color:#000080">SCOPE RULES In C Programming</h1></head>
 <body> <p>A scope in any programming is a region of the program where a defined variable can have its existence and beyond that variable it cannot be accessed. There are three places where variables can be declared in C programming language -</p>
 <ul>
 <li>Inside a function or a block which is called local variables.</li>
@@ -145,23 +144,23 @@ article {
 <p>Let us understand what are local and global variables, and formal parameters.</p>
 <h2>Local Variables</h2>
 <p>Variables that are declared inside a function or block are called local variables. They can be used only by statements that are inside that function or block of code. Local variables are not known to functions outside their own. The following example shows how local variables are used. Here all the variables a, b, and c are local to main() function.</p> 
-<img src="c_srules1.png">
+<img src="images/c_srules1.png">
 <h2>Global Variables</h2>
 <p>Global variables are defined outside a function, usually on top of the program. Global variables hold their values throughout the lifetime of your program and they can be accessed inside any of the functions defined for the program.</p>
 <p>A global variable can be accessed by any function. That is, a global variable is available for use throughout your entire program after its declaration. The following program show how global variables are used in a program.</p>
-<img src="c_srules2.png">
+<img src="images/c_srules2.png">
 <p>A program can have same name for local and global variables but the value of local variable inside a function will take preference. Here is an example -<p>
-<img src="c_srules3.png">
+<img src="images/c_srules3.png">
 <p>When the above code is compiled and executed, it produces the following result -</p>
-<img src="c_srules4.png">
+<img src="images/c_srules4.png">
 <h2>Formal Parameters</h2>
 <p>Formal parameters, are treated as local variables with-in a function and they take precedence over global variables. Following is an example -</p>
-<img src="c_srules5.png">
+<img src="images/c_srules5.png">
 <p>When the above code is compiled and executed, it produces the following result -</p>
-<img src="c_srules6.png">
+<img src="images/c_srules6.png">
 <h2>Initializing Local and Global Variables</h2>
 <p>When a local variable is defined, it is not initialized by the system, you must initialize it yourself. Global variables are initialized automatically by the system when you define them as follows -</p>
-<img src="c_srules7.png">
+<img src="images/c_srules7.png">
 <p>It is a good programming practice to initialize variables properly, otherwise your program may produce unexpected results, because uninitialized variables will take some garbage value already available at their memory location.</p></arial>
 </article>
 <footer>Devoloped by LE's</footer>

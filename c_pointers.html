@@ -95,6 +95,28 @@ article {
     background-color: #000080;
     color: white;
 }
+<style>
+button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+}
+
 </style>
 
 </head>
@@ -104,7 +126,7 @@ article {
 </header>
 
 <div class="topnav">
-  <div class="icon-bar"> <a class="" href="home.html"><i class="fa fa-home"></i></a> </div>
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
 <a href="allprolang.html">All Languages</a>
   <a class="active" href="c_overview.html">C</a>
   <a href="cpp_overview.html">C++</a>
@@ -135,8 +157,11 @@ article {
    <a href="c_fileio.html">File I/O </a>
  </div> </nav></nav>
 <article> 
+<button type="button" onclick="c_arrays.html">&laquo; Previous
+</button>
+<button type="button" onclick="c_strings.html">&laquo; Previous
+</button>
 <h1 style="color:#000080">POINTERS In C Programming</h1>
-<h2><u>pointers</u></h2>
 <p>Pointers in C language is a variable that stores/points the address of another variable. A Pointer in C is used to allocate memory dynamically i.e. at run time. The pointer variable might be belonging to any of the data type such as int, float, char, double, short etc.<br>
 Pointers are also variables and play a very important role in C programming language.</p> <h4>They are used for several reasons, such as:</h4>
 <p>Strings<br>Dynamic memory allocation<br>Sending function arguments by reference<br>Building complicated data structures<br>Pointing to functions<br>Building special data structures (i.e. Tree, Tries, etc...)<br>And many more.</p>

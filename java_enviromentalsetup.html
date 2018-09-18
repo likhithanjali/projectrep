@@ -1,0 +1,60 @@
+<html>
+<head>
+<h2>Environmental set up</h2>
+<p>Click the 'Environment variables' button under the 'Advanced' tab. Now, alter the 'Path' variable so that it also contains the path to the Java executable. Example, if the path is currently set to 'C:\WINDOWS\SYSTEM32', then change your path to read 'C:\WINDOWS\SYSTEM32;c:\Program Files\java\jdk\bin'.</p>
+<h4>How to set path in Java</h4>
+<p>The path is required to be set for using tools such as javac, java etc.<br>
+
+<p>If you are saving the java source file inside the jdk/bin directory, path is not required to be set because all the tools will be available in the current directory.<br>
+
+<p>But If you are having your java file outside the jdk/bin folder, it is necessary to set path of JDK.</p>
+
+<h4>There are 2 ways to set java path:</h4>
+
+<ul><li>temporary</li>
+<li>permanent</li></ul>
+<h4>1) How to set Temporary Path of JDK in Windows</h4>
+<p>To set the temporary path of JDK, you need to follow following steps:</p>
+
+<ul><li>Open command prompt</li>
+<li>Copy the path of jdk/bin directory</li>
+<li>Write in command prompt: set path=copied_path/li></ul>
+<h4>For Example:</h4>
+<table border="" width="400"><tr><td>
+set path=C:\Program Files\Java\jdk1.6.0_23\bin
+</td></tr></table>
+</p>Let's see it in the figure given below:</p>
+<img src="java_enver1.png">
+<h2>2. How to set Permanent Path of JDK in Windows</h2>
+<p>For setting the permanent path of JDK, you need to follow these steps:</p>
+
+<ul><li>Go to MyComputer properties -> advanced tab -> environment variables -> new tab of user variable -> write path in variable name -> write path of bin folder in variable value -> ok -> ok -> ok</li></ul>
+</h4>For Example:<h4>
+<p>1)Go to MyComputer properties</p>
+<img src="java_enver2.png">
+<p>2)click on advanced tab</p>
+<img src="java_enver3.png">
+<p>3)click on environment variables</p>
+<img src="java_enver4.png">
+<p>4)click on new tab of user variables</p>
+<img src="java_enver5.png">
+<p>5)write path in variable name</p>
+<img src="java_enver6.png">
+<p>6)Copy the path of bin folder</p>
+<img src="java_enver7.png">
+<p>7)paste path of bin folder in variable value</p>
+<img src="java_enver8.png">
+<p>8)click on ok button</p>
+<img src="java_enver9.png">
+<p>9)click on ok button</p>
+<img src="java_enver10.png">
+<p>Now your permanent path is set.You can now execute any program of java from any drive.</p>
+
+<h4>Setting Java Path in Linux OS</h4>
+<p>Setting path in Linux OS is same as setting path in the Windows OS. But here we use export tool rather than set. Let's see how to set path in Linux OS:</p>
+<table border="" width="400"><tr><td>
+export PATH=$PATH:/home/jdk1.6.01/bin/</td></tr></table>
+<p>Here, we have installed the JDK in the home directory under Root (/home).</p>
+
+</head>
+</html>

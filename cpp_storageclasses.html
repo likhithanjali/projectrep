@@ -1,10 +1,34 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-div.container {
-    width: 100%;
-    border: 1px solid gray;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
 }
 
 header, footer {
@@ -18,7 +42,7 @@ header, footer {
 
 nav {
     float: left;
-    max-width: 160px;
+    max-width: 180px;
     margin: 0;
     padding: 1em;
 }
@@ -38,54 +62,84 @@ article {
     border-left: 1px solid gray;
     padding: 1em;
     overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
 }
-body{
-font-family:arial;
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
 }
 </style>
+
 </head>
 <body>
-
-<div class="container">
 <header>
-<h1>C++ Programming</h1>
+<h1>CPP Programming</h1>
 </header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a class="active" href="cpp_overview.html">C++</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVA SCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
 <nav>
-<ul>
-<li> <a href="home.html">HOME</a></li><br>
-<li><a href="cpp_overview.html">Overview</a></li><br>
+<div class="vertical-menu">
+<a href="cpp_overview.html">Overview</a>
+<a href="cpp_envrnmnt.html">environment setup</a>
+<a href="cpp_basicsyntax.html">basic syntax</a>
+<a href="cpp_comments.html">comments</a>
+<a href="cpp_datatypes.html">data types</a>
+<a href="cpp_variables.html">variable types</a>
+<a href="cpp_constliterals.html">constants &literas </a>
+<a href="cpp_modifiertypes.html">modifier types</a>
+<a class="active" href="cpp_storageclasses.html">storage classes</a>
+<a href="cpp_operators.html">operators</a>
+<a href="cpp_loops.html">loops</a>
+<a href="cpp_decisionmake.html">decision making</a>
+<a href="cpp_functions.html">functions</a>
+<a href="cpp_arraays.html">arrays</a>
+<a href="cpp_strings.html">strings</a>
+<a href="cpp_pointers.html">pointers</a>
+<a href="cpp_references.html">references</a>
+<a href="cpp_basicio.html">basic input&output </a>
+<a href="cpp_datastructures.html">data structures</a>
+<a href="cpp_classobject.html">classes&objects </a>
+<a href="cpp_inheritance.html">inheritance </a>
+<a href="cpp_overloading.html">overloading</a>
+<a href="cpp_polymorphism.html">polymorphism</a>
+<a href="cpp_encapsulation.html">encapsulation</a>
+<a href="cpp_interfaces.html">interfaces</a>
+</div> </nav>
 
-<li><a href="cpp_envrnmnt.html">environment setup</a></li><br>
-<li><a href="cpp_basicsyntax.html">basic syntax</a></li><br>
-<li><a href="cpp_comments.html">comments</a></li><br>
-<li><a href="cpp_datatypes.html">data types</a></li><br>
-<li><a href="cpp_variables.html">variable types</a></li><br>
-
-<li><a href="cpp_constliterals.html">constants &literas</a></li><br>
-<li><a href="cpp_modifiertypes.html">modifier types</a></li><br>
-<li><a href="cpp_storageclasses.html">storage classes</a></li><br>
-<li><a href="cpp_operators.html">operators</a></li><br>
-<li><a href="cpp_loops.html">loops</a></li><br>
-<li><a href="cpp_decisionmake.html">decision making</a></li><br>
-<li><a href="cpp_functions.html">functions</a></li><br>
-<li><a href="cpp_arraays.html">arrays</a></li><br>
-<li><a href="cpp_strings.html">strings</a></li><br>
-<li><a href="cpp_pointers.html">pointers</a></li><br>
-<li><a href="cpp_references.html">references</a></li><br>
-<li><a href="cpp_basicio.html">basic input&output</a></li><br>
-<li><a href="cpp_datastructures.html">data structures</a></li><br>
-<li><a href="cpp_classobject.html">classes&objects</a></li><br>
-<li><a href="cpp_inheritance.html">inheritance </a></li><br>
-<li><a href="cpp_overloading.html">overloading</a></li><br>
-<li><a href="cpp_polymorphism.html">polymorphism</a></li><br>
-<li><a href="cpp_encapsulation.html">encapsulation</a></li><br>
-<li><a href="cpp_interfaces.html">interfaces</a></li><br>
-
-
-</ul>
-</nav>
 <article><h1 style="color:#000080">STORAGE CLASSES In C++ Programming</h1>
-<h2>Storage class</h2>
 <p> Storage class of a variable defines the lifetime and visibility of a variable. Lifetime means the duration till which the variable remains active and visibility defines in which module of the program the variable is accessible.</p> 
 <p>There are five types of storage classes in C++. They are:</p>
 
@@ -94,7 +148,7 @@ font-family:arial;
 <li>Static</li>
 <li>Register</li>
 <li>Mutable</li></ul>
-<img src="cpp_storage1.png">
+<img src="images/cpp_storage1.png">
 <p><h2>1. Automatic Storage Class</h2></p>
 <p>Automatic storage class assigns a variable to its default storage type. auto keyword is used to declare automatic variables. However, if a variable is declared without any keyword inside a function, it is automatic by default. This variable is visible only within the function it is declared and its lifetime is same as the lifetime of the function as well. Once the execution of function is finished, the variable is destroyed.</p>
 <h4>Syntax of Automatic Storage Class Declaration</h4>

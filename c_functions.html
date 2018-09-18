@@ -104,7 +104,7 @@ article {
 </header>
 
 <div class="topnav">
-  <div class="icon-bar"> <a class="" href="home.html"><i class="fa fa-home"></i></a> </div>
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
 <a href="allprolang.html">All Languages</a>
   <a class="active" href="c_overview.html">C</a>
   <a href="cpp_overview.html">C++</a>
@@ -149,7 +149,7 @@ one memory location to another location, and many more functions.</p>
 <p><h2>Defining a Function</h2></p>
 <p>The general form of a function definition in C programming language is as
 follows:</p>
-<IMG SRC="c_func1.PNG">
+<IMG SRC="images/c_func1.PNG">
 <p>A function definition in C programming consists of a function header and a
 function body. Here are all the parts of a function:</p>
 <p><h3>* Return Type:</h3> A function may return a value. The return_type is the
@@ -169,7 +169,7 @@ that define what the function does.</p>
 two parameters num1 and num2 and returns the maximum value between the
 two:</p>
 <p><h3>Example</h3></p>
-<img src="c_func2.png"/>
+<img src="images/c_func2.png"/>
 <p><h2><u>function declaration</u></h2></p>
 <p>A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function. The C standard library provides numerous built-in functions that your program can call.</p>
 <p><h3>Syntax of Function Declaration</h3></p>
@@ -200,12 +200,12 @@ int getSum(int, int);</p>
 </head>
 <p><h2><u>calling function</u></h2></p>
 <p>The calling function is exactly what it sounds like - the function that calls your function. Consider this example:</p>
-<img src="c_func3.png"/>
+<img src="images/c_func3.png"/>
 <p>In the above code snippet, fun2() is the calling function for fun1(). In general, a C program constitutes a chain of calling functions that have the main() at one end and the currently executing function at the other end. This chain (with intermediate parameter values and return types) is what constitutes a call stack.</p>
 <p><h2>Function Arguments</h2></p>
 <p>A function in C can be called either with arguments or without arguments. These function may or may not return values to the calling functions. All C functions can be called either with arguments or without arguments in a C program. Also, they may or may not return any values.</p>
 <p>While calling a function, the arguments can be passed to a function in two ways, Call by value and call by reference.</p>
-<img src="c_func4.png"/>
+<img src="images/c_func4.png"/>
 <p><h2><u>call by value</u></h2></p>
 <p>The call by value method of passing arguments to a function copies the actual
 value of an argument into the formal parameter of the function. In this case,
@@ -215,7 +215,7 @@ argument.</p>
 means the code within a function cannot alter the arguments used to call the
 function.</p>
 <p><h3>Example</h3></p>
-<p>#include<stdio.h></p>
+<p>#include&ltstdio.h></p>
 
 <p>/* function declaration */int addition(int num1, int num2);</p>
 
@@ -253,7 +253,7 @@ parameters as pointer types as in the following function swap(), which
 exchanges the values of the two integer variables pointed to, by their
 arguments.</p>
 <p><h3>Example</h3></p>
-<p>#include<stdio.h></p>
+<p>#include&ltstdio.h></p>
 
 <p>/* function declaration */int addition(int *num1, int *num2);</p>
 
