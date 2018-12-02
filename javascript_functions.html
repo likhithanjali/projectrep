@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVASCRIPT</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a  href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a class="active" href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="javascript_overview.html">Overview</a>
+<a href="javascript_output.html">Output</a>
+<a href="javascript_statements.html">Statements</a>
+<a href="javascript_syntax.html">Syntax</a>
+<a href="javascript_comments.html">Comments</a>
+<a href="javascript_variables.html">Variables</a>
+<a href="javascript_operators.html">Operators</a> 
+<a href="javascript_datatypes.html">Data Types</a>
+<a class="active" href="javascript_functions.html">Functions</a>
+<a href="javascript_objects.html">Objects</a>
+<a href="javascript_events.html">Events</a>
+<a href="javascript_strings.html">Strings</a>
+<a href="javascript_numbers.html">Numbers</a>
+<a href="javascript_validations.html">Validations</a>
+<a href="javascript_cookies.html">Cookies</a>
+<a href="javascript_debugging.html">Debugging</a>
+<a href="javascript_errorHandling.html">Error Handling</a>
+</div> </nav>
+
+<article>
+<a href="javascript_datatypes.html" class="previous">&laquo; Previous</a>
+<a href="javascript_objects.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>JavaScript Functions</h1>
+<p>A <strong>function</strong> is a block of code that performs an action or returns a value. Functions are custom code defined by programmers that are reusable, and can therefore make your programs more modular and efficient.</p>
+
+<p>In this tutorial, we will learn several ways to define a function, call a function, and use function parameters in JavaScript.</p>
+
+<h2 id="defining-a-function">Defining a Function</h2>
+
+<p>Functions are defined, or declared, with the <code>function</code> keyword. Below is the syntax for a function in JavaScript.</p>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code class="code-highlight language-js">function nameOfFunction() {
+    // Code to be executed
+}
+</code></pre>
+</td></tr></table>
+<p>The declaration begins with the <code>function</code> keyword, followed by the name of the function. Function names follow the same rules as variables — they can contain letters, numbers, underscores and dollar signs. The name is followed by a set of parentheses, which can be used for optional parameters. The code of the function is contained in curly brackets .</p>
+
+<p>In our first example, we'll make a <strong>function declaration</strong> to print a greeting statement to the console.</p>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code class="code-highlight language-js">// Initialize greeting function
+function greet() {
+    console.log("Hello, World!");
+}
+</code></pre>
+</td></tr></table>
+<p>Here we have the code to print <code>Hello, World!</code> to the console contained inside the <code>greet()</code> function. However, nothing will happen and no code will execute until we <strong>invoke</strong>, or call the function. You can invoke a function by writing the name of the function followed by the parentheses.</p>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code class="code-highlight language-js">// Invoke the function
+greet();
+</code></pre>
+</td></tr></table>
+<p>Now we will put those together, defining our function and invoking it.</p> 
+<table border="" width="500" height="" ><tr><td>
+<div class="code-label " title="greet.js">greet.js</div><pre class="code-pre "><code class="code-highlight language-js">// Initialize greeting function
+function greet() {
+    console.log("Hello, World!");
+}
+
+// Invoke the function
+greet();
+</code></pre></td></tr></table>
+<p>With the call for <code>greet();</code>, the function will run and we will receive the <code>Hello, World!</code> as the program's output.</p>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code langs=""><div class="secondary-code-label " title="Output">Output</div>Hello, World!
+</code></pre></td></tr></table>
+<p>Now we have our <code>greet()</code> code contained in a function, and can reuse it as many times as we want.</p>
+
+<p>Using parameters, we can make the code more dynamic.</p>
+
+<h2 id="function-parameters">Function Parameters</h2>
+
+<p>In our <code>greet.js</code> file, we created a basic function that prints <code>Hello, World</code> to the console. Using parameters, we can add additional functionality that will make the code more flexible. <strong>Parameters</strong> are input that get passed into functions as names and behave as local variables.</p>
+
+<p>When a user logs in to an application, we may want the program to greet them by name, instead of just saying, "Hello, World!".</p>
+
+<p>We'll add a parameter into our function, called <code>name</code>, to represent the name of the person being greeted.</p> 
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code class="code-highlight language-js">// Initialize custom greeting function
+function greet(name) {
+    console.log(`Hello, ${name}!`);
+}
+</code></pre></td></tr></table>
+<p>The name of the function is <code>greet</code>, and now we have a single parameter inside the parentheses. The name of the parameter follows the same rules as naming a variable. Inside of the function, instead of a static string consisting of <code>Hello, World</code>, we have a   string containing our parameter, which is now behaving as a local variable.</p>
+
+<p>You'll notice we haven't defined our <code>name</code> parameter anywhere. We assign it a value when we invoke our function. Assuming our user is named Sammy, we'll call the function and place the username as the <strong>argument</strong>. The argument is the actual value that gets passed into the function, in this case it is the string <code>"Sammy"</code>.</p> 
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code class="code-highlight language-js">// Invoke greet function with "Sammy" as the argument
+greet("Sammy");
+</code></pre></td></tr></table>
+<p>The value of <code>"Sammy"</code> is being passed into the function through the <code>name</code> parameter. Now every time <code>name</code> is used throughout the function, it will represent the <code>"Sammy"</code> value. Here is the whole code.</p> 
+<table border="" width="500" height="" ><tr><td>
+<div class="code-label " title="greetSammy.js">greetSammy.js</div><pre class="code-pre "><code class="code-highlight language-js">// Initialize custom greeting function
+function greet(name) {
+    console.log(`Hello, ${name}!`);
+}
+
+// Invoke greet function with "Sammy" as the argument
+greet("Sammy");
+</code></pre></td></tr></table>
+<p>When we run the program above, we'll receive the following output.</p>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code langs=""><div class="secondary-code-label " title="Output">Output</div>Hello, Sammy!
+</code></pre></td></tr></table>
+<p>Now we have an example of how a function can be reused. In a real world example, the function would pull the username from a database instead of directly supplying the name as an argument value.</p>
+
+<p>In addition to parameters, variables can be declared inside of functions. These variables are known as <strong>local variables</strong>, and will only exist inside the <em>scope</em> of their own function block. Variable scope determines variables' accessibility; variables that are defined inside of a function are not accessible from outside of the function, but they can be used as many times as their function is used throughout a program.</p>
+
+<h2 id="returning-values">Returning Values</h2>
+
+<p>More than one parameter can be used in a function. We can pass multiple values into a function and return a value. We will create a function to find the sum of two values, represented by <code>x</code> and <code>y</code>.</p>
+<table border="" width="500" height="" ><tr><td>
+<div class="code-label " title="sum.js">sum.js</div><pre class="code-pre "><code class="code-highlight language-js">// Initialize add function
+function add(x, y) {
+    return x + y;
+}
+
+// Invoke function to find the sum
+add(9, 7);
+</code></pre></td></tr></table>
+<p>In the program above, we defined a function with the parameters <code>x</code> and <code>y</code>, and then passed the values of <code>9</code> and <code>7</code> to the function. When we run the program, we'll receive the sum of those numbers as the output.</p>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code langs=""><div class="secondary-code-label " title="Output">Output</div>16
+</code></pre></td></tr></table>
+<p>In this case, with <code>9</code> and <code>7</code> passed to the <code>sum()</code> function, the program returned <code>16</code>.</p>
+
+<p>When the <code>return</code> keyword is used, the function ceases to execute and the value of the expression is returned. Although in this case the browser will display the value in the console, it is not the same as using <code>console.log()</code> to print to the console. Invoking the function will output the value exactly where the function was invoked. This value can be used immediately or placed into a variable.</p>
+
+<h2 id="function-expressions">Function Expressions</h2>
+
+<p>In the last section, we used a function declaration to get the sum of two numbers and return that value. We can also create a <strong> function expression </strong> by assigning a function to a variable.</p>
+
+<p>Using our same <code>add</code> function example, we can directly apply the returned value to a variable, in this case <code>sum</code>.</p>
+<table border="" width="500" height="" ><tr><td>
+<div class="code-label " title="functionExpression.js">functionExpression.js</div><pre class="code-pre "><code class="code-highlight language-js">// Assign add function to sum constant
+const sum = function add(x, y) {
+    return x + y;
+}
+
+// Invoke function to find the sum
+sum(20, 5);
+</code></pre>
+</td></tr></table><br>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code langs=""><div class="secondary-code-label " title="Output">Output</div>25
+</code></pre></td></tr></table>
+<p>Now the <code>sum</code> constant is a function. We can make this expression more concise by turning it into an <strong>anonymous function</strong>, which is an unnamed function. Currently, our function has the name <code>add</code>, but with function expressions it is not necessary to name the function and the name is usually omitted.</p>
+<table border="" width="500" height="" ><tr><td>
+<div class="code-label " title="anonymousExpression.js">anonymousExpression.js</div><pre class="code-pre "><code class="code-highlight language-js">// Assign function to sum constant
+const sum = function(x, y) {
+    return x + y;
+}
+
+// Invoke function to find the sum
+sum(100, 3);
+</code></pre></td></tr></table><br>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code langs=""><div class="secondary-code-label " title="Output">Output</div>103
+</code></pre></td></tr></table>
+<p>In this example, we've removed the name of the function, which was <code>add</code>, and turned it into an anonymous function. A named function expression could be used to aid in debugging, but it is usually omitted.</p>
+
+<h2 id="arrow-functions">Arrow Functions</h2>
+
+<p>So far, we have gone through how to define functions using the <code>function</code> keyword. However, there is a newer, more concise method of defining a function known as <strong>arrow function expressions</strong>  . Arrow functions, as they are commonly known, are represented by an equals sign followed by a greater than sign: <code>=&gt;</code>.</p>
+
+<p>Arrow functions are always anonymous functions and a type of function expression. We can create a basic example to find the product of two numbers.</p>
+<table border="" width="500" height="" ><tr><td>
+<div class="code-label " title="arrowFunction.js">arrowFunction.js</div><pre class="code-pre "><code class="code-highlight language-js">// Define multiply function
+const multiply = (x, y) =&gt; {
+    return x * y;
+}
+
+// Invoke function to find product
+multiply(30, 4);
+</code></pre>
+</td></tr></table><br>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code langs=""><div class="secondary-code-label " title="Output">Output</div>120
+</code></pre></td></tr></table>
+<p>Instead of writing out the keyword <code>function</code>, we use the <code>=&gt;</code> arrow to indicate a function. Otherwise, it works similarly to a regular function expression, with some advanced differences which you can read  .</p>
+
+<p>In the case of only one parameter, the parentheses can be excluded. In this example, we're squaring <code>x</code>, which only requires one number to be passed as an argument. The parentheses have been omitted.</p>  
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code class="code-highlight language-js">// Define square function
+const square = x =&gt; {
+    return x * x;
+}
+
+// Invoke function to find product
+square(8);
+</code></pre> 
+</td></tr></table><br>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code langs=""><div class="secondary-code-label " title="Output">Output</div>64
+</code></pre></td></tr></table>
+<p><span class='note'><strong>Note:</strong> In the case of no parameters, an empty set of parentheses <code>()</code> is required in the arrow functions.<br></span></p>
+
+<p>With these particular examples that only consist of a <code>return</code> statement, arrow functions allow the syntax to be reduced even further. If the function is only a single line <code>return</code>, both the curly brackets and the <code>return</code> statement can be omitted, as seen in the example below.</p>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code class="code-highlight language-js">// Define square function
+const square = x =&gt; x * x;
+
+// Invoke function to find product
+square(10);
+</code></pre>
+</td></tr></table><br>
+<table border="" width="500" height="" ><tr><td>
+<pre class="code-pre "><code langs=""><div class="secondary-code-label " title="Output">Output</div>100
+</code></pre></td></tr></table>
+<p>All three of these types of syntax result in the same output. It is generally a matter of preference or company coding standards to decide how you will structure your own functions.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this tutorial, we covered function declarations and function expressions, returning values from functions, assigning function values to variables, and ES6 arrow functions.</p>
+
+<p>Functions are blocks of code that return a value or perform an action, making programs scalable and modular. </p>
+<br><br>
+<a href="javascript_datatypes.html" class="previous">&laquo; Previous</a>
+<a href="javascript_objects.html" class="next">Next &raquo;</a>
+</article> 
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

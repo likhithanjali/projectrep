@@ -91,6 +91,28 @@ article {
     background-color: #000080;
     color: white;
 }
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
 </style>
 
 </head>
@@ -103,43 +125,48 @@ article {
   <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
 <a href="allprolang.html">All Languages</a>
   <a href="c_overview.html">C</a>
-  <a class="active" href="cpp_overview.html">C++</a>
+  <a class="active" href="cpp_overview.html">CPP</a>
   <a href="java_overview.html">JAVA</a>
   <a href="html_overview.html">HTML</a>
   <a href="css_overview.html">CSS</a>
-  <a href="javascript_overview.html">JAVA SCRIPT</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
   <a href="python_overview.html">PYTHON</a>
   <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
 <nav>
 <div class="vertical-menu">
 <a href="cpp_overview.html">Overview</a>
-<a href="cpp_envrnmnt.html">environment setup</a>
-<a href="cpp_basicsyntax.html">basic syntax</a>
-<a href="cpp_comments.html">comments</a>
-<a href="cpp_datatypes.html">data types</a>
-<a href="cpp_variables.html">variable types</a>
-<a href="cpp_constliterals.html">constants &literas </a>
-<a href="cpp_modifiertypes.html">modifier types</a>
-<a href="cpp_storageclasses.html">storage classes</a>
-<a href="cpp_operators.html">operators</a>
-<a href="cpp_loops.html">loops</a>
-<a href="cpp_decisionmake.html">decision making</a>
-<a href="cpp_functions.html">functions</a>
-<a href="cpp_arraays.html">arrays</a>
-<a href="cpp_strings.html">strings</a>
-<a class="active" href="cpp_pointers.html">pointers</a>
-<a href="cpp_references.html">references</a>
-<a href="cpp_basicio.html">basic input&output </a>
-<a href="cpp_datastructures.html">data structures</a>
-<a href="cpp_classobject.html">classes&objects </a>
-<a href="cpp_inheritance.html">inheritance </a>
-<a href="cpp_overloading.html">overloading</a>
-<a href="cpp_polymorphism.html">polymorphism</a>
-<a href="cpp_encapsulation.html">encapsulation</a>
-<a href="cpp_interfaces.html">interfaces</a>
+<a href="cpp_envrnmnt.html">Environment Setup</a>
+<a href="cpp_basicsyntax.html">Basic Syntax</a>
+<a href="cpp_comments.html">Comments</a>
+<a href="cpp_datatypes.html">Data types</a>
+<a href="cpp_variables.html">Variable Types</a>
+<a href="cpp_constliterals.html">Constants &literas </a>
+<a href="cpp_modifiertypes.html">Modifier Types</a>
+<a href="cpp_storageclasses.html">Storage Classes</a>
+<a href="cpp_operators.html">Operators</a>
+<a href="cpp_loops.html">Loops</a>
+<a href="cpp_decisionmake.html">Decision Making</a>
+<a href="cpp_functions.html">Functions</a>
+<a href="cpp_arraays.html">Arrays</a>
+<a href="cpp_strings.html">Strings</a>
+<a class="active" href="cpp_pointers.html">Pointers</a>
+<a href="cpp_references.html">References</a>
+<a href="cpp_basicio.html">Basic Input&Output </a>
+<a href="cpp_datastructures.html">Data Structures</a>
+<a href="cpp_classobject.html">Classes&Objects </a>
+<a href="cpp_inheritance.html">Inheritance </a>
+<a href="cpp_overloading.html">Overloading</a>
+<a href="cpp_polymorphism.html">Polymorphism</a>
+<a href="cpp_encapsulation.html">Encapsulation</a>
+<a href="cpp_interfaces.html">Interfaces</a> 
 </div> </nav>
 
-<article><h1 style="color:#000080">POINTERS In C++ Programming</h1>
+<article>
+
+<a href="cpp_strings.html" class="previous">&laquo; Previous</a>
+<a href="cpp_references.html" class="next">Next &raquo;</a>
+
+<h1 style="color:#000080">Pointers In Cpp</h1>
 <p>In this article, you'll learn everything about pointers. You'll learn how values are stored in the computer and how to access them using pointers.</p>
 <img src="images/cpp_pointerpic1.png">
 
@@ -157,7 +184,7 @@ article {
 <p>If var is a variable then, &var gives the address of that variable.</p>
 
 <h4>Example 1: Address in C++</h4>
-<table border=""width="400">
+<table border=""width="600">
 <tr><td><pre>#include &ltiostream&gt
 using namespace std;
 
@@ -171,7 +198,7 @@ int main()
     cout  &lt&lt &var3  &lt&ltendl;
 }</pre></td></tr></table>
 <h4>Output</h4>
-<table border=""width="400">
+<table border=""width="600">
 <tr><td><pre>
 0x7fff5fbff8ac
 0x7fff5fbff8a8
@@ -191,7 +218,7 @@ int main()
 <p>Pointers variables are variables that points to a specific address in the memory pointed by another variable.</p>
  
 <h4>How to declare a pointer?</h4>
-<table border="" width="400">
+<table border="" width="600">
 <tr><td><pre>int *p;
       OR,
 int* &lt&lt p;</pre></td></tr></table>
@@ -213,7 +240,7 @@ int* &lt&lt p;</pre></td></tr></table>
 
 <h4>Note:</h4><p> The (*) sign used in the declaration of C++ pointer is not the dereference pointer. It is just a similar notation that creates a pointer.</p>
 <h4>C++ Program to demonstrate the working of pointer.</h4>
-<table border=""width="400">
+<table border=""width="600">
 <tr><td><pre>
 #include &ltiostream&gt
 using namespace std;
@@ -239,7 +266,7 @@ int main() {
     return 0;
 }</pre></td></tr></table>
 <h4>Output</h4>
-<table border=""width="400">
+<table border=""width="600">
 <tr><td><pre>
 Address of c (&c): 0x7fff5fbff80c
 Value of c (c): 5
@@ -262,13 +289,18 @@ Value of c (c): 2</pre></td></tr></table><br>
 <p>When *pc = 2; it changes the content of the address stored by pc - 0x7fff5fbff8c. This is changed from 11 to 2. So, when we print the value of c, the value is 2 as well.</p>
 <h4>Common mistakes when working with pointers</h4>
 <p>Suppose, you want pointer pc to point to the address of c. Then,</p>
-<table border=""width="400">
+<table border=""width="600">
 <tr><td><pre>
 int c, *pc;
 pc=c;  /* Wrong! pc is address whereas, c is not an address. */
 *pc=&c; /* Wrong! *pc is the value pointed by address whereas, %amp;c is an address. */
 pc=&c; /* Correct! pc is an address and, %amp;pc is also an address. */
 *pc=c; /* Correct! *pc is the value pointed by address and, c is also value*/</pre></td></tr></table>
+<br><br>
+
+<a href="cpp_strings.html" class="previous">&laquo; Previous</a>
+<a href="cpp_references.html" class="next">Next &raquo;</a>
+
 </article>
 <footer>Devoloped by LE's</footer>
 </div>

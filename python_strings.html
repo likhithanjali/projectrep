@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>PYTHON</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a class="active" href="python_overview.html">PYTHON</a>
+
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href= "python_overview.html">Overview</a> 
+<a href= "python_environmentSetup.html">Environmental Setup</a>
+<a href= "python_basicSyntax.html">Basic Syntax</a>
+<a href= "python_variableTypes.html">Variable Types</a>
+<a href= "python_basicOperators.html">Basic Operators</a>
+<a href= "python_decisionMaking.html">Decision Making</a>
+<a href= "python_loops.html">Loops</a>
+<a href= "python_numbers.html">Numbers</a>
+<a class="active" href= "python_strings.html">Strings</a>
+<a href= "python_lists.html">Lists</a>
+<a href= "python_tuples.html">Tuples</a>
+<a href= "python_dictionary.html">Dictionary</a>
+<a href= "python_date&time.html">Date & Time</a>
+<a href= "python_functions.html">Functions</a>
+<a href= "python_modules.html">Modules</a>
+<a href= "python_fileIO.html">File IO</a>
+<a href= "python_exceptions.html">Exceptions</a> 
+</div> </nav>
+
+<article>
+<a href="python_numbers.html" class="previous">&laquo; Previous</a>
+<a href="python_lists.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Strings In Python</h1>
+<p>Python has several built-in functions associated with the string data type. These functions let us easily modify and manipulate strings. We can think of functions as being actions that we perform on elements of our code. Built-in functions are those that are defined in the Python programming language and are readily available for us to use.<br>
+
+In this tutorial, we’ll go over several different functions that we can use to work with strings in Python .</p>
+
+<h3>Making Strings Upper and Lower Case</h3>
+<p>The functions str.upper() and str.lower() will return a string with all the letters of an original string converted to upper- or lower-case letters. Because strings are immutable data types, the returned string will be a new string. Any characters in the string that are not letters will not be changed.</p>
+
+<p>Let’s convert the string Sammy Shark to be all upper case:</p>
+<table border="" width="500"><tr><td><pre>
+ss = "Sammy Shark"
+print(ss.upper())
+</pre></td></tr></table>
+<h4>Ouput</h4>
+<table border="" width="500"><tr><td>
+SAMMY SHARK
+</td></tr></table>
+<p>Now, let’s convert the string to be all lower case:</p>
+<table border="" width="500"><tr><td>
+print(ss.lower())
+</td></tr></table>
+<h4>Ouput</h4>
+<table border="" width="500"><tr><td>
+sammy shark
+</td></tr></table>
+<p>The str.upper() and str.lower() functions make it easier to evaluate and compare strings by making case consistent throughout. That way if a user writes their name all lower case, we can still determine whether their name is in our database by checking it against an all upper-case version, for example.</p>
+
+<h3>Boolean Methods</h3>
+<p>Python has some string methods that will evaluate to a Boolean value. These methods are useful when we are creating forms for users to fill in, for example. If we are asking for a post code we will only want to accept a numeric string, but when we are asking for a name, we will only want to accept an alphabetic string.</p>
+
+<p>There are a number of string methods that will return Boolean values:</p>
+<table border="" width="500">
+<tr><td><b>Method</b></td>	<td><b>True if</b></td></tr>
+<tr><td>str.isalnum()</td>	<td>String consists of only alphanumeric characters (no symbols)</td></tr>
+<tr><td>str.isalpha()</td>	<td>String consists of only alphabetic characters (no symbols)</td></tr>
+<tr><td>str.islower()</td>	<td>String’s alphabetic characters are all lower case</td></tr>
+<tr><td>str.isnumeric()</td>	<td>String consists of only numeric characters</td></tr>
+<tr><td>str.isspace()</td>	<td>String consists of only whitespace characters</td></tr>
+<tr><td>str.istitle()</td>	<td>String is in title case</td></tr>
+<tr><td>str.isupper()</td>	<td>String’s alphabetic characters are all upper case</td></tr></table>
+<p>Let’s look at a couple of these in action:</p>
+<table border="" width="500"><tr><td><pre>
+number = "5"
+letters = "abcdef"
+
+print(number.isnumeric())
+print(letters.isnumeric())
+</pre></td></tr></table>
+<h4>Output</h4>
+<table border="" width="500"><tr><td><pre>
+True
+False
+</pre></td></tr></table>
+<p>Using the str.isnumeric() method on the string 5 returns a value of True, while using the same method on the string abcdef returns a value of False.<br>
+
+Similarly, we can query whether a string’s alphabetic characters are in title case, upper case, or lower case. Let’s create a few strings:</p>
+<table border="" width="500"><tr><td><pre>
+movie = "2001: A SAMMY ODYSSEY"
+book = "A Thousand Splendid Sharks"
+poem = "sammy lived in a pretty how town"
+</pre></td></tr></table>
+<p>Now let’s try the Boolean methods that check for case:</p>
+<table border="" width="500"><tr><td><pre>
+print(movie.islower())
+print(movie.isupper())
+</pre></td></tr></table><br>
+<table border="" width="500"><tr><td><pre>
+print(book.istitle())
+print(book.isupper())
+</pre></td></tr></table><br>
+<table border="" width="500"><tr><td><pre>
+print(poem.istitle())
+print(poem.islower())
+</pre></td></tr></table>
+<p>Now we can run these small programs and see the output:</p>
+ 
+   
+<h4>Output of movie string</h4>
+ <table border="" width="500"><tr><td>
+False<br>
+True
+</pre></td></tr></table> 
+<h4>Output of book string</h4>
+<table border="" width="500"><tr><td> 
+ 
+True<br>
+False
+ </td></tr></table> 
+<h4>Output of book string</h4>
+<table border="" width="500"><tr><td> 
+ 
+False<br>
+True
+ </td></tr></table>
+<p>Checking whether characters are lower case, upper case, or title case, can help us to sort our data appropriately, as well as provide us with the opportunity to standardize data we collect by checking and then modifying strings as needed.<br>
+
+Boolean string methods are useful when we want to check whether something a user enters fits within given parameters.</p>
+
+<h3>Determining String Length</h3>
+<p>The string method len() returns the number of characters in a string. This method is useful for when you need to enforce minimum or maximum password lengths, for example, or to truncate larger strings to be within certain limits for use as abbreviations.<br>
+
+To demonstrate this method, we’ll find the length of a sentence-long string:</p>
+<table border="" width="500"><tr><td><pre>
+open_source = "Sammy contributes to open source."
+print(len(open_source))
+</pre></td></tr></table>
+<h4>Output</h4>
+<table border="" width="500"><tr><td> 
+33
+ </td></tr></table>
+<p>We set the variable open_source equal to the string "Sammy contributes to open source." and then we passed that variable to the len() method with len(open_source). We then passed the method into the print() method so that we could see the output on the screen from our program.<br>
+
+Keep in mind that any character bound by single or double quotation marks — including letters, numbers, whitespace characters, and symbols — will be counted by the len() method.</p>
+
+<h3>join(), split(), and replace() Methods</h4>
+<p>The str.join(), str.split(), and str.replace() methods are a few additional ways to manipulate strings in Python.<br>
+
+The str.join() method will concatenate two strings, but in a way that passes one string through another.</p>
+
+<h4>Let’s create a string:</h4>
+<table border="" width="500"><tr><td> 
+balloon = "Sammy has a balloon."
+ </td></tr></table>
+<p>Now, let’s use the str.join() method to add whitespace to that string, which we can do like so:</p>
+<table border="" width="500"><tr><td>
+" ".join(balloon)
+ </td></tr></table>
+<p>If we print this out:</p>
+<table border="" width="500"><tr><td>
+print(" ".join(balloon))
+</td></tr></table>
+<p>We will see that in the new string that is returned there is added space throughout the first string:</p>
+
+<h4>Ouput</h4>
+<table border="" width="500"><tr><td>
+S a m m y   h a s   a   b a l l o o n .
+</td></tr></table>
+<p>We can also use the str.join() method to return a string that is a reversal from the original string:</p>
+<table border="" width="500"><tr><td>
+print("".join(reversed(balloon)))
+</td></tr></table>
+<h4>Ouput</h4>
+<table border="" width="500"><tr><td>
+.noollab a sah ymmaS
+</td></tr></table>
+<p>We did not want to add any part of another string to the first string, so we kept the quotation marks touching with no space in between.<br>
+
+The str.join() method is also useful to combine a list of strings into a new single string.<br>
+
+Let’s create a comma-separated string from a list of strings:</p>
+ <table border="" width="500"><tr><td>
+print(",".join(["sharks", "crustaceans", "plankton"]))
+</td></tr></table>
+<h4>Ouput</h4>
+<table border="" width="500"><tr><td>
+sharks,crustaceans,plankton
+</td></tr></table>
+<p>If we want to add a comma and a space between string values in our new string, we can simply rewrite our expression with a whitespace after the comma: ", ".join(["sharks", "crustaceans", "plankton"]).<br>
+
+Just as we can join strings together, we can also split strings up. To do this, we will use the str.split() method:</p>
+<table border="" width="500"><tr><td>
+print(balloon.split())
+</td></tr></table>
+<h4>Ouput</h4>
+<table border="" width="500"><tr><td>
+['Sammy', 'has', 'a', 'balloon.']
+</td></tr></table>
+<p>The str.split() method returns a list of strings that are separated by whitespace if no other parameter is given.<br>
+
+We can also use str.split() to remove certain parts of an original string. For example, let’s remove the letter a from the string:</p>
+ <table border="" width="500"><tr><td>
+print(balloon.split("a"))
+</td></tr></table>
+<h4>Ouput</h4>
+<table border="" width="500"><tr><td>
+['S', 'mmy h', 's ', ' b', 'lloon.']
+</td></tr></table>
+<p>Now the letter a has been removed and the strings have been separated where each instance of the letter a had been, with whitespace retained.<br>
+
+The str.replace() method can take an original string and return an updated string with some replacement.<br>
+
+Let’s say that the balloon that Sammy had is lost. Since Sammy no longer has this balloon, we will change the substring "has" from the original string balloon to "had" in a new string:</p>
+<table border="" width="500"><tr><td>
+print(balloon.replace("has","had"))
+</td></tr></table>
+<p>Within the parentheses, the first substring is what we want to be replaced, and the second substring is what we are replacing that first substring with. Our output will look like this:</p>
+
+<h4>Ouput</h4>
+<table border="" width="500"><tr><td>
+Sammy had a balloon.
+</td></tr></table>
+<p>Using the string methods str.join(), str.split(), and str.replace() will provide you with greater control to manipulate strings in Python.</p>
+<br><br>
+<a href="python_numbers.html" class="previous">&laquo; Previous</a>
+<a href="python_lists.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

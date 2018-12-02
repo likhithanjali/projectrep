@@ -1,0 +1,461 @@
+<html>
+<body>
+<p>This tutorial will teach you how to set different properties of an HTML table using CSS. You can set following properties of a table -</p>
+
+<ul><li>The border-collapse specifies whether the browser should control the appearance of the adjacent borders that touch each other or whether each cell should maintain its style.<li>
+
+<li>The border-spacing specifies the width that should appear between table cells.</li>
+
+<li>The caption-side captions are presented in the <caption> element. By default, these are rendered above the table in the document. You use the caption-side property to control the placement of the table caption.</li>
+
+<li>The empty-cells specifies whether the border should be shown if a cell is empty.</li>
+
+<li>The table-layout allows browsers to speed up layout of a table by using the first width properties it comes across for the rest of a column rather than having to load the whole table before rendering it.</li></ul>
+
+<p>Now, we will see how to use these properties with examples.</p>
+
+<h3>The border-collapse Property</h3>
+<p>This property can have two values collapse and separate. The following example uses both the values -</p>
+<table border="" width="600"><tr><td><pre>
+&lthtml&gt
+   &lthead&gt
+      &ltstyle type = "text/css"&gt
+         table.one {border-collapse:collapse;}
+         table.two {border-collapse:separate;}
+         
+         td.a {
+            border-style:dotted; 
+            border-width:3px; 
+            border-color:#000000; 
+            padding: 10px;
+         }
+         td.b {
+            border-style:solid; 
+            border-width:3px; 
+            border-color:#333333; 
+            padding:10px;
+         }
+      &lt/style&gt
+   &lt/head&gt
+
+   &ltbody&gt
+      &lttable class = "one"&gt
+         &ltcaption&gtCollapse Border Example&lt/caption&gt
+         &lttr&gt&lttd class = "a"&gt Cell A Collapse Example&lt/td&gt&lt/tr&gt
+         &lttr&gt&lttd class = "b"&gt Cell B Collapse Example&lt/td&gt&lt/tr&gt
+      &lt/table&gt
+      &ltbr /&gt
+      
+      &lttable class = "two"&gt
+         &ltcaption&gtSeparate Border Example&lt/caption&gt
+         &lttr&gt&lttd class = "a"&gt Cell A Separate Example&lt/td&gt&lt/tr&lgt
+         &lttr&gt&lttd class = "b"&gt Cell B Separate Example&lt/td&gt&lt/tr&gt
+      &lt/table&gt
+   &lt/body&gt
+&lt/html&gt
+</pre></td></tr></table>
+<p>It will produce the following result -</p>
+<table border="" width="600"><tr><td> 
+ <html>
+   <head>
+      <style type = "text/css">
+         table.one {border-collapse:collapse;}
+         table.two {border-collapse:separate;}
+         
+         td.a {
+            border-style:dotted; 
+            border-width:3px; 
+            border-color:#000000; 
+            padding: 10px;
+         }
+         td.b {
+            border-style:solid; 
+            border-width:3px; 
+            border-color:#333333; 
+            padding:10px;
+         }
+      </style>
+   </head>
+
+   <body>
+      <table class = "one">
+         <caption>Collapse Border Example</caption>
+         <tr><td class = "a"> Cell A Collapse Example</td></tr>
+         <tr><td class = "b"> Cell B Collapse Example</td></tr>
+      </table>
+      <br />
+      
+      <table class = "two">
+         <caption>Separate Border Example</caption>
+         <tr><td class = "a"> Cell A Separate Example</td></tr>
+         <tr><td class = "b"> Cell B Separate Example</td></tr>
+      </table>
+   </body>
+</html>
+ </td></tr></table>
+<h3>The border-spacing Property</h3>
+<p>The border-spacing property specifies the distance that separates adjacent cells'. borders. It can take either one or two values; these should be units of length.<br>
+
+If you provide one value, it will applies to both vertical and horizontal borders. Or you can specify two values, in which case, the first refers to the horizontal spacing and the second to the vertical spacing -</p>
+
+<table border="" width="600"><tr><td><pre> 
+&ltstyle type="text/css"&gt
+   /* If you provide one value */
+   table.example {border-spacing:10px;}
+   /* This is how you can provide two values */
+   table.example {border-spacing:10px; 15px;}
+</pre>&lt/style&gt
+</td></tr></table>
+<p>Now let's modify the previous example and see the effect -</p>
+<table border="" width="600"><tr><td><pre> 
+&lthtml&gt
+   &lthead&gt
+      &ltstyle type = "text/css"&gt
+         table.one {
+            border-collapse:separate;
+            width:400px;
+            border-spacing:10px;
+         }
+         table.two {
+            border-collapse:separate;
+            width:400px;
+            border-spacing:10px 50px;
+         }
+      &lt/style&gt
+   &lt/head&gt
+
+   &ltbody&gt
+   
+      &lttable class = "one" border = "1"&gt
+         &ltcaption&gtSeparate Border Example with border-spacing&lt/caption&gt
+         &lttr&gt&lttd&gt Cell A Collapse Example&lt/td&gt&lt/tr&gt
+         &lttr&gt&lttd&gt Cell B Collapse Example&lt/td&gt&lt/tr&gt
+      &lt/table&gt
+      &ltbr /&gt
+      
+      &lttable class = "two" border = "1"&gt
+         &ltcaption&gtSeparate Border Example with border-spacing&lt/caption&gt
+         &lttr&gt&lttd&gt Cell A Separate Example&lt/td&gt&lt/tr&gt
+         &lttr&gt&lttd&gt Cell B Separate Example&lt/td&gt&lt/tr&gt
+      &lt/table&gt
+      
+   &lt/body&gt
+&lt/html&gt
+</pre></td></tr></table> 
+<p>It will produce the following result -</p>
+<table border="" width="600"><tr><td> 
+  <html>
+   <head>
+      <style type = "text/css">
+         table.one {
+            border-collapse:separate;
+            width:400px;
+            border-spacing:10px;
+         }
+         table.two {
+            border-collapse:separate;
+            width:400px;
+            border-spacing:10px 50px;
+         }
+      </style>
+   </head>
+
+   <body>
+   
+      <table class = "one" border = "1">
+         <caption>Separate Border Example with border-spacing</caption>
+         <tr><td> Cell A Collapse Example</td></tr>
+         <tr><td> Cell B Collapse Example</td></tr>
+      </table>
+      <br />
+      
+      <table class = "two" border = "1">
+         <caption>Separate Border Example with border-spacing</caption>
+         <tr><td> Cell A Separate Example</td></tr>
+         <tr><td> Cell B Separate Example</td></tr>
+      </table>
+      
+   </body>
+</html> 
+ </td></tr></table>
+<h3>The caption-side Property</h3>
+<p>The caption-side property allows you to specify where the content of a <caption> element should be placed in relationship to the table. The table that follows lists the possible values.<br>
+
+This property can have one of the four values top, bottom, left or right. The following example uses each value.</p>
+<table border="" width="600"><tr><td><pre>
+&lthtml&gt
+   &lthead&gt
+      &ltstyle type = "text/css"&gt
+         caption.top {caption-side:top}
+         caption.bottom {caption-side:bottom}
+         caption.left {caption-side:left}
+         caption.right {caption-side:right}
+      &lt/style&gt
+   &lt/headgt
+
+   &ltbody&gt
+   
+      &lttable style = "width:400px; border:1px solid black;"&gt
+         &ltcaption class = "top"&gt
+            This caption will appear at the top
+         &lt/caption&gt
+         &lttr&gt&lttd &gt Cell A&lt/td&gt&lt/tr&gt
+         &lttr&gt&lttd &gt Cell B&lt/td&gt&lt/tr&gt
+      &lt/table&gt
+      &ltbr /&gt
+      
+      &lttable style = "width:400px; border:1px solid black;"&gt
+         &ltcaption class = "bottom"&gt
+            This caption will appear at the bottom
+         &lt/caption&gt
+         &lttr&gt&lttd &gt Cell A&lt/td&gt&lt/tr&gt
+         &lttr&gt&lttd &gt Cell B&lt/td&gt&lt/tr&gt
+      &lt/table&gt
+      &ltbr /&gt
+      
+      &lttable style = "width:400px; border:1px solid black;"&gt
+         &ltcaption class = "left"&gt
+            This caption will appear at the left
+         &lt/caption&gt
+         &lttr&gt&lttd &gt Cell A&lt/td&gt&lt/tr&gt
+         &lttr&gt&lttd &gt Cell B&lt/td&gt&lt/tr&gt
+      &lt/table&gt
+      &ltbr /&gt
+      
+      &lttable style = "width:400px; border:1px solid black;"&gt
+         &ltcaption class = "right"&gt
+            This caption will appear at the right
+         &lt/caption&gt
+         &lttr&gt&lttd &gt Cell A&lt/td&gt&lt/tr&gt
+         &lttr&gt&lttd &gt Cell B&lt/td&gt&lt/tr&gt
+      &lt/table&gt
+      
+   &lt/body&gt
+&lt/html&gt
+</pre></td></tr></table>
+<p>It will produce the following result -</p>
+<table border="" width="600"><tr><td> 
+ <html>
+   <head>
+      <style type = "text/css">
+         caption.top {caption-side:top}
+         caption.bottom {caption-side:bottom}
+         caption.left {caption-side:left}
+         caption.right {caption-side:right}
+      </style>
+   </head>
+
+   <body>
+   
+      <table style = "width:400px; border:1px solid black;">
+         <caption class = "top">
+            This caption will appear at the top
+         </caption>
+         <tr><td > Cell A</td></tr>
+         <tr><td > Cell B</td></tr>
+      </table>
+      <br />
+      
+      <table style = "width:400px; border:1px solid black;">
+         <caption class = "bottom">
+            This caption will appear at the bottom
+         </caption>
+         <tr><td > Cell A</td></tr>
+         <tr><td > Cell B</td></tr>
+      </table>
+      <br />
+      
+      <table style = "width:400px; border:1px solid black;">
+         <caption class = "left">
+            This caption will appear at the left
+         </caption>
+         <tr><td > Cell A</td></tr>
+         <tr><td > Cell B</td></tr>
+      </table>
+      <br />
+      
+      <table style = "width:400px; border:1px solid black;">
+         <caption class = "right">
+            This caption will appear at the right
+         </caption>
+         <tr><td > Cell A</td></tr>
+         <tr><td > Cell B</td></tr>
+      </table>
+      
+   </body>
+</html>
+ </td></tr></table>
+<h3>The empty-cells Property</h3>
+<p>The empty-cells property indicates whether a cell without any content should have a border displayed.<br>
+
+This property can have one of the three values - show, hide or inherit.</p>
+
+<p>Here is the empty-cells property used to hide borders of empty cells in the &lttable&gt element.</p>
+<table border="" width="600"><tr><td><pre>
+
+&lthtml&gt
+   &lthead&gt
+      &ltstyle type = "text/css"&gt
+         table.empty {
+            width:350px;
+            border-collapse:separate;
+            empty-cells:hide;
+         }
+         td.empty {
+            padding:5px;
+            border-style:solid;
+            border-width:1px;
+            border-color:#999999;
+         }
+      &lt/style&gt
+   &lt/head&gt
+
+   &ltbody&gt
+   
+      &lttable class = "empty"&gt
+         &lttr&gt
+            &ltth&gt&lt/th&gt
+            &ltth&gtTitle one&lt/th&gt
+            &ltth&gtTitle two&lt/th&gt
+         &lt/tr&gt
+      
+         &lttr&gt
+            &ltth&gtRow Title&lt/th&gt
+            &lttd class = "empty"&gtvalue&lt/td&gt
+            &lttd class = "empty"&gtvalue&lt/td&gt
+         &lt/tr&gt
+      
+         &lttr&gt
+            &ltth&gtRow Title&lt/th&gt
+            &lttd class = "empty"&gtvalue&lt/td&gt
+            &lttd class = "empty"&gt&lt/td&gt
+         &lt/tr&gt
+      &lt/table&gt
+      
+   &lt/body&gt
+&lt/html&gt
+</pre></td></tr></table>
+<p>It will produce the following result -</p>
+<table border="" width="600"><tr><td> 
+  <html>
+   <head>
+      <style type = "text/css">
+         table.empty {
+            width:350px;
+            border-collapse:separate;
+            empty-cells:hide;
+         }
+         td.empty {
+            padding:5px;
+            border-style:solid;
+            border-width:1px;
+            border-color:#999999;
+         }
+      </style>
+   </head>
+
+   <body>
+   
+      <table class = "empty">
+         <tr>
+            <th></th>
+            <th>Title one</th>
+            <th>Title two</th>
+         </tr>
+      
+         <tr>
+            <th>Row Title</th>
+            <td class = "empty">value</td>
+            <td class = "empty">value</td>
+         </tr>
+      
+         <tr>
+            <th>Row Title</th>
+            <td class = "empty">value</td>
+            <td class = "empty"></td>
+         </tr>
+      </table>
+      
+   </body>
+</html> 
+ </td></tr></table>
+<h3>The table-layout Property</h3>
+<p>The table-layout property is supposed to help you control how a browser should render or lay out a table.<br>
+
+This property can have one of the three values: fixed, auto or inherit.<br>
+
+The following example shows the difference between these properties.</p>
+
+ <table border="" width="600"><tr><td><pre>
+&lthtml&gt
+   &lthead&gt
+      &ltstyle type = "text/css"&gt
+         table.auto {
+            table-layout: auto
+         }
+         table.fixed {
+            table-layout: fixed
+         }
+      &lt/style&gt
+   &lt/head&gt
+   
+   &ltbody&gt
+   
+      &lttable class = "auto" border = "1" width = "100%"&gt
+         &lttr&gt
+            &lttd width = "20%"&gt1000000000000000000000000000&lt/td&gt
+            &lttd width = "40%"&gt10000000&lt/td&gt
+            &lttd width = "40%"&gt100&lt/td&gt
+         &lt/tr&gt
+      &lt/table&gt
+      &ltbr /&gt
+      
+      &lttable class = "fixed" border = "1" width = "100%"&gt
+         &lttr&gt
+            &lttd width = "20%"&gt1000000000000000000000000000&lt/td&gt
+            &lttd width = "40%"&gt10000000&lt/td&gt
+            &lttd width = "40%"&gt100&lt/td&gt
+         &lt/tr&gt
+      &lt/table&gt
+   
+   &lt/body&gt
+&lt/html&gt
+</pre></td></tr></table>
+<p>It will produce the following result -</p>
+<table border="" width="600"><tr><td> 
+  <html>
+   <head>
+      <style type = "text/css">
+         table.auto {
+            table-layout: auto
+         }
+         table.fixed {
+            table-layout: fixed
+         }
+      </style>
+   </head>
+   
+   <body>
+   
+      <table class = "auto" border = "1" width = "100%">
+         <tr>
+            <td width = "20%">1000000000000000000000000000</td>
+            <td width = "40%">10000000</td>
+            <td width = "40%">100</td>
+         </tr>
+      </table>
+      <br />
+      
+      <table class = "fixed" border = "1" width = "100%">
+         <tr>
+            <td width = "20%">1000000000000000000000000000</td>
+            <td width = "40%">10000000</td>
+            <td width = "40%">100</td>
+         </tr>
+      </table>
+   
+   </body>
+</html> 
+ </td></tr></table>
+</body>
+</html>

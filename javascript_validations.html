@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVASCRIPT</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a  href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a class="active" href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="javascript_overview.html">Overview</a>
+<a href="javascript_output.html">Output</a>
+<a href="javascript_statements.html">Statements</a>
+<a href="javascript_syntax.html">Syntax</a>
+<a href="javascript_comments.html">Comments</a>
+<a href="javascript_variables.html">Variables</a>
+<a href="javascript_operators.html">Operators</a> 
+<a href="javascript_datatypes.html">Data Types</a>
+<a href="javascript_functions.html">Functions</a>
+<a href="javascript_objects.html">Objects</a>
+<a href="javascript_events.html">Events</a>
+<a href="javascript_strings.html">Strings</a>
+<a href="javascript_numbers.html">Numbers</a>
+<a  class="active" href="javascript_validations.html">Validations</a>
+<a href="javascript_cookies.html">Cookies</a>
+<a href="javascript_debugging.html">Debugging</a>
+<a href="javascript_errorHandling.html">Error Handling</a>
+</div> </nav>
+<article>
+<a href="javascript_numbers.html" class="previous">&laquo; Previous</a>
+<a href="javascript_cookies.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>JavaScript Form Validation</h1>
+<p>It is important to validate the form submitted by the user because it can have inappropriate values. So validation is must.<br>
+
+The JavaScript provides you the facility the validate the form on the client side so processing will be fast than server-side validation. So, most of the web developers prefer JavaScript form validation.<br>
+
+Through JavaScript, we can validate name, password, email, date, mobile number etc fields.</p>
+
+<h4>JavaScript form validation example</h4>
+<p>In this example, we are going to validate the name and password. The name can’t be empty and password can’t be less than 6 characters long.<br>
+
+Here, we are validating the form on form submit. The user will not be forwarded to the next page until given values are correct.</p>
+<table border="" width="700"><tr><td><pre>
+&ltscript&gt  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+}  
+&lt/script&gt  
+&ltbody&gt
+&ltform name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" &gt
+Name: &ltinput type="text" name="name"&gt&ltbr/&gt  
+Password: &ltinput type="password" name="password"&gt&ltbr/&gt
+&ltinput type="submit" value="register"&gt  
+&lt/form&gt 
+</pre></tr></td></table> 
+<h4>output</h4>
+<table border="" width="700"><tr><td><pre>
+<html>
+<body>  
+<form name="myform" method="post"   onsubmit="return validateform()" >  
+Name: <input type="text" name="name"><br/>  
+Password: <input type="password" name="password"><br/>  
+<input type="submit" value="register">  
+</form>  
+</body>
+</html>
+</pre></td></tr></table>
+<h3>JavaScript Retype Password Validation</h3>
+<table border="" width="700"><tr><td><pre>
+&ltscript type="text/javascript"&gt
+function matchpass(){  
+var firstpassword=document.f1.password.value;  
+var secondpassword=document.f1.password2.value;  
+  
+if(firstpassword==secondpassword){  
+return true;  
+}  
+else{  
+alert("password must be same!");  
+return false;  
+}  
+}  
+&lt/script&gt
+  
+&ltform name="f1" action="register.jsp" onsubmit="return matchpass()"&gt
+Password:&ltinput type="password" name="password" /&gt&ltbr/&gt  
+Re-enter Password:&ltinput type="password" name="password2"/&gt&ltbr/&gt  
+&ltinput type="submit"&gt  
+&lt/form&gt 
+</pre></td></tr></table>
+<h4>output</h4>
+<table border="" width="700"><tr><td><pre>
+<body>
+
+<form name="f1" action="  onsubmit="return matchpass()">
+Password:<input type="password" name="password" /><br/>
+Re-enter Password:<input type="password" name="password2"/><br/>
+<input type="submit">
+</form>
+
+</body> 
+</pre></td></tr></table>
+<h3>JavaScript Number Validation</h3>
+<p>Let's validate the textfield for numeric value only. Here, we are using isNaN() function.</p>
+<table border="" width="700"><tr><td><pre>
+&ltscript&gt  
+function validate(){  
+var num=document.myform.num.value;  
+if (isNaN(num)){  
+  document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+  return false;  
+}else{  
+  return true;  
+  }  
+}  
+&lt/script&gt
+&ltform name="myform" onsubmit="return validate()" &gt
+Number: &ltinput type="text" name="num"&gt&ltspan id="numloc"&gt&lt/span&gt&ltbr/&t  
+&ltinput type="submit" value="submit"&gt  
+&lt/form&gt 
+</pre></tr></td></table> 
+<h4>output</h4>
+<table border="" width="700"><tr><td><pre>
+<body>
+<form name="myform"   onsubmit="return validate()" >
+Number: <input type="text" name="num"><span id="numloc"></span><br/>
+<input type="submit" value="submit">
+</form>
+
+</body>
+</pre></tr></td></table>
+<h3>JavaScript validation with image</h3>
+<p>Let’s see an interactive JavaScript form validation example that displays correct and incorrect image if input is correct or incorrect.</p>
+<table border="" width="700"><tr><td><pre>
+&ltscript&gt  
+function validate(){  
+var name=document.f1.name.value;  
+var password=document.f1.password.value;  
+var status=false;  
+  
+if(name.length<1){  
+document.getElementById("nameloc").innerHTML=  "Please enter your name";  
+status=false;  
+}else{  
+document.getElementById("nameloc").innerHTML="";  
+status=true;  
+}  
+if(password.length<6){  
+document.getElementById("passwordloc").innerHTML=  " Password must be at least 6 char long";  
+status=false;  
+}else{  
+document.getElementById("passwordloc").innerHTML="";  
+}  
+return status;  
+}  
+&lt/script&gt  
+  
+&ltform name="f1" action="#" onsubmit="return validate()"&gt
+&lttable&gt  
+&lttr&gt&lttd&gtEnter Name:&lt/td&gt&lttd&gt&ltinput type="text" name="name"/&gt  
+&ltspan id="nameloc"&gt&lt/span&gt&lt/td&gt&lt/tr&gt  
+&lttr&gt&lttd&gtEnter Password:&lt/td&gt&lttd&gt&ltinput type="password" name="password"/&gt  
+&ltspan id="passwordloc"&gt&lt/span&gt&lt/td&gt&lt/tr&gt  
+&lttr&gt&lttd colspan="2"&gt&ltinput type="submit" value="register"/&gt&lt/td&gt&lt/tr&gt    
+&lt/table&gt  
+&lt/form&gt
+</pre></td></tr></table>
+<h4>output</h4>
+<table border="" width="700"><tr><td><pre>
+<form name="f1" action="#" onsubmit="return validate()">  
+<table>  
+<tr><td>Enter Name:</td><td><input type="text" name="name"/>  
+<span id="nameloc"></span></td></tr>  
+<tr><td>Enter Password:</td><td><input type="password" name="password"/>  
+<span id="passwordloc"></span></td></tr>  
+<tr><td colspan="2"><input type="submit" value="register"/></td></tr>  
+</table>  
+</form>
+</pre></td></tr></table>  
+<h3>JavaScript email validation</h3>
+<p>We can validate the email by the help of JavaScript.<br>
+
+There are many criteria that need to be follow to validate the email id such as:</p>
+
+<ul><li>email id must contain the @ and . character</li>
+<li>There must be at least one character before and after the @.</li>
+<li>There must be at least two characters after . (dot).</li></ul>
+<p>Let's see the simple example to validate the email field.</p>
+<table border="" width="700"><tr><td><pre>
+&ltscript&gt  
+function validateemail()  
+{  
+var x=document.myform.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+}  
+&lt/script&gt  
+&ltbody&gt  
+&ltform name="myform"  method="post" action="#" onsubmit="return validateemail();"&gt 
+Email: &ltinput type="text" name="email"&gt&ltbr/&gt  
+  
+&ltinput type="submit" value="register"&gt  
+&lt/form&gt
+</pre></td></tr></table> 
+<h4>output</h4>
+ <table border="" width="700"><tr><td><pre>
+<body>  
+<form name="myform"  method="post" action="#" onsubmit="return validateemail();">  
+Email: <input type="text" name="email"><br/>  
+  
+<input type="submit" value="register">  
+</form>
+</pre></td></tr></table>   
+<br><br>
+<a href="javascript_numbers.html" class="previous">&laquo; Previous</a>
+<a href="javascript_cookies.html" class="next">Next &raquo;</a>
+</article> 
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

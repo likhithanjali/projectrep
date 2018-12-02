@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVA</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a class="active" href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="java_overview.html">Overview</a>
+<a href="java_environmentalsetup.html">Environment Setup</a>
+<a href="java_basicsyntax.html">Basic Syntax</a>
+<a href="java_comments.html">Comments</a>
+<a href="java_obj&cls.html">Objects&Classes</a>
+<a href="java_datatypes.html">Data Types</a>
+<a href="java_variables.html">Variable Types</a>
+<a href="java_modifiertypes.html">Modifier Types</a>
+<a href="java_operators.html">Basic Operators</a>
+<a href="java_loops.html">Loops</a>
+<a href="java_decisionmake.html">Decision Making</a>
+<a href="java_characters.html">Characters</a>
+<a href="java_strings.html">strings</a>
+<a href="java_arrays.html">Arrays</a>
+<a href="java_datetime.html">Date&Time</a>
+<a href="java_regularexpr.html">Regular expressions</a>
+<a href="java_methods.html">Methods</a>
+<a href="java_io.html">Files and i/o</a>
+<a class="active" href="java_excepetions">Exceptions </a>
+<a href="java_innerclass.html">Inner classes</a>
+<a href="java_inheritance.html">Inheritance </a>
+<a href="java_overriding.html">Overriding</a>
+<a href="java_overloading.html">Overloading</a>
+<a href="java_polymorphism.html">Polymorphism</a> 
+<a href="java_Abstraction.html">Abstraction</a>
+<a href="java_encapsulation.html">Encapsulation</a>
+<a href="java_interfaces.html">Interfaces</a>
+<a href="java_packages.html">Packages</a>
+</div> </nav>
+
+<article>
+<a href="java_io.html" class="previous">&laquo; Previous</a>
+<a href="java_innerclass.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080">Exceptions In Java</h1>
+<h3>
+What is an Exception?
+</h3>
+An exception is an unwanted or unexpected event, which occurs during the execution of a program i.e at run time, that disrupts the normal flow of the program’s instructions.
+<br/>
+<h4>Error vs Exception</h4>
+Error: An Error indicates serious problem that a reasonable application should not try to catch.<br>
+Exception: Exception indicates conditions that a reasonable application might try to catch.
+<br>
+<h4>Exception Hierarchy</h4>
+
+All exception and errors types are sub classes of class Throwable, which is base class of hierarchy.One branch is headed by Exception. This class is used for exceptional conditions that user programs should catch. NullPointerException is an example of such an exception.Another branch,Error are used by the Java run-time system(JVM) to indicate errors having to do with the run-time environment itself(JRE). StackOverflowError is an example of such an error.
+<br><br/>
+<img src="images/java_exception.png"/>
+<br>
+<h4>How JVM handle an Exception?</h4><p>
+<b>
+Default Exception Handling : </b>Whenever inside a method, if an exception has occurred, the method creates an Object known as Exception Object and hands it off to the run-time system(JVM). The exception object contains name and description of the exception, and current state of the program where exception has occurred. Creating the Exception Object and handling it to the run-time system is called throwing an Exception.There might be the list of the methods that had been called to get to the method where exception was occurred. This ordered list of the methods is called Call Stack.Now the following procedure will happen.
+</p><p><ul><li>
+The run-time system searches the call stack to find the method that contains block of code that can handle the occurred exception. The block of the code is called Exception handler.<br/></li><li>
+The run-time system starts searching from the method in which exception occurred, proceeds through call stack in the reverse order in which methods were called.<br/>
+</li><li>
+If it finds  appropriate handler then it passes the occurred exception to it. Appropriate handler means the type of the exception object thrown matches the type of the exception object it can handle.<br/>
+</li><li>
+If run-time system searches all the methods on call stack and couldn’t have found the appropriate handler then run-time system handover the Exception Object to default exception handler , which is part of run-time system. This handler prints the exception information in the following format and terminates program abnormally.<br/>
+</li><li></ul>
+<h4>
+Example :
+</h4> <table border="" width="500" height=""><tr><td><pre>
+// Java program to demonstrate how exception is thrown. 
+class ThrowsExecp{ 
+      
+    public static void main(String args[]){ 
+          
+        String str = null; 
+        System.out.println(str.length()); 
+          
+    } 
+}
+</pre></td></tr></table> 
+<h4>
+Output :
+</h4> <table border="" width="500" height=""><tr><td><pre>
+Exception in thread "main" java.lang.NullPointerException
+    at ThrowsExecp.main(File.java:8)
+</pre></td></tr></table> <br/>
+Let us see an example that illustrate how run-time system searches appropriate exception handling code on the call stack :
+<br/><br>
+ <table border="" width="500" height=""><tr><td><pre>
+// Java program to demonstrate exception is thrown 
+// how the runTime system searches th call stack 
+// to find appropriate exception handler. 
+class ExceptionThrown 
+{ 
+    // It throws the Exception(ArithmeticException). 
+    // Appropriate Exception handler is not found within this method. 
+    static int divideByZero(int a, int b){ 
+          
+        // this statement will cause ArithmeticException(/ by zero) 
+        int i = a/b;  
+          
+        return i; 
+    } 
+      
+    // The runTime System searches the appropriate Exception handler 
+    // in this method also but couldn't have found. So looking forward 
+    // on the call stack. 
+    static int computeDivision(int a, int b) { 
+          
+        int res =0; 
+          
+        try
+        { 
+          res = divideByZero(a,b); 
+        } 
+        // doesn't matches with ArithmeticException 
+        catch(NumberFormatException ex) 
+        { 
+           System.out.println("NumberFormatException is occured");  
+        } 
+        return res; 
+    } 
+      
+    // In this method found appropriate Exception handler. 
+    // i.e. matching catch block. 
+    public static void main(String args[]){ 
+          
+        int a = 1; 
+        int b = 0; 
+          
+        try
+        { 
+            int i = computeDivision(a,b); 
+          
+        } 
+          
+        // matching ArithmeticException 
+        catch(ArithmeticException ex) 
+        { 
+            // getMessage will print description of 
+			               exception(here / by zero) 
+            System.out.println(ex.getMessage()); 
+        } 
+    } 
+}
+</pre></td></tr></table> <br/>
+<h4> 
+Output :
+</h4> <table border="" width="500" height=""><tr><td><pre>
+/ by zero.
+</pre></td></tr></table> <br/>
+
+ 
+
+<h3>How Programmer handles an exception?</h3>
+<p><b>
+Customized Exception Handling : </b>Java exception handling is managed via five <b>keywords: </b>try, catch, throw, throws, and finally. Briefly, here is how they work. Program statements that you think can raise exceptions are contained within a try block. If an exception occurs within the try block, it is thrown. Your code can catch this exception (using catch block) and handle it in some rational manner.<br/> System-generated exceptions are automatically thrown by the Java run-time system. To manually throw an exception, use the keyword throw. Any exception that is thrown out of a method must be specified as such by a throws clause. Any code that absolutely must be executed after a try block completes is put in a finally block.
+</p><br/>
+<b>Need of try-catch clause(Customized Exception Handling)</b>
+<br/>
+Consider the following java program.
+</h4> <table border="" width="500" height=""><tr><td><pre>
+// java program to demonstrate  
+// need of try-catch clause 
+  
+class GFG { 
+    public static void main (String[] args) { 
+          
+        // array of size 4. 
+        int[] arr = new int[4]; 
+       
+        // this statement causes an exception 
+        int i = arr[4]; 
+          
+        // the following statement will never execute 
+        System.out.println("Hi, I want to execute"); 
+    } 
+} 
+</pre></td></tr></table> <br/>
+<h4>Output :
+</h4> <table border="" width="500" height=""><tr><td><pre>
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
+    at GFG.main(GFG.java:9)
+</pre></td></tr></table> <br/>
+<b>Explanation : </b>In the above example an array is defined with size i.e. you can access elements only from index 0 to 3. But you trying to access the elements at index 4(by mistake) that’s why it is throwing an exception.In this case, JVM terminates the program abnormally. The statement System.out.println(“Hi, I want to execute”); will never execute. To execute it, we must handled the exception using try-catch. Hence to continue normal flow of the program, we need try-catch clause.
+<h3>
+How to use try-catch clause
+</h3>
+<table border="" width="500" height=""><tr><td><pre>
+try {
+// block of code to monitor for errors
+// the code you think can raise an exception
+}
+catch (ExceptionType1 exOb) {
+// exception handler for ExceptionType1
+}
+catch (ExceptionType2 exOb) {
+// exception handler for ExceptionType2
+}
+// optional
+finally {
+// block of code to be executed after try block ends
+}
+</pre></td></tr></table> <br/>
+<h3>
+Points to remember :
+</h3><ul>
+<li>In a method, there can be more than one statements that might throw exception, So put all these statements within its own try block and provide separate exception handler within own catch block for each of them.
+</li><br><li>
+If an exception occurs within the try block, that exception is handled by the exception handler associated with it. To associate exception handler, we must put catch block after it. There can be more than one exception handlers. Each catch block is a exception handler that handles the exception of the type indicated by its argument. The argument, ExceptionType declares the type of the exception that it can handle and must be the name of the class that inherits from Throwable class.
+</li><br><li>
+For each try block there can be zero or more catch blocks, but only one finally block.
+</li><br><li>
+The finally block is optional.It always gets executed whether an exception occurred in try block or not . If exception occurs, then it will be executed after try and catch blocks. And if exception does not occur then it will be executed after the try block. The finally block in java is used to put important codes such as clean up code e.g. closing the file or closing the connection.
+</li></ul>
+<br><br>
+<a href="java_io.html" class="previous">&laquo; Previous</a>
+<a href="java_innerclass.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+ 
+</style>
+
+</head>
+<body>
+<header>
+<h1>CPP Programming</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a class="active" href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="cpp_overview.html">Overview</a>
+<a href="cpp_envrnmnt.html">Environment Setup</a>
+<a href="cpp_basicsyntax.html">Basic Syntax</a>
+<a href="cpp_comments.html">Comments</a>
+<a href="cpp_datatypes.html">Data types</a>
+<a href="cpp_variables.html">Variable Types</a>
+<a href="cpp_constliterals.html">Constants &literas </a>
+<a href="cpp_modifiertypes.html">Modifier Types</a>
+<a href="cpp_storageclasses.html">Storage Classes</a>
+<a href="cpp_operators.html">Operators</a>
+<a href="cpp_loops.html">Loops</a>
+<a href="cpp_decisionmake.html">Decision Making</a>
+<a href="cpp_functions.html">Functions</a>
+<a href="cpp_arraays.html">Arrays</a>
+<a href="cpp_strings.html">Strings</a>
+<a href="cpp_pointers.html">Pointers</a>
+<a href="cpp_references.html">References</a>
+<a href="cpp_basicio.html">Basic Input&Output </a>
+<a href="cpp_datastructures.html">Data Structures</a>
+<a href="cpp_classobject.html">Classes&Objects </a>
+<a href="cpp_inheritance.html">Inheritance </a>
+<a href="cpp_overloading.html">Overloading</a>
+<a href="cpp_polymorphism.html">Polymorphism</a>
+<a href="cpp_encapsulation.html">Encapsulation</a>
+<a class="active" href="cpp_interfaces.html">Interfaces</a> 
+</div> </nav>
+<article>
+<a href="cpp_encapsulation.html" class="previous">&laquo; Previous</a>
+<a href="#" class="next">Next &raquo;</a><h1 style="color:#000080">Interfaces in Cpp</h1>
+<p>
+An interface describes the behavior or capabilities of a C++ class without committing to a particular implementation of that class.<br>
+
+The C++ interfaces are implemented using abstract classes and these abstract classes should not be confused with data abstraction which is a concept of keeping implementation details separate from associated data.<br>
+
+A class is made abstract by declaring at least one of its functions as pure virtual function. A pure virtual function is specified by placing "= 0" in its declaration as follows </p>
+<table border="" width="500"><tr><td><pre>
+class Box {
+   public:
+      // pure virtual function
+      virtual double getVolume() = 0;
+      
+   private:
+      double length;      // Length of a box
+      double breadth;     // Breadth of a box
+      double height;      // Height of a box
+};</tr></td></pre></table>
+<p>
+The purpose of an abstract class (often referred to as an ABC) is to provide an appropriate base class from which other classes can inherit. Abstract classes cannot be used to instantiate objects and serves only as an interface. Attempting to instantiate an object of an abstract class causes a compilation error.<br>
+
+Thus, if a subclass of an ABC needs to be instantiated, it has to implement each of the virtual functions, which means that it supports the interface declared by the ABC. Failure to override a pure virtual function in a derived class, then attempting to instantiate objects of that class, is a compilation error.<br>
+
+Classes that can be used to instantiate objects are called concrete classes.</p>
+
+<b>Abstract Class Example:</b>
+<p>Consider the following example where parent class provides an interface to the base class to implement a function called getArea() </p>
+<table border="" width="500"><tr><td><pre>
+#include &ltiostream&gt
+ 
+using namespace std;
+ 
+// Base class
+class Shape {
+   public:
+      // pure virtual function providing interface framework.
+      virtual int getArea() = 0;
+      void setWidth(int w) {
+         width = w;
+      }
+   
+      void setHeight(int h) {
+         height = h;
+      }
+   
+   protected:
+      int width;
+      int height;
+};
+ 
+// Derived classes
+class Rectangle: public Shape {
+   public:
+      int getArea() { 
+         return (width * height); 
+      }
+};
+
+class Triangle: public Shape {
+   public:
+      int getArea() { 
+         return (width * height)/2; 
+      }
+};
+ 
+int main(void) {
+   Rectangle Rect;
+   Triangle  Tri;
+ 
+   Rect.setWidth(5);
+   Rect.setHeight(7);
+   
+   // Print the area of the object.
+   cout &lt&lt "Total Rectangle area: " &lt&lt Rect.getArea() &lt&lt endl;
+
+   Tri.setWidth(5);
+   Tri.setHeight(7);
+   
+   // Print the area of the object.
+   cout &lt&lt "Total Triangle area: " &lt&lt Tri.getArea()&lt&lt endl; 
+
+   return 0;
+}</tr></td></pre></table>
+<p>
+When the above code is compiled and executed, it produces the following result </p>
+<table border="" width="500"><tr><td><pre>
+Total Rectangle area: 35
+Total Triangle area: 17</tr></td></pre></table>
+<p>You can see how an abstract class defined an interface in terms of getArea() and two other classes implemented same function but with different algorithm to calculate the area specific to the shape.</p>
+
+<b>Designing Strategy</b>
+<p>
+An object-oriented system might use an abstract base class to provide a common and standardized interface appropriate for all the external applications. Then, through inheritance from that abstract base class, derived classes are formed that operate similarly.<br>
+
+The capabilities (i.e., the public functions) offered by the external applications are provided as pure virtual functions in the abstract base class.<br> The implementations of these pure virtual functions are provided in the derived classes that correspond to the specific types of the application.<br>
+
+This architecture also allows new applications to be added to a system easily, even after the system has been defined.</p><br>
+<a href="cpp_encapsulation.html" class="previous">&laquo; Previous</a>
+<a href="#" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

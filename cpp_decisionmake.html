@@ -91,6 +91,28 @@ article {
     background-color: #000080;
     color: white;
 }
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
 </style>
 
 </head>
@@ -103,43 +125,47 @@ article {
   <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
 <a href="allprolang.html">All Languages</a>
   <a href="c_overview.html">C</a>
-  <a class="active" href="cpp_overview.html">C++</a>
+  <a class="active" href="cpp_overview.html">CPP</a>
   <a href="java_overview.html">JAVA</a>
   <a href="html_overview.html">HTML</a>
   <a href="css_overview.html">CSS</a>
-  <a href="javascript_overview.html">JAVA SCRIPT</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
   <a href="python_overview.html">PYTHON</a>
   <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
 <nav>
 <div class="vertical-menu">
 <a href="cpp_overview.html">Overview</a>
-<a href="cpp_envrnmnt.html">environment setup</a>
-<a href="cpp_basicsyntax.html">basic syntax</a>
-<a href="cpp_comments.html">comments</a>
-<a href="cpp_datatypes.html">data types</a>
-<a href="cpp_variables.html">variable types</a>
-<a href="cpp_constliterals.html">constants &literas </a>
-<a href="cpp_modifiertypes.html">modifier types</a>
-<a href="cpp_storageclasses.html">storage classes</a>
-<a href="cpp_operators.html">operators</a>
-<a href="cpp_loops.html">loops</a>
-<a class="active" href="cpp_decisionmake.html">decision making</a>
-<a href="cpp_functions.html">functions</a>
-<a href="cpp_arraays.html">arrays</a>
-<a href="cpp_strings.html">strings</a>
-<a href="cpp_pointers.html">pointers</a>
-<a href="cpp_references.html">references</a>
-<a href="cpp_basicio.html">basic input&output </a>
-<a href="cpp_datastructures.html">data structures</a>
-<a href="cpp_classobject.html">classes&objects </a>
-<a href="cpp_inheritance.html">inheritance </a>
-<a href="cpp_overloading.html">overloading</a>
-<a href="cpp_polymorphism.html">polymorphism</a>
-<a href="cpp_encapsulation.html">encapsulation</a>
-<a href="cpp_interfaces.html">interfaces</a>
+<a href="cpp_envrnmnt.html">Environment Setup</a>
+<a href="cpp_basicsyntax.html">Basic Syntax</a>
+<a href="cpp_comments.html">Comments</a>
+<a href="cpp_datatypes.html">Data types</a>
+<a href="cpp_variables.html">Variable Types</a>
+<a href="cpp_constliterals.html">Constants &literas </a>
+<a href="cpp_modifiertypes.html">Modifier Types</a>
+<a href="cpp_storageclasses.html">Storage Classes</a>
+<a href="cpp_operators.html">Operators</a>
+<a href="cpp_loops.html">Loops</a>
+<a class="active" href="cpp_decisionmake.html">Decision Making</a>
+<a href="cpp_functions.html">Functions</a>
+<a href="cpp_arraays.html">Arrays</a>
+<a href="cpp_strings.html">Strings</a>
+<a href="cpp_pointers.html">Pointers</a>
+<a href="cpp_references.html">References</a>
+<a href="cpp_basicio.html">Basic Input&Output </a>
+<a href="cpp_datastructures.html">Data Structures</a>
+<a href="cpp_classobject.html">Classes&Objects </a>
+<a href="cpp_inheritance.html">Inheritance </a>
+<a href="cpp_overloading.html">Overloading</a>
+<a href="cpp_polymorphism.html">Polymorphism</a>
+<a href="cpp_encapsulation.html">Encapsulation</a>
+<a href="cpp_interfaces.html">Interfaces</a> 
 </div> </nav>
 
-<article><h1 style="color:#000080">DECISION MAKING In C++Programming</h1>
+<article>
+<a href="cpp_loops.html" class="previous">&laquo; Previous</a>
+<a href="cpp_functions.html" class="next">Next &raquo;</a>
+
+<h1 style="color:#000080">Decision Making In Cpp</h1>
 <p>Decision making is about deciding the order of execution of statements based on certain conditions or repeat a group of statements until certain specified conditions are met. C++ handles decision-making by supporting the following statements,
 </p>
 <p>* if statement
@@ -175,7 +201,7 @@ int main( )
  y=13;
  if (x > y )
  {
-  cout << "x is greater than y";
+  cout &lt&lt "x is greater than y";
  }
 } </td></tr></table>
 <h4>Output:</h4><table border="" width="400"><tr><td>
@@ -206,11 +232,11 @@ void main( )
  y=18;
  if (x > y )
  {
-  cout << "x is greater than y";
+  cout &lt&lt "x is greater than y";
  }
  else
  {
-  cout << "y is greater than x";
+  cout &lt&lt "y is greater than x";
  }
 }</pre></td></tr></table>
 <h4>Output :</h4>
@@ -247,24 +273,24 @@ void main( )
 {
  int a,b,c;
  clrscr();
- cout << "enter 3 number";
+ cout &lt&lt "enter 3 number";
  cin >> a >> b >> c;
  if(a > b)
  {
   if( a > c)
   {
-    cout << "a is greatest";
+    cout &lt&lt "a is greatest";
   }
   else 
   {
-    cout << "c is greatest";
+    cout &lt&lt "c is greatest";
   }
  }
  else
  {
   if( b> c)
    {
-     cout << "b is greatest";
+     cout &lt&lt "b is greatest";
    }
   else
    {
@@ -300,23 +326,23 @@ Example :</h4>
 void main( )
 {
  int a;
- cout << "enter a number";
+ cout &lt&lt "enter a number";
  cin >> a;
  if( a%5==0 && a%8==0)
  {
-  cout << "divisible by both 5 and 8";
+  cout &lt&lt "divisible by both 5 and 8";
  }  
  else if( a%8==0 )
  {
-  cout << "divisible by 8";
+  cout &lt&lt "divisible by 8";
  }
  else if(a%5==0)
  {
-  cout << "divisible by 5";
+  cout &lt&lt "divisible by 5";
  }
  else 
  {
-  cout << "divisible by none";
+  cout &lt&lt "divisible by none";
  }
 getch();
 }</pre></td></tr></table>
@@ -336,6 +362,9 @@ if(27)
  cout << "hello";
 </pre></td></tr></table>
 <P>In above example, hello will be printed.</P>
+<a href="cpp_loops.html" class="previous">&laquo; Previous</a>
+<a href="cpp_functions.html" class="next">Next &raquo;</a>
+
 </article>
 <footer>Devoloped by LE's</footer>
 </div>

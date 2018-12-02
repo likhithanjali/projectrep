@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>CSS </h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a  href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a class="active" href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="css_overview.html">Overview&Syntax</a> 
+<a href="css_waysToInsert.html">Ways To Insert</a> 
+<a href="css_colors.html">Colors</a> 
+<a  class="active" href="css_background.html">Background</a> 
+<a href="css_border.html">Borders</a> 
+<a href="css_margin.html">Margins</a> 
+<a href="css_padding.html">Padding</a> 
+<a href="css_height&width.html">Height&Width</a> 
+<a href="css_boxModel.html">Box Model</a> 
+<a href="css_outline.html">Outline</a> 
+<a href="css_text.html">Text</a> 
+<a href="css_fonts.html">Fonts</a> 
+<a href="css_icons.html">Icons</a> 
+<a href="css_links.html">Links</a> 
+<a href="css_lists.html">Lists</a> 
+<a href="css_tables.html">Tables</a> 
+<a href="css_overflow.html">Overflow</a> 
+<a href="css_float.html">Float</a> 
+<a href="css_display.html">Display</a> 
+<a href="css_maxWidth.html">Max Width</a> 
+<a href="css_position.html">Position</a> 
+</div> </nav>
+
+<article>
+<a href="css_colors.html" class="previous">&laquo; Previous</a>
+<a href="css_border.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Css Backgrounds</h1>
+This  tells you how to set backgrounds of various HTML elements. You can set the following background properties of an element -
+<ul>
+<li>The background-color property is used to set the background color of an element.
+
+<li>The background-image property is used to set the background image of an element.
+
+<li>The background-repeat property is used to control the repetition of an image in the background.
+
+<li>The background-position property is used to control the position of an image in the background.
+
+<li>The background-attachment property is used to control the scrolling of an image in the background.
+
+<li>The background property is used as a shorthand to specify a number of other background properties.</li>
+</ul>
+<h3>Set the Background Color</h3>
+Following is the example which demonstrates how to set the background color for an element.
+<table border="" width="400" height="">
+<td><pre><code><html>
+   &lthead&gt
+   &lt/head&gt
+   &ltbody&gt
+      &ltp style = "background-color:yellow;"&gt
+         This text has a yellow background color.
+      &lt/p&gt
+   &lt/body&gt
+&lt/html&gt</td></pre></code></table> 
+This will produce following result -
+This text has a yellow background color.
+<h3>Set the Background Image</h3>
+We can set the background image by calling local stored images as shown below -
+<table border="" width="400" height="">
+<td><pre><code>&lthtml&gt
+   &lthead&gt
+      &ltstyle&gt
+         body  {
+            background-image: url("/desktop/pra/pic.png");
+            background-color: #cccccc;
+         }
+      &lt/style&gt
+   &lt/head&gt
+   
+   &ltbody&gt
+      <h1&gtHello World!</h1&gt
+   &lt/body&gt
+&lthtml&gt</td></pre></code></table>
+It will produce the following result -
+<h2>Hello World</h2>
+
+<h3>Repeat the Background Image</h3>
+The following example demonstrates how to repeat the background image if an image is small. You can use no-repeat value for background-repeat property if you don't want to repeat an image, in this case image will display only once.
+
+By default background-repeat property will have repeat value.
+<table border="" width="400" height="">
+<td><pre><code>&lthtml&gt
+   &lthead&gt
+      &ltstyle&gt
+         body {
+            background-image: url("/desktop/pra/pic.png");
+            background-repeat: repeat;
+         }
+      &lt/style&gt
+   &lt/head&gt
+
+   &ltbody&gt
+      &ltp&gtcascaded style sheets&lt/p&gt
+   &lt/body&gt
+&lt/html&gt</td></pre></code></table>
+It will produce the following result -
+cascaded style sheets
+The following example which demonstrates how to repeat the background image vertically.
+<table border="" width="400" height="">
+<td><pre><code>&lthtml&gt
+   &lthead&gt
+      &ltstyle&gt
+         body {
+            background-image: url("/css/images/css.jpg");
+            background-repeat: repeat-y;
+         }
+      &lt/style&gt
+   &lt/head&gt
+
+   &ltbody&gt
+      &ltp&gtcascaded style sheets</p&gt
+   &lt/body&gt
+&lt/html&gt</td></pre></code></table>
+It will produce the following result -
+cascaded style sheets
+The following example demonstrates how to repeat the background image horizontally.
+<table border="" width="400" height="">
+<td><pre><code>&lthtml&gt
+   &lthead&gt
+      &ltstyle&gt
+         body {
+            background-image: url("/css/images/css.jpg");
+            background-repeat: repeat-x;
+         }
+      &lt/style&gt
+   &lt/head&gt
+   
+   &ltbody&gt
+      &ltp&gtcascaded style sheets&lt/p&gt
+   &lt/body&gt
+&lt/html&gt</td></pre></code></table>
+It will produce the following result -
+cascaded style sheets
+
+<h3>Set the Background Image Position</h3>
+The following example demonstrates how to set the background image position 100 pixels away from the left side.
+<table border="" width="400" height="">
+<td><pre><code>&lthtml&gt
+   &lthead&gt
+      &ltstyle&gt
+         body {
+            background-image: url("/css/images/css.jpg");
+            background-position:100px;
+         }
+      &lt/style&gt
+   &lt/head&gt
+
+   &ltbody&gt
+      &ltp&gtcascaded style sheets&lt/p&gt
+   &lt/body&gt
+&lt/html&gt</td></pre></code></table>
+It will produce the following result -
+cascaded style sheets
+
+The following example demonstrates how to set the background image position 100 pixels away from the left side and 200 pixels down from the top.
+<table border="" width="400" height="">
+<td><pre><code>&lthtml&gt
+    &lthead&gt
+       &ltstyle&gt
+         body {
+            background-image: url("/css/images/css.jpg");
+            background-position:100px 200px;
+         }
+       &lt/style&gt
+    &lt/head&gt
+
+    &ltbody&gt
+       &ltp &gtcascaded style sheets&lt/p&gt
+    &lt/body&gt
+ &lt/html&gt</td></pre></code></table>
+It will produce the following result -
+cascaded style sheets
+
+<h3>Set the Background Attachment</h3>
+Background attachment determines whether a background image is fixed or scrolls with the rest of the page.
+
+The following example demonstrates how to set the fixed background image.
+<table border="" width="400" height="">
+<td><pre><code>&lt!DOCTYPE html&gt
+&lthtml&gt
+   &lthead&gt
+      &ltstyle&gt
+         body {
+            background-image: url('/css/images/css.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+         }
+      &lt/style&gt
+   &lt/head&gt
+
+   &ltbody&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+   &lt/body&gt
+&lt/html&gt</td></pre></code></table>
+It will produce the following result -
+<table border="" width="400" height="">
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+</td></table>
+If you do not see any scrollbars, try to resize the browser window.
+The following example demonstrates how to set the scrolling background image.
+<table border="" width="400" height="">
+<td><pre><code>&lt!DOCTYPE html&gt
+html&gt
+   &lthead&gt
+      &ltstyle&gt
+         body {
+            background-image: url('/css/images/css.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-attachment:scroll;
+         }
+      &lt/style&gt
+   &lt/head&gt
+
+   &ltbody&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+      &ltp&gtThe background-image is fixed. Try to scroll down the page.&lt/p&gt
+   &lt/body&gt
+&lt/html&gt</td></pre></code></table>
+It will produce the following result -<table border="" width="400" height="">
+<td>The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+
+The background-image is fixed. Try to scroll down the page.<br>
+</td></table>
+
+Shorthand Property
+You can use the background property to set all the background properties at once. For example -
+<table border="" width="400" height="">
+<td><pre><code>&ltp style = "background:url(/images/pattern1.gif) repeat fixed;"&gt
+   This parapgraph has fixed repeated background image.
+&lt/p&gt</td></pre></code></table>
+<br><br>
+<a href="css_colors.html" class="previous">&laquo; Previous</a>
+<a href="css_border.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

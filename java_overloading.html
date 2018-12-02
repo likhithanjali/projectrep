@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVA</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a class="active" href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="java_overview.html">Overview</a>
+<a href="java_environmentalsetup.html">Environment Setup</a>
+<a href="java_basicsyntax.html">Basic Syntax</a>
+<a href="java_comments.html">Comments</a>
+<a href="java_obj&cls.html">Objects&Classes</a>
+<a href="java_datatypes.html">Data Types</a>
+<a href="java_variables.html">Variable Types</a>
+<a href="java_modifiertypes.html">Modifier Types</a>
+<a href="java_operators.html">Basic Operators</a>
+<a href="java_loops.html">Loops</a>
+<a href="java_decisionmake.html">Decision Making</a>
+<a href="java_characters.html">Characters</a>
+<a href="java_strings.html">strings</a>
+<a href="java_arrays.html">Arrays</a>
+<a href="java_datetime.html">Date&Time</a>
+<a href="java_regularexpr.html">Regular expressions</a>
+<a href="java_methods.html">Methods</a>
+<a href="java_io.html">Files and i/o</a>
+<a href="java_excepetions.html">Exceptions </a>
+<a href="java_innerclass.html">Inner classes</a>
+<a href="java_inheritance.html">Inheritance </a>
+<a href="java_overriding.html">Overriding</a>
+<a class="active" href="java_overloading.html">Overloading</a>
+<a href="java_polymorphism.html">Polymorphism</a>
+<a href="java_Abstraction.html">Abstraction</a>
+<a href="java_encapsulation.html">Encapsulation</a>
+<a href="java_interfaces.html">Interfaces</a>
+<a href="java_packages.html">Packages</a>
+</div> </nav>
+
+<article>
+<a href="java_overriding.html" class="previous">&laquo; Previous</a>
+<a href="java_polymorphism.html" class="next">Next &raquo;</a>
+
+<h1 style="color:#000080";>Method Overloading in Java</h1>
+<p>Whenever same method name is exiting multiple times in the same class with different number of
+parameter or different order of parameters or different types of parameters is known as method
+overloading.</p>
+<h4>Why use method Overloading in Java ?</h4>
+<p>Suppose we have to perform addition of given number but there can be any number of arguments, if we
+write method such as a(int, int)for two arguments, b(int, int, int) for three arguments then it is very
+difficult for you and other programmer to understand purpose or behaviors of method they can not
+identify purpose of method. So we use method overloading to easily figure out the program. For
+example above two methods we can write sum(int, int) and sum(int, int, int) using method overloading
+concept.</p>
+<h4>Syntax</h4>
+<table border="" width="500" height=""><tr><td><pre>
+class class_Name
+{
+Returntype method()
+{.........}
+Returntype method(datatype1 variable1)
+{.........}
+Returntype method(datatype1 variable1, datatype2 variable2)
+{.........}
+Returntype method(datatype2 variable2)
+{.........}
+Returntype method(datatype2 variable2, datatype1 variable1)
+{.........}
+}</pre></td></tr></table>
+<p>Different ways to overload the method<br>
+There are two ways to overload the method in java</p>
+<ul><ol>1.By changing number of arguments or parameters</ol>
+<ol>2.By changing the data type</ol></ul>
+<h3>* By changing number of arguments</h3>
+<p>In this example, we have created two overloaded methods, first sum method performs addition of two
+numbers and second sum method performs addition of three numbers.</p>
+<h4>Example Method Overloading in Java</h4>
+<table border="" width="500" height=""><tr><td><pre>
+class Addition
+{
+void sum(int a, int b)
+{
+System.out.println(a+b);
+}
+void sum(int a, int b, int c)
+{
+System.out.println(a+b+c);
+}
+public static void main(String args[])
+{
+Addition obj=new Addition();
+obj.sum(10, 20);
+obj.sum(10, 20, 30);
+}
+}
+</pre></td></tr></table>
+<h4>Output</h4>
+<table border="" width="500" height=""><tr><td>
+30<br>
+60</td></tr></table>
+<h3>* By changing the data type</h3>
+<p>In this example, we have created two overloaded methods that differs in data type. The first sum
+method receives two integer arguments and second sum method receives two float arguments.</p>
+<h4>Example Method Overloading in Java</h4>
+<table border="" width="500" height=""><tr><td><pre>
+class Addition
+{
+void sum(int a, int b)
+{
+System.out.println(a+b);
+}
+void sum(float a, float b)
+{
+System.out.println(a+b);
+}
+public static void main(String args[])
+{
+Addition obj=new Addition();
+obj.sum(10, 20);
+obj.sum(10.05, 15.20);
+}
+}</pre></td></tr></table>
+<h4>Output</h4>
+<table border="" width="500" height=""><tr><td> 
+30<br>
+25.25</td></tr></table>
+<h4>Why Method Overloading is not possible by changing the return type of method?</h4>
+<p>In java, method overloading is not possible by changing the return type of the method because there
+may occur ambiguity. Let&#39;s see how ambiguity may occur:</p>
+<p>because there was problem:<p>
+<h4>Example of Method Overloading</h4>
+<table border="" width="500" height=""><tr><td><pre>
+class Addition
+{
+int sum(int a, int b)
+{
+System.out.println(a+b);
+}
+double sum(int a, int b)
+{
+System.out.println(a+b);
+}
+public static void main(String args[])
+{
+Addition obj=new Addition();
+int result=obj.sum(20,20); //Compile Time Error
+}
+}</pre></td></tr></table>
+<h4>Explanation of Code</h4>
+<p>Example<br>
+int result=obj.sum(20,20);<br>
+Here how can java determine which sum() method should be called<br>
+Note: The scope of overloading is within the class.<br>
+Any object reference of class can call any of overloaded method.</p>
+<h4>Can we overload main() method ?</h4>
+<p>Yes, We can overload main() method. A Java class can have any number of main() methods. But run the
+java program, which class should have main() method with signature as &quot;public static void main(String[]
+args). If you do any modification to this signature, compilation will be successful. But, not run the java
+program. we will get the run time error as main method not found.</p>
+<p>Example of override main() method</p>
+<h4>Example</h4>
+<table border="" width="500" height=""><tr><td><pre>
+public class mainclass
+{
+public static void main(String[] args)
+{
+System.out.println(&quot;Execution starts from Main()&quot;);
+}
+void main(int args)
+{
+System.out.println(&quot;Override main()&quot;);
+}
+double main(int i, double d)
+{
+System.out.println(&quot;Override main()&quot;);
+return d;
+}
+}</pre></td></tr></table>
+<h4>Output</h4>
+<table border="" width="500" height=""><tr><td> 
+Execution starts from Main()
+</td></tr></table>
+<br><br>
+<a href="java_overriding.html" class="previous">&laquo; Previous</a>
+<a href="java_polymorphism.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</body>
+</html>

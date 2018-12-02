@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVA</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a class="active" href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="java_overview.html">Overview</a>
+<a href="java_environmentalsetup.html">Environment Setup</a>
+<a href="java_basicsyntax.html">Basic Syntax</a>
+<a href="java_comments.html">Comments</a>
+<a href="java_obj&cls.html">Objects&Classes</a>
+<a href="java_datatypes.html">Data Types</a>
+<a href="java_variables.html">Variable Types</a>
+<a href="java_modifiertypes.html">Modifier Types</a>
+<a href="java_operators.html">Basic Operators</a>
+<a href="java_loops.html">Loops</a>
+<a class="active" href="java_decisionmake.html">Decision Making</a>
+<a href="java_characters.html">Characters</a>
+<a href="java_strings.html">strings</a>
+<a href="java_arrays.html">Arrays</a>
+<a href="java_datetime.html">Date&Time</a>
+<a href="java_regularexpr.html">Regular expressions</a>
+<a href="java_methods.html">Methods</a>
+<a href="java_io.html">Files and i/o</a>
+<a href="java_excepetions.html">Exceptions </a>
+<a href="java_innerclass.html">Inner classes</a>
+<a href="java_inheritance.html">Inheritance </a>
+<a href="java_overriding.html">Overriding</a> 
+<a href="java_overloading.html">Overloading</a>
+<a href="java_Abstraction.html">Abstraction</a>
+<a href="java_encapsulation.html">Encapsulation</a>
+<a href="java_interfaces.html">Interfaces</a>
+<a href="java_packages.html">Packages</a>
+
+</div> </nav>
+<article>
+<a href="java_loops.html" class="previous">&laquo; Previous</a>
+<a href="java_characters.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Desision Making In Java</h1>
+<h3>Decision Making in Java (if, if-else, switch, break, continue, jump)</h3>
+Decision Making in programming is similar to decision making in real life. In programming also we face some situations where we want a certain block of code to be executed when some condition is fulfilled.
+<br>
+A programming language uses control statements to control the flow of execution of program based on certain conditions. These  are used to cause the flow of execution to advance and branch based on changes to the state of a program.
+<h3>Java’s Selection statements:</h3>
+<li>if</li>
+<li>if-else</li>
+<li>nested-if</li>
+<li>if-else-if</li>
+<li>switch-case</li>
+<li>jump – break, continue, return</li>
+These statements allow you to control the flow of your program’s execution based upon conditions known only during run time.
+<h3>if:</h3> if statement is the most simple decision making statement. It is used to decide whether a certain statement or block of statements will be executed or not i.e if a certain condition is true then a block of statement is executed otherwise not.
+<h3>Syntax:</h3>
+<table border="" width="500"><tr><td><pre>
+if(condition) 
+{
+   // Statements to execute if
+   // condition is true
+}
+</pre></tr></td></table>
+<h3>Flow chart:</h3>
+<img src="images/java_if.png"><br>
+Here, condition after evaluation will be either true or false. if statement accepts boolean values – if the value is true then it will execute the block of statements under it.
+If we do not provide the curly braces ‘{‘ and ‘}’ after if( condition ) then by default if statement will consider the immediate one statement to be inside its block.
+<h3>For example</h3>
+<table border="" width="500"><tr><td><pre>
+if(condition)
+   statement1;
+   statement2;
+</pre></tr></td></table>
+// Here if the condition is true, if block 
+// will consider only statement1 to be inside 
+// its block.
+
+<h3>if-statement-in-java</h3>
+<h3>Example:</h3>
+// Java program to illustrate If statement 
+<table border="" width="500"><tr><td><pre>
+class IfDemo 
+{ 
+    public static void main(String args[]) 
+    { 
+        int i = 10; 
+  
+        if (i > 15) 
+            System.out.println("10 is less than 15"); 
+  
+        // This statement will be executed 
+        // as if considers one statement by default 
+        System.out.println("I am Not in if"); 
+    } 
+} 
+</pre></tr></td></table>
+<h3>Output:</h3>
+<table border="" width="500"><tr><td><pre>
+I am Not in if
+</pre></tr></td></table>
+<h3>if-else:</h3> The if statement alone tells us that if a condition is true it will execute a block of statements and if the condition is false it won’t. But what if we want to do something else if the condition is false. Here comes the else statement. We can use the else statement with if statement to execute a block of code when the condition is false.
+<h3>Syntax:</h3>
+<table border="" width="500"><tr><td><pre>
+if (condition)
+{
+    // Executes this block if
+    // condition is true
+}
+else
+{
+    // Executes this block if
+    // condition is false
+}
+</pre></tr></td></table>
+<h3>Flow chart:</h3>
+
+<img src="images/java_ifelse.png"><br>
+
+<h3>if-else-statement</h3>
+<h3>Example:</h3>
+// Java program to illustrate if-else statement 
+<table border="" width="500"><tr><td><pre>
+class IfElseDemo 
+{ 
+    public static void main(String args[]) 
+    { 
+        int i = 10; 
+  
+        if (i &lt 15) 
+            System.out.println("i is smaller than 15"); 
+        else
+            System.out.println("i is greater than 15"); 
+    } 
+} 
+</pre></tr></td></table>
+
+<h3>Output:</h3>
+<table border="" width="500"><tr><td><pre>
+i is smaller than 15
+</pre></tr></td></table>
+<h3>nested-if:</h3> A nested if is an if statement that is the target of another if or else. Nested if statements means an if statement inside an if statement. Yes, java allows us to nest if statements within if statements. i.e, we can place an if statement inside another if statement.
+<h3>Syntax:</h3>
+<table border="" width="500"><tr><td><pre>
+if (condition1) 
+{
+   // Executes when condition1 is true
+   if (condition2) 
+   {
+      // Executes when condition2 is true
+   }
+}
+</pre></tr></td></table>
+<h3>Flow chart:</h3>
+<img src="images/java_nestedif.png"><br>
+<h3>nested-if</h3>
+<h3>Example:</h3>
+// Java program to illustrate nested-if statement 
+<table border="" width="500"><tr><td><pre>
+class NestedIfDemo 
+{ 
+    public static void main(String args[]) 
+    { 
+        int i = 10; 
+  
+        if (i == 10) 
+        { 
+            // First if statement 
+            if (i &lt 15) 
+                System.out.println("i is smaller than 15"); 
+  
+            // Nested - if statement 
+            // Will only be executed if statement above 
+            // it is true 
+            if (i &lt 12) 
+                System.out.println("i is smaller than 12 too"); 
+            else
+                System.out.println("i is greater than 15"); 
+        } 
+    } 
+} 
+</pre></tr></td></table>
+<h3>Output:</h3>
+<table border="" width="500"><tr><td><pre>
+i is smaller than 15
+i is smaller than 12 too
+</pre></tr></td></table>
+<h3>if-else-if ladder:</h3> Here, a user can decide among multiple options.The if statements are executed from the top down. As soon as one of the conditions controlling the if is true, the statement associated with that if is executed, and the rest of the ladder is bypassed. If none of the conditions is true, then the final else statement will be executed.
+<table border="" width="500"><tr><td><pre>
+if (condition)
+    statement;
+else if (condition)
+    statement;
+.
+.
+else
+    statement;
+if-else-if-ladder
+</pre></tr></td></table>
+<h3>Flow chart:</h3>
+<img src="images/java_ifelseladder.png"><br>
+<h3>Example:</h3>
+// Java program to illustrate if-else-if ladder 
+<table border="" width="500"><tr><td><pre>
+class ifelseifDemo 
+{ 
+    public static void main(String args[]) 
+    { 
+        int i = 20; 
+  
+        if (i == 10) 
+            System.out.println("i is 10"); 
+        else if (i == 15) 
+            System.out.println("i is 15"); 
+        else if (i == 20) 
+            System.out.println("i is 20"); 
+        else
+            System.out.println("i is not present"); 
+    } 
+} 
+</pre></tr></td></table>
+<h3>Output:</h3>
+<table border="" width="500"><tr><td><pre>
+i is 20
+</pre></tr></td></table>
+<h3>switch-case:</h3> The switch statement is a multiway branch statement. It provides an easy way to dispatch execution to different parts of code based on the value of the expression.
+<h3>Syntax:</h3>
+<table border="" width="500"><tr><td><pre>
+switch (expression)
+{
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+  .
+  .
+  case valueN:
+    statementN;
+    break;
+  default:
+    statementDefault;
+}
+</pre></tr></td></table>
+
+<li>Expression can be of type byte, short, int char or an enumeration. Beginning with JDK7, expression can also be of type String.</li>
+<li>Dulplicate case values are not allowed.</li>
+<li>The default statement is optional.</li>
+<li>The break statement is used inside the switch to terminate a statement sequence.</li>
+<li>The break statement is optional. If omitted, execution will continue on into the next case.</li>
+<h3>Flow chart:</h3>
+<img src="images/java_switch.png"><br>
+<h3>switch-case-in-java</h3>
+<h3>Example:</h3>
+// Java program to illustrate switch-case 
+<table border="" width="500"><tr><td><pre>
+class SwitchCaseDemo 
+{ 
+    public static void main(String args[]) 
+    { 
+        int i = 9; 
+        switch (i) 
+        { 
+        case 0: 
+            System.out.println("i is zero."); 
+            break; 
+        case 1: 
+            System.out.println("i is one."); 
+            break; 
+        case 2: 
+            System.out.println("i is two."); 
+            break; 
+        default: 
+            System.out.println("i is greater than 2."); 
+        } 
+    } 
+} </pre></tr></td></table>
+
+<h3>Output:</h3>
+<table border="" width="500"><tr><td><pre>
+i is greater than 2.
+</pre></tr></td></table>
+<h3><li>jump:</h3> Java supports three jump statement: break, continue and return. These three statements transfer control to other part of the program.</li>
+<h3>1.Break:</h3> In Java, break is majorly used for:
+<li>Terminate a sequence in a switch statement (discussed above).</li>
+<li>To exit a loop.</li>
+<li>Used as a “civilized” form of goto.</li>
+<h3>Using break to exit a Loop</h3>
+Using break, we can force immediate termination of a loop, bypassing the conditional expression and any remaining code in the body of the loop.
+<h4>Note:</h4> Break, when used inside a set of nested loops, will only break out of the innermost loop.
+<h3>Flow chart:</h3>
+
+<img src="images/java_breakloop.png"><br>
+using-break-to-exit-a-loop-in-java
+<h3>Example:</h3>
+// Java program to illustrate using 
+// break to exit a loop
+<table border="" width="500"><tr><td><pre> 
+class BreakLoopDemo 
+{ 
+    public static void main(String args[]) 
+    { 
+        // Initially loop is set to run from 0-9 
+        for (int i = 0; i &lt 10; i++) 
+        { 
+            // terminate loop when i is 5. 
+            if (i == 5) 
+                break; 
+  
+            System.out.println("i: " + i); 
+        } 
+        System.out.println("Loop complete."); 
+    } 
+} 
+</pre></tr></td></table>
+<h3>Output:</h3>
+<table border="" width="500"><tr><td><pre>
+i: 0
+i: 1
+i: 2
+i: 3
+i: 4
+Loop complete.
+</pre></tr></td></table>
+<h3>Using break as a Form of Goto</h3>
+Java does not have a goto statement because it provides a way to branch in an arbitrary and unstructured manner. Java uses label. A Label is use to identifies a block of code.
+<h3>Syntax:</h3>
+<table border="" width="500"><tr><td><pre>
+label:
+{
+  statement1;
+  statement2;
+  statement3;
+  .
+  .
+}
+</pre></tr></td></table>
+Now, break statement can be use to jump out of target block.
+<h4>Note:</h4> You cannot break to any label which is not defined for an enclosing block.
+<h3>Syntax:</h3>
+<table border="" width="500"><tr><td><pre>
+break label;
+</pre></tr></td></table>
+<h3>Example:</h3>
+// Java program to illustrate using break with goto 
+<table border="" width="500"><tr><td><pre>
+class BreakLabelDemo 
+{ 
+    public static void main(String args[]) 
+    { 
+        boolean t = true; 
+  
+        // label first 
+        first: 
+        { 
+            // Illegal statement here as label second is not 
+            // introduced yet break second; 
+            second: 
+            { 
+                third: 
+                { 
+                    // Before break 
+                    System.out.println("Before the break statement"); 
+  
+                    // break will take the control out of 
+                    // second label 
+                    if (t) 
+                        break second; 
+                    System.out.println("This won't execute."); 
+                } 
+                System.out.println("This won't execute."); 
+            } 
+  
+            // Third block 
+            System.out.println("This is after second block."); 
+        } 
+    } 
+} 
+</pre></tr></td></table>
+<h3>Output:</h3>
+<table border="" width="500"><tr><td><pre>
+Before the break.
+This is after second block.
+</pre></tr></td></table>
+<h3>2.Continue:</h3> Sometimes it is useful to force an early iteration of a loop. That is, you might want to continue running the loop but stop processing the remainder of the code in its body for this particular iteration. This is, in effect, a goto just past the body of the loop, to the loop’s end. The continue statement performs such an action.
+<h3>Flow chart:</h3>
+
+<img src="images/java_continue.png"><br>
+<h3>continue-in-java</h3>
+<h3>Example:</h3>
+// Java program to illustrate using 
+// continue in an if statement
+<table border="" width="500"><tr><td><pre>
+class ContinueDemo 
+{ 
+    public static void main(String args[]) 
+    { 
+        for (int i = 0; i &lt 10; i++) 
+        { 
+            // If the number is even 
+            // skip and continue 
+            if (i%2 == 0) 
+                continue; 
+  
+            // If number is odd, print it 
+            System.out.print(i + " "); 
+        } 
+    } 
+} 
+</pre></tr></td></table>
+<h3>Output:</h3>
+<table border="" width="500"><tr><td><pre>
+1 3 5 7 9 
+</pre></tr></td></table>
+<h3>Return:</h3>The return statement is used to explicitly return from a method. That is, it causes a program control to transfer back to the caller of the method.
+<h3>Example:</h3>
+// Java program to illustrate using return 
+<table border="" width="500"><tr><td><pre>
+class Return 
+{ 
+    public static void main(String args[]) 
+    { 
+        boolean t = true; 
+        System.out.println("Before the return."); 
+      
+        if (t) 
+            return; 
+  
+        // Compiler will bypass every statement  
+        // after return 
+        System.out.println("This won't execute."); 
+    } 
+} 
+</pre>
+</tr>
+</td><table>
+<h3>Output:</h3>
+<table border="" width="500"><tr><td><pre>
+Before the return.
+</pre></tr></td></table>
+<br><br>
+<a href="java_loops.html" class="previous">&laquo; Previous</a>
+<a href="java_characters.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</body>
+</html>

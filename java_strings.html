@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVA</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a class="active" href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="java_overview.html">Overview</a>
+<a href="java_environmentalsetup.html">Environment Setup</a>
+<a href="java_basicsyntax.html">Basic Syntax</a>
+<a href="java_comments.html">Comments</a>
+<a href="java_obj&cls.html">Objects&Classes</a>
+<a href="java_datatypes.html">Data Types</a>
+<a href="java_variables.html">Variable Types</a>
+<a href="java_modifiertypes.html">Modifier Types</a>
+<a href="java_operators.html">Basic Operators</a>
+<a href="java_loops.html">Loops</a>
+<a href="java_decisionmake.html">Decision Making</a>
+<a href="java_characters.html">Characters</a>
+<a class="active" href="java_strings.html">strings</a>
+<a href="java_arrays.html">Arrays</a>
+<a href="java_datetime.html">Date&Time</a>
+<a href="java_regularexpr.html">Regular expressions</a>
+<a href="java_methods.html">Methods</a>
+<a href="java_io.html">Files and i/o</a>
+<a href="java_excepetions.html">Exceptions </a>
+<a href="java_innerclass.html">Inner classes</a>
+<a href="java_inheritance.html">Inheritance </a>
+<a href="java_overriding.html">Overriding</a>
+<a href="java_overloading.html">Overloading</a>
+<a href="java_polymorphism.html">Polymorphism</a> 
+<a href="java_Abstraction.html">Abstraction</a>
+<a href="java_encapsulation.html">Encapsulation</a>
+<a href="java_interfaces.html">Interfaces</a>
+<a href="java_packages.html">Packages</a>
+
+</div> </nav>
+<article>
+<a href="java_characters.html" class="previous">&laquo; Previous</a>
+<a href="java_arrays.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Strings In Java</h1>
+<p>A Java String contains an immutable sequence of Unicode characters. Unlike C/C++, where string is simply an array of char , A Java String is an object of the class java.lang . ... For example, the method toUpperCase() constructs and returns a new String instead of modifying the its existing content.</p>
+<h3>Creating a String</h3>
+<p>Strings in Java are objects. Therefore you need to use the new operator to create a new Java String object. Here is a Java String instantiation (creation) example:</p>
+<table border="" height="" width="500"><tr><td>
+String myString = new String("Hello World");
+</td></tr></table>
+<p>The text inside the quotes is the text the String object will contain.</p>
+
+<h3>Java String Literals</h3>
+<p>Java has a shorter way of creating a new String:</p>
+<table border="" height="" width="500"><tr><td>
+String myString = "Hello World";
+</td></tr></table>
+<p>Instead of passing the text "Hello World" as a parameter to the String constructor, you can just write the text itself inside the double quote characters. This is called a String literal. The Java compiler will internally figure out how to create a new Java String representing the given text.</p>
+
+<h3>Escape Characters</h3>
+<p>Java Strings literals accepts a set of escape characters which are translated into special characters in the created String. These escape characters are:</p>
+<table border="" height="" width="500"><tr><td><pre>
+Esc. Char	Description
+\\	Translated into a single \ character in the String
+\t	Translated into a single tab character in the string
+\r	Translated into a single carriage return character in the string
+\n	Translated into a single new line character in the string
+</pre></td></tr></table>
+<p>Here is an example of creating a Java String using escape characters:</p>
+<table border="" height="" width="500"><tr><td>
+String text = "\tThis text is one tab in.\r\n";
+</td></tr></table>
+<p>This String literal will result in a String that starts with a tab character and ends with a carriage return and a new line character.</p>
+
+<h3>String Literals as Constants or Singletons</h3>
+<p>If you use the same string (e.g. "Hello World") in other String variable declarations, the Java virtual machine may only create a single String instance in memory. The string literal thus becomes a de facto constant or singleton. The various different variables initialized to the same constant string will point to the same String instance in memory. Here is a Java String constant / singleton example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String myString1 = "Hello World";
+String myString2 = "Hello World";
+</pre></td></tr></table>
+<pr>In this case the Java virtual machine will make both myString1 and myString2 point to the same String object.<br>
+
+More precisely, objects representing Java String literals are obtained from a constant String pool which the Java virtual machine keeps internally. That means, that even classes from different projects compiled separately, but which are used in the same application may share constant String objects. The sharing happens at runtime. It is not a compile time feature.<br>
+
+If you want to be sure that two String variables point to separate String objects, use the new operator like this:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String myString1 = new String("Hello World");
+String myString2 = new String("Hello World");
+</pre></td></tr></table>
+<p>Even though the value (text) of the two Java Strings created is the same, the Java virtual machine will create two different objects in memory to represent them.</p>
+
+<h3>Concatenating Strings</h3>
+<p>Concatenating Strings means appending one string to another. Strings in Java are immutable meaning they cannot be changed once created. Therefore, when concatenating two Java String objects to each other, the result is actually put into a third String object.<br>
+
+Here is a Java String concatenation example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String one = "Hello";
+String two = "World";
+
+String three = one + " " + two;
+</pre></td></tr></table>
+<p>The content of the String referenced by the variable three will be Hello World; The two other Strings objects are untouched.</p>
+
+<h3>String Concatenation Performance</h3>
+<p>When concatenating Strings you have to watch out for possible performance problems. Concatenating two Strings in Java will be translated by the Java compiler to something like this:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String one = "Hello";
+String two = " World";
+
+String three = new StringBuilder(one).append(two).toString();
+</pre></td></tr></table>
+<p>As you can see, a new StringBuilder is created, passing along the first String to its constructor, and the second String to its append() method, before finally calling the toString() method. This code actually creates two objects: A StringBuilder instance and a new String instance returned from the toString() method.<br>
+
+When executed by itself as a single statement, this extra object creation overhead is insignificant. When executed inside a loop, however, it is a different story.<br>
+
+Here is a loop containing the above type of String concatenation:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String[] strings = new String[]{"one", "two", "three", "four", "five" };
+
+String result = null;
+for(String string : strings) {
+    result = result + string;
+}
+This code will be compiled into something similar to this:
+
+String[] strings = new String[]{"one", "two", "three", "four", "five" };
+
+String result = null;
+for(String string : strings) {
+    result = new StringBuilder(result).append(string).toString();
+}
+</pre></td></tr></table>
+<p>Now, for every iteration in this loop a new StringBuilder is created. Additionally, a String object is created by the toString() method. This results in a small object instantiation overhead per iteration: One StringBuilder object and one String object. This by itself is not the real performance killer though. But something else related to the creation of these objects is.<br>
+
+Every time the new StringBuilder(result) code is executed, the StringBuilder constructor copies all characters from the result String into the StringBuilder. The more iterations the loop has, the bigger the result String grows. The bigger the result String grows, the longer it takes to copy the characters from it into a new StringBuilder, and again copy the characters from the StringBuilder into the temporary String created by the toString() method. In other words, the more iterations the slower each iteration becomes.<br>
+
+The fastest way of concatenating Strings is to create a StringBuilder once, and reuse the same instance inside the loop. Here is how that looks:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String[] strings = new String[]{"one", "two", "three", "four", "five" };
+
+StringBuilder temp  = new StringBuilder();
+for(String string : strings) {
+    temp.append(string);
+}
+String result = temp.toString();
+</pre></td></tr></table>
+<p>This code avoids both the StringBuilder and String object instantiations inside the loop, and therefore also avoids the two times copying of the characters, first into the StringBuilder and then into a String again.</p>
+
+<h3>String Length</h3>
+<p>You can obtain the length of a String using the length() method. The length of a String is the number of characters the String contains - not the number of bytes used to represent the String.</p> <h4>Here is an example:</h4>
+<table border="" height="" width="500"><tr><td><pre>
+String string = "Hello World";
+int length = string.length();
+</pre></td></tr></table>
+<h3>Substrings</h3>
+<p>You can extract a part of a String. This is called a substring. You do so using the substring() method of the String class. Here is an example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String string1 = "Hello World";
+
+String substring = string1.substring(0,5);
+</pre></td></tr></table>
+<p>After this code is executed the substring variable will contain the string Hello.<br>
+
+The substring() method takes two parameters. The first is the character index of the first character to be included in the substring. The second is the index of the character after the last character to be included in the substring. Remember that. The parameters mean "from - including, to - excluding". This can be a little confusing until you memorize it.<br>
+
+The first character in a String has index 0, the second character has index 1 etc. The last character in the string has has the index String.length() - 1.</p>
+
+<h3>Searching in Strings With indexOf()</h3>
+<p>You can search for substrings in Strings using the indexOf() method. Here is an example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String string1 = "Hello World";
+
+int index = string1.indexOf("World");
+</pre></td></tr></table>
+<p>The index variable will contain the value 6 after this code is executed. The indexOf() method returns the index of where the first character in the first matching substring is found. In this case the W of the matched substring World was found at index 6.<br>
+
+If the substring is not found within the string, the indexOf() method returns -1;<br>
+
+There is a version of the indexOf() method that takes an index from which the search is to start. That way you can search through a string to find more than one occurrence of a substring. Here is an example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String theString = "is this good or is this bad?";
+String substring = "is";
+
+int index = theString.indexOf(substring);
+while(index != -1) {
+    System.out.println(index);
+    index = theString.indexOf(substring, index + 1);
+}
+</pre></td></tr></table>
+<p>This code searches through the string "is this good or is this bad?" for occurrences of the substring "is". It does so using the indexOf(substring, index) method. The index parameter tells what character index in the String to start the search from. In this example the search is to start 1 character after the index where the previous occurrence was found. This makes sure that you do not just keep finding the same occurrence.</p>
+
+<h4>The output printed from this code would be:</h4>
+<table border="" height="" width="500"><tr><td><pre>
+0
+5
+16
+21
+</pre></td></tr></table>
+<p>The substring "is" is found in four places. Two times in the words "is", and two times inside the word "this".<br>
+
+The Java String class also has a lastIndexOf() method which finds the last occurrence of a substring. Here is an example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String theString = "is this good or is this bad?";
+String substring = "is";
+
+int index = theString.lastIndexOf(substring);
+System.out.println(index);
+</pre></td></tr></table>
+<p>The output printed from this code would be 21 which is the index of the last occurrence of the substring "is".<br>
+
+Matching a String Against a Regular Expression With matches()<br>
+The Java String matches() method takes a regular expression as parameter, and returns true if the regular expression matches the string, and false if not.</p>
+
+<h4>Here is a matches() example:</h4>
+<table border="" height="" width="500"><tr><td><pre>
+String text = "one two three two one";
+
+boolean matches = text.matches(".*two.*");
+</pre></td></tr></table>
+<h3>Comparing Strings</h3>
+<p>Java Strings also have a set of methods used to compare Strings. These methods are:</p>
+
+<ul><li>equals()</li>
+<li>equalsIgnoreCase()</li>
+<li>startsWith()</li>
+<li>endsWith()</li>
+<li>compareTo()</li></ul>
+<h3>equals()</h3>
+<p>The equals() method tests if two Strings are exactly equal to each other. If they are, the equals() method returns true. If not, it returns false. Here is an example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String one   = "abc";
+String two   = "def";
+String three = "abc";
+String four  = "ABC";
+
+System.out.println( one.equals(two) );
+System.out.println( one.equals(three) );
+System.out.println( one.equals(four) );
+</pre></td></tr></table>
+<p>The two strings one and three are equal, but one is not equal to two or to four. The case of the characters must match exactly too, so lowercase characters are not equal to uppercase characters.</p>
+
+<h4>the output printed from the code above would be:</h4>
+<table border="" height="" width="500"><tr><td><pre>
+false
+true
+false
+</pre></td></tr></table>
+<h3>equalsIgnoreCase()</h3>
+<p>The String class also has a method called equalsIgnoreCase() which compares two strings but ignores the case of the characters. Thus, uppercase characters are considered to be equal to their lowercase equivalents.</p>
+
+<h3>startsWith() and endsWith()</h3>
+<p>The startsWith() and endsWith() methods check if the String starts with a certain substring. Here are a few examples:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String one = "This is a good day to code";
+
+System.out.println( one.startsWith("This")    );
+System.out.println( one.startsWith("This", 5) );
+
+System.out.println( one.endsWith  ("code")    );
+System.out.println( one.endsWith  ("shower")  );
+</pre></td></tr></table>
+<p>This example creates a String and checks if it starts and ends with various substrings.<br>
+
+The first line (after the String declaration) checks if the String starts with the substring "This". Since it does, the startsWith() method returns true.<br>
+
+The second line checks if the String starts with the substring "This" when starting the comparison from the character with index 5. The result is false, since the character at index 5 is "i".<br>
+
+The third line checks if the String ends with the substring "code". Since it does, the endsWith() method returns true.<br>
+
+The fourth line checks if the String ends with the substring "shower". Since it does not, the endsWith() method returns false.</p>
+
+<h3>compareTo()</h3>
+<p>The compareTo() method compares the String to another String and returns an int telling whether this String is smaller, equal to or larger than the other String. If the String is earlier in sorting order than the other String, compareTo() returns a negative number. If the String is equal in sorting order to the other String, compareTo() returns 0. If the String is after the other String in sorting order, the compareTo() metod returns a positive number.</p>
+
+<h4>Here is an example:</h4>
+<table border="" height="" width="500"><tr><td><pre>
+String one   = "abc";
+String two   = "def";
+String three = "abd";
+
+System.out.println( one.compareTo(two)   );
+System.out.println( one.compareTo(three) );
+</pre></td></tr></table>
+<p>This example compares the one String to two other Strings. The output printed from this code would be:</p>
+<table border="" height="" width="500"><tr><td>
+-3<br>
+-1
+</td></tr></table>
+<p>The numbers are negative because the one String is earlier in sorting order than the two other Strings.<br>
+
+The compareTo() method actually belongs to the Comparable interface. This interface is described in more detail in my tutorial about Sorting.<br>
+
+You should be aware that the compareTo() method may not work correctly for Strings in different languages than English. To sort Strings correctly in a specific language, use a Collator.</p>
+
+<h3>Trimming Strings With trim()</h3>
+<p>The Java String class contains a method called trim() which can trim a string object. By trim is meant to remove white space characters at the beginning and end of the string. White space characters include space, tab and new lines. Here is a Java String trim() example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String text    = "  And he ran across the field   ";
+String trimmed = text.trim();
+</pre></td></tr></table>
+<p>After executing this code the trimmed variable will point to a String instance with the value
+
+"And he ran across the field"<br>
+The white space characters at the beginning and end of the String object have been removed. The white space character inside the String have not been touched. By inside is meant between the first and last non-white-space character.<br>
+
+The trim() method does not modify the String instance. Instead it returns a new Java String object which is equal to the String object it was created from, but with the white space in the beginning and end of the String removed.<br>
+
+The trim() method can be very useful to trim text typed into input fields by a user. For instance, the user may type in his or her name and accidentally put an extra space after the last word, or before the first word. The trim() method is an easy way to remove such extra white space characters.</p>
+
+<h3>Replacing Characters in Strings With replace()</h3>
+<p>The Java String class contains a method named replace() which can replace characters in a String. The replace() method does not actually replace characters in the existing String. Rather, it returns a new String instance which is equal to the String instance it was created from, but with the given characters replaced. Here is a Java String replace() example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String source   = "123abc";
+String replaced = source.replace('a', '@');
+</pre></td></tr></table>
+<p>After executing this code the replaced variable will point to a String with the text:</p>
+<table border="" height="" width="500"><tr><td>
+123@bc
+</td></tr></table>
+<p>The replace() method will replace all character matching the character passed as first parameter to the method, with the second character passed as parameter to the replace() method.</p>
+
+<h3>replaceFirst()</h3>
+<p>The Java String replaceFirst() method returns a new String with the first match of the regular expression passed as first parameter with the string value of the second parameter.</p>
+
+<h4>Here is a replaceFirst() example:</h4>
+<table border="" height="" width="500"><tr><td><pre>
+String text = "one two three two one";
+
+String s = text.replaceFirst("two", "five");
+</pre></td></tr></table>
+<p>This example will return the string "one five three two one".</p>
+
+<h3>replaceAll()</h3>
+<p>The Java String replaceAll() method returns a new String with all matches of the regular expression passed as first parameter with the string value of the second parameter.</p>
+
+<h4>Here is a replaceAll() example:</h4>
+<table border="" height="" width="500"><tr><td>
+String text = "one two three two one";<br>
+
+String t = text.replaceAll("two", "five");
+</td></tr></table>
+<p>This example will return the string "one five three five one".</p>
+
+<h3>Splitting Strings With split()</h3>
+<p>The Java String class contains a split() method which can be used to split a String into an array of String objects. Here is a Java String split() example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String   source = "A man drove with a car.";
+String[] occurrences = source.split("a");
+</pre></td></tr></table>
+<p>After executing this Java code the occurrences array would contain the String instances:</p>
+<table border="" height="" width="500"><tr><td><pre>
+"A m"
+"n drove with "
+" c"
+"r."
+</pre></td></tr></table>
+<p>The source String has been split on the a characters. The Strings returned do not contain the a characters. The a characters are considered delimiters to split the String by, and the delimiters are not returned in the resulting String array.<br>
+
+The parameter passed to the split() method is actually a Java regular expression. Regular expressions can be quite advanced. The regular expression above just matched all a characters. It even only matched lowercase a characters.<br>
+
+The String split() method exists in a version that takes a limit as a second parameter. Here is a Java String split() example using the limit parameter:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String   source = "A man drove with a car.";
+int      limit  = 2;
+String[] occurrences = source.split("a", limit);
+</pre></td></tr></table>
+<p>The limit parameter sets the maximum number of elements that can be in the returned array. If there are more matches of the regular expression in the String than the given limit, then the array will contain limit - 1 matches, and the last element will be the rest of the String from the last of the limit - 1 matches. So, in the example above the returned array would contain these two Strings:</p>
+<table border="" height="" width="500"><tr><td><pre>
+"A m"
+"n drove with a car."
+</pre></td></tr></table>
+<p>The first String is a match of the a regular expression. The second String is the rest of the String after the first match.<br>
+
+Running the example with a limit of 3 instead of 2 would result in these Strings being returned in the resulting String array:</p>
+<table border="" height="" width="500"><tr><td><pre>
+"A m"
+"n drove with "
+" car."
+</pre></td></tr></table>
+<p>Notice how the last String still contains the a character in the middle. That is because this String represents the rest of the String after the last match (the a after 'n drove with ').<br>
+
+Running the example above with a limit of 4 or higher would result in only the Split strings being returned, since there are only 4 matches of the regular expression a in the String.</p>
+
+<h3>Converting Numbers to Strings With valueOf()</h3>
+<p>The Java String class contains a set of overloaded static methods named valueOf() which can be used to convert a number to a String. Here are some simple Java String valueOf() examples:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String intStr = String.valueOf(10);
+System.out.println("intStr = " + intStr);
+
+String flStr = String.valueOf(9.99);
+System.out.println("flStr = " + flStr);
+The output printed from this code would be:
+
+intStr = 10
+flStr = 9.99
+</pre></td></tr></table>
+<h3>Converting Objects to Strings</h3>
+<p>The Object class contains a method named toString(). Since all Java classes extends (inherits from) the Object class, all objects have a toString() method. This method can be used to create a String representation of the given object. Here is a Java toString() example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+Integer integer = new Integer(123);
+
+String intStr = integer.toString();
+</pre></td></tr></table>
+<p><b>Note:</b> For the toString() method to return a sane String representation of the given object, the class of the object must have overridden the toString() method. If not, the default toString() method (inherited from the Object class) will get called. The default toString() method does not provide that much useful information. Many built-in Java classes have a sensible toString() method already.</p>
+
+<h3>Getting Characters and Bytes</h3>
+<p>It is possible to get a character at a certain index in a String using the charAt() method. Here is an example:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String theString = "This is a good day to code";
+
+System.out.println( theString.charAt(0) );
+System.out.println( theString.charAt(3) );
+</pre></td></tr></table>
+<h4>This code will print out:</h4>
+<table border="" height="" width="500"><tr><td><pre>
+T
+s</pre></td></tr></table>
+<p>since these are the characters located at index 0 and 3 in the String.<br>
+
+You can also get the byte representation of the String method using the getBytes() method. Here are two examples:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String theString = "This is a good day to code";
+
+byte[] bytes1 = theString.getBytes();
+byte[] bytes2 = theString.getBytes(Charset.forName("UTF-8");
+</pre></td></tr></table>
+<p>The first getBytes() call return a byte representation of the String using the default character set encoding on the machine. What the default character set is depends on the machine on which the code is executed. Therefore it is generally better to explicitly specify a character set to use to create the byte representation (as in the next line).<br>
+
+The second getBytes() call return a UTF-8 byte representation of the String.</p>
+
+<h3>Converting to Uppercase and Lowercase</h3>
+<p>You can convert Strings to uppercase and lowercase using the methods toUpperCase() and toLowerCase(). Here are two examples:</p>
+<table border="" height="" width="500"><tr><td><pre>
+String theString = "This IS a mix of UPPERcase and lowerCASE";
+
+String uppercase = theString.toUpperCase();
+String lowercase = theString.toLowerCase();
+</pre></td></tr></table>
+<br><br>
+<a href="java_characters.html" class="previous">&laquo; Previous</a>
+<a href="java_arrays.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</body>
+</html>

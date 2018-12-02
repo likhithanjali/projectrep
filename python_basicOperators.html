@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>PYTHON</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a class="active" href="python_overview.html">PYTHON</a>
+
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href= "python_overview.html">Overview</a> 
+<a href= "python_environmentSetup.html">Environmental Setup</a>
+<a href= "python_basicSyntax.html">Basic Syntax</a>
+<a href= "python_variableTypes.html">Variable Types</a>
+<a class="active" href= "python_basicOperators.html">Basic Operators</a>
+<a href= "python_decisionMaking.html">Decision Making</a>
+<a href= "python_loops.html">Loops</a>
+<a href= "python_numbers.html">Numbers</a>
+<a href= "python_strings.html">Strings</a>
+<a href= "python_lists.html">Lists</a>
+<a href= "python_tuples.html">Tuples</a>
+<a href= "python_dictionary.html">Dictionary</a>
+<a href= "python_date&time.html">Date & Time</a>
+<a href= "python_functions.html">Functions</a>
+<a href= "python_modules.html">Modules</a>
+<a href= "python_fileIO.html">File IO</a>
+<a href= "python_exceptions.html">Exceptions</a> 
+</div> </nav>
+
+<article>
+<a href="python_variableTypes.html" class="previous">&laquo; Previous</a>
+<a href="python_decisionMaking.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Basic Operators In Python</h1>
+
+ <h3>What is an operator?</h3>
+<p>Simple answer can be given using expression 4 + 5 is equal to 9. Here, 4 and 5 are called operands and + is
+called operator.</p>
+<h4> Python language supports the following types of operators.</h4>
+<ul><li>Arithmetic Operators</li>
+<li>Comparison(i.e., Relational) Operators</li>
+<li>Assignment Operators</li>
+<li>Log icalOperators</li>
+<li>Bitwise Operators</li>
+<li>Membership Operators</li>
+<li>Identity Operators</li></ul>
+<p>Let's have a look onall operators one by one.</p>
+<h3>Python Arithmetic Operators:</h3>
+<p>Assume variable a holds 10 and variable b holds 20, then:</p>
+<table border="" width="700">
+<tr><td><b>Operator</b></td> <td><b><center>Description</center></b></td> <td><b>Example</b></td></tr>
+<tr><td>+</td> <td>Addition- Adds values on either side of the
+operator</td>
+<td>a + b will give 30</td></tr>
+<tr><td>-</td> <td>Subtraction- Subtracts right hand operand
+fromleft hand operand</td>
+<td>a - b will give -10</td></tr>
+<tr><td>*</td> <td>Multiplication- Multiplies values oneither side
+of the operator</td>
+<td>a * b will give 200</td></tr>
+<tr><td>/</td> <td>Division- Divides left hand operand by right
+hand operand</td>
+<td>b / a will give 2</td></tr>
+<tr><td>%</td> <td>Modulus - Divides left hand operand by right
+hand operand and returns remainder</td>
+<td>b % a will g ive 0</td></tr>
+<tr><td>**</td> <td>Exponent- Performs exponential(power)
+calculationonoperators</td>
+<td>a**b will give 10 to the power 20</td></tr>
+<tr><td>//</td> <td>Floor Division- The divisionof operands
+where the resultis the quotient in which the
+digits after the decimal point are removed.</td>
+<td>9//2 is equalto 4 and 9.0//2.0 is equalto 
+4.0</td></tr></table>
+<h3>Python Comparison Operators:</h3>
+<p>Assume variable a holds 10 and variable b holds 20, then:</p>
+<table border="" width="700">
+<tr><td><b>Operator</b></td> <td><b><center>Description</center></b></td> <td><b>Example</b></td></tr>
+<tr><td>==</td> <td>Checks if the value of two operands are equal
+or not, if yes then condition becomes true.</td>
+<td>(a == b) is nottrue.</td></tr>
+<tr><td>!=</td> <td>Checks if the value of two operands are equal
+or not, if values are not equal then condition
+becomes true.</td>
+<td>(a != b) is true.</td></tr>
+<tr><td><></td>  <td>Checks if the value of two operands are equal
+or not, if values are not equal then condition
+becomes true.</td>
+<td>(a <> b) is true. This is similar to !=
+operator.</td></tr>
+<tr><td>></td>  <td>Checks if the value of left operand is greater
+than the value of right operand, if yes then 
+condition becomes true.</td>
+<td>(a > b) is nottrue.</td></tr>
+<tr><td><</td>  <td>Checks if the value of left operand is less than
+the value of right operand, if yes then condition
+becomes true.</td>
+<td>(a < b) is true.</td></tr>
+<tr><td> = <td>Checks if the value of left operand is g reater
+thanor equalto the value of right operand, if
+yes then condition becomes true.</td>
+<td>(a >= b) is nottrue.</td></tr> 
+<tr><td> = <td>Checks if the value of left operand is less than
+or equal to the value of right operand, if yes
+then condition becomes true.</td>
+<td>(a <= b) is true.</td></tr></table>
+<h3>Python Assignment Operators:</h3>
+<p>Assume variable a holds 10 and variable b holds 20, then:</p>
+<table border="" width="700">
+<tr><td><b>Operator</b></td> <td> <b><center>Description</center></b></td>  <td><b>Example</b></td></tr>
+ 
+<tr><td> =</td> <td>Simple assignment operator, Assigns values
+fromright side operands to left side operand</td>
+<td>c = a + b will assigne value of a + b into c</td></tr>
+<tr><td>+=</td> <td>Add AND assignment operator, It adds right
+operand to the left operand and assignthe
+resultto left operand</td>
+<td>c += a is equivalent to c = c + a</td></tr>
+<tr><td>-=</td> <td>Subtract AND assignment operator, It
+subtracts right operand fromthe left operand
+and assign the result to left operand</td>
+<td>c -= a is equivalentto c = c - a</td></tr>
+<tr><td>*=</td> <td>Multiply AND assignment operator, It multiplies
+right operand with the left operand and assign
+the result to left operand</td>
+<td>c *= a is equivalent to c = c * a</td></tr>
+<tr><td>/=</td> <td>Divide AND assignment operator, It divides
+left operand with the right operand and assign
+the result to left operand</td>
+<td>c /= a is equivalent to c = c / a</td></tr>
+<tr><td>%=</td> <td>Modulus AND assignment operator, It takes
+modulus using two operands and assign the
+resultto left operand</td>
+<td>c %= a is equivalent to c = c % a</td></tr>
+<tr><td>**=</td> <td>ExponentAND assignment operator,   
+Performs exponential(power) calculation on
+operators and assign value to the left operand</td> 
+ <td>c **= a is equivalentto c = c ** a</td></tr>
+<tr><td>//=</td> <td>Floor Dividion and assigns a value, Performs
+floor division on operators and assign value to
+the left operand</td>
+<td>c //= a is equivalent to c = c // a</td></tr></table>
+<h3>Python Bitwise Operators:</h3>
+<p>Bitwise operator works on bits and perform bit by bit operation. Assume if a = 60; and b = 13; Now inbinary
+formatthey will be as follows:</p>
+<p>a = 0011 1100<br>
+b = 0000 1101<br>
+-----------------<br>
+a&b = 0000 1100<br>
+a|b = 0011 1101<br>
+a^b = 0011 0001<br.
+~a = 1100 0011</p>
+<p>There are following Bitwise operators supported by Python language</p>
+<table border="" width="700">
+<tr><td><b>Operator</b></td> <td><b><center>Description</center></b></td> <td> </b>Example</b></td></tr>
+<tr><td>&</td> <td>Binary AND Operator copies a bit to the result
+if it exists in both operands.</td>
+<td>(a & b) will give 12 whichis 0000 1100</td></tr>
+<tr><td>|</td> <td>Binary OR Operator copies a bit if it exists in
+either operand.</td>
+<td>(a | b) will give 61 which is 0011 1101</td></tr>
+<tr><td>^</td> <td>Binary XOR Operator copies the bit if it is set in
+one operand but not both.</td>
+<td>(a ^ b) will give 49 which is 0011 0001</td></tr>
+<tr><td>~</td> <td>Binary Ones Complement Operator is unary
+and has the efect of 'flipping ' bits.</td>
+<td>(~a ) will give -61 whichis 1100 0011 in2's</td></tr>
+complement form due to a signed binary
+number.
+<tr><td><<</td> <td>Binary Left Shift Operator. The left operands
+value is moved left by the number of bits
+specified by the right operand.</td>
+<td>a << 2 will give 240 which is 1111 0000</td></tr>
+<tr><td>>></td> <td>Binary Right Shift Operator. The left operands
+value is moved right by the number of bits
+specified by the right operand.</td>
+<td>a >> 2 will g ive 15 whichis 0000 1111</td></tr></table>
+ 
+<h3>Python Logical Operators:</h3>
+<p>There are following logical operators supported by Python language. Assume variable a holds 10 and variable b
+holds 20 then :</p>
+<table border="" width="700">
+<tr><td><b>Operator</b></td> <td><b><center>Description</center></b></td> <td><b>Example</b></td></tr>
+<tr><td>and</td> <td>Called Logical AND operator. If both the
+operands are true then the condition becomes
+true.</td>
+<td>(a and b) is true.</td></tr>
+<tr><td>or</td> <td>Called Logical OR Operator. If any of the two
+operands are nonzero then the condition
+becomes true.</td>
+<td>(a or b) is true.</td></tr>
+<tr><td>not</td> <td>Called Logical NOT Operator. Use to
+reverses the logical state of its operand. If a
+conditionis true thenLogical NOT operator will
+make false.</td>
+<td>not(a and b) is false.</td></tr></table>
+<h3>Python Membership Operators:</h3>
+<p>In additionto the operators discussed previously, Python has membership operators, which test for membership
+in a sequence, such as strings, lists, or tuples. There are two membership operators explained below:<p>
+<table border="" width="700">
+<tr><td><b>Operator</b></td> <td><b><center>Description</center></b></td> <td><b>Example</tb></tr></td>
+<tr><td>in</td> <td>Evaluates to true if itfinds a variable inthe
+specified sequence and false otherwise.</td>
+<td>x iny, here in results ina 1 if x is a member
+of sequence y.</td></tr>
+<tr><td>notin</td> <td>Evaluates to true if it does notfinds a variable in
+the specified sequence and false otherwise.</td>
+<td>x notiny, here not in results</td></tr></table>
+<h3>Python Identity Operators:</h3>
+<p>Identity operators compare the memory locations of two objects. There are two Identity operators explained
+below:</p>
+<table border="" width="700">
+<tr><td><b>Operator</b></td> <td> <b><center>Description</center></b></td> <td><b>Example<b></td></tr>
+<tr><td>is</td> <td>Evaluates to true if the variables on either side
+of the operator pointto the same object and
+false otherwise.</br>
+<td>x is y, here is results in1 if id(x) equals id(y).</td></tr>
+<tr><td>is not</td> <td>Evaluates to false if the variables oneither side
+of the operator pointto the same object and
+true otherwise.</td>
+<td>x is not y, here is not results in1 if id(x) is
+not equalto id(y).</td></tr></table>
+<h3>Python Operators Precedence</h3>
+<p>The following table lists all operators fromhighest precedence to lowest.</p>
+<table border="" width="700">
+<tr><td><b>Operator</b></td> <td><b>Description</b></td></tr>
+<tr><td>**</td> <td>Exponentiation(raise to the power)</td></tr>
+<tr><td>~ + - </td><td>Ccomplement, unary plus and minus (method names for the lasttwo are +@ and -
+@)</td></tr>
+<tr><td>* / % //</td> <td>Multiply, divide, modulo and floor division</td></tr>
+<tr><td>+ -</td> <td>Addition and subtraction</td></tr>
+<tr><td>>> <<</td> <td>Right and left bitwise shift</td></tr>
+<tr><td>& </td><td>Bitwise 'AND'</td></tr>
+<tr><td>^ |</td> <td>Bitwise exclusive `OR' and regular `OR'</td></tr>
+<tr><td><= < > >= </td><td>Comparison operators</td></tr>
+<tr><td><> == !=</td> <td>Equality operators</td></tr>
+<tr><td>= %= /= //= -= += *=
+**=</td>
+<td>Assignment operators</td></tr>
+<tr><td>is is not</td> <td>Identity operators</td></tr>
+<tr><td>innotin</td> <td>Membership operators</td></tr>
+<tr><td>not or and</td> <td>Logical operators</td></tr></table>
+<br><br>
+<a href="python_variableTypes.html" class="previous">&laquo; Previous</a>
+<a href="python_decisionMaking.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

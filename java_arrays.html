@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVA</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a class="active" href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="java_overview.html">Overview</a>
+<a href="java_environmentalsetup.html">Environment Setup</a>
+<a href="java_basicsyntax.html">Basic Syntax</a>
+<a href="java_comments.html">Comments</a>
+<a href="java_obj&cls.html">Objects&Classes</a>
+<a href="java_datatypes.html">Data Types</a>
+<a href="java_variables.html">Variable Types</a>
+<a href="java_modifiertypes.html">Modifier Types</a>
+<a href="java_operators.html">Basic Operators</a>
+<a href="java_loops.html">Loops</a>
+<a href="java_decisionmake.html">Decision Making</a>
+<a href="java_characters.html">Characters</a>
+<a href="java_strings.html">strings</a>
+<a class="active" href="java_arrays.html">Arrays</a>
+<a href="java_datetime.html">Date&Time</a>
+<a href="java_regularexpr.html">Regular expressions</a>
+<a href="java_methods.html">Methods</a>
+<a href="java_io.html">Files and i/o</a>
+<a href="java_excepetions.html">Exceptions </a>
+<a href="java_innerclass.html">Inner classes</a>
+<a href="java_inheritance.html">Inheritance </a>
+<a href="java_overriding.html">Overriding</a>
+<a href="java_overloading.html">Overloading</a>
+<a href="java_polymorphism.html">Polymorphism</a> 
+
+<a href="java_Abstraction.html">Abstraction</a>
+<a href="java_encapsulation.html">Encapsulation</a>
+<a href="java_interfaces.html">Interfaces</a>
+<a href="java_packages.html">Packages</a>
+</div> </nav>
+
+<article>
+<a href="java_strings.html" class="previous">&laquo; Previous</a>
+<a href="java_datetime.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Arrays In Java</h1>
+<p>An array is a group of like-typed variables that are referred to by a common name.Arrays in Java work differently than they do in C/C++.</p> <p>Following are some important point about Java arrays.</p><ul><li>
+ In Java all arrays are dynamically allocated.(discussed below)</li>
+<li>	Since arrays are objects in Java, we can find their length using member length. This is different from C/C++ where we find length using sizeof.</li>
+<li>	A Java array variable can also be declared like other variables with [] after the data type.</li>
+<li>	The variables in the array are ordered and each have an index beginning from 0.</li>
+<li>	Java array can be also be used as a static field, a local variable or a method parameter.</li>
+<li>	The size of an array must be specified by an int value and not long or short.</li>
+<li>	The direct superclass of an array type is Object.</li>
+<li>	Every array type implements the interfaces Cloneable and java.io.Serializable.</li></ul>
+<p>Array can contains primitives data types as well as objects of a class depending on the definition of array. In case of primitives data types, the actual values are stored in contiguous memory locations. In case of objects of a class, the actual objects are stored in heap segment.</p>
+  
+<p>Creating, Initializing, and Accessing an Array</p>
+<b>One-Dimensional Arrays : </b>
+<p>The general form of a one-dimensional array declaration is</p>
+<table border="" width="500"><tr><td><pre>type var-name[];
+OR
+type[] var-name;</tr></td></pre></table>
+<p>
+An array declaration has two components: the type and the name. typedeclares the element type of the array. The element type determines the data type of each element that comprises the array. Like array of int type, we can also create an array of other primitive data types like char, float, double..etc or user defined data type(objects of a class).Thus, the element type for the array determines what type of data the array will hold.</p>
+<b>Example:</b>
+<table border="" width="500"><tr><td><pre>
+// both are valid declarations
+intintArray[]; 
+or int[] intArray; 
+
+byte byteArray[];
+short shortsArray[];
+booleanbooleanArray[];
+long longArray[];
+float floatArray[];
+double doubleArray[];
+char charArray[];
+
+// an array of references to objects of
+// the class MyClass (a class created by
+// user)
+MyClassmyClassArray[]; 
+
+Object[]  ao,        // array of Object
+Collection[] ca;  // array of Collection
+                     // of unknown type</pre></tr></td></table>
+<p>Although the above first declaration establishes the fact that intArray is an array variable, no array actually exists. It simply tells to the compiler that this(intArray) variable will hold an array of the integer type. To link intArray with an actual, physical array of integers, you must allocate one using new and assign it to intArray.</p>
+<b>Instantiating an Array in Java</b>
+<p>When an array is declared, only a reference of array is created. To actually create or give memory to array, you create an array like this:The general form of new as it applies to one-dimensional arrays appears as follows:</p>
+<table border="" width="500"><tr><td><pre>var-name = new type [size];</table></tr></td></pre>
+<p>Here, type specifies the type of data being allocated, size specifies the number of elements in the array, and var-name is the name of array variable that is linked to the array. That is, to use new to allocate an array, you must specify the type and number of elements to allocate.</p>
+<b>Example:</b><table border="" width="500"><tr><td><pre>
+intintArray[];    //declaring array
+intArray = new int[20];  // allocating memory to array
+OR
+int[] intArray = new int[20]; // combining both statements in one</table></tr></td></pre>
+<b>Note :</b>
+<p>1.	The elements in the array allocated by new will automatically be initialized to zero (for numeric types), false (for boolean), or null (for reference types).Refer Default array values in Java</p>
+<p>2.	Obtaining an array is a two-step process. First, you must declare a variable of the desired array type. Second, you must allocate the memory that will hold the array, using new, and assign it to the array variable. Thus, in Java all arrays are dynamically allocated.</p>
+<b>Array Literal</b>
+<p>In a situation, where the size of the array and variables of array are already known, array literals can be used.</p>
+<table border="" width="500"><tr><td><pre>
+int[] intArray = new int[]{ 1,2,3,4,5,6,7,8,9,10 }; 
+ // Declaring array literal</table></tr></td></pre>
+<p>•	The length of this array determines the length of the created array.</p>
+<p>•	There is no need to write the new int[] part in the latest versions of Java
+Accessing Java Array Elements using for Loop
+Each element in the array is accessed via its index. The index begins with 0 and ends at (total array size)-1. All the elements of array can be accessed using Java for Loop.</p>
+
+// accessing the elements of the specified array
+for (inti = 0; i &lt arr.length; i++)
+System.out.println("Element at index " + i + 
+                                " : "+ arr[i]);
+<table border="" width="500"><tr><td><pre>Implementation:
+// Java program to illustrate creating an array 
+// of integers,  puts some values in the array, 
+// and prints each value to standard output. 
+
+  
+
+classGFG  
+{ 
+
+    publicstaticvoidmain (String[] args)  
+
+    {          
+
+      // declares an Array of integers. 
+
+      int[] arr; 
+
+          
+
+      // allocating memory for 5 integers. 
+
+      arr = newint[5]; 
+
+          
+
+      // initialize the first elements of the array 
+
+      arr[0] = 10; 
+
+          
+
+      // initialize the second elements of the array 
+
+      arr[1] = 20; 
+      //so on... 
+
+      arr[2] = 30; 
+
+      arr[3] = 40; 
+
+      arr[4] = 50; 
+      // accessing the elements of the specified array 
+
+      for(int i = 0; i&lt arr.length; i++) 
+
+         System.out.println("Element at index "+ i +  
+
+                                      " : "+ arr[i]);           
+
+    } 
+} </table></tr></td></pre>
+<br>
+<b>Output:</b>
+<table border="" width="500"><tr><td><pre>Element at index 0 : 10
+Element at index 1 : 20
+Element at index 2 : 30
+Element at index 3 : 40
+Element at index 4 : 50	</table></tr></td></pre>
+<br><br>
+<a href="java_strings.html" class="previous">&laquo; Previous</a>
+<a href="java_datetime.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVASCRIPT</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a  href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a class="active" href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="javascript_overview.html">Overview</a>
+<a href="javascript_output.html">Output</a>
+<a href="javascript_statements.html">Statements</a>
+<a href="javascript_syntax.html">Syntax</a>
+<a href="javascript_comments.html">Comments</a>
+<a href="javascript_variables.html">Variables</a>
+<a class="active" href="javascript_operators.html">Operators</a> 
+<a href="javascript_datatypes.html">Data Types</a>
+<a href="javascript_functions.html">Functions</a>
+<a href="javascript_objects.html">Objects</a>
+<a href="javascript_events.html">Events</a>
+<a href="javascript_strings.html">Strings</a>
+<a href="javascript_numbers.html">Numbers</a>
+<a href="javascript_validations.html">Validations</a>
+<a href="javascript_cookies.html">Cookies</a>
+<a href="javascript_debugging.html">Debugging</a>
+<a href="javascript_errorHandling.html">Error Handling</a>
+</div> </nav>
+
+<article>
+<a href="javascript_variables.html" class="previous">&laquo; Previous</a>
+<a href="javascript_datatypes.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>JavaScript Operators</h1>
+ <p>JavaScript operators are symbols that are used to perform operations on operands.</p>
+<h4> For example:</h4>
+<table border="" width="500" height=""><tr><td>
+var sum=10+20; 
+</td></tr></table> 
+<p>Here, + is the arithmetic operator and = is the assignment operator.</p>
+
+<h4>There are following types of operators in JavaScript.</h4>
+
+<ul><li>Arithmetic Operators</li>
+<li>Comparison (Relational) Operators</li>
+<li>Bitwise Operators</li>
+<li>Logical Operators</li>
+<li>Assignment Operators</li>
+<li>Special Operators</li></ul>
+<h3>JavaScript Arithmetic Operators</h3>
+<p>Arithmetic operators are used to perform arithmetic operations on the operands. The following operators are known as JavaScript arithmetic operators.</p>
+<table border="" width="500" height="">
+<tr><td>Operator</td>	<td>Description</td>	<td>Example</td></tr>
+<tr><td>+</td>	<td>Addition</td>	<td>10+20 = 30</td></tr>
+<tr><td>-</td>	<td>Subtraction</td>	<td>20-10 = 10</td></tr>
+<tr><td>*</td>	<td>Multiplication</td>	<td>10*20 = 200</td></tr>
+<tr><td>/</td>	<td>Division</td>	<td>20/10 = 2</td></tr>
+<tr><td>%</td>	<td>Modulus (Remainder)</td>	<td>20%10 = 0</td></tr>
+<tr><td>++</td>	<td>Increment</td>	<td>var a=10; a++; Now a = 11</td></tr>
+<tr><td>--</td>	<td>Decrement</td>	<td>var a=10; a--; Now a = 9</td></tr></table>
+<h3>JavaScript Comparison Operators</h3>
+<p>The JavaScript comparison operator compares the two operands. The comparison operators are as follows:</p>
+<table border="" width="500" height="">
+<tr><td>Operator</td>	<td>Description</td>	<td>Example</td></tr>
+<tr><td>==</td>	<td>Is equal to</td>	<td>10==20 = false</td></tr>
+<tr><td>===</td>	<td>Identical (equal and of same type)</td>	<td>10==20 = false</td></tr>
+<tr><td>!=</td>	<td>Not equal to</td>	<td>10!=20 = true</td></tr>
+<tr><td>!==</td>	<td>Not Identical</td>	<td>20!==20 = false</td></tr>
+<tr><td>></td>	<td>Greater than</td>	<td>20>10 = true</td></tr>
+<tr><td>>=</td>	<td>Greater than or equal to</td>	<td>20>=10 = true</td></tr>
+<tr><td><</td>	<td>Less than</td>	<td>20<10 = false</td></tr>
+<tr><td><=</td>	<td>Less than or equal to</td>	<td>20<=10 = false</td></tr></table>
+<h3>JavaScript Bitwise Operators</h3>
+<p>The bitwise operators perform bitwise operations on operands. The bitwise operators are as follows:</p>
+<table border="" width="500" height="">
+<tr><td>Operator</td>	<td>Description</td><td>Example</td></tr>
+<tr><td>&</td>	<td>Bitwise AND</td>	<td>(10==20 & 20==33) = false</td></tr>
+<tr><td>|</td>	<td>Bitwise OR</td>	<td>(10==20 | 20==33) = false</td></tr>
+<tr><td>^</td>	<td>Bitwise XOR</td>	<td>(10==20 ^ 20==33) = false</td></tr>
+<tr><td>~</td>	<td>Bitwise NOT</td>	<td>(~10) = -10</td></tr>
+<tr><td><<</td>	<td>Bitwise Left Shift</td>	<td>(10<<2) = 40</td></tr>
+<tr><td>>></td>	<td>Bitwise Right Shift</td>	<td>(10>>2) = 2</td></tr>
+<tr><td>>>></td>	<td>Bitwise Right Shift with Zero</td>	<td>(10>>>2) = 2</td></tr></table>
+<h3>JavaScript Logical Operators</h3>
+<p>The following operators are known as JavaScript logical operators.</p>
+<table border="" width="500" height="">
+<tr><td>Operator</td>	<td>Description	<td>Example</td></tr>
+<tr><td>&&</td>	<td>Logical AND</td>	<td>(10==20 && 20==33) = false</td></tr>
+<tr><td>||</td>	<td>Logical OR</td>	<td>(10==20 || 20==33) = false</td></tr>
+<tr><td>!</td>	<td>Logical Not</td>	<td>!(10==20) = true</td></tr></table>
+<h3>JavaScript Assignment Operators</h3>
+<p>The following operators are known as JavaScript assignment operators.</p>
+<table border="" width="500" height="">
+<tr><td>Operator</td>	<td>Description</td>	<td>Example
+<tr><td>=</td>	<td>Assign</td>	<td>10+10 = 20</td></tr>
+<tr><td>+=</td>	<td>Add and assign</td>	<td>var a=10; a+=20; Now a = 30</td></tr>
+<tr><td>-=</td>	<td>Subtract and assign</td>	<td>var a=20; a-=10; Now a = 10</td></tr>
+<tr><td>*=</td>	<td>Multiply and assign</td>	<td>var a=10; a*=20; Now a = 200</td></tr>
+<tr><td>/=</td>	<td>Divide and assign</td>	<td>var a=10; a/=2; Now a = 5</td></tr>
+<tr><td>%=</td>	<td>Modulus and assign</td>	<td>var a=10; a%=2; Now a = 0</td></tr></table>
+<h3>JavaScript Special Operators</h3>
+<p>The following operators are known as JavaScript special operators.</p>
+<table border="" width="500" height="">
+<tr><td>Operator</td><td>Description</td></tr>
+<tr><td>(?:)</td>	 <td>Conditional Operator returns value based on the condition. It is like if-else.</td></tr>
+<tr><td>,</td>	 <td>Comma Operator allows multiple expressions to be evaluated as single statement.</td></tr>
+<tr><td>delete</td>	 <td>Delete Operator deletes a property from the object.</td></tr>
+<tr><td>in</td>	 <td>In Operator checks if object has the given property</td></tr>
+<tr><td>instanceof</td>	 <td>checks if the object is an instance of given type</td></tr>
+<tr><td>new</td>	<td>creates an instance (object)</td></tr>
+<tr><td>typeof</td>	<td>checks the type of object.</td></tr>
+<tr><td>void</td>	<td>it discards the expression's return value.</td></tr>
+<tr><td>yield</td>	<td>checks what is returned in a generator by the generator's iterator.</td></tr></table>
+<br><br>
+<a href="javascript_variables.html" class="previous">&laquo; Previous</a>
+<a href="javascript_datatypes.html" class="next">Next &raquo;</a>
+</article> 
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

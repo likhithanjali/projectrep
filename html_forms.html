@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>HTML</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a class="active" href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="html_overview.html">Overview</a>
+<a href="html_editors.html">Editors</a>
+<a href="html_basicsyntax.html">Basic Syntaxes</a>
+<a href="html_elements.html">HTML Elements</a>
+<a href="html_attributes.html">Attributes</a>
+<a href="html_headings.html">Headings</a>
+<a href="html_paragraphs.html">Paragraphs</a>
+<a href="html_comments.html">Comments</a>
+<a href="html_styles.html">Styles</a>
+<a href="html_formatting.html">Formatting</a>
+<a href="html_quotes.html">Quotes</a>
+<a href="html_links.html">Links</a>
+<a href="html_tables.html">Tables</a>
+<a href="html_lists.html">Lists</a>
+<a class="active" href="html_forms.html">Forms</a>
+<a href="html_htmlWithCss.html">Html with Css</a>
+<a href="html_images.html">Images</a> 
+<a href="html_colors.html">Colors</a>
+</div> </nav>
+
+<article>
+<a href="html_lists.html" class="previous">&laquo; Previous</a>
+<a href="html_htmlWithCss.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Forms In Html</h1>
+<p>HTML Forms are required, when you want to collect some data from the site visitor. For example, during user registration you would like to collect information such as name, email address, credit card, etc.<br>
+
+A form will take input from the site visitor and then will post it to a back-end application such as CGI, ASP Script or PHP script etc. The back-end application will perform required processing on the passed data based on defined business logic inside the application.<br>
+
+There are various form elements available like text fields, textarea fields, drop-down menus, radio buttons, checkboxes, etc.</p>
+
+<h3>The HTML &ltform> tag is used to create an HTML form and it has following syntax</h3>
+<table border="" width="600"><tr><td><pre>
+&ltform action = "Script URL" method = "GET|POST">
+   form elements like input, textarea etc.
+&lt/form></tr></td></pre></table>
+<h3>Form Attributes</h3>
+<p>Apart from common attributes, following is a list of the most frequently used form attributes</p>
+<table border="" width="600"><tr>
+<th>Sr.No</th><th>	Attribute & Description</th>
+<tr><td>1</td><td>	
+<b>action</b><br>
+
+Backend script ready to process your passed data.</td></tr>
+
+<tr><td>2</td><td>	
+<b>method</b>
+<br>
+Method to be used to upload data. The most frequently used are GET and POST methods.
+</td></tr><tr><td>
+3	</td><td>
+<b>target</b><br>
+
+Specify the target window or frame where the result of the script will be displayed. It takes values like _blank, _self, _parent etc.
+</td></tr><tr><td>
+4	</td><td>
+<b>enctype</b><br>
+
+You can use the enctype attribute to specify how the browser encodes the data before it sends it to the server. Possible values are −<br>
+
+application/x-www-form-urlencoded − This is the standard method most forms use in simple scenarios.<br>
+
+mutlipart/form-data − This is used when you want to upload binary data in the form of files like image, word file etc.</td></tr></table>
+
+<p><b>Note − </b>You can refer to Perl & CGI for a detail on how form data upload works.</p>
+
+<h3>HTML Form Controls</h3>
+<p>There are different types of form controls that you can use to collect data using HTML form −</p>
+<ul><li>
+Text Input Controls</li>
+<li>Checkboxes Controls</li>
+<li>Radio Box Controls</li>
+<li>Select Box Controls</li>
+<li>File Select boxes</li>
+<li>Hidden Controls</li>
+<li>Clickable Buttons</li>
+<li>Submit and Reset Button</li></ul>
+<h3>Text Input Controls</h3>
+There are three types of text input used on forms −
+
+<p><b>Single-line text input controls −</b> This control is used for items that require only one line of user input, such as search boxes or names. They are created using HTML &ltinput> tag.</p>
+
+<p><b>Password input controls −</b> This is also a single-line text input but it masks the character as soon as a user enters it. They are also created using HTMl <ltnput> tag.</p>
+
+<p><b>Multi-line text input controls −</b> This is used when the user is required to give details that may be longer than a single sentence. Multi-line input controls are created using HTML &lttextarea> tag.</p>
+
+<h3>Checkbox Control</h3>
+<p>
+Checkboxes are used when more than one option is required to be selected. They are also created using HTML &ltinput> tag but type attribute is set to checkbox..</p>
+
+<h3>Example</h3
+<p>Here is an example HTML code for a form with two checkboxes −</p>
+<table border="" width="600"><tr><td><pre>
+&lt!DOCTYPE html>
+&lthtml>
+
+   &lthead>
+      &lttitle>Checkbox Control&lt/title>
+   &lt/head>
+	
+   &ltbody>
+      &ltform>
+         &ltinput type = "checkbox" name = "maths" value = "on"> Maths
+         &ltinput type = "checkbox" name = "physics" value = "on"> Physics
+      &lt/form>
+   &lt/body>
+	
+&lt/html>
+</tr></td></pre></table>
+This will produce the following result −
+<h3>Output</h3><table border="" width="600"><tr><td>
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Checkbox Control</title>
+   </head>
+	
+   <body>
+      <form>
+         <input type = "checkbox" name = "maths" value = "on"> Maths
+         <input type = "checkbox" name = "physics" value = "on"> Physics
+      </form>
+   </body>
+	
+</html>
+</td></tr></table>
+
+<h3>Radio Button Control</h3>
+<p>Radio buttons are used when out of many options, just one option is required to be selected. They are also created using HTML &ltinput> tag but type attribute is set to radio.</p>
+
+<h3>Example</h3>
+<p>Here is example HTML code for a form with two radio buttons −</p>
+
+<table border="" width="600"><tr><td><pre>
+&lt!DOCTYPE html>
+&lthtml>
+
+   &lthead>
+      &lttitle>Radio Box Control</title>
+   &lt/head>
+
+   &ltbody>
+      &ltform>
+         &ltinput type = "radio" name = "subject" value = "maths"> Maths
+         &ltinput type = "radio" name = "subject" value = "physics"> Physics
+      &lt/form>
+   &lt/body>
+
+&lt/html>
+</tr></td></pre></table>
+This will produce the following result −
+<h3>Output</h3><table border="" width="600"><tr><td>
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Radio Box Control</title>
+   </head>
+
+   <body>
+      <form>
+         <input type = "radio" name = "subject" value = "maths"> Maths
+         <input type = "radio" name = "subject" value = "physics"> Physics
+      </form>
+   </body>
+
+</html></td></td></table>
+
+<h3>Select Box Control</h3><p>
+A select box, also called drop down box which provides option to list down various options in the form of drop down list, from where a user can select one or more options.</p>
+
+<h3>Example</h3>
+<p>Here is example HTML code for a form with one drop down box</p>
+
+<table border="" width="600"><tr><td><pre>
+&lt!DOCTYPE html>
+&lthtml>
+
+   &lthead>
+      &lttitle>Select Box Control</title>
+   &lt/head>
+	
+   &ltbody>
+      &ltform>
+         &ltselect name = "dropdown">
+            &ltoption value = "Maths" selected>Maths</option>
+            &ltoption value = "Physics">Physics</option>
+         &lt/select>
+      &lt/form>
+   &lt/body>
+	
+&lt/html>
+</tr></td></pre></table>
+This will produce the following result −
+<h3>Output</h3>
+<table border="" width="600"><tr><td><br>
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>Select Box Control</title>
+   </head>
+	
+   <body>
+      <form>
+         <select name = "dropdown">
+            <option value = "Maths" selected>Maths</option>
+            <option value = "Physics">Physics</option>
+         </select>
+      </form>
+   </body>
+	
+</html><br> </td></tr></table>
+
+<h3>File Upload Box</h3>
+<p>
+If you want to allow a user to upload a file to your web site, you will need to use a file upload box, also known as a file select box. This is also created using the &ltinput> element but type attribute is set to file.</h3>
+
+<h3>Example</h3>
+<p>Here is example HTML code for a form with one file upload box −</p>
+
+<table border="" width="600"><tr><td><pre>
+&lt!DOCTYPE html>
+&lthtml>
+
+   &lthead>
+      &lttitle>File Upload Box&lt/title>
+   &lt/head>
+
+   &ltbody>
+      &ltform>
+         &ltinput type = "file" name = "fileupload" accept = "image/*" />
+      &lt/form>
+   &lt/body>
+	
+&lt/html>
+</tr></td></pre></table>
+This will produce the following result −
+<h3>Output</h3><table border="" width="600"><tr><td>
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>File Upload Box</title>
+   </head>
+
+   <body>
+      <form>
+         <input type = "file" name = "fileupload" accept = "image/*" />
+      </form>
+   </body>
+	
+</html></td></tr></table>
+
+
+<h3>Button Controls</h3>
+<p>There are various ways in HTML to create clickable buttons. You can also create a clickable button using &ltinput>tag by setting its type attribute to button. The type attribute can take the following values −</h3>
+
+<table border="" width="600"><tr>
+<th>Sr.No</th>	<th>Type & Description</th></tr><tr><td>
+1	</td><td>
+<b>submit</b><br>
+
+
+This creates a button that automatically submits a form.</td></tr>
+<tr><td>
+2	</td><td>
+<b>reset</b><br>
+
+This creates a button that automatically resets form controls to their initial values.</td></tr>
+<tr><td>
+3	</td><td>
+<b>button</b><br>
+
+This creates a button that is used to trigger a client-side script when the user clicks that button.</td></tr>
+<tr><td>
+4	</td><td>
+<b>image</b><br>
+
+This creates a clickable button but we can use an image as background of the button.</td></tr>
+</table>
+<br><br>
+<a href="html_lists.html" class="previous">&laquo; Previous</a>
+<a href="html_htmlWithCss.html" class="next">Next &raquo;</a></article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

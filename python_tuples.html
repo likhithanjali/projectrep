@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>PYTHON</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a class="active" href="python_overview.html">PYTHON</a>
+
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href= "python_overview.html">Overview</a> 
+<a href= "python_environmentSetup.html">Environmental Setup</a>
+<a href= "python_basicSyntax.html">Basic Syntax</a>
+<a href= "python_variableTypes.html">Variable Types</a>
+<a href= "python_basicOperators.html">Basic Operators</a>
+<a href= "python_decisionMaking.html">Decision Making</a>
+<a href= "python_loops.html">Loops</a>
+<a href= "python_numbers.html">Numbers</a>
+<a href= "python_strings.html">Strings</a>
+<a href= "python_lists.html">Lists</a>
+<a class="active" href= "python_tuples.html">Tuples</a>
+<a href= "python_dictionary.html">Dictionary</a>
+<a href= "python_date&time.html">Date & Time</a>
+<a href= "python_functions.html">Functions</a>
+<a href= "python_modules.html">Modules</a>
+<a href= "python_fileIO.html">File IO</a>
+<a href= "python_exceptions.html">Exceptions</a> 
+</div> </nav>
+
+<article>
+<a href="python_lists.html" class="previous">&laquo; Previous</a>
+<a href="python_dictionary.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Tuples In Python</h1>
+<p>A Tuple is a collection of Python objects separated by commas. In someways a tuple is similar to a list in terms of indexing, nested objects and repetition but a tuple is immutable unlike lists which are mutable.</p>
+
+<h3>Creating Tuples</h3>
+<table border="" height="" width="500"><tr>
+<td><pre># An empty tuple 
+empty_tuple = () 
+print (empty_tuple)</pre></tr></td></table>
+<h4>Output:</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>()
+</pre></tr></td></table><br>
+<table border="" height="" width="500"><tr>
+<td><pre># Creating non-empty tuples 
+  
+# One way of creation 
+tup = 'python', 'easy'
+print(tup) 
+  
+# Another for doing the same 
+tup = ('python', 'easy') 
+print(tup) </pre></tr></td></table>
+<h4>Output</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>('python', 'easy')
+('python', 'easy')
+</pre></tr></td></table><br>
+<b>Note:</b><p> In case your generating a tuple with a single element, make sure to add a comma after the element.</p>
+<h3>Concatenation of Tuples</h3>
+<table border="" height="" width="500"><tr>
+<td><pre># Code for concatenating 2 tuples 
+  
+tuple1 = (0, 1, 2, 3) 
+tuple2 = ('python', 'easy') 
+  
+# Concatenating above two 
+print(tuple1 + tuple2)
+</pre></tr></td></table> 
+<h4>Output:</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>(0, 1, 2, 3, 'python', 'easy')</pre></tr></td></table>
+
+<h3>Nesting of Tuples</h3>
+<table border="" height="" width="500"><tr>
+<td><pre># Code for creating nested tuples 
+  
+tuple1 = (0, 1, 2, 3) 
+tuple2 = ('python', 'easy') 
+tuple3 = (tuple1, tuple2) 
+print(tuple3) 
+</pre></tr></td></table>
+<h4>Output :</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>((0, 1, 2, 3), ('python', 'easy'))
+</pre></tr></td></table>
+
+<h3>Repetition in Tuples</h3>
+
+<table border="" height="" width="500"><tr>
+<td><pre>
+# Code to create a tuple with repetition 
+  
+tuple3 = ('python',)*3
+print(tuple3) 
+</pre></tr></td></table>
+<h4>Output</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>
+('python', 'python', 'python')
+Try the above without a comma 
+sand check. You will get tuple3 as a string ‘pythonpythonpython’.
+</pre></tr></td></table>
+
+<h3>Immutable Tuples</h3>
+  
+<table border="" height="" width="500"><tr>
+<td><pre>
+#code to test that tuples are immutable 
+  
+tuple1 = (0, 1, 2, 3) 
+tuple1[0] = 4
+print(tuple1)
+</pre></tr></td></table> 
+<h4>Output</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>
+Traceback (most recent call last):
+  File "e0eaddff843a8695575daec34506f126.py", line 3, in
+    tuple1[0]=4
+TypeError: 'tuple' object does not support item assignment
+</pre></tr></td></table>
+<h3>Slicing in Tuples</h3>
+
+<table border="" height="" width="500"><tr>
+<td><pre>
+# code to test slicing 
+  
+tuple1 = (0 ,1, 2, 3) 
+print(tuple1[1:]) 
+print(tuple1[::-1]) 
+print(tuple1[2:4]) 
+</pre></tr></td></table>
+<h4>Output</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>
+(1, 2, 3)
+(3, 2, 1, 0)
+(2, 3)
+</pre></tr></td></table> 
+
+<h3>Deleting a Tuple</h3>
+<table border="" height="" width="500"><tr>
+<td><pre>
+# Code for deleting a tuple 
+  
+tuple3 = ( 0, 1) 
+del tuple3 
+print(tuple3) 
+</pre></tr></td></table>
+<h4>Error:</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>
+Traceback (most recent call last):
+  File "d92694727db1dc9118a5250bf04dafbd.py", line 6, in &lt;module>
+    print(tuple3)
+NameError: name 'tuple3' is not defined
+</pre></tr></td></table>
+<h4>Output:</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>(0, 1)
+</pre></tr></td></table>
+<h3>Finding Length of a Tuple</h3>
+<table border="" height="" width="500"><tr>
+<td><pre># Code for printing the length of a tuple 
+  
+tuple2 = ('python', 'easy') 
+print(len(tuple2)) 
+</pre></tr></td></table>
+<h4>Output</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>2</pre></tr></td></table>
+<h3>Converting list to a Tuple</h3>
+<table border="" height="" width="500"><tr>
+<td><pre># Code for converting a list and a string into a tuple 
+  
+list1 = [0, 1, 2] 
+print(tuple(list1)) 
+print(tuple('python')) # string 'python' 
+</pre></tr></td></table>
+<h4>Output</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>
+(0, 1, 2)
+('p', 'y', 't', 'h', 'o', 'n')
+</pre></tr></td></table>
+<p>Takes a single parameter which may be a list,string,set or even a dictionary( only keys are taken as elements) and converts them to a tuple.<p>
+<h3>Tuples in a loop</h3>
+
+<table border="" height="" width="500"><tr>
+<td><pre>#python code for creating tuples in a loop 
+  
+tup = ('easy',) 
+n = 5  #Number of time loop runs 
+for i in range(int(n)): 
+    tup = (tup,) 
+    print(tup) 
+</pre></tr></td></table>
+<h3>Output :</h3>
+<table border="" height="" width="500"><tr>
+<td><pre>
+(('easy',),)
+((('easy',),),)
+(((('easy',),),),)
+((((('easy',),),),),)
+(((((('easy',),),),),),)
+</pre></tr></td></table>
+<h3>Using cmp(), max() , min()</h3>
+
+<table border="" height="" width="500"><tr>
+<td><pre>
+# A python program to demonstrate the use of  
+# cmp(), max(), min() 
+  
+tuple1 = ('python', 'easy') 
+tuple2 = ('coder', 1) 
+  
+if (cmp(tuple1, tuple2) != 0): 
+  
+    # cmp() returns 0 if matched, 1 when not tuple1  
+    # is longer and -1 when tuple1 is shoter 
+    print('Not the same') 
+else: 
+    print('Same') 
+print ('Maximum element in tuples 1,2: ' + 
+        str(max(tuple1)) +  ',' + 
+        str(max(tuple2))) 
+print ('Minimum element in tuples 1,2: ' + 
+     str(min(tuple1)) + ','  + str(min(tuple2))) 
+</pre></tr></td></table>
+<h4>Output</h4>
+<table border="" height="" width="500"><tr>
+<td><pre>
+Not the same
+Maximum element in tuples 1,2: python,coder
+Minimum element in tuples 1,2: easy,1
+</pre></tr></td></table><br>
+<b>Note:</b><p> max() and min() checks the based on ASCII values. If there are two strings in a tuple, then the first different character in the strings are checked.</p>
+<br>
+<a href="python_lists.html" class="previous">&laquo; Previous</a>
+<a href="python_dictionary.html" class="next">Next &raquo;</a></article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

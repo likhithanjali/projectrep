@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>HTML</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a class="active" href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="html_overview.html">Overview</a>
+<a href="html_editors.html">Editors</a>
+<a href="html_basicsyntax.html">Basic Syntaxes</a>
+<a href="html_elements.html">HTML Elements</a>
+<a class="active" href="html_attributes.html">Attributes</a>
+<a href="html_headings.html">Headings</a>
+<a href="html_paragraphs.html">Paragraphs</a>
+<a href="html_comments.html">Comments</a>
+<a href="html_styles.html">Styles</a>
+<a href="html_formatting.html">Formatting</a>
+<a href="html_quotes.html">Quotes</a>
+<a href="html_links.html">Links</a>
+<a href="html_tables.html">Tables</a>
+<a href="html_lists.html">Lists</a>
+<a href="html_forms.html">Forms</a>
+<a href="html_htmlWithCss.html">Html with Css</a>
+<a href="html_images.html">Images</a> 
+<a href="html_colors.html">Colors</a>
+</div> </nav>
+
+<article>
+<a href="html_elements.html" class="previous">&laquo; Previous</a>
+<a href="html_headings.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Attributes In HTML</h1>
+<ul><li>Attributes provide additional information about HTML elements.</li><li>
+All HTML elements can have attributes</li><li>
+Attributes provide additional information about an element</li><li>
+Attributes are always specified in the start tag</li><li>
+Attributes usually come in name/value pairs like: name="value"</li></ul>
+<h1>The href Attribute</h1>
+HTML links are defined with the &lt;a&gt; tag. The link address is specified in the href attribute:
+<h3>Example</h3><table border="" width="700"><tr><td>
+<a href="https://www.google.com">This is a link</a></td></tr></table>
+You will learn more about links and the &lt;a&gt; tag later in this tutorial.
+<h1>The src Attribute</h1>
+HTML images are defined with the &lt;img&gt; tag.
+The filename of the image source is specified in the 'src' attribute:
+<h3>Example</h3><table border="" width="700"><tr><td>
+<img src="images/html_attribute1.jpg"></td></tr></table>
+<h1>The width and height Attributes</h1>
+Images in HTML have a set of size attributes, which specifies the width and height of the image:
+<h3>Example</h3>
+<table border="" width="700"><tr><td>
+
+<img src="images/html_attribute2.jpg" width="500" height="600"></td></tr></table><br>
+The image size is specified in pixels: width="500" means 500 pixels wide.
+<h3>The alt Attribute</h3>
+The alt attribute specifies an alternative text to be used, when an image cannot be displayed.
+The value of the attribute can be read by screen readers. This way, someone "listening" to the webpage, e.g. a blind person, can "hear" the element.
+<h3>Example</h3>
+<table border="" width="700"><tr><td>
+<img src="images/html_attribute3.jpg" alt="three friends"></td></tr></table>
+The alt attribute is also useful if the image does not exist:
+<h3>Example</h3>
+See what happens if we try to display an image that does not exist:<br>
+<table border="" width="700"><tr><td><br>
+<img src="images/img_typo.jpg" alt="Girl with an umbrella"><br></td></tr></table>
+ <h1>The style Attribute</h1>
+The style attribute is used to specify the styling of an element, like color, font, size etc.
+<h2>Example</h2>
+<table border="" width="700"><tr><td>&ltp style="color:red">I am a paragraph&lt/p></td></tr></table>
+<h1>The lang Attribute</h1>
+The language of the document can be declared in the <html> tag.
+The language is declared with the lang attribute.
+Declaring a language is important for accessibility applications (screen readers) and search engines:
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en-US"&gt;
+&lt;body&gt;
+
+...
+
+&lt;/body&gt;
+&lt;/html&gt;
+The first two letters specify the language (en). If there is a dialect, use two more letters (US).
+<h1>The title Attribute</h1>
+Here, a title attribute is added to the &lt;p&gt; element. The value of the title attribute will be displayed as a tooltip when you mouse over the paragraph:
+<h3>Example</h3><table border="" width="700"><tr><td><pre>
+&ltp title="I'm a Good Girl">
+This is a paragraph.&lt/p></pre></td><tr></table>
+<h1>We Suggest: Use Lowercase Attributes</h1>
+The HTML5 standard does not require lowercase attribute names.
+<h1>We Suggest: Quote Attribute Values</h1>
+The HTML5 standard does not require quotes around attribute values.
+The href attribute, demonstrated above, can be written without quotes:
+Bad
+<a href=https://www.google.com>google.com</a>
+Good
+<a href="https://www.google.com">www.Google.com</a>
+we recommends quotes in HTML, and demands quotes for stricter document types like XHTML.
+Sometimes it is necessary to use quotes. This example will not display the title attribute correctly, because it contains a space:
+<h3>Example</h3><table border="" width="700"><tr><td>
+&ltp title=About learn programming></td></tr></table>
+Using quotes are the most common. Omitting quotes can produce errors. 
+<h1>Single or Double Quotes?</h1>
+Double quotes around attribute values are the most common in HTML, but single quotes can also be used.
+In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes:
+&ltp title='peter "Fishes" Fish'>
+Or vice versa:
+&ltp title="peter 'Fishes' Fish">
+<h1>Summary</h1>
+All HTML elements can have attributes
+The title attribute provides additional "tool-tip" information
+The href attribute provides address information for links
+The width and height attributes provide size information for images
+The alt attribute provides text for screen readers
+we always use lowercase attribute names
+we always quote attribute values with double quotes
+<h1>HTML Attributes</h1>
+Below is an alphabetical list of some attributes often used in HTML, which you will learn more about in this tutorial:
+<table border="" width="700">
+<tr><th>Attribute</th>
+            <th> Description</th></tr>
+<tr><td>alt                    </td> <td>Specifies an alternative text for an image, when the image cannot be displayed</td>
+<tr><td>disabled	 </td> <td>Specifies that an input element should be disabled</td>
+<tr><td>href	 </td> <td>Specifies the URL (web address) for a link</td>
+<tr><td>id	                    </td> <td>Specifies a unique id for an element</td>
+<tr><td>src	</td> <td>Specifies the URL (web address) for an image</td>
+<tr><td>style	</td> <td>Specifies an inline CSS style for an element</td>
+<tr><td>title	</td> <td>Specifies extra information about an element (displayed as a tool tip)</td></table><br><br>
+<a href="html_elements.html" class="previous">&laquo; Previous</a>
+<a href="html_headings.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

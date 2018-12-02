@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVA</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a class="active" href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="java_overview.html">Overview</a>
+<a href="java_environmentalsetup.html">Environment Setup</a>
+<a href="java_basicsyntax.html">Basic Syntax</a>
+<a href="java_comments.html">Comments</a>
+<a href="java_obj&cls.html">Objects&Classes</a>
+<a href="java_datatypes.html">Data Types</a>
+<a href="java_variables.html">Variable Types</a>
+<a href="java_modifiertypes.html">Modifier Types</a>
+<a class="active" href="java_operators.html">Basic Operators</a>
+<a href="java_loops.html">Loops</a>
+<a href="java_decisionmake.html">Decision Making</a>
+<a href="java_characters.html">Characters</a>
+<a href="java_strings.html">strings</a>
+<a href="java_arrays.html">Arrays</a>
+<a href="java_datetime.html">Date&Time</a>
+<a href="java_regularexpr.html">Regular expressions</a>
+<a href="java_methods.html">Methods</a>
+<a href="java_io.html">Files and i/o</a>
+<a href="java_excepetions.html">Exceptions </a>
+<a href="java_innerclass.html">Inner classes</a>
+<a href="java_inheritance.html">Inheritance </a>
+<a href="java_overriding.html">Overriding</a>
+<a href="java_overloading.html">Overloading</a>
+<a href="java_polymorphism.html">Polymorphism</a>
+<a href="java_Abstraction.html">Abstraction</a>
+<a href="java_encapsulation.html">Encapsulation</a>
+<a href="java_interfaces.html">Interfaces</a>
+<a href="java_packages.html">Packages</a>
+</div> </nav>
+<article>
+<a href="java_modifiertypes.html" class="previous">&laquo; Previous</a>
+<a href="java_loops.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Basic Operators In Java</h1>
+
+<p>Operators are special symbols (characters) that carry out operations on operands (variables and values). For example, + is an operator that performs addition.
+<br>
+In Java variables article, you learned to declare variables and assign values to variables. Now, you will learn to use operators to manipulate variables.
+<br>
+<h4>Assignment Operator</h4>
+Assignment operators are used in Java to assign values to variables.</p><h4> For example:</h4>
+<table height="" width="500" border=""><tr><td><pre>
+int age;
+age = 5;</pre></td></tr></table><br>
+The assignment operator assigns the value on its right to the variable on its left. Here, 5 is assigned to the variable age using = operator.
+<br>
+There are other assignment operators too. However, to keep things simple, we will learn other assignment operators later in this article.
+<br>
+<h4>Example 1: Assignment Operator</h4>
+<table height="" width="500" border=""><tr><td><pre>
+class AssignmentOperator {
+    public static void main(String[] args) {
+    	
+    	int number1, number2;
+    	
+    	// Assigning 5 to number1 
+    	number1 = 5;
+    	System.out.println(number1);
+    	    	
+    	// Assigning value of variable number2 to number1
+    	number2 = number1;
+    	System.out.println(number2);
+    }
+}
+</pre></td></tr></table><br>
+When you run the program, the output will be:
+<table height="" width="500" border=""><tr><td><pre>
+5
+5
+</pre></td></tr></table><br>
+<h4>Arithmetic Operators</h4>
+Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication etc.
+<br>
+<b>Java Arithmetic Operators</b><br>
+<table height="" width="500" border=""><tr><td><pre>
+Operator	Meaning
++	Addition (also used for string concatenation)
+-	Subtraction Operator
+*	Multiplication Operator
+/	Division Operator
+%	Remainder Operator
+</pre></td></tr></table><br>
+Example 2: Arithmetic Operator
+<table height="" width="500" border=""><tr><td><pre>
+class ArithmeticOperator {
+    public static void main(String[] args) {
+    	
+    	double number1 = 12.5, number2 = 3.5, result;
+    	
+    	// Using addition operator
+    	result = number1 + number2;
+    	System.out.println("number1 + number2 = " + result);
+    	
+    	// Using subtraction operator
+    	result = number1 - number2;
+    	System.out.println("number1 - number2 = " + result);
+    	
+    	// Using multiplication operator
+    	result = number1 * number2;
+    	System.out.println("number1 * number2 = " + result);
+
+    	// Using division operator
+    	result = number1 / number2;
+    	System.out.println("number1 / number2 = " + result);
+    	
+    	// Using remainder operator
+    	result = number1 % number2;
+    	System.out.println("number1 % number2 = " + result);
+    }
+}
+</pre></td></tr></table><br>
+When you run the program, the output will be:
+<table height="" width="500" border=""><tr><td><pre>
+number1 + number2 = 16.0
+number1 - number2 = 9.0
+number1 * number2 = 43.75
+number1 / number2 = 3.5714285714285716
+number1 % number2 = 2.0
+</pre></td></tr></table><br>
+In above example, all operands used are variables. However, it's not necessary at all. Operands used in arithmetic operators can be literals as well. For example,
+<table height="" width="500" border=""><tr><td><pre>
+result = number1 + 5.2;
+result = 2.3 + 4.5;
+number2 = number1 -2.9;
+</pre></td></tr></table><br>
+The + operator can also be used to concatenate two or more strings.
+
+Example 3: Arithmetic Operator
+<table height="" width="500" border=""><tr><td><pre>
+class ArithmeticOperator {
+    public static void main(String[] args) {
+    	
+    	String start, middle, end, result;
+    	
+    	start = "Talk is cheap. ";
+    	middle = "Show me the code. ";
+    	end = "- Linus Torvalds";
+    	
+    	result = start + middle + end;
+    	System.out.println(result);
+    }
+}
+</pre></td></tr></table><br>
+When you run the program, the output will be:
+<table height="" width="500" border=""><tr><td><pre>
+Talk is cheap. Show me the code. - Linus Torvalds
+</pre></td></tr></table><br>
+<h4>Unary Operators</h4>
+Unary operator performs operation on only one operand.
+<table height="" width="500" border=""><tr><td><pre>
+Operator	Meaning
++	Unary plus (not necessary to use since numbers are positive without using it)
+-	Unary minus; inverts the sign of an expression
+++	Increment operator; increments value by 1
+--	decrement operator; decrements value by 1
+!	Logical complement operator; inverts the value of a boolean
+</pre></td></tr></table><br>
+<h4>Example 4: Unary Operator</h4>
+<table height="" width="500" border=""><tr><td><pre>
+class UnaryOperator {
+    public static void main(String[] args) {
+    	
+    	double number = 5.2, resultNumber;
+    	boolean flag = false;
+    	
+    	System.out.println("+number = " + +number);
+    	// number is equal to 5.2 here.
+    	
+    	System.out.println("-number = " + -number);
+    	// number is equal to 5.2 here.
+    	
+        // ++number is equivalent to number = number + 1
+    	System.out.println("number = " + ++number);
+        // number is equal to 6.2 here.
+
+        // -- number is equivalent to number = number - 1
+    	System.out.println("number = " + --number);
+        // number is equal to 5.2 here.
+
+    	System.out.println("!flag = " + !flag);
+    	// flag is still false.
+    }
+}
+</pre></td></tr></table><br>
+When you run the program, the output will be:
+<table height="" width="500" border=""><tr><td><pre>
++number = 5.2
+-number = -5.2
+number = 6.2
+number = 5.2
+!flag = true
+</pre></td></tr></table><br>
+You can also use ++ and -- operator as both prefix and postfix in Java. The ++ operator increases value by 1 and -- operator decreases value by 1.
+<table height="" width="500" border=""><tr><td><pre>
+int myInt = 5;
+++myInt   // myInt becomes 6
+myInt++   // myInt becomes 7
+--myInt   // myInt becomes 6
+myInt--   // myInt becomes 5
+</pre></td></tr></table><br>
+Simple enough till now. However, there is a crucial difference while using increment and decrement operator as prefix and postfix. Consider this example,
+
+<h4>Example 5: Unary Operator</h4>
+<table height="" width="500" border=""><tr><td><pre>
+class UnaryOperator {
+    public static void main(String[] args) {
+    	
+    	double number = 5.2;
+
+    	System.out.println(number++);
+    	System.out.println(number);
+
+    	System.out.println(++number);
+    	System.out.println(number);
+    }
+}
+</pre></td></tr></table><br>
+When you run the program, the output will be:
+<table height="" width="500" border=""><tr><td><pre>
+5.2
+6.2
+7.2
+7.2
+</pre></td></tr></table><br>
+When System.out.println(number++); statement is executed, the original value is evaluated first. The number is increased only after that. That's why you are getting 5.2 as an output. Then, when System.out.println(number); is executed, the increased value 6.2 is displayed.
+<br>
+However, when System.out.println(++number); is executed, number is increased by 1 first before it's printed on the screen.
+<br>
+Similar is the case for decrement -- operator.
+<br>
+<h4>Equality and Relational Operators</h4>
+The equality and relational operators determines the relationship between two operands. It checks if an operand is greater than, less than, equal to, not equal to and so on. Depending on the relationship, it results to either true or false.
+<br><br>
+<b>Java Equality and Relational Operators</b><br><br>
+<table height="" width="500" border=""><tr><td><pre>
+Operator	Description			Example
+==		equal to			5 == 3 is evaluated to false
+!=		not equal to			5 != 3 is evaluated to true
+&gt		greater than			5 &gt 3 is evaluated to true
+&lt		less than			5 &lt 3 is evaluated to false
+&gt=		greater than or equal to	5 &gt= 5 is evaluated to true
+&lt=		less then or equal to		5 &lt= 5 is evaluated to true
+</pre></td></tr></table><br>
+Equality and relational operators are used in decision making and loops (which will be discussed later). For now, check this simple example.
+<br>
+<h4>Example 6: Equality and Relational Operators</h4>
+<table height="" width="500" border=""><tr><td><pre>
+class RelationalOperator {
+    public static void main(String[] args) {
+    	
+    	int number1 = 5, number2 = 6;
+
+    	if (number1 &gt number2)
+    	{
+    		System.out.println("number1 is greater than number2.");
+    	}
+    	else
+    	{
+    		System.out.println("number2 is greater than number1.");
+    	}
+    }
+}
+</pre></td></tr></table><br>
+When you run the program, the output will be:
+<table height="" width="500" border=""><tr><td><pre>
+number2 is greater than number1.
+</pre></td></tr></table><br>
+Here, we have used > operator to check if number1 is greater than number2 or not.
+<br>
+Since, number2 is greater than number1, the expression number1 > number2 is evaluated to false.
+<br>
+Hence, the block of code inside else is executed and the block of code inside if is skipped.
+<br>
+If you didn't understand the above code, don't worry. You will learn it in detail in Java if...else article.
+<br>
+For now, just remember that the equality and relational operators compares two operands and is evaluated to either true or false.
+<br>
+In addition to relational operators, there is also a type comparison operator instanceof which compares an object to a specified type. For example,<br><br>
+In addition to relational operators, there is also a type comparison operator instanceof which compares an object to a specified type. For example,<br><br>
+<b>instanceof Operator</b><br><br>
+Here's an example of instanceof operator.
+<table height="" width="500" border=""><tr><td><pre>
+class instanceofOperator {
+    public static void main(String[] args) {
+    	
+    	String test = "asdf";
+    	boolean result;
+    	
+    	result = test instanceof String;
+    	System.out.println(result);
+    }
+}
+</pre></td></tr></table><br>
+When you run the program, the output will be true. It's because test is the instance of String class.
+<br>
+You will learn more about instanceof operator works once you understand Java Classes and Objects.
+<h4>
+Logical Operators</h4>
+The logical operators || (conditional-OR) and && (conditional-AND) operates on boolean expressions. Here's how they work.
+<br><br>
+<b>Java Logical Operators</b><br>
+<table height="" width="500" border=""><tr><td><pre>
+Operator	Description
+||	conditional-OR; true if either of the boolean expression is true
+&&	conditional-AND; true if all boolean expressions are true
+</pre></td></tr></table><br>
+<h4>Example 8: Logical Operators</h4>
+<table height="" width="500" border=""><tr><td><pre>
+class LogicalOperator {
+    public static void main(String[] args) {
+    	
+    	int number1 = 1, number2 = 2, number3 = 9;
+    	boolean result;
+    	
+    	// At least one expression needs to be true for result to be true
+    	result = (number1 > number2) || (number3 > number1);
+    	// result will be true because (number1 > number2) is true
+    	System.out.println(result);
+    			
+    	// All expression must be true from result to be true	
+    	result = (number1 > number2) && (number3 > number1);
+    	// result will be false because	(number3 > number1) is false
+    	System.out.println(result);
+    }
+}</pre></td></tr></table><br>
+When you run the program, the output will be:
+<table height="" width="500" border=""><tr><td><pre>
+true
+false
+</pre></td></tr></table><br>
+Logical operators are used in decision making and looping.
+<h4>
+Ternary Operator</h4>
+The conditional operator or ternary operator ?: is shorthand for if-then-else statement. The syntax of conditional operator is:
+<br><br>
+variable = Expression ? expression1 : expression2
+<br><br>
+Here's how it works.
+<br>
+If the Expression is true, expression1 is assigned to variable.
+If the Expression is false, expression2 is assigned to variable.
+<br>
+<h4>Example 9: Ternary Operator</h4>
+<table height="" width="500" border=""><tr><td><pre>
+class ConditionalOperator {
+    public static void main(String[] args) {
+    	
+    	int februaryDays = 29;
+    	String result;
+    	
+    	result =  (februaryDays == 28) ? "Not a leap year" : "Leap year";
+    	System.out.println(result);
+    }
+}</pre></td></tr></table><br>
+When you run the program, the output will be:
+<table height="" width="500" border=""><tr><td><pre>
+Leap year
+</pre></td></tr></table><br>
+<h4>Bitwise and Bit Shift Operators</h4>
+To perform bitwise and bit shift operators in Java, these operators are used.
+<br><br>
+<b>Java Bitwise and Bit Shift Operators</b><br><br>
+<table height="" width="500" border=""><tr><td><pre>
+Operator	Description
+~		Bitwise Complement
+&lt&lt		Left Shift
+>>		Right Shift
+>>>		Unsigned Right Shift
+&		Bitwise AND
+^		Bitwise exclusive OR
+|		Bitwise inclusive OR</pre></td></tr></table><br>
+These operators are not commonly used. Visit this page to learn more about bitwise and bit shift operators.
+<br>
+<h4>More Assignment Operators</h4>
+We have only discussed about one assignment operator = in the beginning of the article. Except this operator, there are quite a few assignment operators that helps us to write cleaner code.
+<br>
+<h4>Java Assignment Operators</h4>
+<table height="" width="500" border=""><tr><td><pre>
+Operator	Example	Equivalent to
++=		x += 5	x = x + 5
+-=		x -= 5	x = x - 5
+*=		x *= 5	x = x * 5
+/=		x /= 5	x = x / 5
+%=		x %= 5	x = x / 5
+&lt&lt=		x &lt&lt= 5	x = x &lt&lt 5
+>>=		x >>= 5	x = x >> 5
+&=		x &= 5	x = x & 5
+^=		x ^= 5	x = x ^ 5
+|=		x |= 5	x = x | 5
+</pre></td></tr></table><br>
+Now you know about Java operators, it's time to learn precedence of Java operators; the order in which the operators in an expression are evaluated when two operators share a common operand.
+
+<br><br>
+<a href="java_modifiertypes.html" class="previous">&laquo; Previous</a>
+<a href="java_loops.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</body>
+</html>

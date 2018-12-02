@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVASCRIPT</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a  href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a class="active" href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="javascript_overview.html">Overview</a>
+<a href="javascript_output.html">Output</a>
+<a class="active" href="javascript_statements.html">Statements</a>
+<a href="javascript_syntax.html">Syntax</a>
+<a href="javascript_comments.html">Comments</a>
+<a href="javascript_variables.html">Variables</a>
+<a href="javascript_operators.html">Operators</a> 
+<a href="javascript_datatypes.html">Data Types</a>
+<a href="javascript_functions.html">Functions</a>
+<a href="javascript_objects.html">Objects</a>
+<a href="javascript_events.html">Events</a>
+<a href="javascript_strings.html">Strings</a>
+<a href="javascript_numbers.html">Numbers</a>
+<a href="javascript_validations.html">Validations</a>
+<a href="javascript_cookies.html">Cookies</a>
+<a href="javascript_debugging.html">Debugging</a>
+<a href="javascript_errorHandling.html">Error Handling</a>
+</div> </nav>
+
+<article>
+<a href="javascript_output.html" class="previous">&laquo; Previous</a>
+<a href="javascript_syntax.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>JavaScript statements</h1>
+<p>When writing your own scripts it's very useful to know some of the most common JavaScript statements. With if() you can check conditions, while for() allows you to go through a set of data and do the same with each piece of data. Both are very common statements and you should know how they work.<br>
+<br>
+These statements are common to all programming languages, so if you understand them for JavaScript, you understand them for all other languages and never have to learn the concepts again, only the specific syntax of the programming language.</p>
+
+<p>At the moment I explain the following statements:</p>
+
+<ul><li>if ()</li>
+<li>for () </li></ul>
+<h3>The if() statement</h3>
+<p>Code like this:</p>
+<table border="" width="500"height=""><tr><td><pre>
+if (something is the case) {
+	more JavaScript commands
+}
+</pre></td></tr></table>
+<p>is used when you want to execute some code only if a specific condition is met.</p>
+
+<h2>if ()</h2>
+<p>For instance, suppose you read out the annual income of a user from a form and put it in the variable income. Now if the income is over $100,000, you want to inform the user of some special benefit for people with large incomes. Then the code becomes:</p>
+<table border="" width="500"height=""><tr><td><pre>
+var income = [read out from form]
+
+if (income > 100000) {
+	alert('We can offer you a special benefit.');
+	(more code)
+}
+</pre></td></tr></table>
+<p>The code is very simple: you take income and compare it to 100000. If it's larger, so if the condition (income > 100000) is met, the code between the curly brackets {} is executed. If the condition is not met, nothing happens.<br>
+
+See the Boolean logic page for a description of how conditions like this one work.</p>
+
+<h2>else if ()</h2>
+<p>Now suppose you also want to see if the user has a house of his own. If he does but still has an income less than $100,000 you want to inform him of some other interesting possibilities.<br>
+
+If you want to check for ownhouse only if income is not larger than $100,000 you have to use this code:</p>
+<table border="" width="500"height=""><tr><td><pre>
+var income = [read out from form]
+var ownhouse = [read out from form, value is 'Yes' or 'No']
+
+if (income > 100000) {
+	alert('We can offer you a special benefit.');
+	(more code)
+}
+else if (ownhouse == 'Yes') {
+	alert('We still have some offers');
+	(more code)
+}
+</pre></td></tr></table>
+<p>With if - else if you can define various conditions that are checked one after another until the script finds a true condition. Then the block below the true condition is executed. After one block is executed the script ignores any subesquent else if's.<br>
+
+In this case the script first checks if income is larger than 100000. If it isn't, it then checks (else if) if the user owns a house.</p>
+
+<h4>So in an if-else if construction there are four possibilities:</h4>
+
+<ol><li>Only the first condition is met: the first block of code is executed</li>
+<li>Only the second condition is met: the second block of code is executed</li>
+<li>Both conditions are met: only the first block of code is executed.</li>
+<li>Neither condition is met: nothing happens</li></ol>
+<p>Of course you can use as many else ifs as necessary.</p>
+
+<h2>else</h2>
+<p>Now suppose that you want to say sorry to those people who have an income less than $100,000 and have no house. You can add the following code below the last else if:</p>
+<table border="" width="500"height=""><tr><td><pre>
+else {
+	alert ('sorry');
+	(more code)
+}</pre></td></tr></table>
+<p>This else means: in all other cases. If none of the above conditions are met, this block of code is executed.</p>
+
+<h2>Comparision of values</h2>
+<p>Usually in an if statement you want to compare two strings or numbers. You do this as follows:</p>
+<table border="" width="500"height=""><tr><td><pre>
+Larger than: if (income > 100000)
+Smaller than: if (income &lt 100000)
+Larger than or equal to: if (income >= 100000)
+Smaller than or equal to: if (income &lt;= 100000)
+Equal to: if (income == 100000) (note the double equation mark: ==)
+Not equal to: if (income != 100000) 
+</pre></td></tr></table>
+<p>If you want to compare strings, be sure to always write the string between single quotes, like:</p>
+<table border="" width="500"height=""><tr><td><pre>
+if (ownhouse == 'Yes') {
+	alert('We still have some offers');
+	(more code)
+}
+</pre></td></tr></table>
+<p>If you leave out the quotes, JavaScript thinks that you want to compare the value of the variable ownhouse with the value of the variable Yes.</p>
+<table border="" width="500"height=""><tr><td><pre>
+if (ownhouse == Yes) {
+	alert('We still have some offers');
+	(more code)
+} 
+</pre></td></tr></table>
+<p>If you haven't declared a variable Yes strange errors can creep up.</p>
+
+<h2>Seeing if objects exist</h2>
+<p>You can also see if an object exists:</p>
+<table border="" width="500"height=""><tr><td><pre>
+if (document.images) {
+	do something with document.images
+}</pre></td></tr></table>
+<p>If the object document.images exists, the condition becomes true and the block of code is executed.</p>
+<table border="" width="500"height=""><tr><td>
+<pre>The for () statement
+This block of code
+
+for (var i=0;i&lt;5;i++) {
+	alert('i = ' + i);
+}</pre></td></tr></table>
+<p>is a for loop that gives alerts with the numbers 0,1,2,3 and 4. Try it to see what it does.</p>
+
+<p>As you can see, the alert gives the value of i and this value goes from 0 to 4. This is caused by the for statement:<p>
+<table border="" width="500"height=""><tr><td>
+for (var i=0;i<5;i++)
+</td></tr></table>
+<p>This means: the variable i starts at 0 (var i=0;), the for loop goes on as long as i is less than 5 (i&lt;5) and i is increased by one each time the loop is done again (i++).<br>
+<br>
+In practice, that means that the code between the curly brackets {} is executed with i=0, then with i=1 etc. until i=4. When it increases i to 5, the code sees that the condition i&lt;5 is no longer met and it stops the loop.<br>
+<br>
+So the for statement is used to execute the same code a couple of times with each time a different value of i. You will use this statement mainly if you want to go through an array and do the same thing with each of the elements.<br>
+<br>
+By saying var i you declare a new, local variable for this for loop only. Sometimes it's very important to declare it as such because the program can get confused if you use the variable i more than once. By explicitly declaring it you confine it to this for loop only, as soon as it's done the variable is removed from the program memory. This avoids all potential confusion.</p>
+
+<h4>You can also put an if inside a for, like:</h4>
+<table border="" width="500"height=""><tr><td><pre>
+for (var i=0;i&lt;5;i++) {
+	if (thearray[i] == 'Yes') {
+		(do something)
+	}
+}<pre></td></tr></table>
+<p>Now the code takes all elements from the array thearray and for each one checks if the value is Yes. If it is, the innermost block of code is executed.<br>
+
+Of course, you can also go from 4 to 0 backwards:</p>
+<table border="" width="500"height=""><tr><td>
+for (var i=4;i>=0;i--)
+</td></tr></table><br>
+or from 0 to 10 in steps of 2<br><br>
+<table border="" width="500"height=""><tr><td>
+for (var i=0;i<11;i+=2)
+</td></tr></table>
+<br><br>
+<a href="javascript_output.html" class="previous">&laquo; Previous</a>
+<a href="javascript_syntax.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>
+

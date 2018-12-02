@@ -95,6 +95,28 @@ article {
     background-color: #000080;
     color: white;
 }
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
 </style>
 
 </head>
@@ -107,11 +129,11 @@ article {
   <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
 <a href="allprolang.html">All Languages</a>
    <a class="active" href="c_overview.html">C</a>
-  <a href="cpp_overview.html">C++</a>
+  <a href="cpp_overview.html">CPP</a>
   <a href="java_overview.html">JAVA</a>
   <a href="html_overview.html">HTML</a>
   <a href="css_overview.html">CSS</a>
-  <a href="javascript_overview.html">JAVA SCRIPT</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
   <a href="python_overview.html">PYTHON</a>
   <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
 <nav>
@@ -123,7 +145,7 @@ article {
    <a class="active" href="c_variables.html">Variables</a>
    <a href="c_constliterals.html">Constants&Literals </a>
    <a href="c_operators.html">Operators</a>
-   <a href="c_desisonmake.html">Desision Making</a>
+   <a href="c_desisonmake.html">Decision Making</a>
    <a href="c_loops.html">Loops</a>
    <a href="c_functions.html">Functions</a>
    <a href="c_scope.html">Scope Rules</a>
@@ -135,7 +157,9 @@ article {
    <a href="c_fileio.html">File I/O </a>
  </div> </nav></nav>
 <article>
-<h1 style="color:#000080">VARIABLES In C Programming</h1>
+<a href="c_datatypes.html" class="previous">&laquo; Previous</a>
+<a href="c_constliterals.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080">Variables In C</h1>
 <p>A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.<br></p>
 <p>The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C is case-sensitive. Based on the basic types explained in the previous chapter, there will be the following basic variable types</p>
 <p>C programming language also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Structure, Union, etc. For this chapter, let us study only basic variable types.<br></p>
@@ -169,7 +193,9 @@ article {
 <p><b>rvalue -</b> The term rvalue refers to a data value that is stored at some address in memory. An rvalue is an expression that cannot have a value assigned to it which means an rvalue may appear on the right-hand side but not on the left-hand side of an assignment.</p>
 
 Variables are lvalues and so they may appear on the left-hand side of an assignment. Numeric literals are rvalues and so they may not be assigned and cannot appear on the left-hand side. Take a look at the following valid and invalid statements 
-<img src="images/c_var8.png"/>
+<img src="images/c_var8.png"/><br>
+<a href="c_datatypes.html" class="previous">&laquo; Previous</a>
+<a href="c_constliterals.html" class="next">Next &raquo;</a>
 </article>
 <footer>Devoloped by LE's</footer>
 </body>

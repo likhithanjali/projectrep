@@ -1,0 +1,46 @@
+<html>
+<body>
+<h3>What is "Float"?</h3>
+<p>Float is a CSS positioning property. To understand its purpose and origin, we can look to print design. In a print layout, images may be set into the page such that text wraps around them as needed. This is commonly and appropriately called "text wrap".Here is an example of that.</p> 
+<img src="CssFloat1.png">
+<p>In page layout programs, the boxes that hold the text can be told to honor the text wrap, or to ignore it. Ignoring the text wrap will allow the words to flow right over the image like it wasn't even there. This is the difference between that image being part of the flow of the page (or not). Web design is very similar.</p>
+<img src="CssFloat2.png">
+<p>In web design, page elements with the CSS float property applied to them are just like the images in the print layout where the text flows around them. Floated elements remain a part of the flow of the web page. This is distinctly different than page elements that use absolute positioning. Absolutely positioned page elements are removed from the flow of the webpage, like when the text box in the print layout was told to ignore the page wrap. Absolutely positioned page elements will not affect the position of other elements and other elements will not affect them, whether they touch each other or not.</p>
+Setting the float on an element with CSS happens like this:
+<table border="" width="400"><td>#sidebar {<br>
+  float: right;<br>			
+}</td></table>
+<p>There are four valid values for the float property. Left and Right float elements those directions respectively. None (the default) ensures the element will not float and Inherit which will assume the float value from that elements parent element.</p>
+<h3>What are floats used for?</h3>
+<p>Aside from the simple example of wrapping text around images, floats can be used to create entire web layouts.</p>
+<img src="CssFloat3.png">
+<p>Floats are also helpful for layout in smaller instances. Take for example this little area of a web page. If we use float for our little avatar image, when that image changes size the text in the box will reflow to accommodate:</p>
+<img src="CssFloat4.png">
+<p>This same layout could be accomplished using relative positioning on container and absolute positioning on the avatar as well. In doing it this way, the text would be unaffected by the avatar and not be able to reflow on a size change.</p>
+<img src="CssFloat5.png">
+<h3>Clearing the Float</h3>
+<p>Float's sister property is clear. An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float. Again an illustration probably does more good than words do.</p>
+<img src="CssFloat6.png">
+<p>In the above example, the sidebar is floated to the right and is shorter than the main content area. The footer then is required to jump up into that available space as is required by the float. To fix this problem, the footer can be cleared to ensure it stays beneath both floated columns.</p>
+<table border="" width="400">
+<td>#footer {<br>
+  clear: both;<br>			
+}</td></table>
+<p>Clear has four valid values as well. Both is most commonly used, which clears floats coming from either direction. Left and Right can be used to only clear the float from one direction respectively. None is the default, which is typically unnecessary unless removing a clear value from a cascade. Inherit would be the fifth, but is strangely not supported in Internet Explorer. Clearing only the left or right float, while less commonly seen in the wild, definitely has its uses.</p>
+<img src="CssFloat7.png">
+<h3>Techniques for Clearing Floats</h3>
+<p>If you are in a situation where you always know what the succeeding element is going to be, you can apply the clear: both; value to that element and go about your business. This is ideal as it requires no fancy hacks and no additional elements making it perfectly semantic. Of course things don't typically work out that way and we need to have more float-clearing tools in our toolbox.</p>
+<ul>
+<li><b>The Empty Div Method</b> is, quite literally, an empty div. &ltdiv style="clear: both;"&gt&lt/div&gt. Sometimes you'll see a &ltbr&gt element or some other random element used, but div is the most common because it has no browser default styling, doesn't have any special function, and is unlikely to be generically styled with CSS. This method is scorned by semantic purists since its presence has no contextual meaning at all to the page and is there purely for presentation. Of course in the strictest sense they are right, but it gets the job done right and doesn't hurt anybody.
+<li><b>The Overflow Method</b> relies on setting the overflow CSS property on a parent element. If this property is set to auto or hidden on the parent element, the parent will expand to contain the floats, effectively clearing it for succeeding elements. This method can be beautifully semantic as it may not require an additional elements. However if you find yourself adding a new div just to apply this, it is equally as non-semantic as the empty div method and less adaptable. Also bear in mind that the overflow property isn't specifically for clearing floats. Be careful not to hide content or trigger unwanted scrollbars.
+<li><b>The Easy Clearing Method</b> uses a clever CSS pseudo selector (:after) to clear floats. Rather than setting the overflow on the parent, you apply an additional class like "clearfix" to it. </li></ul>Then apply this CSS:
+<table border="" width="400"><td>.clearfix:after {<br> 
+   content: "."; <br> 
+   visibility: hidden; <br> 
+   display: block; <br> 
+   height: 0; <br> 
+   clear: both;<br> 
+}</td></table>
+<p>This will apply a small bit of content, hidden from view, after the parent element which clears the float. This isn't quite the whole story, as additional code needs to be used to accomodate for older browsers.</p>
+</body>
+</html>

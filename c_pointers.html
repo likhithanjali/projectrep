@@ -95,14 +95,13 @@ article {
     background-color: #000080;
     color: white;
 }
-<style>
-button {
+a{
     text-decoration: none;
     display: inline-block;
-    padding: 8px 16px;
+    padding: 9px 17px;
 }
 
-button:hover {
+a:hover {
     background-color: #ddd;
     color: black;
 }
@@ -115,6 +114,7 @@ button:hover {
 .next {
     background-color: #000080;
     color: white;
+	margin-left:780px;
 }
 
 </style>
@@ -129,11 +129,11 @@ button:hover {
   <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
 <a href="allprolang.html">All Languages</a>
   <a class="active" href="c_overview.html">C</a>
-  <a href="cpp_overview.html">C++</a>
+  <a href="cpp_overview.html">CPP</a>
   <a href="java_overview.html">JAVA</a>
   <a href="html_overview.html">HTML</a>
   <a href="css_overview.html">CSS</a>
-  <a href="javascript_overview.html">JAVA SCRIPT</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
   <a href="python_overview.html">PYTHON</a>
   <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
 <nav>
@@ -145,7 +145,7 @@ button:hover {
    <a href="c_variables.html">Variables</a>
    <a href="c_constliterals.html">Constants&Literals </a>
    <a href="c_operators.html">Operators</a>
-   <a href="c_desisonmake.html">Desision Making</a>
+   <a href="c_desisonmake.html">Decision Making</a>
    <a href="c_loops.html">Loops</a>
    <a href="c_functions.html">Functions</a>
    <a href="c_scope.html">Scope Rules</a>
@@ -156,12 +156,11 @@ button:hover {
    <a href="c_ipop.html">Input&Output </a>
    <a href="c_fileio.html">File I/O </a>
  </div> </nav></nav>
-<article> 
-<button type="button" onclick="c_arrays.html">&laquo; Previous
-</button>
-<button type="button" onclick="c_strings.html">Next&raquo;
-</button>
-<h1 style="color:#000080">POINTERS In C Programming</h1>
+<article>
+<a href="c_arrays.html" class="previous">&laquo; Previous</a>
+<a href="c_strings.html" class="next">Next &raquo;</a>
+
+<h1 style="color:#000080">Pointers In C</h1>
 <p>Pointers in C language is a variable that stores/points the address of another variable. A Pointer in C is used to allocate memory dynamically i.e. at run time. The pointer variable might be belonging to any of the data type such as int, float, char, double, short etc.<br>
 Pointers are also variables and play a very important role in C programming language.</p> <h4>They are used for several reasons, such as:</h4>
 <p>Strings<br>Dynamic memory allocation<br>Sending function arguments by reference<br>Building complicated data structures<br>Pointing to functions<br>Building special data structures (i.e. Tree, Tries, etc...)<br>And many more.</p>
@@ -359,7 +358,7 @@ int main()
 <h4>Associativity :</h4><p> Order operators of equal precedence in an expression are applied</p>
 
 <p>We need to assign the priority to the pointer declaration considering precedence and associative according to the following table.</P>
- <table>
+ <table border="" width="500">
   <tr>
     <th>operator</th>
     <th>precedence</th>
@@ -367,21 +366,21 @@ int main()
    
   </tr>
 <tr>
-    <td>(),[]</td>
-    <td>1</td>
-<td>left to right</td>
+    <td align="center">(),[]</td>
+    <td align="center">1</td>
+<td align="center">left to right</td>
     
   </tr>
 <tr>
-    <td>*,identifier</td>
-    <td>2</td>
-<td> right to left</td>
+    <td align="center">*,identifier</td>
+    <td align="center">2</td>
+<td align="center"> right to left</td>
     
   </tr>
 <tr>
-    <td>datab type</td>
-    <td>3</td>
-<td></td>
+    <td align="center">datab type</td>
+    <td align="center">3</td>
+<td align="center"> - </td>
     
   </tr></table>
 <p>Where</p>
@@ -404,16 +403,16 @@ int,long double etc.)</p>
 <p>That is near pointer cannot access beyond the data segment like graphics video memory, text video memory, etc. Size of near pointer is two byte. With the help of keyword near, we can make any pointer as near pointer.</p>
 <h4>Example of Near Pointer</h4>
 <table border=""  width="400">
-<tr><td><pre>#include&ltstdio.h>
-
-          int main()
-      {
-          int x=25;
-          int near* ptr;
-          ptr=&x;
-          printf(“%d”,sizeof ptr);
-          return 0;
-      }</pre></td></tr></table>
+<tr><td><pre>
+#include&ltstdio.h>
+int main()
+{
+    int x=25;
+    int near* ptr;
+    ptr=&x;
+    printf(“%d”,sizeof ptr);
+    return 0;
+}</pre></td></tr></table>
 <p><b>Output is 2</b></p>
 <h3>7. Far Pointer</h3>
 <ul><li>The pointer which can point or access whole the residence memory of RAM, i.e., which can access all 16 segments is known as far pointer.</li>
@@ -454,7 +453,8 @@ We can pass arrays to a function as call by Reference.</li>
 <li>Pointers are used to efficiently access array elements, as array elements are stored in adjacent memory locations. If we have a pointer pointing to a particular element of an array, then we can get the address of next element by simply incrementing the pointer.</li>
 <li>Pointers in C are used to efficiently implement dynamic Data Structures like Queues, Stacks, Linked Lists, Trees, etc.</li>
 <li>The use of pointers results in the faster execution of the program.</li></ul>
-
+<a href="c_arrays.html" class="previous">&laquo; Previous</a>
+<a href="c_strings.html" class="next">Next &raquo;</a>
 </article>
 <footer>Devoloped by LE's</footer>
 </body>

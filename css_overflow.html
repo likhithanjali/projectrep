@@ -1,0 +1,115 @@
+<html>
+<body>
+<h3>Description</h3>
+The overflow property determines how content which overflows its element's content area should be handled.
+<h3>Possible Values</h3>
+<b>visible -</b> Overflowing content should be displayed.
+
+<b>hidden -</b> Overflowing content should not be displayed.
+
+<b>scroll -</b> Overflowing content should not be displayed, but the user agent should provide some means of accessing the hidden content (e.g., a set of scrollbars).
+
+<b>auto -</b> The behavior caused by this value is dependent on the browser.
+<h3>Applies to</h3>
+All the HTML elements.
+<h3>DOM Syntax</h3>
+<table border="" width="500">
+<td>object.style.overflow = "scroll";</td></table>
+<h3>Example</h3>
+Here is the example -
+<table border="" width="400" height="">
+<td><pre><code>&lthtml&gt
+   &lthead&gt
+      &ltstyle type = "text/css"&gt
+         .scroll {
+            display:block;
+            border: 1px solid red;
+            padding:5px;
+            margin-top:5px;
+            width:300px;
+            height:50px;
+            overflow:scroll;
+         }
+         .auto {
+            display:block;
+            border: 1px solid red;
+            padding:5px;
+            margin-top:5px;
+            width:300px;
+            height:50px;
+            overflow:auto;
+         }
+      &lt/style&gt
+   &lt/head&gt
+
+   &ltbody&gt
+   
+      &ltp&gtExample of scroll value:&lt/p&gt
+      
+      &ltdiv class = "scroll"&gt
+         I am going to keep lot of content here just to show you how 
+         scrollbars works if there is an overflow in an element box. 
+         This provides your horizontal as well as vertical scrollbars.
+      &lt/div&gt
+      &ltbr/&gt
+      
+      &ltp&gtExample of auto value:&lt/p&gt
+      
+      &ltdiv class = "auto"&gt
+         I am going to keep lot of content here just to show you how 
+         scrollbars works if there is an overflow in an element box. 
+         This provides your horizontal as well as vertical scrollbars.
+      &lt/div&gt
+      
+   &lt/body&gt
+&lt/html&gt </code></pre></td></table>
+This will produce following result -
+<table border="" width="400" height="">
+<td><html>
+   <head>
+      <style type = "text/css">
+         .scroll {
+            display:block;
+            border: 1px solid red;
+            padding:5px;
+            margin-top:5px;
+            width:300px;
+            height:50px;
+            overflow:scroll;
+         }
+         .auto {
+            display:block;
+            border: 1px solid red;
+            padding:5px;
+            margin-top:5px;
+            width:300px;
+            height:50px;
+            overflow:auto;
+         }
+      </style>
+   </head>
+
+   <body>
+   
+      <p>Example of scroll value:</p>
+      
+      <div class = "scroll">
+         I am going to keep lot of content here just to show you how 
+         scrollbars works if there is an overflow in an element box. 
+         This provides your horizontal as well as vertical scrollbars.
+      </div>
+      <br />
+      
+      <p>Example of auto value:</p>
+      
+      <div class = "auto">
+         I am going to keep lot of content here just to show you how 
+         scrollbars works if there is an overflow in an element box. 
+         This provides your horizontal as well as vertical scrollbars.
+      </div>
+      
+   </body>
+</html> 
+</td></table>
+</body>
+</html>

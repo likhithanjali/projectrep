@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>PYTHON</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a class="active" href="python_overview.html">PYTHON</a>
+
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href= "python_overview.html">Overview</a> 
+<a href= "python_environmentSetup.html">Environmental Setup</a>
+<a href= "python_basicSyntax.html">Basic Syntax</a>
+<a href= "python_variableTypes.html">Variable Types</a>
+<a href= "python_basicOperators.html">Basic Operators</a>
+<a class="active" href= "python_decisionMaking.html">Decision Making</a>
+<a href= "python_loops.html">Loops</a>
+<a href= "python_numbers.html">Numbers</a>
+<a href= "python_strings.html">Strings</a>
+<a href= "python_lists.html">Lists</a>
+<a href= "python_tuples.html">Tuples</a>
+<a href= "python_dictionary.html">Dictionary</a>
+<a href= "python_date&time.html">Date & Time</a>
+<a href= "python_functions.html">Functions</a>
+<a href= "python_modules.html">Modules</a>
+<a href= "python_fileIO.html">File IO</a>
+<a href= "python_exceptions.html">Exceptions</a> 
+</div> </nav>
+
+<article>
+<a href="python_basicOperators.html" class="previous">&laquo; Previous</a>
+<a href="python_loops.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Decision Making In Python</h1>
+<p>
+
+Decisions in a program are used when the program has conditional choices to execute code block. Let's take an example of traffic lights, where different colors of lights lit up at different situations based on the conditions of the road or any specific rule.</p>
+
+
+ 
+<p>It is the prediction of conditions that occur while executing a program to specify actions. Multiple expressions get evaluated with an outcome of either TRUE or FALSE. These are logical decisions, and Python also provides decision-making statements that to make decisions within a program for an application based on the user requirement.</p>
+
+<p>Python provides various types of conditional statements:</p>
+
+<table border="" width="500"><tr><th>
+Statement</th><th>	Description</th>
+<tr><td>if Statements</td><td>	It consists of a Boolean expression which results is either TRUE or FALSE followed by one or more statements.</td></tr>
+<tr><td>if else Statements</td><td>	It also contains a Boolean expression. The if statement is followed by an optional else statement & if the expression results in FALSE, then else statement gets executed. It is also called alternative execution in which there are two possibilities of the condition determined in which any one of them will get executed.</td></tr>
+<tr><td>Nested Statements	</td><td>We can implement if statement and or if-else statement inside another if or if - else statement. Here more than one if conditions are applied & there can be more than one if within elif.</td></tr></table>
+<h3>if statement</h3>
+<p>The decision-making structures can be recognized and understood using flowcharts.</p>
+
+Figure - If condition Flowchart:
+<img src="images/python_desicionmaking1.png">
+<h3>syntax</h3>
+<table border="" width="500"><tr><td><pre>
+if expression:
+   #execute your code</pre></td></tr></table>
+  <h3>Example</h3> <table border="" width="500"><tr><td><pre>
+a = 15
+
+if a > 10:
+   print("a is greater")</pre></td></tr></table>
+   <h3>Output</h3><table border="" width="500"><tr><td>
+a is greater
+</td></td></table>
+<h3>if else statements</h3>
+Figure - If else condition Flowchart:
+<img src="images/python_decisionmaking2.png">
+<h3>syntax</h3><table border="" width="500"><tr><td><pre>
+if expression:
+   #execute your code
+else:
+   #execute your code</pre></td></tr></table>
+   <h3>Example</h3>
+   <table border="" width="500"><tr><td><pre>
+a = 15
+b = 20
+
+if a > b:
+   print("a is greater")
+else:
+   print("b is greater")</pre></td></td></table>
+   <h3>Output</h3><table border="" width="500"><tr><td>
+b is greater
+</td></tr></table>
+<h3>elif Statements</h3>
+<p>
+elif - is a keyword used in Python replacement of else if to place another condition in the program. This is called chained conditional.</p>
+
+Figure - elif condition Flowchart:
+<img src="images/python_desicionmaking3.png">
+<h3>Output</h3>
+<table border="" width="500"><tr><td><pre>
+if expression:
+   #execute your code
+elif expression:
+   #execute your code
+else:
+   #execute your code</pre></td></tr></table>
+   <h3>Example</h3><table border="" width="500"><tr><td><pre>
+a = 15
+b = 15
+
+if a > b:
+   print("a is greater")
+elif a == b:
+   print("both are equal")
+else:
+   print("b is greater")</pre></td></tr></table>
+   <h3>Output</h3>
+   <table border="" width="500"><tr><td>
+both are equal</td></tr></table>
+<p><b>Note</b>We can write if statement in both ways, within parenthesis or without parenthesis/ brackets, i.e. ( and ).</p>
+<h3>Single Statement Condition</h3>
+<p>If the block of an executable statement of if - clause contains only a single line, programmers can write it on the same line as a header statement.</p>
+<table border="" width="500"><tr><td><pre>
+a = 15
+
+if (a == 15): print("The value of a is 15")
+</pre></td></tr></table><br><br>
+<a href="python_basicOperators.html" class="previous">&laquo; Previous</a>
+<a href="python_loops.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

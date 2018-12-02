@@ -95,6 +95,28 @@ article {
     background-color: #000080;
     color: white;
 }
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
 </style>
 
 </head>
@@ -107,11 +129,11 @@ article {
   <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
 <a href="allprolang.html">All Languages</a>
  <a class="active" href="c_overview.html">C</a>
-  <a href="cpp_overview.html">C++</a>
+  <a href="cpp_overview.html">CPP</a>
   <a href="java_overview.html">JAVA</a>
   <a href="html_overview.html">HTML</a>
   <a href="css_overview.html">CSS</a>
-  <a href="javascript_overview.html">JAVA SCRIPT</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
   <a href="python_overview.html">PYTHON</a>  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
 <nav>
 <div class="vertical-menu">
@@ -122,7 +144,7 @@ article {
    <a href="c_variables.html">Variables</a>
    <a href="c_constliterals.html">Constants&Literals </a>
    <a href="c_operators.html">Operators</a>
-   <a href="c_desisonmake.html">Desision Making</a>
+   <a href="c_desisonmake.html">Decision Making</a>
    <a href="c_loops.html">Loops</a>
    <a href="c_functions.html">Functions</a>
    <a href="c_scope.html">Scope Rules</a>
@@ -133,7 +155,10 @@ article {
    <a href="c_ipop.html">Input&Output </a>
    <a href="c_fileio.html">File I/O </a>
  </div> </nav>
-<article><h1 style="color:#000080">STRUCTURES & UNIONS In C Programming</h1>
+<article>
+<a href="c_strings.html" class="previous">&laquo; Previous</a>
+<a href="c_ipop.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080">Structures & Unions In C</h1>
 <p>Arrays allow to define type of variables that can hold several data items of the
 same kind. Similarly, structure is another user-defined data type available in C
 that allows to combine data items of different kinds.</p>
@@ -165,9 +190,9 @@ variable name and the structure member that we wish to access. You would
 use the keyword struct to define variables of structure type. The following
 example shows how to use a structure in a program:
 
-<table border="" cellpadding="2" cellspacing="2" width="500">
+<table border="" width="500">
 <tr>
-<td>#include&ltstdio.h><br>
+<td><pre>#include&ltstdio.h><br>
 #include&ltstring.h><br>
 struct Books<br>
 {<br>
@@ -200,19 +225,22 @@ printf( "Book 2 title : %s\n", Book2.title);<br>
 printf( "Book 2 author : %s\n", Book2.author);<br>
 printf( "Book 2 subject : %s\n", Book2.subject);<br>
 printf( "Book 2 book_id : %d\n", Book2.book_id);<br>
-return 0;<br>
-}<br><br></td>
+return 0;
+}</pre></td>
 </tr>
 </table>
-<p>
-When the above code is compiled and executed, it produces the following result:<br>
-Book 1 title : C Programming<br>
-Book 1 author : Nuha Ali<br>
-Book 1 subject : C Programming Tutorial<br>
-Book 1 book_id : 6495407<br>
-Book 2 title : Telecom Billing<br>
-Book 2 author : Zara Ali<br>
-Book 2 subject : Telecom Billing Tutorial<br></p>
+<br>
+<table border="" width="500">
+<tr><td><pre>
+When the above code is compiled and executed, it produces the
+ following result:
+Book 1 title : C Programming
+Book 1 author : Neha
+Book 1 subject : C Programming Tutorial
+Book 1 book_id : 6751442
+Book 2 title : CPP
+Book 2 author : kabir
+Book 2 subject : CPP Tutorial</pre></td></tr></table>
 <h2>Structures as Function Arguments:</h2>
 <p>You can pass a structure as a function argument in the same way as you pass
 any other variable or pointer.</p><br>
@@ -220,24 +248,24 @@ any other variable or pointer.</p><br>
 <h2>Pointers to Structures:</h2>
 You can define pointers to structures in the same way as you define pointer to
 any other variable:<br>
-<table border="" cellpadding="2" cellspacing="2" width="200">
+<table border="" width="500">
 <tr>
-<td>struct Books *struct_pointer;</td>
+<td><pre>struct Books *struct_pointer;</pre></td>
 </tr>
 </table><br>
 Now, you can store the address of a structure variable in the above-defined
 pointer variable. To find the address of a structure variable, place the ‘&’
 operator before the structure's name as follows:
-<table border="1" cellpadding="2" cellspacing="2" width="200">
+<table border="" width="500">
 <tr>
-<td>struct_pointer = &Book1;</td><br>
+<td><pre>struct_pointer = &Book1;</pre></td><br>
 </tr>
 </table><br>
 To access the members of a structure using a pointer to that structure, you must
 use the -> operator as follows:
-<table border="1" cellpadding="2" cellspacing="2" width="200">
+<table border="" width="500">
 <tr>
-<td>struct_pointer->title;</td><br>
+<td><pre>struct_pointer->title;</pre></td><br>
 </tr>
 </table><br>
 Let us rewrite the above example using structure pointer.<br>
@@ -252,16 +280,16 @@ in, e.g., 9-bit integers.<br><br>
 
 C allows us to do this in a structure definition by putting :bit length after the
 variable. For example:
-<table border="" cellpadding="" cellspacing="" width="300">
+<table border="" width="500">
 <tr>
-<td>struct packed_struct {<br>
+<td><pre>struct packed_struct {<br>
 unsigned int f1:1;<br>
 unsigned int f2:1;<br>
 unsigned int f3:1;<br>
 unsigned int f4:1;<br>
 unsigned int type:4;<br>
 unsigned int my_int:9;<br>
-} pack;</td><br>
+} pack;</pre></td><br>
 </tr>
 </table><br>
 Here, the packed_struct contains 6 members: Four 1 bit flags f1..f3, a 4-bit
@@ -270,7 +298,9 @@ C automatically packs the above bit fields as compactly as possible, provided
 that the maximum length of the field is less than or equal to the integer word
 length of the computer. If this is not the case, then some compilers may allow
 memory overlap for the fields, while others would store the next field in the next
-word.
+word.<br><br>
+<a href="c_strings.html" class="previous">&laquo; Previous</a>
+<a href="c_ipop.html" class="next">Next &raquo;</a>
 </article>
 <footer>Devoloped by LE's</footer>
 </div>

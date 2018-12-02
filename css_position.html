@@ -1,0 +1,83 @@
+<html>
+<body>
+<h3>Css Position</h3>
+<p>In order to make more complex layouts, we need to discuss the position property. It has a bunch of possible values, and their names make no sense and are impossible to remember. Let's go through them one by one, but maybe you should bookmark this page too.</p>
+<h3>static<h3>
+<table border="" width="400">
+<td>.static {<br>
+  position: static;<br>
+}</td></table><br><br>
+<table border="">
+<td>&ltdiv class="static"&gt<br>
+static is the default value. An element with position: static; is not positioned in any special way. A static element is said to be not positioned and an element with its position set to anything else is said to be positioned.<br>
+&lt/div&gt</td></table>
+<h3>relative</h3>
+<table border="" width="400">
+<td><pre><code>.relative1 {
+  position: relative;
+}
+.relative2 {
+  position: relative;
+  top: -20px;
+  left: 20px;
+  background-color: white;
+  width: 500px;
+}</code></pre></td></table>
+<h3>fixed</h3>
+<p>A fixed element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. As with relative, the top, right, bottom, and left properties are used.</p>
+<p>I'm sure you've noticed that fixed element in the lower-right hand corner of the page. I'm giving you permission to pay attention to it now. Here is the CSS that puts it there:</p>
+<table border="" width="400">
+<td><pre><code>.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background-color: white;
+}code></pre></td></table>
+A fixed element does not leave a gap in the page where it would normally have been located.<br>
+
+Mobile browsers have surprisingly shaky support for fixed. <br>
+<h3>absolute</h3>
+<p>absolute is the trickiest position value. absolute behaves like fixed except relative to the nearest positioned ancestor instead of relative to the viewport. If an absolutely-positioned element has no positioned ancestors, it uses the document body, and still moves along with page scrolling. Remember, a "positioned" element is one whose position is anything except static.</p>
+Here is a simple example:<br>
+<table border="" width="400">
+<td><pre><code>.relative {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+.absolute {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  width: 300px;
+  height: 200px;
+}code></pre></td></table>
+This position stuff might make a little more sense in a practical example. Below is a realistic page layout.
+<table border="" width="400">
+<td><pre><code>.container {
+  position: relative;
+}
+nav {
+  position: absolute;
+  left: 0px;
+  width: 200px;
+}
+section {
+  /* position is static by default */
+  margin-left: 200px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+}
+body {
+  margin-bottom: 120px;
+}<code></pre></td></table>
+
+</body>
+</html>

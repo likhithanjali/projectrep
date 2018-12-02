@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>PYTHON</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a class="active" href="python_overview.html">PYTHON</a>
+
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href= "python_overview.html">Overview</a> 
+<a href= "python_environmentSetup.html">Environmental Setup</a>
+<a href= "python_basicSyntax.html">Basic Syntax</a>
+<a href= "python_variableTypes.html">Variable Types</a>
+<a href= "python_basicOperators.html">Basic Operators</a>
+<a href= "python_decisionMaking.html">Decision Making</a>
+<a href= "python_loops.html">Loops</a>
+<a href= "python_numbers.html">Numbers</a>
+<a href= "python_strings.html">Strings</a>
+<a class="active" href= "python_lists.html">Lists</a>
+<a href= "python_tuples.html">Tuples</a>
+<a href= "python_dictionary.html">Dictionary</a>
+<a href= "python_date&time.html">Date & Time</a>
+<a href= "python_functions.html">Functions</a>
+<a href= "python_modules.html">Modules</a>
+<a href= "python_fileIO.html">File IO</a>
+<a href= "python_exceptions.html">Exceptions</a> 
+</div> </nav>
+
+<article>
+<a href="python_strings.html" class="previous">&laquo; Previous</a>
+<a href="python_tuples.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Lists In Python</h1>
+<p>Lists are just like the arrays, declared in other languages. Lists need not be homogeneous always which makes it a most powerful tool in Python. A single list may contain DataTypes like Integers, Strings, as well as Objects. Lists are also very useful for implementing stacks and queues. Lists are mutable, and hence, they can be altered even after their creation.</p>
+
+<p>In Python, list is a type of container in Data Structures, which is used to store multiple data at the same time. Unlike Sets, the list in Python are ordered and have a definite count. The elements in a list are indexed according to a definite sequence and the indexing of a list is done with 0 being the first index. Each element in the list has its definite place in the list, which allows duplicating of elements in the list, with each element having its own distinct place and credibility.</p>
+
+<p>Note- Lists are a useful tool for preserving a sequence of data and further iterating over it.</p>
+
+<h3>Creating a List</h3>
+<p>Lists in Python can be created by just placing the sequence inside the square brackets[]. Unlike Sets, list doesn’t need a built-in function for creation of list. A list may contain duplicate values with their distinct positions and hence, multiple distinct or duplicate values can be passed as a sequence at the time of list creation.</p>
+
+<p>Note – Unlike Sets, list may contain mutable elements.</p>
+<table border="" height="" width="500">
+<tr><td>
+<pre>
+# Python program to demonstrate  
+# Creation of List  
+  
+# Creating a List 
+List = [] 
+print("Intial blank List: ") 
+print(List) 
+  
+# Creating a List with  
+# the use of a String 
+List = ['howareyou'] 
+print("\nList with the use of String: ") 
+print(List) 
+  
+# Creating a List with 
+# the use of multiple values 
+List = [how", "are", "you"] 
+print("\nList containing multiple values: ") 
+print(List[0])  
+print(List[2]) 
+  
+# Creating a Multi-Dimensional List 
+# (By Nesting a list inside a List) 
+List = [['how', 'are'] , ['you']] 
+print("\nMulti-Dimensional List: ") 
+print(List) 
+  
+# Creating a List with  
+# the use of Numbers 
+# (Having duplicate values) 
+List = [1, 2, 4, 4, 3, 3, 3, 6, 5] 
+print("\nList with the use of Numbers: ") 
+print(List) 
+  
+# Creating a List with  
+# mixed type of values 
+# (Having numbers and strings) 
+List = [1, 2, 'hai', 4, 'For', 6, 'you'] 
+print("\nList with the use of Mixed Values: ") 
+print(List) 
+</pre></td></tr></table>
+
+<h4>Output:</h4>
+<table border="" height="" width="500">
+<tr><td>
+<pre>
+Intial blank List: 
+[]
+
+List with the use of String: 
+['haihellohai']
+
+List containing multiple values: 
+hai
+hai
+
+Multi-Dimensional List: 
+[['hai', 'hello'], ['hai']]
+
+List with the use of Numbers: 
+[1, 2, 4, 4, 3, 3, 3, 6, 5]
+
+List with the use of Mixed Values: 
+[1, 2, 'hai', 4, 'For', 6, 'hello']
+</pre></td></tr></table>
+<h3>Adding Elements to a List</h3>
+<p>Elements can be added to the List by using built-in append() function. Only one element at a time can be added to the list by using append() method, for addition of multiple elements with the append() method, loops are used. Tuples can also be added to the List with the use of append method because tuples are immutable. Unlike Sets, Lists can also be added to the existing list with the use of append() method.
+append() method only works for addition of elements at the end of the List, for addition of element at the desired position, insert() method is used. Unlike append() which takes only one argument, insert() method requires two arguments(position, value). Other than append() and insert() methods, there’s one more method for Addition of elements, extend(), this method is used to add multiple elements at the same time at the end of the list.</p>
+
+<p>Note – append() and extend() methods can only add elements at the end.</p>
+<table border="" height="" width="500">
+<tr><td>
+<pre>
+# Python program to demonstrate  
+# Addition of elements in a List 
+  
+# Creating a List 
+List = [] 
+print("Intial blank List: ") 
+print(List) 
+  
+# Addition of Elements  
+# in the List 
+List.append(1) 
+List.append(2) 
+List.append(4) 
+print("\nList after Addition of Three elements: ") 
+print(List) 
+  
+# Adding elements to the List 
+# using Iterator 
+for i in range(1, 4): 
+    List.append(i) 
+print("\nList after Addition of elements from 1-3: ") 
+print(List) 
+  
+# Adding Tuples to the List 
+List.append((5, 6)) 
+print("\nList after Addition of a Tuple: ") 
+print(List) 
+  
+# Addition of List to a List 
+List2 = ['For', 'hai'] 
+List.append(List2) 
+print("\nList after Addition of a List: ") 
+print(List) 
+  
+# Addition of Element at  
+# specific Position 
+# (using Insert Method) 
+List.insert(3, 12) 
+List2.insert(0, 'hai') 
+print("\nList after performing Insert Operation: ") 
+print(List) 
+  
+# Addition of multiple elements 
+# to the List at the end 
+# (using Extend Method) 
+List.extend([8, 'hai', 'Always']) 
+print("\nList after performing Extend Operation: ") 
+print(List) 
+</pre></td></tr></table>
+
+
+<h4>Output:</h4>
+<table border="" height="" width="500">
+<tr><td>
+<pre>
+Intial blank List: 
+[]
+
+List after Addition of Three elements: 
+[1, 2, 4]
+
+List after Addition of elements from 1-3: 
+[1, 2, 4, 1, 2, 3]
+
+List after Addition of a Tuple: 
+[1, 2, 4, 1, 2, 3, (5, 6)]
+
+List after Addition of a List: 
+[1, 2, 4, 1, 2, 3, (5, 6), ['For', 'hai']]
+
+List after performing Insert Operation: 
+[1, 2, 4, 12, 1, 2, 3, (5, 6), ['hai', 'hello', 'hai']]
+
+List after performing Extend Operation: 
+[1, 2, 4, 12, 1, 2, 3, (5, 6), ['hai', 'hello', 'hai],
+ 8, 'hai', 'Always']
+</pre></td></tr></table>
+<h3>Removing Elements from the List</h3>
+<p>Elements can be removed from the List by using built-in remove() function but an Error arises if element doesn’t exist in the set. Remove() method only removes one element at a time, to remove range of elements, iterator is used. Pop() function can also be used to remove and return an element from the set, but by default it removes only the last element of the set, to remove element from a specific position of the List, index of the element is passed as an argument to the pop() method.</p>
+
+<p>Note – Remove method in List will only remove the first occurrence of the searched element.</p>
+<table border="" height="" width="500">
+<tr><td>
+<pre>
+# Python program to demonstrate  
+# Removal of elements in a List 
+  
+# Creating a List 
+List = [1, 2, 3, 4, 5, 6,  
+        7, 8, 9, 10, 11, 12] 
+print("Intial List: ") 
+print(List) 
+  
+# Removing elements from List 
+# using Remove() method 
+List.remove(5) 
+List.remove(6) 
+print("\nList after Removal of two elements: ") 
+print(List) 
+  
+# Removing elements from List 
+# using iterator method 
+for i in range(1, 5): 
+    List.remove(i) 
+print("\nList after Removing a range of elements: ") 
+print(List) 
+  
+# Removing element from the  
+# Set using the pop() method 
+List.pop() 
+print("\nList after popping an element: ") 
+print(List) 
+  
+# Removing element at a  
+# specific location from the  
+# Set using the pop() method 
+List.pop(2) 
+print("\nList after popping a specific element: ") 
+print(List) 
+</pre></td></tr></table>
+
+<h4>Output:</h4>
+<table border="" height="" width="500">
+<tr><td>
+<pre>
+Intial List: 
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+List after Removal of two elements: 
+[1, 2, 3, 4, 7, 8, 9, 10, 11, 12]
+
+List after Removing a range of elements: 
+[7, 8, 9, 10, 11, 12]
+
+List after popping an element: 
+[7, 8, 9, 10, 11]
+
+List after popping a specific element: 
+[7, 8, 10, 11]
+</pre></td></tr></table>
+<h3>Slicing of a List</h3>
+<p>In Python List, there are multiple ways to print the whole List with all the elements, but to print a specific range of elements from the list, we use Slice operation. Slice operation is performed on Lists with the use of colon(:). To print elements from beginning to a range use [:Index], to print elements from end use [:-Index], to print elements from specific Index till the end use [Index:], to print elements within a range, use [Start Index:End Index] and to print whole List with the use of slicing operation, use [:]. Further, to print whole List in reverse order, use [::-1].</p>
+
+<p>Note – To print elements of List from rear end, use Negative Indexes.</p>
+
+<table border="" height="" width="500">
+<tr><td>
+<pre>
+# Python program to demonstrate  
+# Removal of elements in a List 
+  
+# Creating a List 
+List = ['L','A','K','S','H','M','I','P','R','I','Y','A','D']
+print("Intial List: ") 
+print(List) 
+  
+# Print elements of a range 
+# using Slice operation 
+Sliced_List = List[3:8] 
+print("\nSlicing elements in a range 3-8: ") 
+print(Sliced_List) 
+  
+# Print elements from beginning 
+# to a pre-defined point using Slice 
+Sliced_List = List[:-6] 
+print("\nElements sliced till 6th element from last: ") 
+print(Sliced_List) 
+  
+# Print elements from a  
+# pre-defined point to end 
+Sliced_List = List[5:] 
+print("\nElements sliced from 5th "
+      "element till the end: ") 
+print(Sliced_List) 
+  
+# Printing elements from 
+# beginning till end 
+Sliced_List = List[:] 
+print("\nPrinting all elements using slice operation: ") 
+print(Sliced_List) 
+  
+# Printing elements in reverse 
+# using Slice operation 
+Sliced_List = List[::-1] 
+print("\nPrinting List in reverse: ") 
+print(Sliced_List) 
+</pre></td></tr></table>
+
+<h4>Output:</h4>
+<table border="" height="" width="500">
+<tr><td>
+<pre>
+Intial List: 
+['L','A','K','S','H','M','I','P','R','I','Y','A','D'] 
+
+Slicing elements in a range 3-8: 
+['S', 'H', 'N', 'I', 'P']
+
+Elements sliced till 6th element from last: 
+['L', 'A', 'K', 'S', 'H', 'M', 'I']
+
+Elements sliced from 5th element till the end: 
+['M', 'I', 'P', 'R', 'I', Y', 'A', 'D']
+
+Printing all elements using slice operation: 
+['L','A','K','S','H','M','I','P','R','I','Y','A','D']
+Printing List in reverse: 
+['D', 'A', 'Y', 'I', 'R', 'P', 'I', 'M', 'H', 'S', 'K', 'A', 'L']
+</pre></td></tr></table>
+<h3>List Methods</h3>
+<table border="" height="" width="500">
+<tr>
+<th>METHODS</th>
+<th>DESCRIPTION</th> 
+
+</tr>
+
+
+<tr>
+<td>Append()	</td><td>Add an element to the end of the list</td></tr>
+<tr>
+<td>Extend()	</td><td>Add all elements of a list to the another list</td></tr>
+<tr>
+<td>Insert()</td><td>	Insert an item at the defined index</td></tr>
+<tr>
+<td>Remove()</td><td>	Removes an item from the list</td></tr>
+<tr>
+<td>Pop()</td><td>	Removes and returns an element at the given index</td></tr>
+<tr>
+<td>Clear()</td><td>	Removes all items from the list</td></tr>
+<tr>
+<td>Index()</td><td>	Returns the index of the first matched item</td></tr>
+<tr>
+<td>Count()</td><td>	Returns the count of number of items passed as an argument</td></tr>
+<tr><td>Sort()	</td><td>Sort items in a list in ascending </td></tr>
+<tr>
+<td>Reverse()</td><td>	Reverse the order of items in the list</td></tr>
+<tr>
+<td>copy()</td><td>	Returns a copy of the list</td></tr>
+</pre></tr></td></table>
+<h3>Built-in functions with List</h3>
+<table border="" height="" width="500">
+<tr>
+<th>FUNCTION</th>
+<th>DESCRIPTION</th> 
+
+</tr>
+
+<tr>
+<td>round()</td>
+
+<td>	Rounds off to the given number of digits and returns the floating point number</td>
+</tr>
+<tr>
+<td>reduce()</td>
+
+<td>apply a particular function passed in its argument to all of the list elements stores the intermediate result and only returns the final summation value
+</td>
+</tr>
+<tr>
+<td>sum()</td>
+
+<td>	Sums up the numbers in the list.</td>
+</tr>
+<tr>
+<td>ord()</td>
+
+<td>	Returns an integer representing the Unicode code point of the given Unicode character
+</td>
+</tr>
+<tr>
+<td>cmp()</td>
+
+<td>		This function returns 1, if first list is “greater” than second list</td>	
+	
+</tr>
+<tr>
+<td>max()</td>
+
+<td>	return maximum element of given list
+</td>
+</tr>
+<tr>
+<td>min()</td>
+
+<td>	return minimum element of given list</td>
+</tr>
+<tr>
+<td>all()</td>
+
+<td>	Returns true if all element are true or if list is empty
+</td>
+</tr>
+<tr>
+<td>any()</td>
+
+<td>	return true if any element of the list is true. if list is empty, return false</td>
+</tr>
+
+<tr>
+<td>len()</td>
+
+<td>
+	Returns length of the list or size of the list</td>
+</tr>
+<tr>
+
+<tr><td>enumerate()</td><td>	Returns enumerate object of list</td></tr> 
+<tr><td>accumulate()</td><td>	apply a particular function passed in its argument to all of the list elements returns a list containing the intermediate results</td></tr>
+<tr><td>filter()</td><td>	tests if each element of a list true or not</td></tr>
+<tr><td>map()</td><td>	returns a list of the results after applying the given function to each item of a given iterable</td></tr>
+<tr><td>lambda()</td><td>	This function can have any number of arguments but only one expression, which is evaluated and returned.</td></tr>
+</table>
+<br></br>
+<a href="python_strings.html" class="previous">&laquo; Previous</a>
+<a href="python_tuples.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

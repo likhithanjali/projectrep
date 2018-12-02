@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVA</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a class="active" href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="java_overview.html">Overview</a>
+<a href="java_environmentalsetup.html">Environment Setup</a>
+<a href="java_basicsyntax.html">Basic Syntax</a>
+<a href="java_comments.html">Comments</a>
+<a href="java_obj&cls.html">Objects&Classes</a>
+<a href="java_datatypes.html">Data Types</a>
+<a href="java_variables.html">Variable Types</a>
+<a href="java_modifiertypes.html">Modifier Types</a>
+<a href="java_operators.html">Basic Operators</a>
+<a class="active" href="java_loops.html">Loops</a>
+<a href="java_decisionmake.html">Decision Making</a>
+<a href="java_characters.html">Characters</a>
+<a href="java_strings.html">strings</a>
+<a href="java_arrays.html">Arrays</a>
+<a href="java_datetime.html">Date&Time</a>
+<a href="java_regularexpr.html">Regular expressions</a>
+<a href="java_methods.html">Methods</a>
+<a href="java_io.html">Files and i/o</a>
+<a href="java_excepetions.html">Exceptions </a>
+<a href="java_innerclass.html">Inner classes</a>
+<a href="java_inheritance.html">Inheritance </a>
+<a href="java_overriding.html">Overriding</a> 
+<a href="java_overloading.html">Overloading</a>
+<a href="java_polymorphism.html">Polymorphism</a>
+<a href="java_Abstraction.html">Abstraction</a>
+<a href="java_encapsulation.html">Encapsulation</a>
+<a href="java_interfaces.html">Interfaces</a>
+<a href="java_packages.html">Packages</a>
+
+</div> </nav>
+<article>
+<a href="java_operators.html" class="previous">&laquo; Previous</a>
+<a href="java_decisionmake.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Loops In Java</h1>
+<p>Broadly classifying, there are three types of loops in Java programming which are:<br>
+
+1. while loop<br>
+
+2. for loop<br>
+
+3. do...while loop<br></p>
+
+<h3>while loop</h3>
+<p>while loop makes it quite easy.</p>
+
+<h4>Let's first look at the syntax of while loop.</h4>
+<table border="' height="" width="500"><tr><td><pre>
+while(condition)
+  {
+    statement(s)
+  }</pre></td></tr></table>
+
+<p>while loop checks whether the condition written in ( ) is true. If the condition is true, statements written in the body of the while loop i.e. inside the braces { } are executed.Then, again the condition is checked, and if found true, again the statements inside body of the while loop are executed. This process continues until the condition becomes false.</p>
+
+<h4>An example will make this clear.</h4>
+<table border="' height="" width="500"><tr><td><pre>
+class L1{
+public static void main(String[] args){
+  int n = 1;
+  while( n &lt= 10){
+    System.out.println(n);
+    n++;
+  }
+}
+}</pre></td></tr></table>
+<h4>Output</h4>
+<p>In our example, firstly, we assigned a value 1 to a variable 'n'.<br>
+
+while(n &lt= 10) checks the condition 'n &lt= 10'. Since the value of n is 1 which is less than 10, the statements within the braces { } are executed.<br>
+
+The value of 'n' i.e. 1 is printed and n++ increases the value of 'n' by 1. So, now the value of 'n' becomes 2.<br>
+
+Now, again the condition is checked. This time also 'n &lt= 10' is true because the value of 'n' is 2. So, again the value of 'n' i.e. 2 gets printed and the value of 'n' gets increased to 3.<br>
+
+When the value of 'n' becomes 10, again the condition 'n &lt= 10' is true and 10 gets printed for the tenth time. Now, n++ increases the value to 'n' to 11.<br>
+
+This time, the condition 'n &lt= 10' becomes false and the program terminates.<br>
+
+Quite interesting. Isn't it !</p>
+
+<h4>Let's see one more example of while loop</h4>
+<table border="' height="" width="500"><tr><td><pre>
+import java.util.*;
+
+class L2{
+public static void main(String[] args){
+  Scanner s = new Scanner(System.in);
+  int choice = 1;
+  while(choice == 1){
+	
+    int a;
+
+    System.out.println("Enter a number to check odd or even");
+    a = s.nextInt();
+
+    if(a%2==0){
+      System.out.println("Your number is even");
+    }
+
+    else{
+      System.out.println("Your number is odd");
+    }
+
+    System.out.println("Want to check more 1 for yes 0 for no");
+
+    choice = s.nextInt();
+
+  }
+
+  System.out.println("I hope you checked all your numbers.");
+
+}
+}</pre></td></tr></table>
+<h4>Output</h4>
+<p>The loop will run until the value of 'choice' becomes other than '1'. So, for the first time, it will run since the value of 'choice' is '1'. Then it will perform the codes inside the loop. At last, it will ask the user whether he wants to check more or not. This can change the value of the variable 'choice' and may terminate the loop.<br>
+
+Initially, the value of 'choice' was 1, so the condition of while got satisfied and the statements inside it got executed. We were asked to give the value of choice and we gave 1 again. Things repeated and after that, we gave choice a value of 0. Then the condition of while was not satisfied and the loop terminated.<p>
+
+<h3>for loop</h3>
+<p>Another type of loop is for loop.<br>
+
+Let's go to our first example in which we printed the first 10 natural numbers using while loop. We can also do this with for loop.</p>
+
+<h4>Let's look at the syntax of for loop.</h4>
+<table border="' height="" width="500"><tr><td><pre>
+for(initialization; condition; propagation)
+  {
+    statement(s)
+  }
+</pre></td></tr></table><br>
+<table border="' height="" width="500"><tr><td><pre>
+class L3{
+public static void main(String[] args){
+  int n;
+  for( n = 1; n &lt= 10; n++ ){
+    System.out.println(n);
+  }
+}
+}
+</pre></td></tr></table> 
+<h4>Output</h4>
+<p>Now let's see how for loop works.<br>
+
+for(n=1; n&lt=10; n++)<br>
+
+n=1 - This step is used to initialize a variable and is executed first and only once. Here, 'n' is assigned the value of 1.<br>
+
+n&lt=10 - This is a condition which is evaluated. If the condition is true, the statements written in the body of the loop are executed. If it is false, the statement just after the for loop is executed. This is similar to the condition we used in 'while' loop which was being checked again and again.<br>
+
+n++ - This is executed after the code in the body of for loop has been executed. In this example, the value of 'n' increases by 1 every time the code in the body of for loop executes. There can be any expression here which you want to run after every loop.<br>
+
+
+In the above example, firstly 'n=1' assigns a value 1 to 'n'.<br>
+
+Then the condition 'n&lt=10' is checked. Since the value of 'n' is 1, therefore the code in the body of for loop is executed and thus the current value of 'n' i.e. 1 gets printed.<br>
+
+Once the codes in the body of for loop are executed, step a++ is executed which increases the value of 'n' by 1. So now the value of 'n' is 2.<br>
+
+Again the condition 'n&lt=10' is checked which is true because the value of 'n' is 2. Again codes in the body of for loop are executed and 2 gets printed and then value of 'n' is again incremented.<br>
+
+When the value of 'n' becomes 10, the condition 'n &lt= 10' becomes true and 10 gets printed. Now, when n++ increases the value to 'n' to 11, the condition 'n&lt=10' becomes false and the loop terminates.</p>
+
+<h4>Let's see an example for adding 10 numbers.</h4>
+<table border="' height="" width="500"><tr><td><pre>
+import java.util.*;
+
+class L30{
+public static void main(String[] args){
+
+  int sum = 0, i, n;
+  Scanner s = new Scanner(System.in);
+
+  for(i = 0; i&lt10; i++){
+    System.out.println("Enter number");
+    n = s.nextInt();
+
+    sum = sum + n;
+  }
+
+  System.out.println("Sum is "+sum);
+
+}
+}</pre></td></tr></table> 
+<h4>Output</h4>
+<p>Initially, the variable 'sum' is 0. After the first iteration,<br>
+sum = sum + n; - the value of n is entered 4. So, the expression sum + n is 0+4. So, the expression becomes sum = 0 + 4;, thus making the value of sum as 4.<br>
+In the second iteration,<br>
+sum is 4 and n is entered 3. So, sum + n becomes 4 + 3 i.e. 7, thus making the value of sum as 7.<br>
+In this way, this loop will add all the 10 numbers entered by the user.<br>
+
+There are other ways also to write a program of for loop.<br>
+
+The first example of for loop in which we printed the first 10 natural numbers can also be written in other ways which are :</p>
+<table border="' height="" width="500"><tr><td><pre>
+int n = 1;
+for(; n &lt= 10; n++)
+  {
+    System.out.println(n);
+  }
+</pre></td></tr></table>
+<p>Another way is as follows.</p>
+<table border="' height="" width="500"><tr><td><pre>
+int n;
+for(n = 1; n &lt= 10;)
+  {
+    System.out.println(n);
+    n++;
+  }
+</pre></td></tr></table><br>
+<p>There is also an another form of for loop which is discussed in the chapter 'array'.</p>
+<h3>do...while loop</h3>
+<p>This is another kind of loop. This is just like while and for loop but the only difference is that the<br> code in its body is executed once before checking the conditions.</p>
+
+<h4>Syntax of do...while loop is:</h4>
+<table border="' height="" width="500"><tr><td><pre>
+do{
+  statement(s)
+}
+while(condition);
+</pre></td></tr></table><br>
+<p>Consider the same example to print the first 10 natural numbers for which we wrote programs using while and for loop. Now, let's write its program using do...while loop.</p>
+<table border="' height="" width="500"><tr><td><pre>
+class L5{
+  public static void main(String[] args){
+    int n = 1;
+    do{
+      System.out.println(n);
+      n++;
+    }while( n &lt= 10 );
+  }
+}</pre></td></tr></table><br>
+<h4>Output</h4>
+<p>Let's try to understand this.<br>
+
+At first, the code inside the body of the loop (i.e. within the braces { } following do ) are executed. <br>This prints the value of 'n' i.e. 1 and n++ increments the value of 'n' by 1. So now, the value of 'n' becomes 2.<br>
+
+Once the code inside the braces { } is executed, the condition 'n &lt= 10' is checked. Since the value of 'n' is 2, so the condition is satisfied.<br>
+
+Again the code inside the body of loop is executed and the value of 'n' becomes 2. When the value of 'n' is 10 and 10 is printed, n++ increases the value of 'n' to 11. After this, the condition becomes false and the loop terminates.<br>
+
+As you have seen, in do while loop, codes inside the loop got executed for the first time without checking any condition and then it started checking the condition from the second time.<p>
+
+<h3>Nesting of loop</h4>
+<p>Like 'if/else' we can also use one loop inside another. This is called nesting of loop. See this example to understend it.</p>
+<table border="' height="" width="500"><tr><td><pre>
+class L6{
+public static void main(String[] args){
+  int i;
+  int j;
+
+  for(i = 12;i&lt=14;i++){/*outer loop*/
+
+    System.out.println("Table of " + i);
+
+    for(j = 1;j&lt=10;j++){/*inner loop*/
+
+      System.out.println(i+"*"+j+" = "+(i*j));
+
+
+    }
+  }
+}
+}</pre></td></tr></table><br>
+<h4>Output</h4>
+<p>When the first for loop is executed, the value of i is 12 and then Table of 12 get printed.
+Now coming to the second for loop.<br>
+Initially, the condition ( j&lt=10 ) gets satisfied since the value of j is 1 ( j is less than 10 ). Thus the body of this for loop gets executed and i*j (which is 14*1) i.e. 14 gets on the screen and then j++ increases the value of j by 1, making its value equal to 2.<br>
+Again the condition of the loop gets satisfied since the value of j is 2 this time ( 2 is less than 10 ). Again its body gets executed and i*j (which is 14*2) i.e. 28 gets printed on the screen and j++ further increases its value by 1 thus making it 3. Again the condition of the loop gets satisfied and 42 gets printed.<br>
+When the value of j becomes 10, 140 gets printed and j++ makes its value equal to 11. So now, the condition of the loop ( j <= 10 ) is not satisfied and the loop stops.<br>
+Now, coming out of the inner loop, i becomes 13 and Table of 13 gets printed and again things will repeat again with i equals 13.<br>
+It's cool!</p>
+
+<h3>Infinite loop</h3>
+<p>There may exist some loops that iterate or occur infinitely. These are called Infinite Loop. These loops occur infinitely because their condition is always true. We can make an infinite loop by leaving its conditional expression empty. When the conditional expression is empty, it is assumed to be true. Let's see an example on how to make a for loop infinite.</p>
+<table border="' height="" width="500"><tr><td><pre>
+class L7{
+public static void main(String[] args){
+  for(;;){
+    System.out.println("This loop will never end");
+  }
+}
+}</pre></td></tr></table><br>
+<h4>Output</h4>
+<table border="' height="" width="500"><tr><td>
+To terminate an infinite loop, press Ctrl + C.
+</td></tr></table><br>
+<br>
+<a href="java_operators.html" class="previous">&laquo; Previous</a>
+<a href="java_decisionmake.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</body>
+</html>

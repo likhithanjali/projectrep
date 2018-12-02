@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>PYTHON</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a class="active" href="python_overview.html">PYTHON</a>
+
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href= "python_overview.html">Overview</a> 
+<a href= "python_environmentSetup.html">Environmental Setup</a>
+<a href= "python_basicSyntax.html">Basic Syntax</a>
+<a href= "python_variableTypes.html">Variable Types</a>
+<a href= "python_basicOperators.html">Basic Operators</a>
+<a href= "python_decisionMaking.html">Decision Making</a>
+<a href= "python_loops.html">Loops</a>
+<a class="active" href= "python_numbers.html">Numbers</a>
+<a href= "python_strings.html">Strings</a>
+<a href= "python_lists.html">Lists</a>
+<a href= "python_tuples.html">Tuples</a>
+<a href= "python_dictionary.html">Dictionary</a>
+<a href= "python_date&time.html">Date & Time</a>
+<a href= "python_functions.html">Functions</a>
+<a href= "python_modules.html">Modules</a>
+<a href= "python_fileIO.html">File IO</a>
+<a href= "python_exceptions.html">Exceptions</a> 
+</div> </nav>
+
+<article>
+<a href="python_loops.html" class="previous">&laquo; Previous</a>
+<a href="python_strings.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Python Numbers</h1>
+<p>Data types that store numeric values are called Number. If you change the value of a number data type, this results in a newly allocated object. So you can call numbers immutable.</p>
+
+<p>We can simply create a number object by assigning some value to a variable. Also we can manipulate them as shown in below example.</p>
+<table border="" width="500"><tr><td>
+<pre>
+#create two number objects
+var1=2
+var2=3
+
+# to print them
+print(var1)
+print(var2)
+
+#to delete one of them
+del var1
+</pre></td></tr></table>
+
+<h3>Different Numerical Type</h3>
+<p>Python supports four different data types.</p>
+<ol>
+<li><b>int</b> – signed integers. Can hold both positive and negative value</li>
+<li><b>long</b> – long integers. Similar like int. But range of this data type is unlimited</li>
+<li><b>float–</b> floating point real values. Holds real numbers.</li>
+<li><b>complex– </b>values of the form r+ij. Holds complex numerical values.</li></ol>
+<h3>Python Numbers – Type Conversion</h3>
+<p>We can convert data types from one to another. This often is called type casting also. Here are some example.</p>
+<ol>
+<li><b>int(x)</b> – converts x to a plain integer.</li>
+<li><b>long(x)</b> – converts x to a long integer.</li>
+<li><b>float(x)</b> – converts x to a floating point number.</li>
+<li><b>complex(x)</b> – converts x to a complex number with real part x and imaginary part zero.</li>
+<li><b>complex(x,y)</b> – converts x to a complex number with real part x and imaginary part y.</li></ol>
+<p>Here are some example of type casting.</p>
+<p>python tutorial, python numbers type casting example</p> 
+<table border="" width="500"><tr><td>
+<img src="images/python_num.png"/>
+</pre></td></tr></table>
+<h3>Determining type</h3>
+<p>We can also determine what type of numeric value one variable holds.</p>
+<table border="" width="500"><tr><td>
+<pre>
+a = 25
+
+# Output: 
+print(type(a))
+
+# Output: 
+b=25.0
+print(type(b))
+
+# Output: True
+print(isinstance(b, float))
+</pre></td></tr></table>
+<p>The above code, if we run it will produce following output.</p>
+<p>python numbers, determining type of a variable example</p>
+<table border="" width="500"><tr><td>
+<img src="images/python_num1.png"/>
+</pre></td></tr></table>
+<h3>Python Numbers with Prefix</h3>
+<p>In our day to day life we deal with decimal numbers(base 10). But in computer programs we may need to deal with numbers of other bases too like binary numbers(base 2), hexadecimal numbers(base 16), octal numbers(base 8) etc. We can represent these numbers with placing a prefix before the number like below-</p>
+ <table border="" width="500"><tr><td>
+<pre>
+
+# Output: 10
+print(0b1010)
+
+# Output: 15
+print(0xF)
+
+# Output: 13
+print(0o15)
+</pre></td></tr></table>
+<p>This code will produce output like below.
+python numbers with different base example</p>
+<table border="" width="500"><tr><td>
+<img src="images/python_num2.png">
+</pre></td></tr></table>
+<h3>More on Complex numbers</h3>
+<p>There are some built-in accessors and functions to support complex number in python. Take a look at the following code for better understanding.</p>
+
+<table border="" width="500"><tr><td>
+<pre>
+# different complex numbers and their real and imaginary part
+complex1 = (1,2)
+print(complex1)
+
+complex2=(2,-3)
+print(complex2)
+
+complex3= 3+4j
+print(complex3)
+
+complex4=2+3j
+print(complex4)
+
+#some built-in accessors
+
+print(complex4.real) # gives the real part of a complex number
+
+print(complex4.imag) #gives the imaginary part of a imaginary number
+
+print(complex4.conjugate()) # gives the complex conjugate of a complex number
+
+#some built-in functions for complex numbers
+print(abs(complex3)) #gives the magnitude of a complex number
+
+print(pow(complex3,2)) #raise a complex number to a power
+</pre></td></tr></table>
+<p>The above code will produce the following output-</p>
+<p>python complex numbers functions example output</p>
+<table border="" width="500"><tr><td>
+<img src="images/python_num3.png">
+</pre></td></tr></table>
+<br><br>
+<a href="python_loops.html" class="previous">&laquo; Previous</a>
+<a href="python_strings.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<body>
+<h3>CSS Layout - width and max-width</h3>
+<h3>Using width, max-width and margin: auto;</h3>
+<p>As mentioned in the previous chapter; a block-level element always takes up the full width available (stretches out to the left and right as far as it can).</p>
+<p>Setting the width of a block-level element will prevent it from stretching out to the edges of its container. Then, you can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins:</p>
+<table border="">
+<td>This &ltdiv&gt element has a width of 500px, and margin set to auto.</td></table>
+<b>Note:</b> The problem with the <div> above occurs when the browser window is smaller than the width of the element. The browser then adds a horizontal scrollbar to the page.
+<p>Using max-width instead, in this situation, will improve the browser's handling of small windows. This is important when making a site usable on small devices:</p>
+<table border="">
+<td>This &ltdiv&gt element has a max-width of 500px, and margin set to auto.</td></table><br>
+<b>Tip:</b> Resize the browser window to less than 500px wide, to see the difference between the two divs!
+Here is an example of the two divs above:<br>
+<h3>Example</h3>
+<table border="" width="400">
+<td><pre><code>div.ex1 {
+    width: 500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+}
+
+div.ex2 {
+    max-width: 500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+}</code></pre></td></table>
+<h3>CSS max-width Property</h3>
+<h3>Example</h3>
+Set the maximum width of a &ltp&gt element to 150 pixels:
+<table border="" width="400">
+<td>p.ex1 {<br>
+    max-width: 150px;<br>
+}</td></table>
+<h3>Definition and Usage</h3>
+The max-width property defines the maximum width of an element.<br><br>
+
+If the content is larger than the maximum width, it will automatically change the height of the element.<br><br>
+
+If the content is smaller than the maximum width, the max-width property has no effect.<br><br>
+<b>Note:</b> This prevents the value of the width property from becoming larger than max-width. The value of the max-width property overrides the width property.
+</body>
+</html>

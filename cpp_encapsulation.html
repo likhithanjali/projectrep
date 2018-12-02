@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+ 
+</style>
+
+</head>
+<body>
+<header>
+<h1>CPP Programming</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a class="active" href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="cpp_overview.html">Overview</a>
+<a href="cpp_envrnmnt.html">Environment Setup</a>
+<a href="cpp_basicsyntax.html">Basic Syntax</a>
+<a href="cpp_comments.html">Comments</a>
+<a href="cpp_datatypes.html">Data types</a>
+<a href="cpp_variables.html">Variable Types</a>
+<a href="cpp_constliterals.html">Constants &literas </a>
+<a href="cpp_modifiertypes.html">Modifier Types</a>
+<a href="cpp_storageclasses.html">Storage Classes</a>
+<a href="cpp_operators.html">Operators</a>
+<a href="cpp_loops.html">Loops</a>
+<a href="cpp_decisionmake.html">Decision Making</a>
+<a href="cpp_functions.html">Functions</a>
+<a href="cpp_arraays.html">Arrays</a>
+<a href="cpp_strings.html">Strings</a>
+<a href="cpp_pointers.html">Pointers</a>
+<a href="cpp_references.html">References</a>
+<a href="cpp_basicio.html">Basic Input&Output </a>
+<a href="cpp_datastructures.html">Data Structures</a>
+<a href="cpp_classobject.html">Classes&Objects </a>
+<a href="cpp_inheritance.html">Inheritance </a>
+<a href="cpp_overloading.html">Overloading</a>
+<a href="cpp_polymorphism.html">Polymorphism</a>
+<a class="active" href="cpp_encapsulation.html">Encapsulation</a>
+<a href="cpp_interfaces.html">Interfaces</a> 
+</div> </nav>
+
+<article>
+
+<a href="cpp_polymorphism.html" class="previous">&laquo; Previous</a>
+<a href="cpp_interfaces.html" class="next">Next &raquo;</a><h1 style="color:#000080">Encapsulation In CPP</h1>
+<p>Encapsulation is a process of combining data members and functions in a single unit called class. This is to prevent the access to the data directly, the access to them is provided through the functions of the class. It is one of the popular feature of Object Oriented Programming(OOPs) that helps in data hiding.</p>
+
+How Encapsulation is achieved in a class<br>
+To do this:<br>
+1) Make all the data members private.<br>
+2) Create public setter and getter functions for each data member in such a way that the set function set the value of data member and get function get the value of data member.<br>
+
+Let’s see this in an example Program:<br>
+
+Encapsulation Example in C++<br>
+Here we have two data members num and ch, we have declared them as private so that they are not accessible outside the class, this way we are hiding the data. The only way to get and set the values of these data members is through the public getter and setter functions.
+<table border=""width="500"><tr><td><pre> 
+#include &ltiostream>
+using namespace std;
+class ExampleEncap{
+private:
+   /* Since we have marked these data members private,
+    * any entity outside this class cannot access these
+    * data members directly, they have to use getter and
+    * setter functions.
+    */
+   int num;
+   char ch;
+public:
+   /* Getter functions to get the value of data members.
+    * Since these functions are public, they can be accessed
+    * outside the class, thus provide the access to data members
+    * through them
+    */
+   int getNum() const {
+      return num;
+   }
+   char getCh() const {
+      return ch;
+   }
+   /* Setter functions, they are called for assigning the values
+    * to the private data members.
+    */
+   void setNum(int num) {
+      this->num = num;
+   }
+   void setCh(char ch) {
+      this->ch = ch;
+   }
+};
+int main(){
+   ExampleEncap obj;
+   obj.setNum(100);
+   obj.setCh('A');
+   cout &lt&lt obj.getNum()&lt&ltendl;
+   cout &lt&lt obj.getCh()&lt&ltendl;
+   return 0;
+}
+</pre>
+</table></tr></td>
+<br>
+<b>Output:</b>
+<table border="" height="" width="500"><tr><td><pre>
+100
+</pre>
+</table></tr></td><br><br><br>
+<a href="cpp_polymorphism.html" class="previous">&laquo; Previous</a>
+<a href="cpp_interfaces.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>HTML</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a href="java_overview.html">JAVA</a>
+  <a class="active" href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="html_overview.html">Overview</a>
+<a href="html_editors.html">Editors</a>
+<a href="html_basicsyntax.html">Basic Syntaxes</a>
+<a href="html_elements.html">HTML Elements</a>
+<a href="html_attributes.html">Attributes</a>
+<a href="html_headings.html">Headings</a>
+<a href="html_paragraphs.html">Paragraphs</a>
+<a href="html_comments.html">Comments</a>
+<a href="html_styles.html">Styles</a>
+<a href="html_formatting.html">Formatting</a>
+<a href="html_quotes.html">Quotes</a>
+<a class="active" href="html_links.html">Links</a>
+<a href="html_tables.html">Tables</a>
+<a href="html_lists.html">Lists</a>
+<a href="html_forms.html">Forms</a>
+<a href="html_htmlWithCss.html">Html with Css</a>
+<a href="html_images.html">Images</a> 
+<a href="html_colors.html">Colors</a>
+</div> </nav>
+
+<article>
+<a href="html_quotes.html" class="previous">&laquo; Previous</a>
+<a href="html_tables.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080";>Text links (anchors) In Html</h1>
+<h3>html - text links (anchors)</h3>
+<p>The World Wide Web got its spidery name from the plentiful connections (links) that link websites together with the click of a button. What most people don't know is that HTML links are actually HTML anchors constructed using anchor tags (&lta>).</p>
+
+<h3>HTML Text Link:</h3><table border="" width="700"><tr><td>
+&lta>I am a text link!&lt/a></tr></td></table>
+<h3>HTML Text Link:</h3>
+<table border="" width="700"><tr><td>
+<a href="">I am a text link!</a></tr></td></table>
+<p>While the example above appears and feels like a text link when viewed through a web browser, the element is incomplete as it is missing a vital attribute that references another web page called a Hypertext Reference (href).
+</p>
+<h3>html - hypertext reference (href)</h3>
+<p>A Hypertext Reference (href) is an HTML attribute of an anchor (link) tag that requires a valid URL in order to properly direct a user to a different location. In other words, this Hypertext Reference is where users will navigate to if they do click on this link. Use the demonstration below as a reference.</p>
+
+<h3>HTML Text Link Code:</h3><table border="" width="700"><tr><td><pre>
+&lta href="http://www.google.com/" target="_blank">google&lt/a>
+&ltbr />
+&lta href="http://www.email.com/" target="_blank">email&lt/a>
+&ltbr />
+&lta href="http://www.yahoo.com/" target="_blank">Yahoo&lt/a>
+</pre></tr></td></table>
+<h3>HTML Text Links:</h3><table border="" width="700"><tr><td>
+<a href="http://www.google.com/" target="_blank">google</a>
+<br />
+<a href="http://www.email.com/" target="_blank">email</a>
+<br />
+<a href="http://www.yahoo.com/" target="_blank">Yahoo</a>
+</tr></td></table>
+<p>
+The address of a website is called a Uniform Resource Locator (a URL), and it acts like a street address for a website as a user is directed from one site to another. There are different types of URLs, and each has a slightly different look. The examples above link to what are known as Global URLs, since they are external web addresses that do not reside on the Tizag.com domain. Here's a look at the different types of URLs.</p>
+
+<h3>HTML Text Link Code:</h3><table border="" width="700"><tr><td><pre>
+Global - href="http://www.tutorialsproject.com/" Links to other domains outside your website domain.
+Local - href="../internal/mypage2.html"   Links to other pages within your website domain.
+Internal - href="#anchorname" Links to anchors embedded in the current web page.</tr></td></pre></table
+<h3>html - link targets</h3>
+<p>The target attribute defines how each link will open when clicked. Will each one open in a new window, or will each one open in the current browser window? As the web designer, you call the shots as to how a user navigates from page to page, so long as you know how to handle the target attribute.</p>
+
+<h3>Link Targets:</h3><table border="" width="700"><tr>
+<td>Target</td><td>Description</td></tr>
+<tr><td>_blank	 </td><td>Opens new page in a new browser window</td></tr>
+<tr><td>_self	</td><td>Loads the new page in the current window</td></tr>
+<tr><td>_parent	</td><td>Loads new page into a parent frame</td></tr>
+<tr><td>_top	</td><td>Loads new page into the current browser window, cancelling all frames</tr></td></table>
+<p>The two most important values are the top two, (target="_blank" and target="_self"). The _self value is generally the default. It loads each new page in the current browser window, while _blank opens up a new web browser window with each click of the text link.
+
+The code below shows how you would link to ESPN.com, a popular sports website. The target attribute is added to allow the browser to open ESPN in a new window, so that the viewer can have a window that remains opened to our website. Here's the example.</p>
+
+<h3>HTML Link Target Code:</h3><table border="" width="700"><tr><td><pre>
+&lta href="http://www.google.com" target="_blank">google.COM&lt/a></tr></td></pre></table>
+<h3>_blank Target:</h3><table border="" width="700"><tr><td>
+<a href="http://www.google.com" target="_blank">google.COM</a>
+</tr></td></table>
+
+<p>Links are a big part of the user experience for any website. Always try to keep that in mind when working on a site's navigation. A web page that opens a new web browser window each time a user clicks a link is not the greatest way to entice users to stick around.</p>
+<h3>
+html - email links</h3>
+<p>Creating an email link is simple. If you want people to mail you about your site, a good way to do it is place an email link with a subject line already filled out for them.</p>
+
+<h3>HTML Email Link Code:</h3><table border="" width="700"><tr><td><pre>
+&lta href="mailto:email.com?subject=Feedback" >Email.com&lt/a>
+</tr></td></pre></table>
+<h3>Email Links:</h3><table border="" width="700"><tr><td>
+<a href="mailto:email.com?subject=Feedback" >Email.com</a></tr></td></table>
+<p>In some circumstances, it may be necessary to fill in the body of the email for the user as well.</p>
+
+<h3>HTML Email Link Code:</h3><table border="" width="700"><tr><td><pre>
+&lta href="mailto:email.com?subject=Feedback&body=Sweet site!">
+Email.co&lt/a></tr></td></pre></table>
+<h3>Complete Email:</h3><table border="" width="700"><tr><td>
+<a href="mailto:email.com?subject=Feedback&body=Sweet site!">
+email.com</a></tr></td></table>
+<h3>html - download links</h3>
+<p>Placing files available for download is done in exactly the same fashion as placing text links. However, things become complicated if we want to place image links for download. The best solution for images is to use a thumbnail links, which we will discuss in the next lesson.</p>
+
+<h3>HTML Download Link Code:</h3><table border="" width="700"><tr><td><pre>
+&lta href="http://www.google.com/pics/htmlT/blanktext.zip">Text Document&lt/a>
+</tr></td></pre></table>
+<h3>Download a Text Document:</h3><table border="" width="700"><tr><td>
+<a href="http://www.google.com/pics/htmlT/blanktext.zip">Text Document</a>
+</tr></td></table>
+<h3>html - default links; base</h3>
+<p>Use the &ltbase> tag in the head element to set a default URL for all links on a page to go to. It's always a good idea to set a base tag just in case your links become bugged somewhere down the line. Usually, you should set your base to your home page.</p>
+
+<h3>HTML Base Link Code:</h3><table border="" width="700"><tr><td><pre>
+&lthead>
+  &ltbase href="http://www.google.com/" />
+&lt/head>
+</tr></td></pre></table>
+
+<br><br>
+<a href="html_quotes.html" class="previous">&laquo; Previous</a>
+<a href="html_tables.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</div>
+</body>
+</html>

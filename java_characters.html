@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+.topnav a {
+  float: left;
+  color: #000080;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+.topnav a:hover {
+  background-color: #ddd ;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#000080  ;
+  color:white;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: #000080;
+    clear: left;
+    font-size:large;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size:20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+} 
+.icon-bar a {
+    float: left;
+    width: 5%;
+    text-align: center;
+    padding: 13px 0;
+    color: #000080;
+    font-size: 25px;
+}
+.vertical-menu {
+    width: 180px;
+}
+
+.vertical-menu a {
+    background-color:#eee;
+    color:black;
+    display: block;
+    padding:15px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #000080;
+    color: white;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 9px 17px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.previous {
+    background-color:#000080;
+    color: white;
+}
+
+.next {
+    background-color: #000080;
+    color: white;
+	margin-left:780px;
+}
+
+</style>
+
+</head>
+<body>
+<header>
+<h1>JAVA</h1>
+</header>
+
+<div class="topnav">
+  <div class="icon-bar"> <a class="" href="index.html"><i class="fa fa-home"></i></a> </div>
+<a href="allprolang.html">All Languages</a>
+  <a href="c_overview.html">C</a>
+  <a href="cpp_overview.html">CPP</a>
+  <a class="active" href="java_overview.html">JAVA</a>
+  <a href="html_overview.html">HTML</a>
+  <a href="css_overview.html">CSS</a>
+  <a href="javascript_overview.html">JAVASCRIPT</a>
+  <a href="python_overview.html">PYTHON</a>
+   
+  <div class="icon-bar"> <a class="" href="#"><i class="fa fa-search"></i></a> </div></div>
+<nav>
+<div class="vertical-menu">
+<a href="java_overview.html">Overview</a>
+<a href="java_environmentalsetup.html">Environment Setup</a>
+<a href="java_basicsyntax.html">Basic Syntax</a>
+<a href="java_comments.html">Comments</a>
+<a href="java_obj&cls.html">Objects&Classes</a>
+<a href="java_datatypes.html">Data Types</a>
+<a href="java_variables.html">Variable Types</a>
+<a href="java_modifiertypes.html">Modifier Types</a>
+<a href="java_operators.html">Basic Operators</a>
+<a href="java_loops.html">Loops</a>
+<a href="java_decisionmake.html">Decision Making</a>
+<a class="active" href="java_characters.html">Characters</a>
+<a href="java_strings.html">strings</a>
+<a href="java_arrays.html">Arrays</a>
+<a href="java_datetime.html">Date&Time</a>
+<a href="java_regularexpr.html">Regular expressions</a>
+<a href="java_methods.html">Methods</a>
+<a href="java_io.html">Files and i/o</a>
+<a href="java_excepetions.html">Exceptions </a>
+<a href="java_innerclass.html">Inner classes</a>
+<a href="java_inheritance.html">Inheritance </a>
+<a href="java_overriding.html">Overriding</a>
+<a href="java_overloading.html">Overloading</a> 
+<a href="java_Abstraction.html">Abstraction</a>
+<a href="java_encapsulation.html">Encapsulation</a>
+<a href="java_interfaces.html">Interfaces</a>
+<a href="java_packages.html">Packages</a>
+
+</div> </nav>
+<article>
+<a href="java_decisionmake.html" class="previous">&laquo; Previous</a>
+<a href="java_strings.html" class="next">Next &raquo;</a>
+<h1 style="color:#000080">Charecters In Java</h1>
+ <p>Most of the time, if you are using a single character value, you will use the primitive char type. <br>For example:<br>
+<table border="" width="500"><tr><td>
+char ch = 'a'; 
+// Unicode for uppercase Greek omega character</td></tr></table><br>
+<table border="" width="500"><tr><td>
+char uniChar = '\u03A9';
+// an array of chars</tr></td></table><br>
+<table border="" width="500"><tr><td>
+char[] charArray = { 'a', 'b', 'c', 'd', 'e' };</tr></td></table><br>
+There are times, however, when you need to use a char as an object—for example, as a method argument <p>where an object is expected. The Java programming language provides a wrapper class that "wraps" the char in a Character object for this purpose. An object of type Character contains a single field, whose type is char. This Character class also offers a number of useful class (i.e., static) methods for manipulating characters.</p>
+
+<h3>You can create a Character object with the Character constructor:</h3>
+<p>
+Character ch = new Character('a');<br>
+The Java compiler will also create a Character object for you under some circumstances. For example, if you pass a primitive char into a method that expects an object, the compiler automatically converts the char to a Character for you. This feature is called autoboxing—or unboxing, if the conversion goes the other way. For more information on autoboxing and unboxing, see Autoboxing and Unboxing.</p>
+
+<b>Note:</b><p> The Character class is immutable, so that once it is created, a Character object cannot be changed.
+The following table lists some of the most useful methods in the Character class, but is not exhaustive. For a complete listing of all methods in this class (there are more than 50), refer to the java.lang.Character API specification.</p>
+<h3>Useful Methods in the Character Class:</h3>
+<table border="" width="500"><tr>
+<th>Method</th><th>	Description</th></tr>
+<tr><td>boolean isLetter(char ch)
+boolean isDigit(char ch)</td>	<td>Determines whether the specified char value is a letter or a digit, respectively.</td></tr>
+<tr><td>boolean isWhitespace(char ch)</td>	<td>Determines whether the specified char value is white space.</td></tr>
+<tr><td>boolean isUpperCase(char ch)
+boolean isLowerCase(char ch)</td><td>	Determines whether the specified char value is uppercase or lowercase, respectively.</td></tr>
+<tr><td>char toUpperCase(char ch)
+char toLowerCase(char ch)</td><td>	Returns the uppercase or lowercase form of the specified char value.</td></tr>
+<tr><td>toString(char ch)</td><td>	Returns a String object representing the specified character value  that is, a one-character string.</td></tr></table>
+<h3>Escape Sequences</h3>
+<p>
+A character preceded by a backslash (\) is an escape sequence and has special meaning to the compiler. The following table shows the Java escape sequences:</p>
+
+<h3>Escape Sequences</h3>
+<table border="" width="500"><th>Escape Sequence</th>	<th>Description</th></tr>
+<tr><td>\t</td><td>	Insert a tab in the text at this point.</td></tr>
+<tr><td>\b</td><td>	Insert a backspace in the text at this point.</td></tr>
+<tr><td>\n</td>	<td>Insert a newline in the text at this point.</td></tr>
+<tr><td>\r</td><td>	Insert a carriage return in the text at this point.</td></tr>
+<tr><td>\f</td><td>	Insert a formfeed in the text at this point.</td></tr>
+<tr><td>\'	</td><td>Insert a single quote character in the text at this point.</td></tr>
+<tr><td>\"</td><td>	Insert a double quote character in the text at this point.</td></tr>
+<tr><td>\\</td><td>	Insert a backslash character in the text at this point.</td></tr></table>
+<p>When an escape sequence is encountered in a print statement, the compiler interprets it accordingly. For example, if you want to put quotes within quotes you must use the escape sequence, \", on the interior quotes. To print the sentence
+<br>
+
+She said "Hello!" to me.<br>
+you would write</p>
+<table border="" width="500"><tr><td>
+System.out.println("She said \"Hello!\" to me.");</tr></td></table>
+<br><br>
+<a href="java_decisionmake.html" class="previous">&laquo; Previous</a>
+<a href="java_strings.html" class="next">Next &raquo;</a>
+</article>
+<footer>Devoloped by LE's</footer>
+</body>
+</html>
